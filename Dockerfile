@@ -19,6 +19,7 @@ RUN rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.
 RUN \curl -sSL https://get.rvm.io | bash
 RUN echo "rvm_install_on_use_flag=1" >> ~/.rvmrc
 RUN ls -la /etc/profile.d/
+RUN cat /etc/profile.d/rvm.sh
 RUN source /etc/profile.d/rvm.sh
 RUN rvm use "$TARGET_RAILS_VERSION"
 
