@@ -1,7 +1,10 @@
 {
   "name": "www",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "connect-modrewrite": "^0.8.1",
+    "grunt-contrib-livereload": "^0.1.2"
+  },
   "repository": {},
   "devDependencies": {
     "grunt": "^0.4.5",
