@@ -18,7 +18,8 @@ RUN rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.
 # Install rvm and target ruby version
 RUN \curl -sSL https://get.rvm.io | bash
 RUN echo "rvm_install_on_use_flag=1" >> ~/.rvmrc
-RUN source ~/.rvm/scripts/rvm
+RUN ls -la /etc/profile.d/
+RUN source /etc/profile.d/rvm.sh
 RUN rvm use "$TARGET_RAILS_VERSION"
 
 # Install bundler
