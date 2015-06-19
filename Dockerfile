@@ -1,5 +1,5 @@
 # get ready to compile ruby
-FROM rails:2.2
+FROM ruby:2.2
 
 # Install bundler
 RUN gem install bundler
