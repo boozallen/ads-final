@@ -6,7 +6,11 @@ gem 'rails', '4.2.1'
 
 gem 'rails-api'
 
-gem 'spring', :group => :development
+group :development, :test do
+  gem 'spring'
+  gem 'rubocop'
+  gem 'brakeman'
+end
 
 gem 'puma'
 
