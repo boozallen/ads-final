@@ -34,6 +34,9 @@ module.exports = function(config) {
       'bower_components/jquery-placeholder/jquery.placeholder.js',
       'bower_components/foundation/js/foundation.js',
       'bower_components/d3/d3.js',
+      'bower_components/lodash/lodash.js',
+      'bower_components/restangular/dist/restangular.js',
+      'bower_components/angular-foundation/mm-foundation-tpls.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',
