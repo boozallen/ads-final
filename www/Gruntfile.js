@@ -108,7 +108,18 @@ module.exports = function (grunt) {
       dist: {
         options: {
           open: true,
-          base: '<%= yeoman.dist %>'
+          base: '<%= yeoman.dist %>',
+          middleware: function (connect) {
+              return [
+                  modRewrite(['^[^\\.]*$ /index.html [L]']),
+                  connect.static('.tmp'),
+                  connect().use(
+                      '/bower_components',
+                      connect.static('./bower_components')
+                  ),
+                  connect.static(appConfig.app)
+              ];
+          }
         }
       }
     },
