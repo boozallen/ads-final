@@ -40,11 +40,6 @@ angular
   .html5Mode(true);
   })
 
-  // .run(function(Restangular) {
-  //   RestangularProvider.setBaseUrl('http://www.google.com');
-  //   RestangularProvider.setRequestSuffix('.json');
-  // })
-
   .run(function($rootScope) {
     $rootScope.$on('$viewContentLoaded', function() {
       $(document).foundation();

@@ -14,7 +14,7 @@ angular.module('gapFront')
       'AngularJS',
       'Karma'
     ];
-    	Restangular.setBaseUrl('http://localhost:9000/scripts/mockJson');
+    Restangular.setBaseUrl('http://localhost:9000/mockJson');
 		Restangular.all('medicineSearch.json').getList().then(function (response){
 			console.log(response);
 
