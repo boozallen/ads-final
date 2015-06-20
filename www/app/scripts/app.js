@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name wwwApp
+ * @name gapFront
  * @description
- * # wwwApp
+ * # gapFront
  *
  * Main module of the application.
  */
 angular
-  .module('wwwApp', [
+  .module('gapFront', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
@@ -36,4 +36,11 @@ angular
       });
       $locationProvider
   .html5Mode(true);
+  })
+
+  .run(function($rootScope) {
+    $rootScope.$on('$viewContentLoaded', function() {
+      $(document).foundation();
+    });
   });
+

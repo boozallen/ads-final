@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name wwwApp.controller:MainCtrl
+ * @name gapFront.controller:MainCtrl
  * @description
  * # MainCtrl
- * Controller of the wwwApp
+ * Controller of the gapFront
  */
-angular.module('wwwApp')
+angular.module('gapFront')
   .controller('MainCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
