@@ -43,5 +43,3 @@ angular
   //   RestangularProvider.setBaseUrl('http://www.google.com');
   //   RestangularProvider.setRequestSuffix('.json');
   // })
-
-
