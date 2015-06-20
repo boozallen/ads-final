@@ -1,0 +1,10 @@
+db:
+  image: 52.7.171.102:5000/database:latest
+  ports:
+    - "5432"
+backend:
+  image: 52.7.171.102:5000/backend:latest
+  ports:
+    - "3000:3000"
+  links:
+    - db
