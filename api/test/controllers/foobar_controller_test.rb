@@ -25,7 +25,7 @@ class FoobarControllerTest < ActionController::TestCase
 
   test 'should put update' do
     put :update, { id: 5, title: 'Foobar 5!' }
-
+    assert false
     assert_response :success
   end
 end
