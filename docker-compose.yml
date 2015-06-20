@@ -1,9 +1,9 @@
 db:
-  image: 54.175.73.66:5000/database:latest
+  image: 52.7.171.102:5000/database:latest
   ports:
     - "5432"
 backend:
-  image: 54.175.73.66:5000/backend:latest
+  image: 52.7.171.102:5000/backend:latest
   ports:
     - "3000:3000"
   links:
