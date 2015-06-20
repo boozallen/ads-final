@@ -39,7 +39,7 @@ module.exports = function (grunt) {
         tasks: ['wiredep']
       },
       js: {
-        files: ['<%= yeoman.app %>/scripts/{,*/}*.js'],
+        files: ['<%= yeoman.app %>/{,*/}*.js'],
         tasks: ['newer:jshint:all'],
         options: {
           livereload: '<%= connect.options.livereload %>'
@@ -98,7 +98,7 @@ module.exports = function (grunt) {
       },
       test: {
         options: {
-          port: 9001,
+          port: 9000,
           middleware: function (connect) {
             return [
               connect.static('.tmp'),
@@ -112,6 +112,27 @@ module.exports = function (grunt) {
           }
         }
       },
+      prod: {
+        options: {
+          port: 9000,
+          hostname: '0.0.0.0',
+          middleware: function (connect) {
+              return [
+                  modRewrite(['^[^\\.]*$ /index.html [L]']),
+                  connect.static('.tmp'),
+                  connect().use(
+                      '/bower_components',
+                      connect.static('./bower_components')
+                  ),
+                  connect.static(appConfig.app),
+                  connect().use(
+                    '/docs/',
+                    connect.static(appConfig.docs)
+                  )
+              ];
+          }
+        }
+      },
       dist: {
         options: {
           open: true,
@@ -119,7 +140,28 @@ module.exports = function (grunt) {
           livereload: false,
           hostname: '0.0.0.0'
         }
-      }
+      },
+      dev: {
+        options: {
+          port: 9000,
+          hostname: '0.0.0.0',
+          middleware: function (connect) {
+              return [
+                  modRewrite(['^[^\\.]*$ /index.html [L]']),
+                  connect.static('.tmp'),
+                  connect().use(
+                      '/bower_components',
+                      connect.static('./bower_components')
+                  ),
+                  connect.static(appConfig.app),
+                  connect().use(
+                    '/docs/',
+                    connect.static(appConfig.docs)
+                  )
+              ];
+          }
+        }
+      },
     },
 
     // Make sure code styles are up to par and there are no obvious mistakes
@@ -218,7 +260,7 @@ module.exports = function (grunt) {
         cssDir: '.tmp/styles',
         generatedImagesDir: '.tmp/images/generated',
         imagesDir: '<%= yeoman.app %>/images',
-        javascriptsDir: '<%= yeoman.app %>/scripts',
+        javascriptsDir: '<%= yeoman.app %>',
         fontsDir: '<%= yeoman.app %>/styles/fonts',
         importPath: './bower_components',
         httpImagesPath: '/images',
@@ -244,7 +286,7 @@ module.exports = function (grunt) {
     filerev: {
       dist: {
         src: [
-          '<%= yeoman.dist %>/scripts/{,*/}*.js',
+          '<%= yeoman.dist %>/{,*/}*.js',
           '<%= yeoman.dist %>/styles/{,*/}*.css',
           '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
           '<%= yeoman.dist %>/styles/fonts/*'
@@ -410,6 +452,33 @@ module.exports = function (grunt) {
           src: ['generated/*']
         }]
       },
+      prod: {
+        files: [{
+          expand: true,
+          dot: true,
+          cwd: '<%= yeoman.app %>',
+          dest: '<%= yeoman.dist %>',
+          src: [
+            '*.{ico,png,txt}',
+            '.htaccess',
+            '*.html',
+            'views/{,*/}*.html',
+            'images/{,*/}*.{webp}',
+            'styles/fonts/{,*/}*.*'
+          ]
+        }, {
+          expand: true,
+          dot: true,
+          cwd: './bower_components/font-awesome/fonts',
+          dest: '<%= yeoman.dist %>/styles/fonts',
+          src: [ '**' ]
+        }, {
+          expand: true,
+          cwd: '.tmp/images',
+          dest: '<%= yeoman.dist %>/images',
+          src: ['generated/*']
+        }]
+      },
       styles: {
         expand: true,
         cwd: '<%= yeoman.app %>/styles',
@@ -444,7 +513,7 @@ module.exports = function (grunt) {
 
 
   grunt.registerTask('serve', 'Compile then start a connect web server', function (target) {
-    if (target === 'dist') {
+    if (target === 'prod') {
       return grunt.task.run(['build', 'connect:dist:keepalive']);
     }
 
@@ -463,6 +532,35 @@ module.exports = function (grunt) {
     grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
     grunt.task.run(['serve:' + target]);
   });
+
+  grunt.registerTask('dev', [
+    'clean:server',
+    'wiredep',
+    'ngdocs',
+    'concurrent:server',
+    'autoprefixer:server',
+    'connect:dev',
+    'watch'
+  ]);
+
+  grunt.registerTask('prod', [
+    'clean:dist',
+    'wiredep',
+    'ngdocs',
+    'useminPrepare',
+    'concurrent:dist',
+    'autoprefixer',
+    'concat',
+    'ngAnnotate',
+    'copy:prod',
+    'cdnify',
+    'cssmin',
+    'uglify',
+    'filerev',
+    'usemin',
+    'htmlmin',
+    'connect:dist:keepalive'
+  ]);
 
   grunt.registerTask('test', [
     'clean:server',
