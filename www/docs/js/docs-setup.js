@@ -14,6 +14,15 @@ NG_DOCS={
     },
     {
       "section": "api",
+      "id": "gapFront.constant:CONSTANTS",
+      "shortName": "CONSTANTS",
+      "type": "function",
+      "moduleName": "gapFront",
+      "shortDescription": "CONSTANTS",
+      "keywords": "api config constant constants file function gapfront"
+    },
+    {
+      "section": "api",
       "id": "gapFront.controller:AboutCtrl",
       "shortName": "AboutCtrl",
       "type": "function",
