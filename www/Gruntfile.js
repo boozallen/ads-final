@@ -73,7 +73,7 @@ module.exports = function (grunt) {
       options: {
         port: 9000,
         // Change this to '0.0.0.0' to access the server from outside.
-        hostname: '0.0.0.0',
+        hostname: 'localhost',
         livereload: 35729
       },
       livereload: {
@@ -116,17 +116,8 @@ module.exports = function (grunt) {
         options: {
           open: true,
           base: '<%= yeoman.dist %>',
-          middleware: function (connect) {
-              return [
-                  modRewrite(['^[^\\.]*$ /index.html [L]']),
-                  connect.static('.tmp'),
-                  connect().use(
-                      '/bower_components',
-                      connect.static('./bower_components')
-                  ),
-                  connect.static(appConfig.app)
-              ];
-          }
+          livereload: false,
+          hostname: '0.0.0.0'
         }
       }
     },
@@ -408,8 +399,9 @@ module.exports = function (grunt) {
           ]
         }, {
           expand: true,
-          cwd: '<%= yeoman.app %>/bower_components/font-awesome/fonts',
-          dest: '<%= yeoman.dist %>/bower_components/font-awesome/fonts',
+          dot: true,
+          cwd: './bower_components/font-awesome/fonts',
+          dest: '<%= yeoman.dist %>/styles/fonts',
           src: [ '**' ]
         }, {
           expand: true,

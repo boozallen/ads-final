@@ -1,12 +1,2 @@
-== README
-
-Rails Skelton 
-
-Very simple RailsApi application.
-
-Routes: /api/v1/foobar[/:id]
-
-Test with:
-
-rake test 
-
+# ads-final
+[![Build Status](http://52.7.229.22:8080/job/production-backend-api/badge/icon)](http://52.7.229.22:8080/job/production-backend-api/)

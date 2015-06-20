@@ -20,7 +20,7 @@ RUN bower install --allow-root
 COPY package.json /usr/src/app/client/
 RUN npm install
 COPY Gruntfile.js /usr/src/app/client/
-CMD grunt serve --force
+CMD grunt serve:dist
 COPY . /usr/src/app/client
 EXPOSE 9000
 
