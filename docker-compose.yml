@@ -1,5 +1,5 @@
 db:
-  image: postgres
+  image: 54.175.73.66:5000/database:latest
   ports:
     - "5432"
 backend:
