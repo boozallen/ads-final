@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "dependencies": {
     "connect-modrewrite": "^0.8.1",
-    "grunt-contrib-livereload": "^0.1.2"
+    "grunt-contrib-livereload": "^0.1.2",
+    "grunt-ngdocs": "^0.2.7"
   },
   "repository": {},
   "devDependencies": {

@@ -16,10 +16,13 @@ module.exports = function (grunt) {
   require('time-grunt')(grunt);
 
   var modRewrite = require('connect-modrewrite');
+  grunt.loadNpmTasks('grunt-ngdocs');
+
 
   // Configurable paths for the application
   var appConfig = {
     app: require('./bower.json').appPath || 'app',
+    docs: require('./bower.json').docPath || 'docs',
     dist: 'dist'
   };
 
@@ -84,7 +87,11 @@ module.exports = function (grunt) {
                       '/bower_components',
                       connect.static('./bower_components')
                   ),
-                  connect.static(appConfig.app)
+                  connect.static(appConfig.app),
+                  connect().use(
+                    '/docs/',
+                    connect.static(appConfig.docs)
+                  )
               ];
           }
         }
@@ -365,6 +372,17 @@ module.exports = function (grunt) {
       }
     },
 
+    // ng-docs is a Grunt plugin to create a documentation like AngularJS 
+    ngdocs: {
+      all: ['app/scripts/**/*.js'],
+      options: {
+        dest: 'docs',
+        html5Mode: true,
+        title: 'Front End Documentation',
+        startPage: '/'
+      }
+    },
+
     // Replace Google CDN references
     cdnify: {
       dist: {
@@ -441,6 +459,7 @@ module.exports = function (grunt) {
     grunt.task.run([
       'clean:server',
       'wiredep',
+      'ngdocs',
       'concurrent:server',
       'autoprefixer:server',
       'connect:livereload',
@@ -456,6 +475,7 @@ module.exports = function (grunt) {
   grunt.registerTask('test', [
     'clean:server',
     'wiredep',
+    'ngdocs',
     'concurrent:test',
     'autoprefixer',
     'connect:test',
@@ -465,6 +485,7 @@ module.exports = function (grunt) {
   grunt.registerTask('build', [
     'clean:dist',
     'wiredep',
+    'ngdocs',
     'useminPrepare',
     'concurrent:dist',
     'autoprefixer',
