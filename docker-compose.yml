@@ -3,7 +3,7 @@ db:
   ports:
     - "5432"
 backend:
-  image: backend:latest
+  image: 54.175.73.66:5000/backend:latest
   ports:
     - "3000:3000"
   links:
