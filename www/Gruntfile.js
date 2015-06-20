@@ -405,7 +405,7 @@ module.exports = function (grunt) {
       }
     },
 
-    // ng-docs is a Grunt plugin to create a documentation like AngularJS 
+    // ng-docs is a Grunt plugin to create a documentation like AngularJS
     ngdocs: {
       all: ['app/scripts/**/*.js'],
       options: {
@@ -442,8 +442,14 @@ module.exports = function (grunt) {
         }, {
           expand: true,
           dot: true,
+          cwd: './bower_components/bootstrap-sass/assets/fonts',
+          dest: '<%= yeoman.dist %>/fonts',
+          src: [ '**' ]
+        }, {
+          expand: true,
+          dot: true,
           cwd: './bower_components/font-awesome/fonts',
-          dest: '<%= yeoman.dist %>/styles/fonts',
+          dest: '<%= yeoman.dist %>/fonts/font-awesome',
           src: [ '**' ]
         }, {
           expand: true,

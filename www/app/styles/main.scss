@@ -1,8 +1,8 @@
 
 
 // bower:scss
+@import "bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
-
-$fa-font-path: '/styles/fonts';
-
+$fa-font-path: '/fonts/font-awesome';
+@import 'style.css';
