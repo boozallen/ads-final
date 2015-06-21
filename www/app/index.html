@@ -25,15 +25,15 @@
       <![endif]-->
       <div ng-controller="HeaderCtrl" ng-include src="'features/header/header.html'"></div>
 
-      <div class="container">
+      <div class="col-md-8 col-md-offset-2">
         <div ng-view=""></div>
-        <br></br>
-        <div ng-include src="'features/chart/chart.html'">
+        <br/>
+        <div class="spacer" ng-include src="'features/chart/chart.html'">
       </div>
 
       <div class="footer">
         <div class="container">
-          <p><span class="glyphicon glyphicon-heart"></span> from the Booz Allen Hamilton team</p>
+          <p><span class="fa fa-heart"></span> from the Booz Allen Hamilton team</p>
         </div>
       </div>
     </div>
