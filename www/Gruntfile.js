@@ -206,7 +206,7 @@ module.exports = function (grunt) {
       },
       server: {
         options: {
-          map: true,
+          map: true
         },
         files: [{
           expand: true,

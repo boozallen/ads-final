@@ -1,31 +1,26 @@
 <div>
-  <div class="col-md-12 page-header">
-    <div class="col-sm-offset-9">
-      <ul class="breadcrumb">
-        <li><a href="">Home</a></li>
-        <li><a href="">Drug Search</a></li>
-      </ul>
-
-    </div>
-  </div>
-
-  <div>
-
-  </div>
   <br>
-  <div class="well spacer-2x">
+  <div class="row well spacer-2x">
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
     aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
   </div>
-  <form>
-    <div class="input-group col-md-6 col-md-offset-3 spacer">
-      <input type="text" class="form-control" placeholder="search" id="searchInput">
-      <div class="input-group-btn">
-        <button class="btn btn-default" type="button">Search</button>
+  <div class="row">
+    <form>
+      <div class="input-group col-md-6 col-md-offset-3 spacer">
+        <input type="text" class="form-control" placeholder="search" id="searchInput" ng-model="search.text">
+        <div class="input-group-btn">
+          <button class="btn btn-default" type="button">Search</button>
+        </div>
       </div>
-    </div>
-  </form>
+    </form>
+  </div>
+
+  <br>
+  <button type="button" class="btn btn-success" data-animation="am-fade" data-placement="right" bs-popover="popover">popover from right<br><small>(am-fade)</small></button><br><br>
+  <div class="well" ng-show="search.text" data-animation="am-fade">
+  <h3 align="center">Searching for: {{search.text}}</h3>
+  </div>
 
   <div class="col-lg-12 well" style="margin-top:5em;">
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
