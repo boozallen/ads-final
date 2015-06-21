@@ -9,6 +9,8 @@
  */
 angular.module('gapFront')
   .controller('MainCtrl', function ($scope, Restangular, CONSTANTS) {
+    $scope.popover = {title: 'Title', content: 'Hello Popover. This is a multiline message!'};
+
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
