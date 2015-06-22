@@ -8,9 +8,9 @@
  * Controller of the gapFront
  */
 angular.module('gapFront')
-  .controller('MainCtrl', function ($scope, APIService) {
+  .controller('MainCtrl', function ($scope, APIService, IntegrationService) {
     $scope.drugs = [];
-    $scope.selectedDrug = '';
+    $scope.selectedDrug = {};
 
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
@@ -47,6 +47,16 @@ angular.module('gapFront')
       });
       return $scope.drugs;
     };
+
+    $scope.searchDrugEvents = function(){
+      var query = 'patient.drug.medicinalproduct:'+$scope.selectedDrug.brand_name;
+      console.log(query);
+      APIService.aggregateDrugEvent(query,'patient.reaction.reactionmeddrapt.exact').then(function(resp){
+        IntegrationService.callIntegrationMethod('initChart',{results:resp.results});
+      },function(){
+        console.log('error!');
+      });
+    }
 
 
   });
