@@ -15,12 +15,11 @@ angular.module('gapFront')
       'Karma'
     ];
 
-    function initChart(params){
-      var results = params.results;
-    }
+    var  initChart = function(params){
+      console.log(params);
+      var data = params.results;
+    };
 
     IntegrationService.registerIntegrationMethod('initChart', initChart);
 
-    
-    
   });

@@ -16,7 +16,8 @@ angular.module('gapFront')
     }
 
     function callIntegrationMethod(name,params){
-      integrationMethods[name](params);
+      var func = integrationMethods[name];
+      func(params);
     }
 
     return {
