@@ -9,6 +9,7 @@ gem 'rails-api'
 group :development, :test do
   gem 'spring'
   gem 'rubocop'
+  gem 'rubocop-checkstyle_formatter'
   gem 'brakeman'
   gem 'rspec-rails', '~> 3.0'
 end
