@@ -24,26 +24,26 @@ angular.module('gapFront')
       return drug.get('label.json', params);
     }
 
-    function queryDrugEvent(query, skip, limit, callback, error){
+    function queryDrugEvent(query, skip, limit){
       var params = {};
       if(query) params.search = query;
       if(skip) params.skip = skip;
       if(limit) params.limit = limit;
-      drug.get('event.json', params).then(callback, error);
+      return drug.get('event.json', params);
     }
 
-    function aggregateDrugLabel(query, aggregationField, callback, error){
+    function aggregateDrugLabel(query, aggregationField){
       var params = {};
       if(query) params.search = query;
       if(aggregationField) params.count = aggregationField;
-      drug.get('label.json', params).then(callback, error);
+      return drug.get('label.json', params);
     }
 
-    function aggregateDrugEvent(query, aggregationField, callback, error){
+    function aggregateDrugEvent(query, aggregationField){
       var params = {};
       if(query) params.search = query;
       if(aggregationField) params.count = aggregationField;
-      drug.get('event.json', params).then(callback, error);
+      return drug.get('event.json', params);
     }
 
     return {

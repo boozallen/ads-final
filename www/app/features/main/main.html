@@ -9,7 +9,7 @@
         <input type="text" class="form-control" ng-model="search_text"
                placeholder="Search" ng-change="searchDrugs()">
         <div class="input-group-btn">
-          <button class="btn btn-default" type="button" ng-click="searchDrugs()"><i class="fa fa-search"></i></button>
+          <button class="btn btn-default" type="button" ng-click="searchDrugEvents()"><i class="fa fa-search"></i></button>
         </div>
 
       </div>
@@ -25,6 +25,7 @@
     </form>
 
   </div>
+
   <div class="row well spacer" ng-show="selectedDrug.brand_name">
     <div class="col-md-6 col-md-offset-3">
       <h2>Drug: {{selectedDrug.brand_name}}</h2>
@@ -35,7 +36,6 @@
     </div>
   </div>
   <br>
-  <h5 align="center">What are Adverse Reports?</h5>
 </div>
 
 <section id="events-reports" class="features">
