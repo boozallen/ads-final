@@ -34,4 +34,11 @@ angular.module('gapFront')
       })
     }
 
+
+    $scope.drugs = [
+      'Advil',
+      'Xanax',
+      'Diarrhea'
+    ];
+
   });
