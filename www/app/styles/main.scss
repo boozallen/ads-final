@@ -27,3 +27,64 @@ $fa-font-path: '/fonts/font-awesome';
 .spacer-bottom-2x {
   margin-bottom: 6em;
 }
+
+
+
+#rightmost {
+  text-align: right;
+  font-size: 20px;
+}
+
+#leftmost {
+  font-size: 20px;
+  text-align: left;
+}
+
+#centermost {
+  text-align: center;
+}
+
+#decorative_bar {
+  background-color: #bcbd22;
+  height: 10px;
+}
+
+.bar rect {
+  fill: #1f77b4;
+  shape-rendering: crispEdges; 
+}
+
+.nbar rect {
+  fill: #7f7f7f;
+  shape-rendering: crispEdges; 
+  opacity: 0.5;
+}
+
+.axis {
+  shape-rendering: crispEdges;
+}
+
+.x_axis path {
+  fill: none;
+  stroke: white;
+}
+
+.x_axis line {
+  stroke: white;
+  stroke-opacity: 1;
+}
+
+.y_axis path {
+  stroke: white;
+  fill: none;
+}
+
+#title {
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 26px;
+
+}
