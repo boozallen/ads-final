@@ -8,9 +8,11 @@
  * Controller of the gapFront
  */
 angular.module('gapFront')
-  .controller('MainCtrl', function ($scope, APIService) {
+  .controller('MainCtrl', function ($scope, APIService, IntegrationService) {
     $scope.drugs = [];
-    $scope.selectedDrug = '';
+    $scope.selectedDrug = {};
+
+    $scope.searchText = '';
 
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
@@ -18,35 +20,53 @@ angular.module('gapFront')
       'Karma'
     ];
 
-    $scope.search = {text:''};
+    $scope.setSelectedDrug = function(drug) {
+      $scope.selectedDrug = drug;
+      $scope.drugs = [];
+    };
 
-    $scope.searchDrugs = function(viewValue){
-      console.log($scope.selectedDrug);
+    $scope.searchDrugs = function() {
       console.log('searchDrugs');
-      var text = viewValue;
+      var text = $scope.searchText;
       //text = text.replace(' ','+');
-      var query = 'openfda.generic_name:'+text+' openfda.brand_name:'+text+' openfda.substance_name:'+text;
-      console.log(query);
-      APIService.queryDrugLabel(query,0,10).then(function(resp){
+
+      if (text) {
+        var query = 'openfda.generic_name:' + text + ' openfda.brand_name:' + text + ' openfda.substance_name:' + text;
+        console.log(query);
+        APIService.queryDrugLabel(query, 0, 10).then(function (resp) {
+          $scope.drugs = [];
+          for (var i in resp.results) {
+            if (resp.results[i]['openfda']['brand_name']){
+              console.log(resp.results[i]);
+              var drug = {
+                brand_name: resp.results[i]['openfda']['brand_name'][0],
+                generic_name: resp.results[i]['openfda']['generic_name'][0],
+                substance_name: resp.results[i]['openfda']['substance_name'] ? resp.results[i]['openfda']['substance_name'][0] : '',
+                manufacturer_name: resp.results[i]['openfda']['manufacturer_name'][0],
+                object: resp.results[i]
+              };
+            }
+            $scope.drugs.push(drug);
+          }
+          console.log($scope.drugs);
+          return $scope.drugs;
+        }, function () {
+          console.log('error!');
+        });
+      } else {
         $scope.drugs = [];
-
-        for (var i in resp.results) {
-          var drug = {
-            brand_name: resp.results[i]['openfda']['brand_name'][0],
-            generic_name: resp.results[i]['openfda']['generic_name'][0],
-            substance_name: resp.results[i]['openfda']['substance_name'][0],
-            manufacturer_name: resp.results[i]['openfda']['manufacturer_name'][0]
-          };
-
-          $scope.drugs.push(drug);
-        }
-        console.log($scope.drugs);
-        return $scope.drugs;
-      },function(){
-        console.log('error!');
-      });
-      return $scope.drugs;
+      }
     };
 
 
+    $scope.searchDrugEvents = function(){
+      var query = 'patient.drug.medicinalproduct:'+$scope.selectedDrug.brand_name;
+      console.log(query);
+      APIService.aggregateDrugEvent(query,'patient.reaction.reactionmeddrapt.exact').then(function(resp){
+        IntegrationService.callIntegrationMethod('initChart',{results:resp.results});
+      },function(){
+        console.log('error!');
+      });
+      return true;
+    }
   });

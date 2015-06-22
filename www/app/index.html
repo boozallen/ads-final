@@ -31,8 +31,8 @@
       <div class="">
         <div ng-view=""></div>
         <br/>
-        <div class="spacer" ng-include src="'features/chart/chart.html'"></div>
-        
+        <div ng-controller= "ChartCtrl" class="spacer" ng-include src="'features/chart/chart.html'"></div>
+
       </div>
 
       <div class="footer navbar-fixed-bottom spacer-3x">
@@ -75,6 +75,7 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="app.js"></script>
         <script src="features/common/APIService.js"></script>
+        <script src="features/common/IntegrationService.js"></script>
         <script src="features/main/main.js"></script>
         <script src="features/header/header.js"></script>
         <script src="features/about/about.js"></script>
