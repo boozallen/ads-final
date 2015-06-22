@@ -20,4 +20,7 @@ angular.module('gapFront')
     }
 
     IntegrationService.registerIntegrationMethod('initChart', initChart);
+
+    
+    
   });
