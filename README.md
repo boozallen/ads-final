@@ -4,7 +4,7 @@
 This is an awesome open-source project leveraging data provided by the FDA.
  
  Continuous Deployment:
-Jenkins Server: http://52.0.92.86/
+Jenkins Server: http://52.0.92.86:8080/
 
 Development Branch Server: http://52.4.69.219:9000/
 
