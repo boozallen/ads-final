@@ -6,15 +6,24 @@
   <div class="row">
     <form>
       <div class="input-group col-md-6 col-md-offset-3 spacer-2x">
-        <input type="text" class="form-control" ng-model="selectedDrug"
-               bs-options="drug as drug.brand_name for drug in searchDrugs($viewValue)"
-               placeholder="Search" bs-typeahead data-trigger="focus">
+        <input type="text" class="form-control" ng-model="search_text"
+               placeholder="Search" ng-change="searchDrugs()">
         <div class="input-group-btn">
           <button class="btn btn-default" type="button" ng-click="searchDrugs()"><i class="fa fa-search"></i></button>
         </div>
 
       </div>
+      <div class="col-md-6 col-md-offset-3" ng-show="drugs">
+        <div ng-class="!drugs.length==0?'dropdown clearfix open':'dropdown clearfix'">
+          <ul class="dropdown-menu" style="width: 100%">
+            <li ng-repeat="drug in drugs">
+              <a href='#' ng-click="setSelectedDrug(drug)">{{drug.brand_name}}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </form>
+
   </div>
   <div class="row well spacer" ng-show="selectedDrug.brand_name">
     <div class="col-md-6 col-md-offset-3">
