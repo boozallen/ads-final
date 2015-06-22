@@ -6,10 +6,11 @@
   <div class="row">
     <form>
       <div class="input-group col-md-6 col-md-offset-3 spacer-2x">
-        <input type="text" class="form-control" ng-model="selectedDrug" bs-options="drug for drug in drugs" 
-            placeholder="Search" bs-typeahead  data-trigger="focus">
+        <input type="text" class="form-control" ng-model="search.text"
+               bs-options="drug as drug.brand_name for drug in searchDrugs($viewValue)"
+               placeholder="Search" bs-typeahead data-trigger="focus">
         <div class="input-group-btn">
-          <button class="btn btn-default" type="button" ng-click="searchDrugs()"><i class="fa fa-search"></i> Search</button>
+          <button class="btn btn-default" type="button" ng-click="searchDrugs()"><i class="fa fa-search"></i></button>
         </div>
       </div>
     </form>

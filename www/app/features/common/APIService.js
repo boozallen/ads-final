@@ -21,7 +21,7 @@ angular.module('gapFront')
         skip:skip,
         limit:limit
       };
-      drug.get('label.json', params).then(callback, error);
+      return drug.get('label.json', params);
     }
 
     function queryDrugEvent(query, skip, limit, callback, error){

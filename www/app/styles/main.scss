@@ -27,3 +27,5 @@ $fa-font-path: '/fonts/font-awesome';
 .spacer-bottom-2x {
   margin-bottom: 6em;
 }
+
+input + .typeahead.ng-hide { display: block !important; visibility: hidden !important; overflow: hidden; }
