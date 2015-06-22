@@ -7,6 +7,7 @@ describe('Controller: MainCtrl', function () {
 
   var MainCtrl,
     scope;
+  var wait = true;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
@@ -19,4 +20,13 @@ describe('Controller: MainCtrl', function () {
   it('should attach a list of awesomeThings to the scope', function () {
     expect(scope.awesomeThings.length).toBe(3);
   });
+
+
+  it('should add to the list of adverse events if a drug searched', function(){
+      scope.selectedDrug = 'advil';
+      setTimeout(function() {
+        expect(scope.searchDrugEvents()).toBeTruthy();
+      }, 5000);
+    }
+  )
 });
