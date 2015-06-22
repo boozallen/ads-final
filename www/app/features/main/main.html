@@ -1,34 +1,77 @@
-<div>
-  <br>
-  <div class="row well spacer-2x">
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+<div style="background-image:url('http://placehold.it/920x265'); margin-top:4%; background-size:100% auto; padding-bottom:10%;">
+  <div class="row">
+    <br></br>
+  <h3 align="center">ENTER A DRUG NAME TO VIEW ADVERSE EVENT REPORT.</h3>
   </div>
   <div class="row">
     <form>
-      <div class="input-group col-md-6 col-md-offset-3 spacer">
-        <input type="text" class="form-control" placeholder="search" id="searchInput" ng-model="search.text">
+      <div class="input-group col-md-6 col-md-offset-3 spacer-2x">
+        <input type="text" class="form-control" ng-model="searchText" id="searchValue"
+               placeholder="Search" ng-change="searchDrugs()">
         <div class="input-group-btn">
-          <button class="btn btn-default" type="button">Search</button>
+          <button class="btn btn-default" type="button" ng-click="searchDrugEvents()"><i class="fa fa-search"></i></button>
+        </div>
+
+      </div>
+      <div class="col-md-6 col-md-offset-3" ng-show="drugs">
+        <div ng-class="!drugs.length==0?'dropdown clearfix open':'dropdown clearfix'">
+          <ul class="dropdown-menu" style="width: 100%">
+            <li ng-repeat="drug in drugs track by $index">
+              <a href='#' ng-click="setSelectedDrug(drug)">{{drug.brand_name}}</a>
+            </li>
+          </ul>
         </div>
       </div>
     </form>
+
   </div>
 
+  <div class="row well spacer" ng-show="selectedDrug.brand_name">
+    <div class="col-md-6 col-md-offset-3">
+      <h2>Drug: {{selectedDrug.brand_name}}</h2>
+      <ul>
+        <li>Manufacturer: {{selectedDrug.manufacturer_name}}</li>
+        <li>Substance name: {{selectedDrug.substance_name}}</li>
+      </ul>
+    </div>
+  </div>
   <br>
-  <button type="button" class="btn btn-success" data-animation="am-fade" data-placement="right" bs-popover="popover">popover from right</button><br><br>
-  <div class="well" ng-show="search.text" data-animation="am-fade">
-  <h3 align="center">Searching for: {{search.text}}</h3>
-  </div>
-
-  <div class="col-lg-12 well" style="margin-top:5em;">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Lorem ipsum dolor sit amet,
-      consectetur adipiscing elit, sed do eiusmod tempor
-      incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
-  </div>
-
+  <!--<div class="row well spacer" ng-if="selectedDrug.object.boxed_warning">-->
+    <!--<h3>Warnings</h3>-->
+  <!--</div>-->
+  <!--<div class="row well spacer" ng-if="selectedDrug.object.warnings">-->
+    <!--<h3>Warnings</h3>-->
+  <!--</div>-->
 </div>
+
+<section id="events-reports" class="features">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <div class="navy-line"></div>
+        <h1>Alprazolam (Xanax) Adverse Reactions</h1>
+        <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. </p>
+      </div>
+  </div>
+  <div class="row features-block">
+      <div class="col-lg-3 features-text wow fadeInLeft">
+        <small>Xanax</small>
+        <h2>Bottle </h2>
+        <p>Pill bottle picture</p>
+        <a href="" class="btn btn-primary">Learn more</a>
+      </div>
+      <div class="col-lg-6 text-center m-t-n-lg wow zoomIn">
+          <p>Side effects to XANAX Tablets, if they occur, are generally observed at the beginning of therapy and usually disappear upon continued medication. In the usual patient, the most frequent side effects are likely to be an extension of the pharmacological activity of alprazolam, eg, drowsiness or light-headedness.
+<br>
+The data cited in the two tables below are estimates of untoward clinical event incidence among patients who participated under the following clinical conditions: relatively short duration (ie, four weeks) placebo-controlled clinical studies with dosages up to 4 mg/day of XANAX (for the management of anxiety disorders or for the short-term relief of the symptoms of anxiety) and short-term (up to ten weeks) placebo-controlled clinical studies with dosages up to 10 mg/day of XANAX in patients with panic disorder, with or without agoraphobia.</p>
+      </div>
+      <div class="col-lg-3 features-text text-right wow fadeInRight">
+        <small>Xanax</small>
+        <h2>Label </h2>
+        <p>Pill label picture</p>
+        <a href="" class="btn btn-primary">Learn more</a>
+      </div>
+    </div>
+  </div>
+</section>
+

@@ -1,10 +1,12 @@
 <!doctype html>
-<html class="no-js">
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <meta name="author" content="">
+    <title>MINEMED</title>
     <base href="/">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
@@ -15,20 +17,22 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+
     <!-- endbuild -->
   </head>
-  <body ng-app="gapFront">
+  <body ng-app="gapFront" id="page-top">
 
-  <div class="container">
+  <div class="">
       <!--[if lt IE 7]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
       <![endif]-->
       <div ng-controller="HeaderCtrl" ng-include src="'features/header/header.html'"></div>
 
-      <div class="col-md-10 col-md-offset-1">
+      <div class="">
         <div ng-view=""></div>
         <br/>
-        <div class="spacer" ng-include src="'features/chart/chart.html'"></div>
+        <div ng-controller= "ChartCtrl" class="spacer" ng-include src="'features/chart/chart.html'"></div>
+
       </div>
 
       <div class="footer navbar-fixed-bottom spacer-3x">
@@ -70,12 +74,22 @@
     <!-- endbuild -->
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="app.js"></script>
+        <script src="features/common/APIService.js"></script>
+        <script src="features/common/IntegrationService.js"></script>
         <script src="features/main/main.js"></script>
         <script src="features/header/header.js"></script>
         <script src="features/about/about.js"></script>
         <script src="features/chart/chart.js"></script>
 
         <script src="constants.js"></script>
+
+
         <!-- endbuild -->
+        <script src="scripts/pace.min.js"></script>
+        <script src="scripts/classie.js"></script>
+        <script src="scripts/cbpAnimatedHeader.js"></script>
+        <script src="scripts/wow.min.js"></script>
+        <script src="scripts/inspinia.js"></script>
+
 </body>
 </html>
