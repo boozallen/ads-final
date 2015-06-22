@@ -12,6 +12,8 @@ angular.module('gapFront')
     $scope.drugs = [];
     $scope.selectedDrug = {};
 
+    $scope.searchText = ''
+
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -25,7 +27,7 @@ angular.module('gapFront')
 
     $scope.searchDrugs = function() {
       console.log('searchDrugs');
-      var text = $scope.search_text;
+      var text = $scope.searchText;
       //text = text.replace(' ','+');
 
       if (text) {
@@ -48,7 +50,6 @@ angular.module('gapFront')
         }, function () {
           console.log('error!');
         });
-        return $scope.drugs;
       } else {
         $scope.drugs = [];
       }
@@ -63,5 +64,6 @@ angular.module('gapFront')
       },function(){
         console.log('error!');
       });
+      return true;
     }
   });
