@@ -9,7 +9,7 @@
         <input type="text" class="form-control" ng-model="selectedDrug" bs-options="drug for drug in drugs" 
             placeholder="Search" bs-typeahead  data-trigger="focus">
         <div class="input-group-btn">
-          <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+          <button class="btn btn-default" type="button" ng-click="searchDrugs()"><i class="fa fa-search"></i> Search</button>
         </div>
       </div>
     </form>

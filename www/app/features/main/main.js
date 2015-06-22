@@ -8,14 +8,32 @@
  * Controller of the gapFront
  */
 angular.module('gapFront')
-  .controller('MainCtrl', function ($scope, Restangular, CONSTANTS) {
+  .controller('MainCtrl', function ($scope, APIService) {
     $scope.popover = {title: 'Title', content: 'Hello Popover. This is a multiline message!'};
+
+    $scope.results = [];
 
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
+    $scope.search = {text:''};
+
+    $scope.searchDrugs = function(){
+      console.log('searchDrugs');
+      var text = $scope.search.text;
+      //text = text.replace(' ','+');
+      var query = 'openfda.generic_name:'+text+' openfda.brand_name:'+text+' openfda.substance_name:'+text;
+      console.log(query);
+      APIService.queryDrugLabel(query,0,10,function(resp){
+        console.log(resp.results);
+        $scope.results = resp.results;
+      },function(){
+        console.log('error!');
+      })
+    }
+
 
     $scope.drugs = [
       'Advil',
@@ -23,14 +41,4 @@ angular.module('gapFront')
       'Diarrhea'
     ];
 
-$scope.selectedState = "";
-$scope.states = ["Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut","Delaware","Florida","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa","Kansas","Kentucky","Louisiana","Maine","Maryland","Massachusetts","Michigan","Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada","New Hampshire","New Jersey","New Mexico","New York","North Dakota","North Carolina","Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island","South Carolina","South Dakota","Tennessee","Texas","Utah","Vermont","Virginia","Washington","West Virginia","Wisconsin","Wyoming"];
-
-$scope.selectedAddress = "";
-
-    Restangular.setBaseUrl('mockJson/api/v1');
-		Restangular.all('medicineSearch.json').getList().then(function (response){
-			console.log(response);
-		});
-    // console.log(CONSTANTS.testUrl);
   });
