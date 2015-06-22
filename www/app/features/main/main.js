@@ -8,18 +8,30 @@
  * Controller of the gapFront
  */
 angular.module('gapFront')
-  .controller('MainCtrl', function ($scope, Restangular, CONSTANTS) {
+  .controller('MainCtrl', function ($scope, APIService) {
     $scope.popover = {title: 'Title', content: 'Hello Popover. This is a multiline message!'};
+
+    $scope.results = [];
 
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
-    Restangular.setBaseUrl('mockJson/api/v1');
-		Restangular.all('medicineSearch.json').getList().then(function (response){
-			console.log(response);
+    $scope.search = {text:''};
 
-		});
-    // console.log(CONSTANTS.testUrl);
+    $scope.searchDrugs = function(){
+      console.log('searchDrugs');
+      var text = $scope.search.text;
+      //text = text.replace(' ','+');
+      var query = 'openfda.generic_name:'+text+' openfda.brand_name:'+text+' openfda.substance_name:'+text;
+      console.log(query);
+      APIService.queryDrugLabel(query,0,10,function(resp){
+        console.log(resp.results);
+        $scope.results = resp.results;
+      },function(){
+        console.log('error!');
+      })
+    }
+
   });
