@@ -16,7 +16,7 @@
       <div class="col-md-6 col-md-offset-3" ng-show="drugs">
         <div ng-class="!drugs.length==0?'dropdown clearfix open':'dropdown clearfix'">
           <ul class="dropdown-menu" style="width: 100%">
-            <li ng-repeat="drug in drugs">
+            <li ng-repeat="drug in drugs track by $index">
               <a href='#' ng-click="setSelectedDrug(drug)">{{drug.brand_name}}</a>
             </li>
           </ul>
@@ -36,6 +36,12 @@
     </div>
   </div>
   <br>
+  <!--<div class="row well spacer" ng-if="selectedDrug.object.boxed_warning">-->
+    <!--<h3>Warnings</h3>-->
+  <!--</div>-->
+  <!--<div class="row well spacer" ng-if="selectedDrug.object.warnings">-->
+    <!--<h3>Warnings</h3>-->
+  <!--</div>-->
 </div>
 
 <section id="events-reports" class="features">
