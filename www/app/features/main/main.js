@@ -10,7 +10,7 @@
 angular.module('gapFront')
   .controller('MainCtrl', function ($scope, APIService) {
     $scope.drugs = [];
-    $scope.selectedDrug = {};
+    $scope.selectedDrug = '';
 
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
