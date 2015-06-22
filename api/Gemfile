@@ -10,6 +10,7 @@ group :development, :test do
   gem 'spring'
   gem 'rubocop'
   gem 'brakeman'
+  gem 'rspec-rails', '~> 3.0'
 end
 
 gem 'puma'
