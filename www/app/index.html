@@ -29,9 +29,11 @@
       <div ng-controller="HeaderCtrl" ng-include src="'features/header/header.html'"></div>
 
       <div class="">
-        <div ng-view=""></div>
+        <div ng-view></div>
         <br/>
         <div ng-controller= "ChartCtrl" class="spacer" ng-include src="'features/chart/chart.html'"></div>
+        <br/>
+        <div ng-controller= "LabelEffectsCtrl" class="spacer" ng-include src="'features/labelEffects/labelEffects.html'"></div>
 
       </div>
 
@@ -84,6 +86,7 @@
         <script src="features/about/about.js"></script>
         <script src="features/chart/chart.js"></script>
         <script src="features/chart/stacked.js"></script>
+        <script src="features/labelEffects/labelEffects.js"></script>
 
         <script src="constants.js"></script>
 

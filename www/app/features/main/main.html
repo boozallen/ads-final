@@ -1,8 +1,8 @@
-<section style="background-image:url('../assets/Landing_bg.jpg'); 
+<section style="background-image:url('../assets/Landing_bg.jpg');
 background-size:100% auto; padding-bottom:10%;">
 <img src="../assets/Main_logo.png" align="middle" class="img-responsive logoTitle" alt="Responsive image">
 <div class="row">
-  <br></br>
+  <br/>
   <p class="appTitle" align="center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pharetra sed nisi eu aliquam. Phasellus sit amet magna a metus bibendum efficitur. Ut maximus consequat arcu, eu aliquet sem volutpat ut. Aenean mollis interdum hendrerit. Suspendisse lacus erat, luctus sed condimentum sed, molestie aliquam magna. Vestibulum fringilla consectetur fringilla. Aenean maximus eros non odio mattis, ut tristique augue porta. In quis lacus at mi tincidunt vehicula quis sed erat.</p>
 </div>
 <div class="row">
@@ -11,7 +11,7 @@ background-size:100% auto; padding-bottom:10%;">
       <input type="text" class="form-control searchInput" ng-model="searchText" id="searchValue"
       placeholder="Search for a Medication" ng-change="searchDrugs()">
       <div class="input-group-btn">
-        <button class="btn searchButton searchInput" type="button" ng-click="searchDrugEvents()"><i class="fa fa-search searchIcon"></i></button>
+        <!--<button class="btn searchButton searchInput" type="button" ng-click="navigateTo('/labelEffects')"><i class="fa fa-search searchIcon"></i></button>-->
       </div>
 
     </div>
@@ -30,7 +30,7 @@ background-size:100% auto; padding-bottom:10%;">
 
 </section>
 
-<section id="events-reports" class="features" style="height: 100%;">
+<section id="events-reports" ng-show="selectedDrug" class="features" style="height: 100%;">
   <div class="container well" style="width:80%;">
     <div class="row">
       <div class="col-md-9">
@@ -49,7 +49,7 @@ background-size:100% auto; padding-bottom:10%;">
     </div>
   </div>
 </section>
-<!-- 
+<!--
     <div class="row features-block">
       <div class="col-lg-3 features-text wow fadeInLeft">
         <small>{{selectedDrug.brand_name}}</small>

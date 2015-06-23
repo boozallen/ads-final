@@ -17,18 +17,20 @@ angular.module('gapFront')
 
     IntegrationService.registerIntegrationMethod('initLabelEffects', initLabelEffects);
 
-    initLabelEffects();
+
 
     $scope.fetchDrugEffects = function(){
-      APIService.getDrugEffectApi().get($scope.selectedDrug).then(updateList,serviceError)
+      APIService.getDrugEffectApi().get($scope.selectedDrug.brand_name).then(updateList,serviceError)
     };
 
     function updateList(resp){
-
+      console.log(resp);
     }
 
     function serviceError(error){
       console.log(error);
     }
+
+    initLabelEffects();
 
   });

@@ -10,7 +10,7 @@
 angular.module('gapFront')
   .controller('MainCtrl', function ($scope, $anchorScroll, $location, $route, APIService, IntegrationService, DrugService) {
     $scope.drugs = [];
-    $scope.selectedDrug = {};
+    //$scope.selectedDrug;
 
     $scope.searchText = '';
 
@@ -30,6 +30,7 @@ angular.module('gapFront')
       $scope.drugs = [];
       DrugService.setSelectedDrug($scope.selectedDrug);
       IntegrationService.callIntegrationMethod('initChart',{});
+      IntegrationService.callIntegrationMethod('initLabelEffects',{});
       //searchDrugEvents();
       console.log($scope.drugs);
           $location.hash('events-reports');
@@ -98,5 +99,9 @@ angular.module('gapFront')
     function serviceError(error) {
       console.log(error);
     }
+
+    //$scope.navigateTo = function(path){
+    //  $location.path(path);
+    //}
 
   });
