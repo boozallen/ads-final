@@ -31,3 +31,5 @@ gem 'pg', '~> 0.18.2'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 gem 'dotenv-rails'
+
+gem 'rest-client'

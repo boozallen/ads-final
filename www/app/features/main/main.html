@@ -33,19 +33,16 @@ background-size:100% auto; padding-bottom:10%;">
 <section id="events-reports" ng-show="selectedDrug" class="features" style="height: 100%;">
   <div class="container well" style="width:80%;">
     <div class="row">
-      <div class="col-md-9">
         <br></br><br>
-        <h1>{{selectedDrug.substance_name}}&nbsp;({{selectedDrug.brand_name}}) General Information</h1>
+        <h1>{{selectedDrug.substance_name}}&nbsp;({{selectedDrug.brand_name}}) General In<!-- formation</h1>
         <br>
-        <h3>{{selectedDrug.object.package_label_principal_display_panel.toString()}}</h3>
+        <h3>{{selectedDrug.object.package_label_principal_display_panel.toString()}}</h3> -->
         <br>
-        <h3>{{selectedDrug.object.indications_and_usage.toString()}}</h3>
+        <h4>{{selectedDrug.object.indications_and_usage.toString()}}</h4>
         <br>
-        <h3>{{selectedDrug.object.dosage_and_administration.toString()}}</h3>
+        <h4>{{selectedDrug.object.dosage_and_administration}}</h4>
       </div>
-      <div class="col-md-3">
-        <img src='http://placehold.it/487x509'>
-      </div>
+
     </div>
   </div>
 </section>
