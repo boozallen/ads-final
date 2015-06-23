@@ -24,11 +24,10 @@ angular.module('gapFront')
 
     $scope.searchDrugEvents = function(){
       var query = 'patient.drug.medicinalproduct:'+$scope.selectedDrug.brand_name;
-      console.log(query);
       APIService.aggregateDrugEvent(query, 50, 'patient.reaction.reactionmeddrapt.exact').then(function(resp){
         $scope.setChartData(resp.results);
-      },function(){
-        console.log('error!');
+      },function(error){
+        console.log(error);
       });
       return true;
     };
@@ -36,7 +35,6 @@ angular.module('gapFront')
     $scope.setChartData = function(data){
       $scope.chart = data;
 
-      console.log(JSON.stringify($scope.chart));
       var hold = [];
       $scope.effects = [];
       var numbers = [];
@@ -45,8 +43,6 @@ angular.module('gapFront')
         $scope.effects.push($scope.chart[i].term);
         $scope.counts[0].data.push($scope.chart[i].count);
       }
-      console.log($scope.effects);
-      console.log($scope.counts);
 
       createChart();
       $scope.terms = $scope.chart;
@@ -54,7 +50,6 @@ angular.module('gapFront')
 
       //angular.element(document).ready();
       function createChart() {
-        console.log($('#container'));
 
           $('#container').highcharts({
             chart: {
