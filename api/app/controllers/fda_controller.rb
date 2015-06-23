@@ -1,10 +1,11 @@
 class FdaController < ApplicationController
+
   def index
-    render json: Fda.query
+    render json: {}
   end
 
   def show
-    render json: Fda.get(params[:id])
+    render json: drug
   end
 
   def update
@@ -14,5 +15,16 @@ class FdaController < ApplicationController
   end
 
   def create
+  end
+
+  private
+
+  def drug
+    @_drug = Fda.get params[:id]
+    adverse_reactions = (@_drug['adverse_reactions'] || @_drug['warnings'] || ['']).first
+    @_drug['effects'] = EFFECTS_LIST.select do |terms|
+      adverse_reactions.match terms[:medical_term]
+    end
+    @_drug
   end
 end
