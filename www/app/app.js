@@ -17,7 +17,8 @@ angular
     'ngSanitize',
     'ngTouch',
     'restangular',
-    'mgcrea.ngStrap'
+    'mgcrea.ngStrap',
+    'ui-rangeSlider'
   ])
   .config(function ($routeProvider, $locationProvider) {
     $routeProvider

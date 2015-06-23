@@ -20,6 +20,9 @@ angular.module('gapFront')
     $scope.outcome = "all";
     $scope.age = "all";
 
+    $scope.least=0;
+    $scope.greatest=100;
+
     var  initChart = function(params){
       $scope.selectedDrug = DrugService.getSelectedDrug();
       $scope.searchDrugEvents();
@@ -36,7 +39,6 @@ angular.module('gapFront')
       else if($scope.seriousness == 'serious_adverse_events'){
         query += ' AND serious:1';
       }
-      console.log($scope.seriousness);
 
       if($scope.outcome == 'fatal'){
         query += ' AND patient.reaction.reactionoutcome:5';
@@ -52,6 +54,10 @@ angular.module('gapFront')
       }
       else if($scope.outcome == 'unknown'){
         query += ' AND patient.reaction.reactionoutcome:6';
+      }
+
+      if(this.least > 0 || this.greatest < 100){
+        query += ' AND patient.patientonsetage:['+this.least+' TO ' + this.greatest + ']';
       }
 
       console.log(query);
