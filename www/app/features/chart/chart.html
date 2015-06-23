@@ -1,25 +1,44 @@
 <section class="features">
-  <div class="container">
+  <div class="">
 
-<div id="tooltip" class="hidden">
-    <p><span id="value">100</span>
-    </p>
-</div>
+    <div id="tooltip" class="hidden">
+      <p><span id="value">100</span>
+      </p>
+    </div>
 
 <!-- <div id="chart" style="text-align:center;"></div>
 </div>
 <br></br>
 <div stacked chart-data="salesData"></div> -->
 
-<!-- <div id="container" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
- -->  </div>
+<nav class="navbar navbar-default container">
+        <div class="">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a>View Data By:</a></li>
+              <li><a href>Product</a></li>
+              <li><a href>Gender</a></li>
+              <li><a href>Seriousness</a></li>
+              <li><a href>Reaction Outcome</a></li>
+              <li><a href>Age Range</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a>Date Range</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+      <br><br>
 
-  <br>
-  <ul>
-    <li ng-repeat="term in terms"> {{term.term}} </li>
-    </ul
+<div id="container" style="min-width: 310px; max-width: 1600px; height: 1000px; margin: 0 auto"></div>
+</div>
+
 </section>
-
-<script>
-
-</script>

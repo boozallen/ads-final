@@ -9,8 +9,20 @@
  */
 angular.module('gapFront')
   .service('APIService', function (Restangular) {
-    Restangular.setBaseUrl('https://api.fda.gov').setEncodeIds(false);
-    var drug = Restangular.all('drug');
+    var FDAService = Restangular.withConfig(function(RestangularConfigurer) {
+      RestangularConfigurer.setBaseUrl('https://api.fda.gov');
+    });
+
+    var railsService = Restangular.withConfig(function(RestangularConfigurer) {
+      RestangularConfigurer.setBaseUrl('http://52.4.69.219:3000/api/v1');
+    });
+
+    var pillboxService = Restangular.withConfig(function(RestangularConfigurer) {
+      RestangularConfigurer.setBaseUrl('http://pillbox.nlm.nih.gov/PHP/pillboxAPIService.php');
+    });
+
+
+    var drug = FDAService.all('drug');
     //var drugLabel = drug.all('label.json');
     //var drugEvent = drug.all('event.json');
 
@@ -32,24 +44,34 @@ angular.module('gapFront')
       return drug.get('event.json', params);
     }
 
-    function aggregateDrugLabel(query, aggregationField){
+    function aggregateDrugLabel(query, limit, aggregationField){
       var params = {};
       if(query) params.search = query;
+      if(limit) params.limit = limit;
       if(aggregationField) params.count = aggregationField;
       return drug.get('label.json', params);
     }
 
-    function aggregateDrugEvent(query, aggregationField){
+    function aggregateDrugEvent(query, limit, aggregationField){
       var params = {};
       if(query) params.search = query;
+      if(limit) params.limit = limit;
       if(aggregationField) params.count = aggregationField;
       return drug.get('event.json', params);
     }
+
+    function getDrugEffectApi(){
+      return railsService.all('drugs');
+    }
+
+
+
 
     return {
       queryDrugLabel:queryDrugLabel,
       queryDrugEvent:queryDrugEvent,
       aggregateDrugLabel:aggregateDrugLabel,
-      aggregateDrugEvent:aggregateDrugEvent
+      aggregateDrugEvent:aggregateDrugEvent,
+      getDrugEffectApi:getDrugEffectApi
     };
   });
