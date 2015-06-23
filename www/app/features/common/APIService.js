@@ -39,16 +39,18 @@ angular.module('gapFront')
       return drug.get('event.json', params);
     }
 
-    function aggregateDrugLabel(query, aggregationField){
+    function aggregateDrugLabel(query, limit, aggregationField){
       var params = {};
       if(query) params.search = query;
+      if(limit) params.limit = limit;
       if(aggregationField) params.count = aggregationField;
       return drug.get('label.json', params);
     }
 
-    function aggregateDrugEvent(query, aggregationField){
+    function aggregateDrugEvent(query, limit, aggregationField){
       var params = {};
       if(query) params.search = query;
+      if(limit) params.limit = limit;
       if(aggregationField) params.count = aggregationField;
       return drug.get('event.json', params);
     }
