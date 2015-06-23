@@ -16,7 +16,7 @@ angular.module('gapFront')
     ];
 
     var  initChart = function(params){
-      $scope.selectedDrug = DrugService.getSelectedDrug;
+      $scope.selectedDrug = DrugService.getSelectedDrug();
       $scope.searchDrugEvents();
     };
 
