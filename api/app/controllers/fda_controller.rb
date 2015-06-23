@@ -1,5 +1,4 @@
 class FdaController < ApplicationController
-
   def index
     render json: {}
   end
