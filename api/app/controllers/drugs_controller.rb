@@ -1,18 +1,11 @@
 class DrugsController < ApplicationController
-  def index
-    render json: Drugs.query
+  def get
+    respond_with drug
   end
 
-  def show
-    render json: Drugs.get(params[:id])
-  end
+  private
 
-  def update
-  end
-
-  def delete
-  end
-
-  def create
+  def drug
+    @_drug = Drug.find params[:id]
   end
 end

@@ -1,4 +1,4 @@
-class Drugs
+class Fda
   def self.query
     DATA
   end

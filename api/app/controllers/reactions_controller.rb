@@ -3,7 +3,7 @@ class ReactionsController < ApplicationController
   end
 
   def show
-    render json: Drugs.reactions(params[:drug_id])
+    render json: Fda.reactions(params[:drug_id])
   end
 
   def update
