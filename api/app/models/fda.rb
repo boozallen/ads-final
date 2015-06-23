@@ -4,7 +4,7 @@ class Fda
   end
 
   def self.get(id)
-    url = "https://api.fda.gov/drug/label.json?search=boxed_warning+patient.drug.medicinalproduct:#{id}"
+    url = "https://api.fda.gov/drug/label.json?search=boxed_warning+openfda.brand_name:#{id}"
     response = JSON.parse(RestClient.get(url))
     response['results'][0]['adverse_reactions'].to_s
   end
