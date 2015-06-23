@@ -1,15 +1,17 @@
-<div style="background-image:url('http://placehold.it/920x265'); margin-top:4%; background-size:100% auto; padding-bottom:10%;">
+<section style="background-image:url('../assets/Landing_bg.jpg');
+margin-top:4%; background-size:100% auto; padding-bottom:10%;">
+  <img src="../assets/Main_logo.png" align="middle" class="img-responsive logoTitle" alt="Responsive image">
   <div class="row">
     <br></br>
-  <h3 align="center">ENTER A DRUG NAME TO VIEW ADVERSE EVENT REPORT.</h3>
+    <p class="appTitle" align="center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pharetra sed nisi eu aliquam. Phasellus sit amet magna a metus bibendum efficitur. Ut maximus consequat arcu, eu aliquet sem volutpat ut. Aenean mollis interdum hendrerit. Suspendisse lacus erat, luctus sed condimentum sed, molestie aliquam magna. Vestibulum fringilla consectetur fringilla. Aenean maximus eros non odio mattis, ut tristique augue porta. In quis lacus at mi tincidunt vehicula quis sed erat.</p>
   </div>
   <div class="row">
     <form>
-      <div class="input-group col-md-6 col-md-offset-3 spacer-2x">
-        <input type="text" class="form-control" ng-model="searchText" id="searchValue"
-               placeholder="Search" ng-change="searchDrugs()">
+      <div class="input-group input-group-lg col-md-6 col-md-offset-3 spacer-2x">
+        <input type="text" class="form-control searchInput" ng-model="searchText" id="searchValue"
+        placeholder="Search for a Medication" ng-change="searchDrugs()">
         <div class="input-group-btn">
-          <!--<button class="btn btn-default" type="button" ng-click="searchDrugEvents()"><i class="fa fa-search"></i></button>-->
+          <button class="btn searchButton searchInput" type="button" ng-click="searchDrugEvents()"><i class="fa fa-search searchIcon"></i></button>
         </div>
 
       </div>
@@ -36,6 +38,7 @@
     </div>
   </div>
   <br>
+<<<<<<< HEAD
   <td class="column" style="width:50%;">
   <div class="well spacer" ng-if="selectedDrug.object.boxed_warning">
     <h3>Boxed Warnings</h3>
@@ -66,6 +69,15 @@
     <div>Hello!!!</div>
   </td>
 </div>
+=======
+  <!--<div class="row well spacer" ng-if="selectedDrug.object.boxed_warning">-->
+  <!--<h3>Warnings</h3>-->
+  <!--</div>-->
+  <!--<div class="row well spacer" ng-if="selectedDrug.object.warnings">-->
+  <!--<h3>Warnings</h3>-->
+  <!--</div>-->
+</section>
+>>>>>>> d8bcdab604be4751b750acc3618a530b75d68efc
 
 <section id="events-reports" class="features">
   <div class="container">
@@ -75,8 +87,8 @@
         <h1>{{selectedDrug.brand_name}}</h1>
         <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. </p>
       </div>
-  </div>
-  <div class="row features-block">
+    </div>
+    <div class="row features-block">
       <div class="col-lg-3 features-text wow fadeInLeft">
         <small>{{selectedDrug.brand_name}}</small>
         <h2>Bottle </h2>
@@ -84,17 +96,17 @@
         <a href="" class="btn btn-primary">Learn more</a>
       </div>
       <div class="col-lg-6 text-center m-t-n-lg wow zoomIn">
-          <p>Side effects to XANAX Tablets, if they occur, are generally observed at the beginning of therapy and usually disappear upon continued medication. In the usual patient, the most frequent side effects are likely to be an extension of the pharmacological activity of alprazolam, eg, drowsiness or light-headedness.
-<br>
-The data cited in the two tables below are estimates of untoward clinical event incidence among patients who participated under the following clinical conditions: relatively short duration (ie, four weeks) placebo-controlled clinical studies with dosages up to 4 mg/day of XANAX (for the management of anxiety disorders or for the short-term relief of the symptoms of anxiety) and short-term (up to ten weeks) placebo-controlled clinical studies with dosages up to 10 mg/day of XANAX in patients with panic disorder, with or without agoraphobia.</p>
-      </div>
-      <div class="col-lg-3 features-text text-right wow fadeInRight">
-        <small>Xanax</small>
-        <h2>Label </h2>
-        <p>Pill label picture</p>
-        <a href="" class="btn btn-primary">Learn more</a>
+        <p>Side effects to XANAX Tablets, if they occur, are generally observed at the beginning of therapy and usually disappear upon continued medication. In the usual patient, the most frequent side effects are likely to be an extension of the pharmacological activity of alprazolam, eg, drowsiness or light-headedness.
+          <br>
+          The data cited in the two tables below are estimates of untoward clinical event incidence among patients who participated under the following clinical conditions: relatively short duration (ie, four weeks) placebo-controlled clinical studies with dosages up to 4 mg/day of XANAX (for the management of anxiety disorders or for the short-term relief of the symptoms of anxiety) and short-term (up to ten weeks) placebo-controlled clinical studies with dosages up to 10 mg/day of XANAX in patients with panic disorder, with or without agoraphobia.</p>
+        </div>
+        <div class="col-lg-3 features-text text-right wow fadeInRight">
+          <small>Xanax</small>
+          <h2>Label </h2>
+          <p>Pill label picture</p>
+          <a href="" class="btn btn-primary">Learn more</a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 

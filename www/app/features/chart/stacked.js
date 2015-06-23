@@ -4,7 +4,7 @@ angular.module('gapFront').directive("stacked", function($window) {
     template: "<svg width='850' height='200'></svg>",
     link: function(scope, elem, attrs){
 
-      var salesDataToPlot=scope[attrs.chartData];
+      var chart=scope[attrs.chartData];
            var padding = 20;
            var pathClass="path";
            var xScale, yScale, xAxisGen, yAxisGen, lineFun;
@@ -16,11 +16,11 @@ angular.module('gapFront').directive("stacked", function($window) {
            function setChartParameters(){
 
                xScale = d3.scale.linear()
-                   .domain([salesDataToPlot[0].hour, salesDataToPlot[salesDataToPlot.length-1].hour])
+                   .domain([chart[0].hour, chart[chart.length-1].hour])
                    .range([padding + 5, rawSvg.attr("width") - padding]);
 
                yScale = d3.scale.linear()
-                   .domain([0, d3.max(salesDataToPlot, function (d) {
+                   .domain([0, d3.max(chart, function (d) {
                        return d.sales;
                    })])
                    .range([rawSvg.attr("height") - padding, 0]);
@@ -28,7 +28,7 @@ angular.module('gapFront').directive("stacked", function($window) {
                xAxisGen = d3.svg.axis()
                    .scale(xScale)
                    .orient("bottom")
-                   .ticks(salesDataToPlot.length - 1);
+                   .ticks(chart.length - 1);
 
                yAxisGen = d3.svg.axis()
                    .scale(yScale)
@@ -61,7 +61,7 @@ angular.module('gapFront').directive("stacked", function($window) {
 
                svg.append("svg:path")
                    .attr({
-                       d: lineFun(salesDataToPlot),
+                       d: lineFun(chart),
                        "stroke": "blue",
                        "stroke-width": 2,
                        "fill": "none",
@@ -70,7 +70,7 @@ angular.module('gapFront').directive("stacked", function($window) {
            }
 
            drawLineChart();
-      
+
     }
   };
 });

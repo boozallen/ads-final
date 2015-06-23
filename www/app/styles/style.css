@@ -7,9 +7,16 @@
 */
 /* GLOBAL STYLES
 -------------------------------------------------- */
+html, body {height: 100%;}
 body {
   color: #676a6c;
   font-family: 'Open Sans', helvetica, arial, sans-serif;
+}
+#content, .container-fluid, .span9
+{
+    border: 1px solid #000;
+    overflow-y:auto;
+    height:100%;
 }
 span.navy {
   color: #1ab394;
