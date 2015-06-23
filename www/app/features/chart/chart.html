@@ -6,39 +6,137 @@
       </p>
     </div>
 
-<!-- <div id="chart" style="text-align:center;"></div>
-</div>
-<br></br>
-<div stacked chart-data="salesData"></div> -->
+    <nav class="navbar navbar-default container">
+      <div class="">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a>View Data By:</a></li>
+            <li><a ng-click="setFilterType('product')">Product</a></li>
+            <li><a ng-click="setFilterType('gender')">Gender</a></li>
+            <li><a ng-click="setFilterType('hospitalizations')">Hospitalizations</a></li>
+            <li><a ng-click="setFilterType('reaction_outcome')">Reaction Outcome</a></li>
+            <li><a ng-click="setFilterType('age_range')">Age Range</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a>Date Range</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <br><br>
 
-<nav class="navbar navbar-default container">
-        <div class="">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
+    <div class="row">
+      <div class="col-md-3 ">
+        <div ng-if="filterType=='hospitalizations'">
+
+          <div>
+            <br>
+          <h3>Seriousness</h3>
+          <br>
+          <div class="btn-group" data-toggle="buttons">
+            <span class="btn btn-primary" ng-click="filtersUpdated('seriousness','all')" ng-class="seriousness=='all'?'active':''">
+              <input type="radio"   value="all">All
+            </span>
+            <span class="btn btn-primary" ng-click="filtersUpdated('seriousness', 'non_serious_adverse_events')" ng-class="seriousness=='non_serious_adverse_events'?'active':''">
+              <input type="radio"   value="non_serious_adverse_events">Non-serious Adverse Events
+            </span>
+            <span class="btn btn-primary" ng-click="filtersUpdated('seriousness', 'serious_adverse_effects')" ng-class="seriousness=='serious_adverse_events'?'active':''">
+              <input type="radio"   value="serious_adverse_events">Serious Adverse Events
+            </span>
+            <span class="btn btn-primary" ng-click="filtersUpdated('seriousness', 'present_in_label')" ng-class="seriousness=='present_in_label'?'active':''">
+              <input type="radio"   value="present_in_label">present_in_label
+            </span>
           </div>
-          <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              <li><a>View Data By:</a></li>
-              <li><a href>Product</a></li>
-              <li><a href>Gender</a></li>
-              <li><a href>Seriousness</a></li>
-              <li><a href>Reaction Outcome</a></li>
-              <li><a href>Age Range</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <li><a>Date Range</a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div><!--/.container-fluid -->
-      </nav>
-      <br><br>
+        </div>
 
-<div id="container" style="min-width: 310px; max-width: 1600px; height: 1000px; margin: 0 auto"></div>
-</div>
+        <br></br>
+
+        <div>
+          <h3>DME Cases</h3>
+          <br>
+          <div class="btn-group" data-toggle="buttons">
+            <span class="btn btn-primary" ng-click="filtersUpdated('dmeCases', 'all')" ng-class="dmeCases=='all'?'active':''">
+              <input type="radio"   value="all">All
+            </span>
+            <span class="btn btn-primary" ng-click="filtersUpdated('dmeCases', 'dme')" ng-class="dmeCases=='dme'?'active':''">
+              <input type="radio"   value="dme">DME
+            </span>
+            <span class="btn btn-primary" ng-click="filtersUpdated('dmeCases', 'non_dme')" ng-class="dmeCases=='non_dme'?'active':''">
+              <input type="radio"   value="non_dme">Non-DME
+            </span>
+          </div>
+        </div>
+
+        <br></br>
+
+        <div>
+          <h3>Outcome</h3>
+          <br>
+          <div class="btn-group" data-toggle="buttons">
+            <span class="btn btn-primary" ng-click="filtersUpdated('outcome', 'all')" ng-class="outcome=='all'?'active':''">
+              <input type="radio"   value="all">All
+            </span>
+            <span class="btn btn-primary" ng-click="filtersUpdated('outcome', 'fatal')" ng-class="outcome=='fatal'?'active':''">
+              <input type="radio"   value="dme">Fatal
+            </span>
+            <span class="btn btn-primary" ng-click="filtersUpdated('outcome', 'noInfoReported')" ng-class="outcome=='noInfoReported'?'active':''">
+              <input type="radio"   value="non_dme">Non-DME
+            </span>
+            <span class="btn btn-primary" ng-click="filtersUpdated('outcome', 'not_recovered_not_resolved')" ng-class="outcome=='not_recovered_not_resolved'?'active':''">
+              <input type="radio"   value="all">Not Recovered Not Resolved
+            </span>
+            <span class="btn btn-primary" ng-click="filtersUpdated('outcome', 'recovered_resolved')" ng-class="outcome=='recovered_resolved'?'active':''">
+              <input type="radio"   value="dme">Recovered Resolved
+            </span>
+            <span class="btn btn-primary" ng-click="filtersUpdated('outcome', 'present_in_label')" ng-class="outcome=='present_in_label'?'active':''">
+              <input type="radio"   value="non_dme">Present In Label
+            </span>
+            <span class="btn btn-primary" ng-click="filtersUpdated('outcome', 'unknown')" ng-class="outcome=='unknown'?'active':''">
+              <input type="radio"   value="non_dme">Unknown
+            </span>
+          </div>
+        </div>
+
+        <br></br>
+
+        <div>
+          <h3>Age Group</h3>
+          <br>
+          <div class="btn-group" data-toggle="buttons">
+            <span class="btn btn-primary" ng-click="filtersUpdated('age', 'all')" ng-class="age=='all'?'active':''">
+              <input type="radio"   value="all">All
+            </span>
+            <span class="btn btn-primary" ng-click="filtersUpdated('age', 'pediatric')" ng-class="age=='pediatric'?'active':''">
+              <input type="radio"   value="dme">Pediatric
+            </span>
+            <span class="btn btn-primary" ng-click="filtersUpdated('age', 'adult')" ng-class="age=='adult'?'active':''">
+              <input type="radio"   value="non_dme">Adult
+            </span>
+            <span class="btn btn-primary" ng-click="filtersUpdated('age', 'geriatric')" ng-class="age=='geriatric'?'active':''">
+              <input type="radio"   value="all">Geriatric
+            </span>
+            <span class="btn btn-primary" ng-click="filtersUpdated('age', 'no_info_reported')" ng-class="age=='no_info_reported'?'active':''">
+              <input type="radio"   value="dme">No Info Reported
+            </span>
+          </div>
+        </div>
+
+        </div>
+      </div>
+      <div class="col-md-7">
+        <div id="container" style="min-width: 310px; max-width: 1600px; height: 1000px; margin: 0 auto"></div>
+      </div>
+      <div class="col-md-2">
+      </div>
+    </div>
+  </div>
 
 </section>

@@ -14,6 +14,11 @@ angular.module('gapFront')
       'AngularJS',
       'Karma'
     ];
+    $scope.filterType = "hospitalizations"
+    $scope.seriousness = "all";
+    $scope.dmeCases = "all";
+    $scope.outcome = "all";
+    $scope.age = "all";
 
     var  initChart = function(params){
       $scope.selectedDrug = DrugService.getSelectedDrug();
@@ -22,7 +27,9 @@ angular.module('gapFront')
 
     IntegrationService.registerIntegrationMethod('initChart', initChart);
 
-    $scope.searchDrugEvents = function(){
+    $scope.searchDrugEvents = function(filterType){
+      $scope.filterType = filterType;
+      console.log($scope.filterType);
       var query = 'patient.drug.medicinalproduct:'+$scope.selectedDrug.brand_name;
       console.log(query);
       APIService.aggregateDrugEvent(query, 50, 'patient.reaction.reactionmeddrapt.exact').then(function(resp){
@@ -32,6 +39,16 @@ angular.module('gapFront')
       });
       return true;
     };
+
+    $scope.setFilterType = function(filterType){
+      $scope.filterType = filterType;
+      console.log($scope.filterType);
+    };
+
+    $scope.filtersUpdated = function(paramName, paramValue){
+      $scope[paramName] = paramValue;
+      console.log($scope.seriousness, $scope.dmeCases, $scope.outcome, $scope.age);
+    }
 
     $scope.setChartData = function(data){
       $scope.chart = data;
