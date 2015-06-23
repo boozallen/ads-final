@@ -14,7 +14,9 @@ class DrugsController < ApplicationController
   end
 
   def create
-    drug = Drug.create drug_params
+    drug = Drug.find_or_create_by name: params[:name]
+    drug.effect_list.add params[:effects]
+    drug.save
     render json: drug_json(drug)
   end
 
@@ -22,7 +24,7 @@ class DrugsController < ApplicationController
 
   def drug
     @_drug = Fda.get params[:id]
-#    fields = %w(adverse_reactions boxed_warnings warnings_and_precautions user_safety_warnings precautions warnings general_precautions)
+    # fields = %w(adverse_reactions boxed_warnings warnings_and_precautions user_safety_warnings precautions warnings general_precautions)
     fields = %w(boxed_warnings warnings_and_precautions user_safety_warnings precautions warnings general_precautions)
     adverse_reactions = fields.map { |f| @_drug.fetch(f, '') }.join('')
     @_drug['effects'] = EFFECTS_LIST.select do |terms|

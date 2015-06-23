@@ -7,7 +7,7 @@ development: &default
   pool: 2
   timeout: 5000
   user: postgres
-  password: 
+  password:
 
 development:
   <<: *default
