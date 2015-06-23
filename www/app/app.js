@@ -18,7 +18,8 @@ angular
     'ngTouch',
     'restangular',
     'ui.checkbox',
-    'mgcrea.ngStrap'
+    'mgcrea.ngStrap',
+    'ui-rangeSlider'
   ])
   .config(function ($routeProvider, $locationProvider) {
     $routeProvider
