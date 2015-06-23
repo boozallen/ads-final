@@ -1,5 +1,5 @@
 <section style="background-image:url('../assets/Landing_bg.jpg'); 
-margin-top:4%; background-size:100% auto; padding-bottom:10%;">
+ background-size:100% auto; padding-bottom:10%;">
   <img src="../assets/Main_logo.png" align="middle" class="img-responsive logoTitle" alt="Responsive image">
   <div class="row">
     <br></br>
@@ -38,12 +38,36 @@ margin-top:4%; background-size:100% auto; padding-bottom:10%;">
     </div>
   </div>
   <br>
-  <!--<div class="row well spacer" ng-if="selectedDrug.object.boxed_warning">-->
-  <!--<h3>Warnings</h3>-->
-  <!--</div>-->
-  <!--<div class="row well spacer" ng-if="selectedDrug.object.warnings">-->
-  <!--<h3>Warnings</h3>-->
-  <!--</div>-->
+  <td class="column" style="width:50%;">
+  <div class="well spacer" ng-if="selectedDrug.object.boxed_warning">
+    <h3>Boxed Warnings</h3>
+    <div>{{selectedDrug.object.boxed_warning}}</div>
+  </div>
+  <div class="well spacer" ng-if="selectedDrug.object.warnings_and_precautions">
+    <h3>Warnings and Precautions</h3>
+    <div>{{selectedDrug.object.warnings_and_precautions}}</div>
+  </div>
+  <div class="well spacer" ng-if="selectedDrug.object.user_safety_warnings">
+    <h3>User Safety Warnings</h3>
+    <div>{{selectedDrug.object.user_safety_warnings}}</div>
+  </div>
+  <div class="well spacer" ng-if="selectedDrug.object.precautions">
+    <h3>Precautions</h3>
+    <div>{{selectedDrug.object.precautions}}</div>
+  </div>
+  <div class="well spacer" ng-if="selectedDrug.object.warnings">
+    <h3>Warnings</h3>
+    <div>{{selectedDrug.object.warnings}}</div>
+  </div>
+  <div class="well spacer" ng-if="selectedDrug.object.general_precautions">
+    <h3>General Precautions</h3>
+    <div>{{selectedDrug.object.general_precautions}}</div>
+  </div>
+  </td>
+  <td>
+    <div>Hello!!!</div>
+  </td>
+</div>
 </section>
 
 <section id="events-reports" class="features">
