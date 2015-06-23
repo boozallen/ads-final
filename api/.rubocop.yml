@@ -1,0 +1,42 @@
+AllCops:
+  Exclude:
+    - config/puma.rb
+    - db/**/*
+    - vendor/**/*
+    - bin/**
+    - lib/tasks/sample.rake
+    - config/initializers/secret_token.rb
+  RunRailsCops: true
+
+ClassLength:
+  Max: 300
+
+MethodLength:
+  Max: 50
+
+Documentation:
+  Enabled: false
+
+Metrics/LineLength:
+  Enabled: false
+
+Metrics/AbcSize:
+  Max: 38
+
+Style/IfUnlessModifier:
+  Enabled: false
+
+Rails/HasAndBelongsToMany:
+  Enabled: false
+
+GuardClause:
+  Enabled: false
+
+Style/AlignParameters:
+  EnforcedStyle: with_fixed_indentation
+
+Style/ClosingParenthesisIndentation:
+  Enabled: false
+
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
