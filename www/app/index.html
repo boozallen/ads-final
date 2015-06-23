@@ -13,6 +13,7 @@
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
     <link rel="stylesheet" href="bower_components/angular-motion/dist/angular-motion.css" />
+    <link rel="stylesheet" href="bower_components/angular-rangeslider/angular.rangeSlider.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -29,17 +30,19 @@
       <div ng-controller="HeaderCtrl" ng-include src="'features/header/header.html'"></div>
 
       <div class="">
-        <div ng-view=""></div>
+        <div ng-view></div>
         <br/>
         <div ng-controller= "ChartCtrl" class="spacer" ng-include src="'features/chart/chart.html'"></div>
+        <br/>
+        <div ng-controller= "LabelEffectsCtrl" class="spacer" ng-include src="'features/labelEffects/labelEffects.html'"></div>
 
       </div>
 
-      <div class="footer navbar-fixed-bottom spacer-3x">
+      <footer class="footer navbar-fixed-bottom">
         <div class="container">
           <p><span class="fa fa-heart"></span> from the Booz Allen Hamilton team</p>
         </div>
-      </div>
+      </footer>
     </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -70,6 +73,9 @@
     <script src="bower_components/angular-strap/dist/angular-strap.js"></script>
     <script src="bower_components/angular-strap/dist/angular-strap.tpl.js"></script>
     <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-bootstrap-checkbox/angular-bootstrap-checkbox.js"></script>
+    <script src="bower_components/angular-rangeslider/angular.rangeSlider.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
@@ -84,16 +90,17 @@
         <script src="features/about/about.js"></script>
         <script src="features/chart/chart.js"></script>
         <script src="features/chart/stacked.js"></script>
+        <script src="features/labelEffects/labelEffects.js"></script>
 
         <script src="constants.js"></script>
 
 
         <!-- endbuild -->
-        <script src="scripts/pace.min.js"></script>
-        <script src="scripts/classie.js"></script>
-        <script src="scripts/cbpAnimatedHeader.js"></script>
-        <script src="scripts/wow.min.js"></script>
-        <script src="scripts/inspinia.js"></script>
+        <script src="vendor/pace.min.js"></script>
+        <script src="vendor/classie.js"></script>
+        <script src="vendor/cbpAnimatedHeader.js"></script>
+        <script src="vendor/wow.min.js"></script>
+        <script src="vendor/inspinia.js"></script>
 
 </body>
 </html>

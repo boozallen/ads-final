@@ -10,7 +10,7 @@
 angular.module('gapFront')
   .controller('MainCtrl', function ($scope, $anchorScroll, $location, $route, APIService, IntegrationService, DrugService) {
     $scope.drugs = [];
-    $scope.selectedDrug = {};
+    //$scope.selectedDrug;
 
     $scope.searchText = '';
 
@@ -30,14 +30,12 @@ angular.module('gapFront')
       $scope.drugs = [];
       DrugService.setSelectedDrug($scope.selectedDrug);
       IntegrationService.callIntegrationMethod('initChart',{});
-      //searchDrugEvents();
-      console.log($scope.drugs);
-          $location.hash('events-reports');
-          $anchorScroll();
+      IntegrationService.callIntegrationMethod('initLabelEffects',{});
+      $location.hash('events-reports');
+      $anchorScroll();
     };
 
     $scope.searchDrugs = function() {
-      console.log('searchDrugs');
       var text = $scope.searchText;
       //text = text.replace(' ','+');
 
@@ -78,7 +76,6 @@ angular.module('gapFront')
         for (var k in new_drugs) {
           if (new_drugs[k]['lowercase_name'] == $scope.drugs[j][['lowercase_name']]) {
             isDuplicate = true;
-            console.log('isDuplicate');
             break;
           }
         }
@@ -88,9 +85,7 @@ angular.module('gapFront')
       }
 
 
-      //console.log($scope.drugs);
       $scope.drugs = new_drugs;
-      //console.log($scope.drugs);
 
       return $scope.drugs;
     }
@@ -98,5 +93,9 @@ angular.module('gapFront')
     function serviceError(error) {
       console.log(error);
     }
+
+    //$scope.navigateTo = function(path){
+    //  $location.path(path);
+    //}
 
   });

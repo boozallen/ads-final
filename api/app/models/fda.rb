@@ -12,7 +12,7 @@ class Fda
         b['effective_time'].to_i <=> a['effective_time'].to_i
       end.first
     rescue StandardError => e
-      Rails.logger e
+      Rails.logger.error e
       {}
     end
   end
