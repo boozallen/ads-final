@@ -23,6 +23,8 @@ angular.module('gapFront')
     $scope.setSelectedDrug = function(drug) {
       $scope.selectedDrug = drug;
       $scope.drugs = [];
+      IntegrationService.callIntegrationMethod('initChart',{selectedDrug:$scope.selectedDrug});
+      //searchDrugEvents();
     };
 
     $scope.searchDrugs = function() {
@@ -59,14 +61,5 @@ angular.module('gapFront')
     };
 
 
-    $scope.searchDrugEvents = function(){
-      var query = 'patient.drug.medicinalproduct:'+$scope.selectedDrug.brand_name;
-      console.log(query);
-      APIService.aggregateDrugEvent(query,'patient.reaction.reactionmeddrapt.exact').then(function(resp){
-        IntegrationService.callIntegrationMethod('initChart',{results:resp.results});
-      },function(){
-        console.log('error!');
-      });
-      return true;
-    }
+
   });

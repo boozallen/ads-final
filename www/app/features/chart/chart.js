@@ -8,7 +8,7 @@
  * Controller of the gapFront
  */
 angular.module('gapFront')
-  .controller('ChartCtrl', function ($scope, IntegrationService) {
+  .controller('ChartCtrl', function ($scope, IntegrationService, APIService) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -16,17 +16,36 @@ angular.module('gapFront')
     ];
 
     var  initChart = function(params){
-      $scope.chart = params.results;
+      console.log(params);
+      $scope.selectedDrug = params.selectedDrug;
+      $scope.searchDrugEvents();
+    };
+
+    IntegrationService.registerIntegrationMethod('initChart', initChart);
+
+    $scope.searchDrugEvents = function(){
+      var query = 'patient.drug.medicinalproduct:'+$scope.selectedDrug.brand_name;
+      console.log(query);
+      APIService.aggregateDrugEvent(query, 50, 'patient.reaction.reactionmeddrapt.exact').then(function(resp){
+        $scope.setChartData(resp.results);
+      },function(){
+        console.log('error!');
+      });
+      return true;
+    };
+
+    $scope.setChartData = function(data){
+      $scope.chart = data;
 
       console.log(JSON.stringify($scope.chart));
       var hold = [];
       $scope.effects = [];
-      var numbers = []
+      var numbers = [];
       $scope.counts = [{name: "reported Adverse Effects", data: numbers}];
       for (var i in $scope.chart) {
         $scope.effects.push($scope.chart[i].term);
         $scope.counts[0].data.push($scope.chart[i].count);
-      };
+      }
       console.log($scope.effects);
       console.log($scope.counts);
 
@@ -34,7 +53,7 @@ angular.module('gapFront')
       $scope.terms = $scope.chart;
     };
 
-    IntegrationService.registerIntegrationMethod('initChart', initChart);
+
 
 
 $scope.chart=[
@@ -78,9 +97,9 @@ $scope.chart=[
                     stacking: 'normal'
                 }
             },
-            
+
             series: $scope.counts
-                
+
           });
         };
 

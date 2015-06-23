@@ -16,11 +16,10 @@ angular.module('gapFront')
     var railsService = Restangular.withConfig(function(RestangularConfigurer) {
       RestangularConfigurer.setBaseUrl('https://api.fda.gov/???');
     });
-
+    
     var pillboxService = Restangular.withConfig(function(RestangularConfigurer) {
       RestangularConfigurer.setBaseUrl('http://pillbox.nlm.nih.gov/PHP/pillboxAPIService.php');
     });
-
 
 
     var drug = FDAService.all('drug');
