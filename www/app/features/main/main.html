@@ -1,44 +1,44 @@
 <section style="background-image:url('../assets/Landing_bg.jpg'); 
- background-size:100% auto; padding-bottom:10%;">
-  <img src="../assets/Main_logo.png" align="middle" class="img-responsive logoTitle" alt="Responsive image">
-  <div class="row">
-    <br></br>
-    <p class="appTitle" align="center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pharetra sed nisi eu aliquam. Phasellus sit amet magna a metus bibendum efficitur. Ut maximus consequat arcu, eu aliquet sem volutpat ut. Aenean mollis interdum hendrerit. Suspendisse lacus erat, luctus sed condimentum sed, molestie aliquam magna. Vestibulum fringilla consectetur fringilla. Aenean maximus eros non odio mattis, ut tristique augue porta. In quis lacus at mi tincidunt vehicula quis sed erat.</p>
-  </div>
-  <div class="row">
-    <form>
-      <div class="input-group input-group-lg col-md-6 col-md-offset-3 spacer-2x">
-        <input type="text" class="form-control searchInput" ng-model="searchText" id="searchValue"
-        placeholder="Search for a Medication" ng-change="searchDrugs()">
-        <div class="input-group-btn">
-          <button class="btn searchButton searchInput" type="button" ng-click="searchDrugEvents()"><i class="fa fa-search searchIcon"></i></button>
-        </div>
-
+background-size:100% auto; padding-bottom:10%;">
+<img src="../assets/Main_logo.png" align="middle" class="img-responsive logoTitle" alt="Responsive image">
+<div class="row">
+  <br></br>
+  <p class="appTitle" align="center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pharetra sed nisi eu aliquam. Phasellus sit amet magna a metus bibendum efficitur. Ut maximus consequat arcu, eu aliquet sem volutpat ut. Aenean mollis interdum hendrerit. Suspendisse lacus erat, luctus sed condimentum sed, molestie aliquam magna. Vestibulum fringilla consectetur fringilla. Aenean maximus eros non odio mattis, ut tristique augue porta. In quis lacus at mi tincidunt vehicula quis sed erat.</p>
+</div>
+<div class="row">
+  <form>
+    <div class="input-group input-group-lg col-md-6 col-md-offset-3 spacer-2x">
+      <input type="text" class="form-control searchInput" ng-model="searchText" id="searchValue"
+      placeholder="Search for a Medication" ng-change="searchDrugs()">
+      <div class="input-group-btn">
+        <button class="btn searchButton searchInput" type="button" ng-click="searchDrugEvents()"><i class="fa fa-search searchIcon"></i></button>
       </div>
-      <div class="col-md-6 col-md-offset-3" ng-show="drugs">
-        <div ng-class="!drugs.length==0?'dropdown clearfix open':'dropdown clearfix'">
-          <ul class="dropdown-menu" style="width: 100%">
-            <li ng-repeat="drug in drugs track by $index">
-              <a href='#' ng-click="setSelectedDrug(drug)">{{drug.brand_name}}</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </form>
 
-  </div>
-
-  <div class="row well spacer" ng-show="selectedDrug.brand_name">
-    <div class="col-md-6 col-md-offset-3">
-      <h2>Drug: {{selectedDrug.brand_name}}</h2>
-      <ul>
-        <li>Manufacturer: {{selectedDrug.manufacturer_name}}</li>
-        <li>Substance name: {{selectedDrug.substance_name}}</li>
-      </ul>
     </div>
+    <div class="col-md-6 col-md-offset-3" ng-show="drugs">
+      <div ng-class="!drugs.length==0?'dropdown clearfix open':'dropdown clearfix'">
+        <ul class="dropdown-menu" style="width: 100%">
+          <li ng-repeat="drug in drugs track by $index">
+            <a ng-click="setSelectedDrug(drug)">{{drug.brand_name}}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </form>
+
+</div>
+
+<!-- <div class="row well spacer" ng-show="selectedDrug.brand_name">
+  <div class="col-md-6 col-md-offset-3">
+    <h2>Drug: {{selectedDrug.brand_name}}</h2>
+    <ul>
+      <li>Manufacturer: {{selectedDrug.manufacturer_name}}</li>
+      <li>Substance name: {{selectedDrug.substance_name}}</li>
+    </ul>
   </div>
-  <br>
-  <td class="column" style="width:50%;">
+</div>
+<br> -->
+<!-- <td class="column" style="width:50%;">
   <div class="well spacer" ng-if="selectedDrug.object.boxed_warning">
     <h3>Boxed Warnings</h3>
     <div>{{selectedDrug.object.boxed_warning}}</div>
@@ -63,11 +63,9 @@
     <h3>General Precautions</h3>
     <div>{{selectedDrug.object.general_precautions}}</div>
   </div>
-  </td>
-  <td>
-    <div>Hello!!!</div>
-  </td>
-</div>
+</td>
+</div> -->
+
 </section>
 
 <section id="events-reports" class="features">
@@ -76,7 +74,9 @@
       <div class="col-lg-12 text-center">
         <div class="navy-line"></div>
         <h1>{{selectedDrug.brand_name}}</h1>
-        <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. </p>
+        Substance name: {{selectedDrug.substance_name}}
+        <br>
+        Manufacturer: {{selectedDrug.manufacturer_name}}
       </div>
     </div>
     <div class="row features-block">
@@ -87,17 +87,41 @@
         <a href="" class="btn btn-primary">Learn more</a>
       </div>
       <div class="col-lg-6 text-center m-t-n-lg wow zoomIn">
-        <p>Side effects to XANAX Tablets, if they occur, are generally observed at the beginning of therapy and usually disappear upon continued medication. In the usual patient, the most frequent side effects are likely to be an extension of the pharmacological activity of alprazolam, eg, drowsiness or light-headedness.
-          <br>
-          The data cited in the two tables below are estimates of untoward clinical event incidence among patients who participated under the following clinical conditions: relatively short duration (ie, four weeks) placebo-controlled clinical studies with dosages up to 4 mg/day of XANAX (for the management of anxiety disorders or for the short-term relief of the symptoms of anxiety) and short-term (up to ten weeks) placebo-controlled clinical studies with dosages up to 10 mg/day of XANAX in patients with panic disorder, with or without agoraphobia.</p>
+        <div class="well spacer" ng-if="selectedDrug.object.indications_and_usage">
+          <h3>{{selectedDrug.object.indications_and_usage.toString()}}</h3>
         </div>
-        <div class="col-lg-3 features-text text-right wow fadeInRight">
-          <small>Xanax</small>
-          <h2>Label </h2>
-          <p>Pill label picture</p>
-          <a href="" class="btn btn-primary">Learn more</a>
+        <!-- <div class="well spacer" ng-if="selectedDrug.object.boxed_warning">
+          <h3>Boxed Warnings</h3>
+          <div>{{selectedDrug.object.boxed_warning}}</div>
         </div>
+        <div class="well spacer" ng-if="selectedDrug.object.warnings_and_precautions">
+          <h3>Warnings and Precautions</h3>
+          <div>{{selectedDrug.object.warnings_and_precautions}}</div>
+        </div>
+        <div class="well spacer" ng-if="selectedDrug.object.user_safety_warnings">
+          <h3>User Safety Warnings</h3>
+          <div>{{selectedDrug.object.user_safety_warnings}}</div>
+        </div>
+        <div class="well spacer" ng-if="selectedDrug.object.precautions">
+          <h3>Precautions</h3>
+          <div>{{selectedDrug.object.precautions}}</div>
+        </div>
+        <div class="well spacer" ng-if="selectedDrug.object.warnings">
+          <h3>Warnings</h3>
+          <div>{{selectedDrug.object.warnings.toString()}}</div>
+        </div>
+        <div class="well spacer" ng-if="selectedDrug.object.general_precautions">
+          <h3>General Precautions</h3>
+          <div>{{selectedDrug.object.general_precautions}}</div>
+        </div> -->
+      </div>
+      <div class="col-lg-3 features-text text-right wow fadeInRight">
+        <small>Xanax</small>
+        <h2>Label </h2>
+        <p>Pill label picture</p>
+        <a href="" class="btn btn-primary">Learn more</a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
