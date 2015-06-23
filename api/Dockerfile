@@ -14,4 +14,6 @@ RUN bundle install
 COPY . /usr/src/app
 
 EXPOSE 3000
-CMD ["rails", "server", "-b", "0.0.0.0"]
+#ENV RAILS_ENV docker
+#ENV DATABASE_URL postgres://postgres:@0.0.0.0:5432/
+CMD ["/bin/bash", "startup.sh"]

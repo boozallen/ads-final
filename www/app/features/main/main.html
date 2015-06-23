@@ -1,34 +1,46 @@
-<div>
-  <br>
-  <div class="row well spacer-2x">
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+<section style="background-image:url('../assets/Landing_bg.jpg');
+background-size:100% auto;">
+  <img src="../assets/Main_logo.png" align="middle" class="img-responsive logoTitle" alt="Responsive image">
+  <div class="row">
+    <br/>
+    <p class="appTitle" align="center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pharetra sed nisi eu aliquam. Phasellus sit amet magna a metus bibendum efficitur. Ut maximus consequat arcu, eu aliquet sem volutpat ut. Aenean mollis interdum hendrerit. Suspendisse lacus erat, luctus sed condimentum sed, molestie aliquam magna. Vestibulum fringilla consectetur fringilla. Aenean maximus eros non odio mattis, ut tristique augue porta. In quis lacus at mi tincidunt vehicula quis sed erat.</p>
   </div>
   <div class="row">
     <form>
-      <div class="input-group col-md-6 col-md-offset-3 spacer">
-        <input type="text" class="form-control" placeholder="search" id="searchInput" ng-model="search.text">
+      <div class="input-group input-group-lg col-md-6 col-md-offset-3 spacer-2x">
+        <input type="text" class="form-control searchInput" ng-model="searchText" id="searchValue"
+        placeholder="Search for a Medication" ng-change="searchDrugs()">
         <div class="input-group-btn">
-          <button class="btn btn-default" type="button">Search</button>
+          <!--<button class="btn searchButton searchInput" type="button" ng-click="navigateTo('/labelEffects')"><i class="fa fa-search searchIcon"></i></button>-->
+        </div>
+
+      </div>
+      <div class="col-md-6 col-md-offset-3" ng-show="drugs">
+        <div ng-class="!drugs.length==0?'dropdown clearfix open':'dropdown clearfix'">
+          <ul class="dropdown-menu" style="width: 100%">
+            <li ng-repeat="drug in drugs track by $index">
+              <a ng-click="setSelectedDrug(drug)">{{drug.brand_name}}</a>
+            </li>
+          </ul>
         </div>
       </div>
     </form>
+
   </div>
 
-  <br>
-  <button type="button" class="btn btn-success" data-animation="am-fade" data-placement="right" bs-popover="popover">popover from right</button><br><br>
-  <div class="well" ng-show="search.text" data-animation="am-fade">
-  <h3 align="center">Searching for: {{search.text}}</h3>
-  </div>
+</section>
 
-  <div class="col-lg-12 well" style="margin-top:5em;">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Lorem ipsum dolor sit amet,
-      consectetur adipiscing elit, sed do eiusmod tempor
-      incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+<section id="events-reports" ng-show="selectedDrug" class="features">
+  <div class="col-md-10 col-md-offset-1 well" style="width:80%;">
+    <div class="row">
+      <br><br>
+      <h1>{{selectedDrug.substance_name}}&nbsp;({{selectedDrug.brand_name}}) General Information</h1>
+      <br>
+      <h5>{{selectedDrug.object.package_label_principal_display_panel.toString()}}</h5>
+      <br>
+      <h5>{{selectedDrug.object.indications_and_usage.toString()}}</h5>
+      <br>
+      <h5>{{selectedDrug.object.dosage_and_administration}}</h5>
+    </div>
   </div>
-
-</div>
+</section>

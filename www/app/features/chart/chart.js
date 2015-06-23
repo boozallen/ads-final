@@ -8,136 +8,125 @@
  * Controller of the gapFront
  */
 angular.module('gapFront')
-  .controller('ChartCtrl', function ($scope) {
+  .controller('ChartCtrl', function ($scope, IntegrationService, APIService, DrugService) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
+    $scope.filterType = "hospitalizations" //
+    $scope.seriousness = "all";
+    $scope.dmeCases = "all";
+    $scope.outcome = "all";
+    $scope.age = "all";
 
-    
-var data = {
-  labels: [
-    'resilience', 'maintainability', 'accessibility',
-    'uptime', 'functionality', 'impact'
-  ],
-  series: [
-    {
-      label: '2012',
-      values: [4, 8, 15, 16, 23, 42]
-    },
-    {
-      label: '2013',
-      values: [12, 43, 22, 11, 73, 25]
-    },
-    {
-      label: '2014',
-      values: [31, 28, 14, 8, 15, 21]
-    },]
-};
+    $scope.least=0;
+    $scope.greatest=100;
 
-var chartWidth       = 300,
-    barHeight        = 20,
-    groupHeight      = barHeight * data.series.length,
-    gapBetweenGroups = 10,
-    spaceForLabels   = 150,
-    spaceForLegend   = 150;
+    var  initChart = function(params){
+      $scope.selectedDrug = DrugService.getSelectedDrug();
+      $scope.searchDrugEvents();
+    };
 
-// Zip the series data together (first values, second values, etc.)
-var zippedData = [];
-for (var i=0; i<data.labels.length; i++) {
-  for (var j=0; j<data.series.length; j++) {
-    zippedData.push(data.series[j].values[i]);
-  }
-}
+    IntegrationService.registerIntegrationMethod('initChart', initChart);
 
-// Color scale
-var color = d3.scale.category20();
-var chartHeight = barHeight * zippedData.length + gapBetweenGroups * data.labels.length;
+    $scope.searchDrugEvents = function(){
+      var query = 'patient.drug.medicinalproduct:'+$scope.selectedDrug.brand_name;
 
-var x = d3.scale.linear()
-    .domain([0, d3.max(zippedData)])
-    .range([0, chartWidth]);
+      if($scope.seriousness == "non_serious_adverse_events"){
+        query += ' AND serious:2';
+      }
+      else if($scope.seriousness == 'serious_adverse_events'){
+        query += ' AND serious:1';
+      }
 
-var y = d3.scale.linear()
-    .range([chartHeight + gapBetweenGroups, 0]);
+      if($scope.outcome == 'fatal'){
+        query += ' AND patient.reaction.reactionoutcome:5';
+      }
+      else if($scope.outcome == 'resolving'){
+        query += ' AND patient.reaction.reactionoutcome:2';
+      }
+      else if($scope.outcome == 'not_recovered_not_resolved'){
+        query += ' AND patient.reaction.reactionoutcome:3';
+      }
+      else if($scope.outcome == 'recovered_resolved'){
+        query += ' AND (patient.reaction.reactionoutcome:4 1)';
+      }
+      else if($scope.outcome == 'unknown'){
+        query += ' AND patient.reaction.reactionoutcome:6';
+      }
 
-var yAxis = d3.svg.axis()
-    .scale(y)
-    .tickFormat('')
-    .tickSize(0)
-    .orient("left");
+      if(this.least > 0 || this.greatest < 100){
+        query += ' AND patient.patientonsetage:['+this.least+' TO ' + this.greatest + ']';
+      }
 
-// Specify the chart area and dimensions
-var chart = d3.select(".chart")
-    .attr("width", spaceForLabels + chartWidth + spaceForLegend)
-    .attr("height", chartHeight);
+      console.log(query);
+      APIService.aggregateDrugEvent(query, 50, 'patient.reaction.reactionmeddrapt.exact').then(function(resp){
+        $scope.setChartData(resp.results);
+      },function(error){
+        console.log(error);
+      });
+      return true;
+    };
 
-// Create bars
-var bar = chart.selectAll("g")
-    .data(zippedData)
-    .enter().append("g")
-    .attr("transform", function(d, i) {
-      return "translate(" + spaceForLabels + "," + (i * barHeight + gapBetweenGroups * (0.5 + Math.floor(i/data.series.length))) + ")";
-    });
+    $scope.setFilterType = function(filterType){
+      $scope.filterType = filterType;
+      console.log($scope.filterType);
+    };
 
-// Create rectangles of the correct width
-bar.append("rect")
-    .attr("fill", function(d,i) { return color(i % data.series.length); })
-    .attr("class", "bar")
-    .attr("width", x)
-    .attr("height", barHeight - 1);
+    $scope.filtersUpdated = function(paramName, paramValue){
+      $scope[paramName] = paramValue;
+      $scope.searchDrugEvents();
+      console.log($scope.seriousness, $scope.dmeCases, $scope.outcome, $scope.age);
+    }
 
-// Add text label in bar
-bar.append("text")
-    .attr("x", function(d) { return x(d) - 3; })
-    .attr("y", barHeight / 2)
-    .attr("fill", "red")
-    .attr("dy", ".35em")
-    .text(function(d) { return d; });
+    $scope.setChartData = function(data){
+      $scope.chart = data;
 
-// Draw labels
-bar.append("text")
-    .attr("class", "label")
-    .attr("x", function(d) { return - 10; })
-    .attr("y", groupHeight / 2)
-    .attr("dy", ".35em")
-    .text(function(d,i) {
-      if (i % data.series.length === 0)
-        return data.labels[Math.floor(i/data.series.length)];
-      else
-        return ""});
+      var hold = [];
+      $scope.effects = [];
+      var numbers = [];
+      $scope.counts = [{name: "reported Adverse Effects", data: numbers}];
+      for (var i in $scope.chart) {
+        $scope.effects.push($scope.chart[i].term);
+        $scope.counts[0].data.push($scope.chart[i].count);
+      }
 
-chart.append("g")
-      .attr("class", "y axis")
-      .attr("transform", "translate(" + spaceForLabels + ", " + -gapBetweenGroups/2 + ")")
-      .call(yAxis);
+      createChart();
+      $scope.terms = $scope.chart;
+    };
 
-// Draw legend
-var legendRectSize = 18,
-    legendSpacing  = 4;
+      //angular.element(document).ready();
+      function createChart() {
 
-var legend = chart.selectAll('.legend')
-    .data(data.series)
-    .enter()
-    .append('g')
-    .attr('transform', function (d, i) {
-        var height = legendRectSize + legendSpacing;
-        var offset = -gapBetweenGroups/2;
-        var horz = spaceForLabels + chartWidth + 40 - legendRectSize;
-        var vert = i * height - offset;
-        return 'translate(' + horz + ',' + vert + ')';
-    });
+          $('#container').highcharts({
+            chart: {
+                type: 'bar'
+            },
+            title: {
+                text: 'Stacked bar chart'
+            },
+            xAxis: {
+                categories: $scope.effects
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: 'Counts'
+                }
+            },
+            legend: {
+                reversed: true
+            },
+            plotOptions: {
+                series: {
+                    stacking: 'normal'
+                }
+            },
 
-legend.append('rect')
-    .attr('width', legendRectSize)
-    .attr('height', legendRectSize)
-    .style('fill', function (d, i) { return color(i); })
-    .style('stroke', function (d, i) { return color(i); });
+            series: $scope.counts
 
-legend.append('text')
-    .attr('class', 'legend')
-    .attr('x', legendRectSize + legendSpacing)
-    .attr('y', legendRectSize - legendSpacing)
-    .text(function (d) { return d.label; });
+          });
+        };
+
   });
