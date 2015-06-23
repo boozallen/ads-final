@@ -9,8 +9,15 @@
  */
 angular.module('gapFront')
   .service('APIService', function (Restangular) {
-    Restangular.setBaseUrl('https://api.fda.gov').setEncodeIds(false);
-    var drug = Restangular.all('drug');
+    var FDAService = Restangular.withConfig(function(RestangularConfigurer) {
+      RestangularConfigurer.setBaseUrl('https://api.fda.gov');
+    });
+
+    var railsService = Restangular.withConfig(function(RestangularConfigurer) {
+      RestangularConfigurer.setBaseUrl('https://api.fda.gov/???');
+    });
+
+    var drug = FDAService.all('drug');
     //var drugLabel = drug.all('label.json');
     //var drugEvent = drug.all('event.json');
 

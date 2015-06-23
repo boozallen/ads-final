@@ -23,6 +23,8 @@ angular.module('gapFront')
     $scope.setSelectedDrug = function(drug) {
       $scope.selectedDrug = drug;
       $scope.drugs = [];
+      IntegrationService.callIntegrationMethod('initChart',{selectedDrug:$scope.selectedDrug});
+      //searchDrugEvents();
     };
 
     $scope.searchDrugs = function() {
