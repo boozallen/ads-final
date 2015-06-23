@@ -1,6 +1,41 @@
-<section class="features" ng-if="selectedDrug">
-  <div class="container">
-
+<div class="features spacer-6x col-md-10 col-md-offset-1" ng-if="selectedDrug">
+  <div class="col-md-9">
+    <div class="well spacer-3x" ng-if="selectedDrug.object.boxed_warning">
+      <h3>Boxed Warnings</h3>
+      <div>{{selectedDrug.object.boxed_warning}}</div>
+    </div>
+    <div class="well spacer-3x" ng-if="selectedDrug.object.warnings_and_precautions">
+      <h3>Warnings and Precautions</h3>
+      <div>{{selectedDrug.object.warnings_and_precautions}}</div>
+    </div>
+    <div class="well spacer-3x" ng-if="selectedDrug.object.user_safety_warnings">
+      <h3>User Safety Warnings</h3>
+      <div>{{selectedDrug.object.user_safety_warnings}}</div>
+    </div>
+    <div class="well spacer-3x" ng-if="selectedDrug.object.precautions">
+      <h3>Precautions</h3>
+      <div>{{selectedDrug.object.precautions}}</div>
+    </div>
+    <div class="well spacer-3x" ng-if="selectedDrug.object.warnings">
+      <h3>Warnings</h3>
+      <div>{{selectedDrug.object.warnings.toString()}}</div>
+    </div>
+    <div class="well spacer-3x" ng-if="selectedDrug.object.general_precautions">
+      <h3>General Precautions</h3>
+      <div>{{selectedDrug.object.general_precautions}}</div>
+    </div>
   </div>
 
-</section>
+  <div class="col-md-3 spacer-3x">
+    <div class="well row">
+      <div class="checkbox" ng-repeat="effect in effects"><label><input type="checkbox" ng-model="effect.checked"> {{effect.name}}</label></div>
+    </div>
+
+    <div class="well row">
+      <div class="form-group" bs-tooltip="adverseTooltip">
+        <label><i class="fa fa-globe"></i> Symptom</label>
+        <input ng-model="selectedSymptom" bs-options="symptom for symptom in symptoms" placeholder="Enter new adverse effect" bs-typeahead type="text">
+      </div>
+    </div>
+  </div>
+</div>
