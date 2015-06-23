@@ -14,7 +14,9 @@ class DrugsController < ApplicationController
   end
 
   def create
-    drug = Drug.create drug_params
+    drug = Drug.find_or_create_by name: params[:name]
+    drug.effect_list.add params[:effects]
+    drug.save
     render json: drug_json(drug)
   end
 
