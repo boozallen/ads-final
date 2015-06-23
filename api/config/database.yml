@@ -2,7 +2,7 @@ development: &default
   adapter: postgresql
   database: ads_development
   encoding: utf8
-  host: localhost
+  host: 0.0.0.0
   min_messages: warning
   pool: 2
   timeout: 5000
