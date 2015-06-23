@@ -17,6 +17,7 @@ angular
     'ngSanitize',
     'ngTouch',
     'restangular',
+    'ui.checkbox',
     'mgcrea.ngStrap'
   ])
   .config(function ($routeProvider, $locationProvider) {

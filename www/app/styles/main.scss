@@ -21,6 +21,10 @@ $fa-font-path: '/fonts/font-awesome';
   margin-top: 9em;
 }
 
+.spacer-6x {
+  margin-top: 18em;
+}
+
 .spacer-bottom {
   margin-bottom: 3em;
 }
@@ -118,4 +122,11 @@ section {
   font-weight: 500;
   line-height: 26px;
 
+}
+.footer {
+  position: relative;
+  margin-top: -150px; /* negative value of footer height */
+  height: 150px;
+  clear:both;
+  padding-top:20px;
 }

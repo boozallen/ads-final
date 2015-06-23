@@ -1,99 +1,46 @@
-<section style="background-image:url('../assets/Landing_bg.jpg'); 
+<section style="background-image:url('../assets/Landing_bg.jpg');
 background-size:100% auto; padding-bottom:10%;">
-<img src="../assets/Main_logo.png" align="middle" class="img-responsive logoTitle" alt="Responsive image">
-<div class="row">
-  <br></br>
-  <p class="appTitle" align="center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pharetra sed nisi eu aliquam. Phasellus sit amet magna a metus bibendum efficitur. Ut maximus consequat arcu, eu aliquet sem volutpat ut. Aenean mollis interdum hendrerit. Suspendisse lacus erat, luctus sed condimentum sed, molestie aliquam magna. Vestibulum fringilla consectetur fringilla. Aenean maximus eros non odio mattis, ut tristique augue porta. In quis lacus at mi tincidunt vehicula quis sed erat.</p>
-</div>
-<div class="row">
-  <form>
-    <div class="input-group input-group-lg col-md-6 col-md-offset-3 spacer-2x">
-      <input type="text" class="form-control searchInput" ng-model="searchText" id="searchValue"
-      placeholder="Search for a Medication" ng-change="searchDrugs()">
-      <div class="input-group-btn">
-        <button class="btn searchButton searchInput" type="button" ng-click="searchDrugEvents()"><i class="fa fa-search searchIcon"></i></button>
-      </div>
+  <img src="../assets/Main_logo.png" align="middle" class="img-responsive logoTitle" alt="Responsive image">
+  <div class="row">
+    <br/>
+    <p class="appTitle" align="center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pharetra sed nisi eu aliquam. Phasellus sit amet magna a metus bibendum efficitur. Ut maximus consequat arcu, eu aliquet sem volutpat ut. Aenean mollis interdum hendrerit. Suspendisse lacus erat, luctus sed condimentum sed, molestie aliquam magna. Vestibulum fringilla consectetur fringilla. Aenean maximus eros non odio mattis, ut tristique augue porta. In quis lacus at mi tincidunt vehicula quis sed erat.</p>
+  </div>
+  <div class="row">
+    <form>
+      <div class="input-group input-group-lg col-md-6 col-md-offset-3 spacer-2x">
+        <input type="text" class="form-control searchInput" ng-model="searchText" id="searchValue"
+        placeholder="Search for a Medication" ng-change="searchDrugs()">
+        <div class="input-group-btn">
+          <!--<button class="btn searchButton searchInput" type="button" ng-click="navigateTo('/labelEffects')"><i class="fa fa-search searchIcon"></i></button>-->
+        </div>
 
-    </div>
-    <div class="col-md-6 col-md-offset-3" ng-show="drugs">
-      <div ng-class="!drugs.length==0?'dropdown clearfix open':'dropdown clearfix'">
-        <ul class="dropdown-menu" style="width: 100%">
-          <li ng-repeat="drug in drugs track by $index">
-            <a ng-click="setSelectedDrug(drug)">{{drug.brand_name}}</a>
-          </li>
-        </ul>
       </div>
-    </div>
-  </form>
+      <div class="col-md-6 col-md-offset-3" ng-show="drugs">
+        <div ng-class="!drugs.length==0?'dropdown clearfix open':'dropdown clearfix'">
+          <ul class="dropdown-menu" style="width: 100%">
+            <li ng-repeat="drug in drugs track by $index">
+              <a ng-click="setSelectedDrug(drug)">{{drug.brand_name}}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </form>
 
-</div>
+  </div>
 
 </section>
 
-<section id="events-reports" class="features" style="height: 100%;">
-  <div class="container well" style="width:80%;">
+<section id="events-reports" ng-show="selectedDrug" class="features">
+  <div class="col-md-10 col-md-offset-1 well" style="width:80%;">
     <div class="row">
-        <br></br><br>
-        <h1>{{selectedDrug.substance_name}}&nbsp;({{selectedDrug.brand_name}}) General In<!-- formation</h1>
-        <br>
-        <h3>{{selectedDrug.object.package_label_principal_display_panel.toString()}}</h3> -->
-        <br>
-        <h4>{{selectedDrug.object.indications_and_usage.toString()}}</h4>
-        <br>
-        <h4>{{selectedDrug.object.dosage_and_administration}}</h4>
-      </div>
-
+      <br><br>
+      <h1>{{selectedDrug.substance_name}}&nbsp;({{selectedDrug.brand_name}}) General Information</h1>
+      <br>
+      <h5>{{selectedDrug.object.package_label_principal_display_panel.toString()}}</h5>
+      <br>
+      <h5>{{selectedDrug.object.indications_and_usage.toString()}}</h5>
+      <br>
+      <h5>{{selectedDrug.object.dosage_and_administration}}</h5>
     </div>
   </div>
 </section>
-<!-- 
-    <div class="row features-block">
-      <div class="col-lg-3 features-text wow fadeInLeft">
-        <small>{{selectedDrug.brand_name}}</small>
-        <h2>Bottle </h2>
-        <p>Pill bottle picture</p>
-        <a href="" class="btn btn-primary">Learn more</a>
-      </div>
-      <div class="col-lg-6 text-center m-t-n-lg wow zoomIn">
-        <div class="well spacer" ng-if="selectedDrug.object.indications_and_usage">
-          <h3>{{selectedDrug.object.indications_and_usage.toString()}}</h3>
-        </div>
-
-      </div>
-      <div class="col-lg-3 features-text text-right wow fadeInRight">
-        <small>Xanax</small>
-        <h2>Label </h2>
-        <p>Pill label picture</p>
-        <a href="" class="btn btn-primary">Learn more</a>
-      </div>
-    </div>
-
-  </div>
-</section>
- -->
-
-
-        <!-- <div class="well spacer" ng-if="selectedDrug.object.boxed_warning">
-          <h3>Boxed Warnings</h3>
-          <div>{{selectedDrug.object.boxed_warning}}</div>
-        </div>
-        <div class="well spacer" ng-if="selectedDrug.object.warnings_and_precautions">
-          <h3>Warnings and Precautions</h3>
-          <div>{{selectedDrug.object.warnings_and_precautions}}</div>
-        </div>
-        <div class="well spacer" ng-if="selectedDrug.object.user_safety_warnings">
-          <h3>User Safety Warnings</h3>
-          <div>{{selectedDrug.object.user_safety_warnings}}</div>
-        </div>
-        <div class="well spacer" ng-if="selectedDrug.object.precautions">
-          <h3>Precautions</h3>
-          <div>{{selectedDrug.object.precautions}}</div>
-        </div>
-        <div class="well spacer" ng-if="selectedDrug.object.warnings">
-          <h3>Warnings</h3>
-          <div>{{selectedDrug.object.warnings.toString()}}</div>
-        </div>
-        <div class="well spacer" ng-if="selectedDrug.object.general_precautions">
-          <h3>General Precautions</h3>
-          <div>{{selectedDrug.object.general_precautions}}</div>
-        </div> -->
