@@ -8,7 +8,7 @@
  * Controller of the gapFront
  */
 angular.module('gapFront')
-  .controller('MainCtrl', function ($scope, APIService, IntegrationService, DrugService) {
+  .controller('MainCtrl', function ($scope, $anchorScroll, $location, $route, APIService, IntegrationService, DrugService) {
     $scope.drugs = [];
     $scope.selectedDrug = {};
 
@@ -20,12 +20,20 @@ angular.module('gapFront')
       'Karma'
     ];
 
+    var lastRoute = $route.current;
+    $scope.$on('$locationChangeSuccess', function(event) {
+        $route.current = lastRoute;
+    });
+
     $scope.setSelectedDrug = function(drug) {
       $scope.selectedDrug = drug;
       $scope.drugs = [];
       DrugService.setSelectedDrug($scope.selectedDrug);
       IntegrationService.callIntegrationMethod('initChart',{});
       //searchDrugEvents();
+      console.log($scope.drugs);
+          $location.hash('events-reports');
+          $anchorScroll();
     };
 
     $scope.searchDrugs = function() {
