@@ -1,32 +1,32 @@
-<div class="features spacer-6x col-md-10 col-md-offset-1" ng-if="selectedDrug">
-  <div class="col-md-9">
-    <div class="well spacer-3x" ng-if="selectedDrug.object.boxed_warning">
+<div class="features col-md-10 col-md-offset-1" ng-if="selectedDrug">
+  <div class="well col-md-9">
+    <div ng-if="selectedDrug.object.boxed_warning">
       <h3>Boxed Warnings</h3>
       <div>{{selectedDrug.object.boxed_warning}}</div>
     </div>
-    <div class="well spacer-3x" ng-if="selectedDrug.object.warnings_and_precautions">
+    <div ng-if="selectedDrug.object.warnings_and_precautions">
       <h3>Warnings and Precautions</h3>
       <div>{{selectedDrug.object.warnings_and_precautions}}</div>
     </div>
-    <div class="well spacer-3x" ng-if="selectedDrug.object.user_safety_warnings">
+    <div ng-if="selectedDrug.object.user_safety_warnings">
       <h3>User Safety Warnings</h3>
       <div>{{selectedDrug.object.user_safety_warnings}}</div>
     </div>
-    <div class="well spacer-3x" ng-if="selectedDrug.object.precautions">
+    <div ng-if="selectedDrug.object.precautions">
       <h3>Precautions</h3>
       <div>{{selectedDrug.object.precautions}}</div>
     </div>
-    <div class="well spacer-3x" ng-if="selectedDrug.object.warnings">
+    <div ng-if="selectedDrug.object.warnings">
       <h3>Warnings</h3>
       <div>{{selectedDrug.object.warnings.toString()}}</div>
     </div>
-    <div class="well spacer-3x" ng-if="selectedDrug.object.general_precautions">
+    <div ng-if="selectedDrug.object.general_precautions">
       <h3>General Precautions</h3>
       <div>{{selectedDrug.object.general_precautions}}</div>
     </div>
   </div>
 
-  <div class="col-md-3 spacer-3x">
+  <div class="col-md-3">
     <div class="well row">
       <div class="checkbox" ng-repeat="effect in effects"><label><input type="checkbox" ng-model="effect.checked"> {{effect.name}}</label></div>
     </div>
