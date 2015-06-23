@@ -33,6 +33,10 @@ angular
         templateUrl: 'features/chart/chart.html',
         controller: 'ChartCtrl'
       })
+      .when('/labelEffects', {
+        templateUrl: 'features/labelEffects/labelEffects.html',
+        controller: 'LabelEffectsCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

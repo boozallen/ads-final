@@ -8,7 +8,7 @@
  * Controller of the gapFront
  */
 angular.module('gapFront')
-  .controller('ChartCtrl', function ($scope, IntegrationService, APIService) {
+  .controller('ChartCtrl', function ($scope, IntegrationService, APIService, DrugService) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -16,8 +16,7 @@ angular.module('gapFront')
     ];
 
     var  initChart = function(params){
-      console.log(params);
-      $scope.selectedDrug = params.selectedDrug;
+      $scope.selectedDrug = DrugService.getSelectedDrug();
       $scope.searchDrugEvents();
     };
 
