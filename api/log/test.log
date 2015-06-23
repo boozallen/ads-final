@@ -1,0 +1,70 @@
+-------------------------------------------
+DrugsControllerTest: test_should_get_delete
+-------------------------------------------
+-------------------------------------------
+DrugsControllerTest: test_should_get_update
+-------------------------------------------
+------------------------------------------
+DrugsControllerTest: test_should_get_index
+------------------------------------------
+-------------------------------------------
+DrugsControllerTest: test_should_get_create
+-------------------------------------------
+-----------------------------------------
+DrugsControllerTest: test_should_get_show
+-----------------------------------------
+----------------------------------------
+DrugsControllerTest: test_should_get_get
+----------------------------------------
+--------------------------------------------
+FoobarControllerTest: test_should_put_update
+--------------------------------------------
+------------------------------------------
+FoobarControllerTest: test_should_get_show
+------------------------------------------
+---------------------------------------------
+FoobarControllerTest: test_should_post_create
+---------------------------------------------
+-------------------------------------------
+FoobarControllerTest: test_should_get_index
+-------------------------------------------
+-------------------------------------------
+DrugsControllerTest: test_should_get_delete
+-------------------------------------------
+-------------------------------------------
+DrugsControllerTest: test_should_get_update
+-------------------------------------------
+----------------------------------------
+DrugsControllerTest: test_should_get_get
+----------------------------------------
+-----------------------------------------
+DrugsControllerTest: test_should_get_show
+-----------------------------------------
+------------------------------------------
+DrugsControllerTest: test_should_get_index
+------------------------------------------
+-------------------------------------------
+DrugsControllerTest: test_should_get_create
+-------------------------------------------
+-------------------------------------------
+DrugsControllerTest: test_should_get_create
+-------------------------------------------
+Processing by DrugsController#create as HTML
+Completed 200 OK in 0ms
+-----------------------------------------
+DrugsControllerTest: test_should_get_show
+-----------------------------------------
+-------------------------------------------
+DrugsControllerTest: test_should_get_update
+-------------------------------------------
+----------------------------------------
+DrugsControllerTest: test_should_get_get
+----------------------------------------
+-------------------------------------------
+DrugsControllerTest: test_should_get_delete
+-------------------------------------------
+------------------------------------------
+DrugsControllerTest: test_should_get_index
+------------------------------------------
+Processing by DrugsController#index as HTML
+Completed 500 Internal Server Error in 1ms

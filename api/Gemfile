@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
- 
+
 ruby '2.2.2'
 
 gem 'rails', '4.2.1'
@@ -9,9 +9,7 @@ gem 'rails-api'
 group :development, :test do
   gem 'spring'
   gem 'rubocop'
-  gem 'rubocop-checkstyle_formatter'
   gem 'brakeman'
-  gem 'rspec-rails', '~> 3.0'
 end
 
 gem 'puma'
@@ -31,3 +29,5 @@ gem 'pg', '~> 0.18.2'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 gem 'dotenv-rails'
+
+gem 'rest-client'
