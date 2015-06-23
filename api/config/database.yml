@@ -6,8 +6,6 @@ development: &default
   min_messages: warning
   pool: 2
   timeout: 5000
-  username: postgres
-  password: 
 
 development:
   <<: *default
