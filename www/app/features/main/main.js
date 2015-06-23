@@ -96,6 +96,7 @@ angular.module('gapFront')
     }
 
     function serviceError(error) {
+      console.log(error);
     }
-    console.log(error);
+
   });
