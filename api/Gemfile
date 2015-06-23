@@ -12,6 +12,10 @@ group :development, :test do
   gem 'brakeman'
   gem 'rubocop-checkstyle_formatter'
   gem 'rspec-rails', '~> 3.0'
+  gem 'database_cleaner', '~> 1.3.0'
+  gem 'factory_girl_rails', '~> 4.0'
+  gem 'shoulda-matchers'
+  gem 'pry'
 end
 
 gem 'puma'
@@ -33,3 +37,4 @@ gem 'pg', '~> 0.18.2'
 gem 'dotenv-rails'
 
 gem 'rest-client'
+gem 'acts-as-taggable-on'
