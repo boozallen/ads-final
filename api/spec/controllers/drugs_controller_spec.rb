@@ -19,7 +19,7 @@ RSpec.describe DrugsController, type: :controller do
       post :create, name: 'A New Drug', effects: ['oldness']
       json = JSON.parse(response.body)
       expect(json['name']).to eq('A New Drug')
-      expect(json['effects']).to eq(['newness', 'oldness'])
+      expect(json['effects']).to eq(%w(newness oldness))
     end
   end
 end
