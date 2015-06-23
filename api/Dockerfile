@@ -15,3 +15,5 @@ COPY . /usr/src/app
 
 EXPOSE 3000
 CMD ["/bin/bash", "startup.sh"]
+
+ENV DATABASE_URL 0.0.0.0:5432
