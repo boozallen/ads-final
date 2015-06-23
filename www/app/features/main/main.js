@@ -12,7 +12,7 @@ angular.module('gapFront')
     $scope.drugs = [];
     $scope.selectedDrug = {};
 
-    $scope.searchText = ''
+    $scope.searchText = '';
 
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
@@ -36,13 +36,16 @@ angular.module('gapFront')
         APIService.queryDrugLabel(query, 0, 10).then(function (resp) {
           $scope.drugs = [];
           for (var i in resp.results) {
-            var drug = {
-              brand_name: resp.results[i]['openfda']['brand_name'][0],
-              generic_name: resp.results[i]['openfda']['generic_name'][0],
-              substance_name: resp.results[i]['openfda']['substance_name'][0],
-              manufacturer_name: resp.results[i]['openfda']['manufacturer_name'][0]
-            };
-
+            if (resp.results[i]['openfda']['brand_name']){
+              console.log(resp.results[i]);
+              var drug = {
+                brand_name: resp.results[i]['openfda']['brand_name'][0],
+                generic_name: resp.results[i]['openfda']['generic_name'][0],
+                substance_name: resp.results[i]['openfda']['substance_name'] ? resp.results[i]['openfda']['substance_name'][0] : '',
+                manufacturer_name: resp.results[i]['openfda']['manufacturer_name'][0],
+                object: resp.results[i]
+              };
+            }
             $scope.drugs.push(drug);
           }
           console.log($scope.drugs);
