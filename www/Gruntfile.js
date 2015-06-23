@@ -87,6 +87,10 @@ module.exports = function (grunt) {
                       '/bower_components',
                       connect.static('./bower_components')
                   ),
+                  connect().use(
+                      '/assets',
+                      connect.static('./assets')
+                  ),
                   connect.static(appConfig.app),
                   connect().use(
                     '/docs/',
@@ -107,6 +111,10 @@ module.exports = function (grunt) {
                 '/bower_components',
                 connect.static('./bower_components')
               ),
+              connect().use(
+                      '/assets',
+                      connect.static('./assets')
+                  ),
               connect.static(appConfig.app)
             ];
           }
@@ -123,6 +131,10 @@ module.exports = function (grunt) {
                   connect().use(
                       '/bower_components',
                       connect.static('./bower_components')
+                  ),
+                  connect().use(
+                      '/assets',
+                      connect.static('./assets')
                   ),
                   connect.static(appConfig.app),
                   connect().use(
@@ -152,6 +164,10 @@ module.exports = function (grunt) {
                   connect().use(
                       '/bower_components',
                       connect.static('./bower_components')
+                  ),
+                  connect().use(
+                      '/assets',
+                      connect.static('./assets')
                   ),
                   connect.static(appConfig.app),
                   connect().use(
