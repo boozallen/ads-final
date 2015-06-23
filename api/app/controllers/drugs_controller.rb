@@ -1,4 +1,4 @@
-class FdaController < ApplicationController
+class DrugsController < ApplicationController
   def index
     render json: {}
   end
@@ -14,6 +14,8 @@ class FdaController < ApplicationController
   end
 
   def create
+    drug = Drug.create drug_params
+    render json: drug_json(drug)
   end
 
   private
@@ -25,5 +27,16 @@ class FdaController < ApplicationController
       adverse_reactions.match terms[:medical_term]
     end
     @_drug
+  end
+
+  def drug_params
+    params.permit!.slice(:name, :effects).tap { |p| p[:effect_list] = p.delete :effects }
+  end
+
+  def drug_json(drug)
+    {
+      name: drug.name,
+      effects: drug.effect_list
+    }.as_json
   end
 end

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   scope '/api/v1', except: [:new, :edit], defaults: { format: :json } do
-    resources :fda, only: [:index, :show], path: :drugs do
+    resources :drugs, only: [:index, :show, :create] do
       resource :reactions
     end
   end
