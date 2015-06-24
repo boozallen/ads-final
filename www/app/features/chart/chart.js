@@ -214,7 +214,7 @@ angular.module('gapFront')
         },
 
         series: [{
-            name: "Winter 2012-2013",
+            name: "Date",
             // Define the data points. All series have a dummy year
             // of 1970/71 in order to be compared on the same x axis. Note
             // that in JavaScript, months start at 0 for January, 1 for February etc.
