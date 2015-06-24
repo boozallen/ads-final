@@ -14,6 +14,7 @@ angular.module('gapFront')
     $scope.selectedSymptom = '';
     $scope.adverseEffects = [];
     $scope.displayedStuff = [];
+    $scope.count = 0;
 
     var initLabelEffects = function(params){
       $scope.selectedDrug = DrugService.getSelectedDrug();
@@ -47,6 +48,7 @@ angular.module('gapFront')
       var k = genRandomInt(0,$scope.adverseEffects.length);
       var effect = $scope.adverseEffects.splice(k,1)[0];
       var sentence = findMatchingSentence($scope.selectedDrug.object, effect.medical_term);
+      $scope.count += 1;
       $scope.displayedStuff.push({effect: effect, sentence:  sentence});
     }
 
@@ -143,6 +145,10 @@ angular.module('gapFront')
       }
       APIService.getDrugEffectApi().post(post).then(serviceError,serviceError);
 
+    };
+
+    $scope.getPercentage = function() {
+      return (Math.floor(($scope.count/$scope.adverseEffects.length)) * 100);
     };
 
     function effectsContain(obj){
