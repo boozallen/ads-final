@@ -1,9 +1,9 @@
 db:
-  image: <%= ENV['REGISTRY'] ||= '52.7.171.102:5000' %>/<%= ENV['DATABASE_IMAGE_NAME'] ||= 'devel_database' %>
+  image: 52.7.171.102:5000/<%= ENV['DATABASE_IMAGE_NAME'] ||= 'devel_database' %>
   ports:
     - "5432"
 backend:
-  image: <%= ENV['REGISTRY'] ||= '52.7.171.102:5000' %>/<%= ENV['BACKEND_IMAGE_NAME'] ||= 'devel_backend' %>
+  image: 52.7.171.102:5000/<%= ENV['BACKEND_IMAGE_NAME'] ||= 'devel_backend' %>
   ports:
     - "3000:3000"
   environment:
