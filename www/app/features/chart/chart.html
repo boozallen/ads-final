@@ -8,7 +8,7 @@
     <br><br>
 
     <div class="row">
-      <div class="col-md-3 col-md-offset-1">
+      <div class="col-md-3">
 
           <div>
             <br>
@@ -63,8 +63,15 @@
           </div>
 
         </div>
-        <div class="col-md-7">
-          <div id="container" style="min-width: 310px; max-width: 1600px; height: 1000px; margin: 0 auto"></div>
+        <div class="col-md-6">
+          <div style="height:425px; overflow:auto">
+            <div id="chartContainer" style="min-width: 310px; height: 1000px; margin: 0 auto"></div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <h3>Total Reported {{totalReportedCount}}</h3>
+          <br>
+          <div id="totalReportedContainer"></div>
         </div>
       </div>
     </div>
