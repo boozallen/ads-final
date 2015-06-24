@@ -1,21 +1,24 @@
-<section style="background-image:url('../assets/Landing_bg.jpg');
-background-size:100% auto;">
-  <img src="../assets/Main_logo.png" align="middle" class="img-responsive logoTitle" alt="Responsive image">
+<section class="landing">
+  <div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1">
+    <img src="../assets/Main_logo.png" align="middle" class="img-responsive logoTitle" alt="Responsive image">
+  </div>
   <div class="row">
     <br/>
-    <p class="appTitle" align="center"><strong>{{totalEvents}}</strong> people have reported side effects for <strong>{{totalLabels}}</strong> <br/>Help us make sure these side effects reach your label.</p>
+    <div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1">
+      <p class="appTitle" align="center"><strong>{{totalEvents}}</strong> people have reported side effects for medications <strong>{{totalLabels}}</strong> Help us make sure these side effects reach your label.</p>
+    </div>
   </div>
   <div class="row">
     <form>
-      <div class="input-group input-group-xs col-xs-6 col-xs-offset-3 spacer-2x">
+      <div class="search_block input-group input-group-xs col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1 spacer-2x">
         <input type="text" class="form-control searchInput" ng-model="searchText" id="searchValue"
         placeholder="Search for a Medication" ng-change="searchDrugs()">
         <div class="input-group-btn">
-          <!--<button class="btn searchButton searchInput" type="button" ng-click="navigateTo('/labelEffects')"><i class="fa fa-search searchIcon"></i></button>-->
+          <button class="btn searchButton searchInput" type="button" ng-click="navigateTo('/labelEffects')"><i class="fa fa-search searchIcon"></i></button>
         </div>
 
       </div>
-      <div class="col-md-6 col-md-offset-3" ng-show="drugs">
+      <div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1" ng-show="drugs">
         <div ng-class="!drugs.length==0?'dropdown clearfix open':'dropdown clearfix'">
           <ul class="dropdown-menu" style="width: 100%">
             <li ng-repeat="drug in drugs track by $index">
@@ -25,9 +28,23 @@ background-size:100% auto;">
         </div>
       </div>
     </form>
-
   </div>
-
+  <div class="row space-60">
+    <div class="trending col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+      <ul>
+        <li>Trending:</li>
+        <li>Viagra</li>
+        <li>Adderall</li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </div>
+  </div>
 </section>
 
 <div id="events-reports" ng-show="selectedDrug" class="features">
