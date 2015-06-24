@@ -125,7 +125,7 @@ section {
 }
 
 section.landing {
-  background: url("../assets/Landing_bg.jpg") no-repeat center center fixed; 
+  background: url("../assets/Landing_bg.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -224,4 +224,8 @@ section.landing {
 
 .trending ul li:nth-child(2){
   border-left: none;
+}
+
+.highlight {
+  background-color: cyan;
 }
