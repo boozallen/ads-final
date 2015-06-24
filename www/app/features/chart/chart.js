@@ -18,6 +18,9 @@ angular.module('gapFront')
     $scope.seriousness = "all";
     $scope.outcome = "all";
     $scope.age = "all";
+    $scope.totalReportedCount = 0;
+    $scope.percentSerious = 50;
+    $scope.percentNonSerious = 50;
 
     $scope.least=0;
     $scope.greatest=100;
@@ -60,10 +63,32 @@ angular.module('gapFront')
       }
 
       console.log(query);
-      APIService.aggregateDrugEvent(query, 50, 'patient.reaction.reactionmeddrapt.exact').then(function(resp){
+
+      APIService.aggregateDrugEvent(query, 25, 'patient.reaction.reactionmeddrapt.exact').then(function(resp){
         $scope.setChartData(resp.results);
       },function(error){
         console.log(error);
+      });
+
+      query = 'patient.drug.medicinalproduct:'+$scope.selectedDrug.brand_name+' AND serious:2';
+      APIService.aggregateDrugEvent(query, null, null).then(function(resp){
+        $scope.nonSeriousCount = resp.meta.results.total;
+        createPieChart();
+        console.log($scope.nonSeriousCount);
+      });
+
+      query = 'patient.drug.medicinalproduct:'+$scope.selectedDrug.brand_name+' AND serious:1';
+      APIService.aggregateDrugEvent(query, null, null).then(function(resp){
+        $scope.seriousCount = resp.meta.results.total;
+        createPieChart();
+        console.log($scope.seriousCount);
+      });
+
+      query = 'patient.drug.medicinalproduct:'+$scope.selectedDrug.brand_name;
+      APIService.aggregateDrugEvent(query, null, null).then(function(resp){
+        $scope.totalReportedCount = resp.meta.results.total;
+        createPieChart();
+        console.log($scope.totalReportedCount);
       });
       return true;
     };
@@ -90,20 +115,19 @@ angular.module('gapFront')
         $scope.effects.push($scope.chart[i].term);
         $scope.counts[0].data.push($scope.chart[i].count);
       }
-
       createChart();
       $scope.terms = $scope.chart;
     };
 
       //angular.element(document).ready();
       function createChart() {
-
-          $('#container').highcharts({
+        var colors = Highcharts.getOptions().colors;
+          $('#chartContainer').highcharts({
             chart: {
                 type: 'bar'
             },
             title: {
-                text: 'Stacked bar chart'
+                text: 'Top 25 Reported Adverse Effects for ' + $scope.selectedDrug.brand_name
             },
             xAxis: {
                 categories: $scope.effects
@@ -127,5 +151,44 @@ angular.module('gapFront')
 
           });
         };
+      function createPieChart() {
+        $scope.percentSerious = ($scope.seriousCount / $scope.totalReportedCount) * 100;
+      console.log($scope.percentSerious);
+      $scope.percentNonSerious = ($scope.nonSeriousCount / $scope.totalReportedCount) * 100;
+      console.log($scope.percentNonSerious);
+        $('#totalReportedContainer').highcharts({
+            chart: {
+              type: 'pie'
+            },
+            title: {
+              text: 'Total Reported'
+            },
+            yAxis: {
+              title: {
+                text: 'Percent Serious'
+              }
+            },
+            plotOptions: {
+              pie: {
+                shado: false
+              }
+            },
+            tooltip: {
+              formatter: function() {
+                return '<b>' + this.point.name + '</b>: '+ this.y + ' %';
+              }
+            },
+            series: [{
+              name: 'Total Reported',
+              data: [["Serious", $scope.percentSerious], ["Non-serious", $scope.percentNonSerious]],
+              size: '60%',
+              innerSize: '40%',
+              showInLegend: true,
+              dataLabels: {
+                enabled: false
+              }
+            }]
+          });
+      }
 
   });
