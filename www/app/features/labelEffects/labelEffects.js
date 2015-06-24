@@ -150,7 +150,6 @@ angular.module('gapFront')
     };
 
     $scope.getPercentage = function() {
-      if ($scope.count-1 == $scope.total){ return 100}
       var div = ($scope.count-1)/$scope.total;
       var percent = div * 100;
       return Math.floor(percent);
