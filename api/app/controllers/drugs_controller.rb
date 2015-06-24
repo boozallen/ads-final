@@ -11,9 +11,7 @@ class DrugsController < ApplicationController
   param :effects, Array, desc: 'Drug effects that have been experienced'
 
   def create
-    drug = Drug.find_or_create_by name: params[:name]
-    drug.effect_list.add params[:effects]
-    drug.save
+    drug = Drug.create! drug_params
     render json: drug_json(drug)
   end
 
@@ -23,10 +21,17 @@ class DrugsController < ApplicationController
     @_drug = Fda.get params[:id]
     fields = %w(boxed_warnings warnings_and_precautions user_safety_warnings precautions warnings general_precautions warnings_and_cautions adverse_reactions)
     adverse_reactions = fields.map { |f| @_drug.fetch(f, '') }.join('')
-    @_drug['effects'] = EFFECTS_LIST.select do |terms|
-      adverse_reactions.match terms[:medical_term]
+    @_drug.tap do |d|
+      d['effects'] = EFFECTS_LIST.select do |terms|
+        adverse_reactions.match terms[:medical_term]
+      end
+      d['reported_effects'] = Drug.where(name: params[:id]).tag_counts_on(:effects).map do |e|
+        {
+          effect: e.name,
+          reported: e.taggings_count
+        }
+      end
     end
-    @_drug
   end
 
   def drug_params
