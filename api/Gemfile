@@ -41,3 +41,6 @@ gem 'acts-as-taggable-on'
 
 # Documentation
 gem 'apipie-rails', '~> 0.2.6'
+
+# CORS
+gem 'rack-cors'
