@@ -16,7 +16,6 @@ angular.module('gapFront')
     ];
     $scope.filterType = "hospitalizations" //
     $scope.seriousness = "all";
-    $scope.dmeCases = "all";
     $scope.outcome = "all";
     $scope.age = "all";
 
