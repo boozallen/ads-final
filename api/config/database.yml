@@ -22,7 +22,7 @@ production:
 
 docker:
   adapter: postgresql
-  database: postgres
+  database: ads_production
   encoding: utf8
   username: postgres
   password:
