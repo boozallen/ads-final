@@ -1,5 +1,5 @@
 FROM ubuntu:14.04
-
+ 
 RUN mkdir /usr/src/app
 RUN mkdir /usr/src/app/client
 WORKDIR /usr/src/app/client

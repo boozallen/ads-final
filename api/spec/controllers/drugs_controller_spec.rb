@@ -15,7 +15,7 @@ RSpec.describe DrugsController, type: :controller do
       expect(json['effects']).to eq(['newness'])
     end
 
-    it 'appends effects to existing entries' do
+    it 'does not append effects to existing entries' do
       post :create, name: 'A Repeating Drug', effects: ['first']
       json = JSON.parse(response.body)
       expect(json['name']).to eq('A Repeating Drug')
@@ -23,7 +23,18 @@ RSpec.describe DrugsController, type: :controller do
       post :create, name: 'A Repeating Drug', effects: ['second']
       json = JSON.parse(response.body)
       expect(json['name']).to eq('A Repeating Drug')
-      expect(json['effects']).to eq(%w(first second))
+      expect(json['effects']).to eq(%w(second))
+    end
+
+    it 'returns reported effects' do
+      post :create, name: 'A Reported Drug', effects: %w(first)
+      post :create, name: 'A Reported Drug', effects: %w(second)
+      post :create, name: 'A Reported Drug', effects: %w(second third)
+      post :create, name: 'A Reported Drug', effects: %w(first second third)
+      get :show, id: 'A Reported Drug'
+      json = JSON.parse(response.body)
+      expect(json['reported_effects']).not_to be_empty
+      expect(json['reported_effects'].length).to eq(3)
     end
   end
 end
