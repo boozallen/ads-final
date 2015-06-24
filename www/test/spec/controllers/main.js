@@ -7,7 +7,6 @@ describe('Controller: MainCtrl', function () {
 
   var MainCtrl,
     scope;
-  var wait = true;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
@@ -28,5 +27,5 @@ describe('Controller: MainCtrl', function () {
         expect(scope.searchDrugEvents()).toBeTruthy();
       }, 5000);
     }
-  )
+  );
 });
