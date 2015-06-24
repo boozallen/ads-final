@@ -62,8 +62,105 @@
       "response_data": {
         "name": "A Repeating Drug",
         "effects": [
-          "first",
           "second"
+        ]
+      },
+      "code": "200",
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "POST",
+      "path": "/api/v1/drugs",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+        "name": "A Reported Drug",
+        "effects": [
+          "first"
+        ]
+      },
+      "response_data": {
+        "name": "A Reported Drug",
+        "effects": [
+          "first"
+        ]
+      },
+      "code": "200",
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "POST",
+      "path": "/api/v1/drugs",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+        "name": "A Reported Drug",
+        "effects": [
+          "second"
+        ]
+      },
+      "response_data": {
+        "name": "A Reported Drug",
+        "effects": [
+          "second"
+        ]
+      },
+      "code": "200",
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "POST",
+      "path": "/api/v1/drugs",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+        "name": "A Reported Drug",
+        "effects": [
+          "second",
+          "third"
+        ]
+      },
+      "response_data": {
+        "name": "A Reported Drug",
+        "effects": [
+          "second",
+          "third"
+        ]
+      },
+      "code": "200",
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "POST",
+      "path": "/api/v1/drugs",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+        "name": "A Reported Drug",
+        "effects": [
+          "first",
+          "second",
+          "third"
+        ]
+      },
+      "response_data": {
+        "name": "A Reported Drug",
+        "effects": [
+          "first",
+          "second",
+          "third"
         ]
       },
       "code": "200",
@@ -261,6 +358,143 @@
           {
             "medical_term": "ulcer",
             "layman_term": "ulcer"
+          }
+        ],
+        "reported_effects": [
+
+        ]
+      },
+      "code": "200",
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api/v1/drugs",
+      "versions": [
+        "1.0"
+      ],
+      "query": "effects%5B%5D=first&name=A+Reported+Drug",
+      "request_data": null,
+      "response_data": {
+        "set_id": "002e4f96-7a74-4501-8b81-dc6f092c807a",
+        "information_for_patients": [
+          "Information for Patients: Do not touch dropper tip to any surface, as this may contaminate the solution. Patient should be advised not to drive or engage in potentially hazardous activities while pupils are dilated. Patient may experience sensitivity to light and should protect eyes in bright illumination during dilation. Parents should be warned not to get this preparation in their child's mouth and to wash their own hands and the child's hands following administration."
+        ],
+        "indications_and_usage": [
+          "INDICATIONS AND USAGE: For mydriasis and cycloplegia for diagnostic procedures."
+        ],
+        "contraindications": [
+          "CONTRAINDICATIONS: Contraindicated in persons showing hypersensitivity to any component of this preparation."
+        ],
+        "how_supplied": [
+          "HOW SUPPLIED: Tropicamide Ophthalmic Solution USP, 1% are supplied as sterile solutions in plastic dropper bottles. 1% NDC 0404-7192-01 (15 mL) STORAGE: Store at 20° to 25°C (68° to 77°F) [see USP Controlled Room Temperature]. Do not refrigerate or store at high temperatures. Keep container tightly closed. Distributed by (in US only): HENRY SCHEIN INC. 135 DURYEA ROAD MELVILLE, NY 11747 USA BTC00N Rev. 12/14"
+        ],
+        "adverse_reactions": [
+          "ADVERSE REACTIONS: Ocular: Transient stinging, blurred vision, photophobia and superficial punctate keratitis have been reported with the use of tropicamide. Increased intraocular pressure has been reported following the use of mydriatics. Non-Ocular: Dryness of the mouth, tachycardia, headache, allergic reactions, nausea, vomiting, pallor, central nervous system disturbances and muscle rigidity have been reported with the use of tropicamide. Psychotic reactions, behavioral disturbances, and vasomotor or cardiorespiratory collapse in children have been reported with the use of anticholinergic drugs."
+        ],
+        "dosage_and_administration": [
+          "DOSAGE AND ADMINISTRATION: For refraction, instill one or two drops of 1% solution in the eye(s), repeated in five minutes. If patient is not seen within 20 to 30 minutes, an additional drop may be instilled to prolong mydriatic effect. Individuals with heavily pigmented irides may require higher strength or more doses. Mydriasis will reverse spontaneously with time, typically in 4 to 8 hours. However, in some cases, complete recovery may take up to 24 hours."
+        ],
+        "storage_and_handling": [
+          "STORAGE: Store at 20° to 25°C (68° to 77°F) [see USP Controlled Room Temperature]. Do not refrigerate or store at high temperatures. Keep container tightly closed. Distributed by (in US only): HENRY SCHEIN INC. 135 DURYEA ROAD MELVILLE, NY 11747 USA BTC00N Rev. 12/14"
+        ],
+        "general_precautions": [
+          "General: The lacrimal sac should be compressed by digital pressure for two to three minutes after instillation to avoid excessive systemic absorption."
+        ],
+        "drug_interactions": [
+          "Drug Interactions: Tropicamide may interfere with the antihypertensive action of carbachol, pilocarpine, or ophthalmic cholinesterase inhibitors."
+        ],
+        "version": "1",
+        "id": "bfd88552-997c-4cbe-b37e-729a7dc3a61e",
+        "package_label_principal_display_panel": [
+          "Principal Display Panel Text for Container Label: HENRY SCHEIN Logo NDC 0404-7192-01 112-7192 TROPICAMIDE OPHTHALMIC SOLUTION, USP 1% Sterile Rx only 15 mL FOR TOPICAL OPHTHALMIC USE ONLY. Principal Display Panel Text for Container Label",
+          "Principal Display Panel Text for Carton Label: HENRY SCHEIN Logo NDC 0404-7192-01 112-7192 TROPICAMIDE OPHTHALMIC SOLUTION, USP 1% FOR TOPICAL OPHTHALMIC USE ONLY. Sterile Rx only 15 mL HENRY SCHEIN Ribbon Seal Principal Display Panel Text for Carton Label"
+        ],
+        "@epoch": 1432336729.773203,
+        "carcinogenesis_and_mutagenesis_and_impairment_of_fertility": [
+          "Carcinogenesis, Mutagenesis, Impairment of Fertility: There have been no long-term studies done using tropicamide in animals to evaluate carcinogenic potential."
+        ],
+        "effective_time": "20150513",
+        "description": [
+          "DESCRIPTION: Tropicamide Ophthalmic Solution, USP is an anticholinergic prepared as a sterile topical ophthalmic solution in two strengths. The active ingredient is represented by the structural formula: C17H20N2O2 MW=284.36 Established name: Tropicamide Chemical name: Benzeneacetamide, N-ethyl-α-(hydroxymethyl)-N-(4-pyridinylmethyl)-. Each mL contains: Active: Tropicamide 1% (10 mg). Inactives: Edetate Disodium, Sodium Chloride, Hydrochloric Acid and/or Sodium Hydroxide (to adjust pH), Water for Injection. pH range 4.0 to 5.8. Preservative: Benzalkonium Chloride 0.01%. Structural Formula"
+        ],
+        "pregnancy": [
+          "Pregnancy: Pregnancy Category C. Animal reproduction studies have not been conducted with tropicamide. It is also not known whether tropicamide can cause fetal harm when administered to a pregnant woman or can affect reproduction capacity. Tropicamide should be given to a pregnant woman only if clearly needed."
+        ],
+        "precautions": [
+          "PRECAUTIONS: General: The lacrimal sac should be compressed by digital pressure for two to three minutes after instillation to avoid excessive systemic absorption. Information for Patients: Do not touch dropper tip to any surface, as this may contaminate the solution. Patient should be advised not to drive or engage in potentially hazardous activities while pupils are dilated. Patient may experience sensitivity to light and should protect eyes in bright illumination during dilation. Parents should be warned not to get this preparation in their child's mouth and to wash their own hands and the child's hands following administration. Drug Interactions: Tropicamide may interfere with the antihypertensive action of carbachol, pilocarpine, or ophthalmic cholinesterase inhibitors. Carcinogenesis, Mutagenesis, Impairment of Fertility: There have been no long-term studies done using tropicamide in animals to evaluate carcinogenic potential. Pregnancy: Pregnancy Category C. Animal reproduction studies have not been conducted with tropicamide. It is also not known whether tropicamide can cause fetal harm when administered to a pregnant woman or can affect reproduction capacity. Tropicamide should be given to a pregnant woman only if clearly needed. Nursing Mothers: It is not known whether this drug is excreted in human milk. Because many drugs are excreted inhuman milk, caution should be exercised when tropicamide is administered to a nursing woman. Pediatric Use: Tropicamide may rarely cause CNS disturbances which may be dangerous in pediatric patients. Psychotic reactions, behavioral disturbances, and vasomotor or cardiorespiratory collapse in children have been reported with the use of anticholinergic drugs (See WARNINGS). Keep this and all medications out of the reach of children."
+        ],
+        "pediatric_use": [
+          "Pediatric Use: Tropicamide may rarely cause CNS disturbances which may be dangerous in pediatric patients. Psychotic reactions, behavioral disturbances, and vasomotor or cardiorespiratory collapse in children have been reported with the use of anticholinergic drugs (See WARNINGS). Keep this and all medications out of the reach of children."
+        ],
+        "nursing_mothers": [
+          "Nursing Mothers: It is not known whether this drug is excreted in human milk. Because many drugs are excreted inhuman milk, caution should be exercised when tropicamide is administered to a nursing woman."
+        ],
+        "clinical_pharmacology": [
+          "CLINICAL PHARMACOLOGY: This anticholinergic preparation blocks the responses of the sphincter muscle of the iris and the ciliary muscle to cholinergic stimulation, dilating the pupil (mydriasis). The stronger preparation (1%) also paralyzes accommodation. This preparation acts in 15-30 minutes and the duration of activity is approximately 3-8hours. Complete recovery from mydriasis in some individuals may require 24 hours. The weaker strength may be useful in producing mydriasis with only slight cycloplegia. Heavily pigmented irides may require more doses than lightly pigmented irides."
+        ],
+        "openfda": {
+        },
+        "spl_product_data_elements": [
+          "Tropicamide Tropicamide Tropicamide Tropicamide Edetate Disodium Sodium Chloride Hydrochloric Acid Sodium Hydroxide Water Benzalkonium Chloride"
+        ],
+        "warnings": [
+          "WARNINGS: For topical use only — not for injection. This preparation may cause CNS disturbances which may be dangerous in pediatric patients. The possibility of psychotic reactions and behavioral disturbances due to hypersensitivity to anticholinergic drugs should be considered. Mydriatics may produce a transient elevation of intraocular pressure. Remove contact lenses before using."
+        ],
+        "spl_unclassified_section": [
+          "Rx only"
+        ],
+        "effects": [
+          {
+            "medical_term": "nausea",
+            "layman_term": "nausea"
+          },
+          {
+            "medical_term": "headache",
+            "layman_term": "headache"
+          },
+          {
+            "medical_term": "vomiting",
+            "layman_term": "vomiting"
+          },
+          {
+            "medical_term": "hypersensitivity",
+            "layman_term": "hypersensitivity"
+          },
+          {
+            "medical_term": "tachycardia",
+            "layman_term": "rapid heartbeat"
+          },
+          {
+            "medical_term": "anger",
+            "layman_term": "anger"
+          },
+          {
+            "medical_term": "pallor",
+            "layman_term": "pallor"
+          },
+          {
+            "medical_term": "photophobia",
+            "layman_term": "photophobia"
+          },
+          {
+            "medical_term": "muscle rigidity",
+            "layman_term": "muscle rigidity"
+          }
+        ],
+        "reported_effects": [
+          {
+            "effect": "second",
+            "reported": 3
+          },
+          {
+            "effect": "third",
+            "reported": 2
+          },
+          {
+            "effect": "first",
+            "reported": 2
           }
         ]
       },
