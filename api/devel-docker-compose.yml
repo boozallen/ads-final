@@ -1,0 +1,10 @@
+db:
+  image: 52.7.171.102:5000/devel-database
+  ports:
+    - "5432"
+backend:
+  image: 52.7.171.102:5000/devel-backend
+  ports:
+    - "3000:3000"
+  links:
+    - db
