@@ -7,7 +7,7 @@ class Fda
       end.first
     rescue StandardError => e
       Rails.logger.error e
-      {}
+      nil
     end
   end
 end

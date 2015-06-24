@@ -3,7 +3,11 @@ class DrugsController < ApplicationController
   param :id, String, required: true
 
   def show
-    render json: drug
+    if drug.nil?
+      render nothing: true, status: 404
+    else
+      render json: drug
+    end
   end
 
   api :POST, '/drugs', 'Creates or Updates a drug entry by name'
@@ -19,6 +23,13 @@ class DrugsController < ApplicationController
 
   def drug
     @_drug = Fda.get params[:id]
+
+    return nil if @_drug.nil?
+    #if @_drug.nil?
+    #  render nothing: true, status: 404
+    #  fail
+    #end
+
     fields = %w(boxed_warnings warnings_and_precautions user_safety_warnings precautions warnings general_precautions warnings_and_cautions adverse_reactions)
     adverse_reactions = fields.map { |f| @_drug.fetch(f, '') }.join('')
     @_drug.tap do |d|
