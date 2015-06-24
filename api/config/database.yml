@@ -26,7 +26,7 @@ docker: &docker
   encoding: utf8
   username: postgres
   password:
-  host: db
+  host: localhost
   pool: 5
 
 docker-test:
