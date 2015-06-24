@@ -6,5 +6,7 @@ backend:
   image: 52.7.171.102:5000/devel_backend
   ports:
     - "3000:3000"
+  environment:
+    - RAILS_ENV=docker
   links:
     - db
