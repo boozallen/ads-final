@@ -1,17 +1,14 @@
 class DrugsController < ApplicationController
-  def index
-    render json: {}
-  end
+  api :GET, '/drugs/:id', 'Shows drug as returned from FDA with parsed effects by :id'
+  param :id, :number, required: true
 
   def show
     render json: drug
   end
 
-  def update
-  end
-
-  def delete
-  end
+  api :POST, '/drugs', 'Creates or Updates a drug entry by name'
+  param :name, String, desc: 'Drug Brand Name', required: true
+  param :effects, Array, desc: 'Drug effects that have been experienced'
 
   def create
     drug = Drug.find_or_create_by name: params[:name]

@@ -38,3 +38,6 @@ gem 'dotenv-rails'
 
 gem 'rest-client'
 gem 'acts-as-taggable-on'
+
+# Documentation
+gem 'apipie-rails', '~> 0.2.6'
