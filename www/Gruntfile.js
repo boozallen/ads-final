@@ -589,6 +589,7 @@ module.exports = function (grunt) {
     'wiredep',
     'ngdocs',
     'concurrent:test',
+    'jshint:test',
     'autoprefixer',
     'connect:test',
     'karma'

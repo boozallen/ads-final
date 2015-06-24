@@ -1,5 +1,5 @@
 <div class="features col-md-10 col-md-offset-1" ng-if="selectedDrug">
-  <div class="well col-md-9">
+  <div class="well col-md-7">
     <div ng-if="selectedDrug.object.boxed_warning">
       <h3>Boxed Warnings</h3>
       <div>{{selectedDrug.object.boxed_warning}}</div>
@@ -26,11 +26,14 @@
     </div>
   </div>
 
-  <div class="col-md-3">
-    <div class="well row" ng-repeat="effect in displayedEffects">
-      <div >
-        <p>{{effect}}</p>
-        <button ng-click="completeIndex($index,true)">Yes</button><button ng-click="completeIndex($index,false)">No</button><br/><br/>
+  <div class="col-md-4 col-md-offset-1">
+    <div ng-class="!$first?'row well disabled spacer-2x':'row well'" ng-repeat="effect in displayedEffects">
+      <div align="center">
+        Is <strong>{{effect.toLowerCase()}}</strong> listed on the label as a side effect?<br/><br/>
+        <div class="btn-group">
+          <button class="btn btn-primary" ng-click="completeIndex($index,true, $first)">Yes</button>
+          <button class="btn btn-danger" ng-click="completeIndex($index,false, $first)">No</button>
+        </div>
       </div>
 
       <!--<div class="checkbox" ng-repeat="effect in effects"><label><input type="checkbox" ng-model="effect.checked"> <p bs-tooltip="effect.layman_term" data-placement="right">{{effect.medical_term}}</p></label></div>-->
