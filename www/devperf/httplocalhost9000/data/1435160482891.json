@@ -1,0 +1,2082 @@
+{
+  "assertions": {
+    "requests": {
+      "value": 200
+    },
+    "cssCount": {
+      "value": 6
+    },
+    "jsCount": {
+      "value": 12
+    },
+    "imageCount": {
+      "value": 30
+    },
+    "smallImages": {
+      "value": 20
+    },
+    "imageSize": {
+      "value": 512000
+    },
+    "webfontCount": {
+      "value": 4
+    },
+    "multipleRequests": {
+      "value": 1
+    },
+    "imagesWithoutDimensions": {
+      "value": 5
+    },
+    "commentsSize": {
+      "value": 1000
+    },
+    "whiteSpacesSize": {
+      "value": 8000
+    },
+    "DOMelementsCount": {
+      "value": 2000
+    },
+    "DOMqueries": {
+      "value": 200
+    },
+    "DOMqueriesDuplicated": {
+      "value": 30
+    },
+    "DOMinserts": {
+      "value": 100
+    },
+    "jQuerySizzleCalls": {
+      "value": 300
+    },
+    "headersSentSize": {
+      "value": 20000
+    }
+  },
+  "metrics": {
+    "requests": {
+      "values": [
+        54,
+        54,
+        54,
+        54,
+        54,
+        null
+      ],
+      "sum": 270,
+      "min": 54,
+      "max": 54,
+      "median": 54,
+      "average": 54
+    },
+    "gzipRequests": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "postRequests": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "httpsRequests": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "notFound": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "bodySize": {
+      "values": [
+        1284257,
+        1418139,
+        1827181,
+        2091312,
+        2114745,
+        null
+      ],
+      "sum": 8735634,
+      "min": 1284257,
+      "max": 2114745,
+      "median": 1827181,
+      "average": 1747126.8
+    },
+    "contentLength": {
+      "values": [
+        3503799,
+        3506695,
+        3532759,
+        3584887,
+        3620174,
+        null
+      ],
+      "sum": 17748314,
+      "min": 3503799,
+      "max": 3620174,
+      "median": 3532759,
+      "average": 3549662.8
+    },
+    "httpTrafficCompleted": {
+      "values": [
+        5675,
+        5676,
+        5681,
+        5684,
+        5915,
+        null
+      ],
+      "sum": 28631,
+      "min": 5675,
+      "max": 5915,
+      "median": 5681,
+      "average": 5726.2
+    },
+    "timeToFirstByte": {
+      "values": [
+        502,
+        504,
+        506,
+        516,
+        528,
+        null
+      ],
+      "sum": 2556,
+      "min": 502,
+      "max": 528,
+      "median": 506,
+      "average": 511.2
+    },
+    "timeToLastByte": {
+      "values": [
+        549,
+        550,
+        562,
+        577,
+        578,
+        null
+      ],
+      "sum": 2816,
+      "min": 549,
+      "max": 578,
+      "median": 562,
+      "average": 563.2
+    },
+    "ajaxRequests": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "htmlCount": {
+      "values": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        null
+      ],
+      "sum": 25,
+      "min": 5,
+      "max": 5,
+      "median": 5,
+      "average": 5
+    },
+    "htmlSize": {
+      "values": [
+        13381,
+        13381,
+        13381,
+        13381,
+        13381,
+        null
+      ],
+      "sum": 66905,
+      "min": 13381,
+      "max": 13381,
+      "median": 13381,
+      "average": 13381
+    },
+    "cssCount": {
+      "values": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        null
+      ],
+      "sum": 40,
+      "min": 8,
+      "max": 8,
+      "median": 8,
+      "average": 8
+    },
+    "cssSize": {
+      "values": [
+        432055,
+        432055,
+        432055,
+        432055,
+        432055,
+        null
+      ],
+      "sum": 2160275,
+      "min": 432055,
+      "max": 432055,
+      "median": 432055,
+      "average": 432055
+    },
+    "jsCount": {
+      "values": [
+        37,
+        37,
+        37,
+        37,
+        37,
+        null
+      ],
+      "sum": 185,
+      "min": 37,
+      "max": 37,
+      "median": 37,
+      "average": 37
+    },
+    "jsSize": {
+      "values": [
+        2930765,
+        2933661,
+        2959725,
+        3011853,
+        3047140,
+        null
+      ],
+      "sum": 14883144,
+      "min": 2930765,
+      "max": 3047140,
+      "median": 2959725,
+      "average": 2976628.8
+    },
+    "jsonCount": {
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "sum": 5,
+      "min": 1,
+      "max": 1,
+      "median": 1,
+      "average": 1
+    },
+    "jsonSize": {
+      "values": [
+        33755,
+        33755,
+        33755,
+        33755,
+        33755,
+        null
+      ],
+      "sum": 168775,
+      "min": 33755,
+      "max": 33755,
+      "median": 33755,
+      "average": 33755
+    },
+    "imageCount": {
+      "values": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        null
+      ],
+      "sum": 15,
+      "min": 3,
+      "max": 3,
+      "median": 3,
+      "average": 3
+    },
+    "imageSize": {
+      "values": [
+        93843,
+        93843,
+        93843,
+        93843,
+        93843,
+        null
+      ],
+      "sum": 469215,
+      "min": 93843,
+      "max": 93843,
+      "median": 93843,
+      "average": 93843
+    },
+    "videoCount": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "videoSize": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "webfontCount": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "webfontSize": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "base64Count": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "base64Size": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "otherCount": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "otherSize": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "cacheHits": {
+      "values": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        null
+      ],
+      "sum": 15,
+      "min": 3,
+      "max": 3,
+      "median": 3,
+      "average": 3
+    },
+    "cacheMisses": {
+      "values": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        null
+      ],
+      "sum": 10,
+      "min": 2,
+      "max": 2,
+      "median": 2,
+      "average": 2
+    },
+    "cachePasses": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "cachingNotSpecified": {
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "sum": 5,
+      "min": 1,
+      "max": 1,
+      "median": 1,
+      "average": 1
+    },
+    "cachingTooShort": {
+      "values": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        null
+      ],
+      "sum": 20,
+      "min": 4,
+      "max": 4,
+      "median": 4,
+      "average": 4
+    },
+    "cachingDisabled": {
+      "values": [
+        43,
+        43,
+        43,
+        43,
+        43,
+        null
+      ],
+      "sum": 215,
+      "min": 43,
+      "max": 43,
+      "median": 43,
+      "average": 43
+    },
+    "oldCachingHeaders": {
+      "values": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        null
+      ],
+      "sum": 30,
+      "min": 6,
+      "max": 6,
+      "median": 6,
+      "average": 6
+    },
+    "consoleMessages": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "cookiesSent": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "cookiesRecv": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "domainsWithCookies": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "documentCookiesLength": {
+      "values": [
+        37,
+        38,
+        38,
+        39,
+        39,
+        null
+      ],
+      "sum": 191,
+      "min": 37,
+      "max": 39,
+      "median": 38,
+      "average": 38.2
+    },
+    "documentCookiesCount": {
+      "values": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        null
+      ],
+      "sum": 10,
+      "min": 2,
+      "max": 2,
+      "median": 2,
+      "average": 2
+    },
+    "documentHeight": {
+      "values": [
+        1024,
+        1024,
+        1024,
+        1024,
+        2048,
+        null
+      ],
+      "sum": 6144,
+      "min": 1024,
+      "max": 2048,
+      "median": 1024,
+      "average": 1228.8
+    },
+    "domains": {
+      "values": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        null
+      ],
+      "sum": 20,
+      "min": 4,
+      "max": 4,
+      "median": 4,
+      "average": 4
+    },
+    "maxRequestsPerDomain": {
+      "values": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        null
+      ],
+      "sum": 245,
+      "min": 49,
+      "max": 49,
+      "median": 49,
+      "average": 49
+    },
+    "medianRequestsPerDomain": {
+      "values": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        null
+      ],
+      "sum": 10,
+      "min": 2,
+      "max": 2,
+      "median": 2,
+      "average": 2
+    },
+    "commentsSize": {
+      "values": [
+        503,
+        503,
+        503,
+        503,
+        503,
+        null
+      ],
+      "sum": 2515,
+      "min": 503,
+      "max": 503,
+      "median": 503,
+      "average": 503
+    },
+    "hiddenContentSize": {
+      "values": [
+        807,
+        807,
+        807,
+        807,
+        807,
+        null
+      ],
+      "sum": 4035,
+      "min": 807,
+      "max": 807,
+      "median": 807,
+      "average": 807
+    },
+    "whiteSpacesSize": {
+      "values": [
+        678,
+        678,
+        678,
+        678,
+        678,
+        null
+      ],
+      "sum": 3390,
+      "min": 678,
+      "max": 678,
+      "median": 678,
+      "average": 678
+    },
+    "DOMelementsCount": {
+      "values": [
+        76,
+        76,
+        76,
+        76,
+        76,
+        null
+      ],
+      "sum": 380,
+      "min": 76,
+      "max": 76,
+      "median": 76,
+      "average": 76
+    },
+    "DOMelementMaxDepth": {
+      "values": [
+        9,
+        9,
+        9,
+        9,
+        9,
+        null
+      ],
+      "sum": 45,
+      "min": 9,
+      "max": 9,
+      "median": 9,
+      "average": 9
+    },
+    "nodesWithInlineCSS": {
+      "values": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        null
+      ],
+      "sum": 15,
+      "min": 3,
+      "max": 3,
+      "median": 3,
+      "average": 3
+    },
+    "DOMmutationsInserts": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "DOMmutationsRemoves": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "DOMmutationsAttributes": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "DOMqueries": {
+      "values": [
+        59,
+        60,
+        62,
+        63,
+        63,
+        null
+      ],
+      "sum": 307,
+      "min": 59,
+      "max": 63,
+      "median": 62,
+      "average": 61.4
+    },
+    "DOMqueriesById": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "DOMqueriesByClassName": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "DOMqueriesByTagName": {
+      "values": [
+        30,
+        30,
+        30,
+        30,
+        30,
+        null
+      ],
+      "sum": 150,
+      "min": 30,
+      "max": 30,
+      "median": 30,
+      "average": 30
+    },
+    "DOMqueriesByQuerySelectorAll": {
+      "values": [
+        29,
+        30,
+        32,
+        33,
+        33,
+        null
+      ],
+      "sum": 157,
+      "min": 29,
+      "max": 33,
+      "median": 32,
+      "average": 31.4
+    },
+    "DOMinserts": {
+      "values": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        null
+      ],
+      "sum": 40,
+      "min": 8,
+      "max": 8,
+      "median": 8,
+      "average": 8
+    },
+    "DOMqueriesDuplicated": {
+      "values": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        null
+      ],
+      "sum": 30,
+      "min": 6,
+      "max": 6,
+      "median": 6,
+      "average": 6
+    },
+    "eventsBound": {
+      "values": [
+        24,
+        24,
+        24,
+        24,
+        24,
+        null
+      ],
+      "sum": 120,
+      "min": 24,
+      "max": 24,
+      "median": 24,
+      "average": 24
+    },
+    "globalVariables": {
+      "values": [
+        17,
+        17,
+        17,
+        17,
+        17,
+        null
+      ],
+      "sum": 85,
+      "min": 17,
+      "max": 17,
+      "median": 17,
+      "average": 17
+    },
+    "globalVariablesFalsy": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "headersCount": {
+      "values": [
+        623,
+        623,
+        623,
+        623,
+        623,
+        null
+      ],
+      "sum": 3115,
+      "min": 623,
+      "max": 623,
+      "median": 623,
+      "average": 623
+    },
+    "headersSentCount": {
+      "values": [
+        161,
+        161,
+        161,
+        161,
+        161,
+        null
+      ],
+      "sum": 805,
+      "min": 161,
+      "max": 161,
+      "median": 161,
+      "average": 161
+    },
+    "headersRecvCount": {
+      "values": [
+        462,
+        462,
+        462,
+        462,
+        462,
+        null
+      ],
+      "sum": 2310,
+      "min": 462,
+      "max": 462,
+      "median": 462,
+      "average": 462
+    },
+    "headersSize": {
+      "values": [
+        20703,
+        20703,
+        20703,
+        20703,
+        20703,
+        null
+      ],
+      "sum": 103515,
+      "min": 20703,
+      "max": 20703,
+      "median": 20703,
+      "average": 20703
+    },
+    "headersSentSize": {
+      "values": [
+        5937,
+        5937,
+        5937,
+        5937,
+        5937,
+        null
+      ],
+      "sum": 29685,
+      "min": 5937,
+      "max": 5937,
+      "median": 5937,
+      "average": 5937
+    },
+    "headersRecvSize": {
+      "values": [
+        14766,
+        14766,
+        14766,
+        14766,
+        14766,
+        null
+      ],
+      "sum": 73830,
+      "min": 14766,
+      "max": 14766,
+      "median": 14766,
+      "average": 14766
+    },
+    "headersBiggerThanContent": {
+      "values": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        null
+      ],
+      "sum": 10,
+      "min": 2,
+      "max": 2,
+      "median": 2,
+      "average": 2
+    },
+    "documentWriteCalls": {
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "sum": 5,
+      "min": 1,
+      "max": 1,
+      "median": 1,
+      "average": 1
+    },
+    "evalCalls": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "jQueryOnDOMReadyFunctions": {
+      "values": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        null
+      ],
+      "sum": 20,
+      "min": 4,
+      "max": 4,
+      "median": 4,
+      "average": 4
+    },
+    "jQuerySizzleCalls": {
+      "values": [
+        11,
+        11,
+        11,
+        11,
+        11,
+        null
+      ],
+      "sum": 55,
+      "min": 11,
+      "max": 11,
+      "median": 11,
+      "average": 11
+    },
+    "jsErrors": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "localStorageEntries": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "redirects": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "redirectsTime": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "assetsNotGzipped": {
+      "values": [
+        50,
+        50,
+        50,
+        50,
+        50,
+        null
+      ],
+      "sum": 250,
+      "min": 50,
+      "max": 50,
+      "median": 50,
+      "average": 50
+    },
+    "assetsWithQueryString": {
+      "values": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        null
+      ],
+      "sum": 10,
+      "min": 2,
+      "max": 2,
+      "median": 2,
+      "average": 2
+    },
+    "assetsWithCookies": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "smallImages": {
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "sum": 5,
+      "min": 1,
+      "max": 1,
+      "median": 1,
+      "average": 1
+    },
+    "multipleRequests": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "timeToFirstCss": {
+      "values": [
+        476,
+        546,
+        560,
+        572,
+        581,
+        null
+      ],
+      "sum": 2735,
+      "min": 476,
+      "max": 581,
+      "median": 560,
+      "average": 547
+    },
+    "timeToFirstJs": {
+      "values": [
+        522,
+        564,
+        591,
+        602,
+        630,
+        null
+      ],
+      "sum": 2909,
+      "min": 522,
+      "max": 630,
+      "median": 591,
+      "average": 581.8
+    },
+    "timeToFirstImage": {
+      "values": [
+        5535,
+        5573,
+        5581,
+        5595,
+        5927,
+        null
+      ],
+      "sum": 28211,
+      "min": 5535,
+      "max": 5927,
+      "median": 5581,
+      "average": 5642.2
+    },
+    "domInteractive": {
+      "values": [
+        4898,
+        4905,
+        4941,
+        4949,
+        5186,
+        null
+      ],
+      "sum": 24879,
+      "min": 4898,
+      "max": 5186,
+      "median": 4941,
+      "average": 4975.8
+    },
+    "domContentLoaded": {
+      "values": [
+        4898,
+        4906,
+        4942,
+        4950,
+        5186,
+        null
+      ],
+      "sum": 24882,
+      "min": 4898,
+      "max": 5186,
+      "median": 4942,
+      "average": 4976.4
+    },
+    "domContentLoadedEnd": {
+      "values": [
+        4998,
+        5050,
+        5130,
+        5150,
+        5225,
+        null
+      ],
+      "sum": 25553,
+      "min": 4998,
+      "max": 5225,
+      "median": 5130,
+      "average": 5110.6
+    },
+    "domComplete": {
+      "values": [
+        4976,
+        5002,
+        5033,
+        5052,
+        5465,
+        null
+      ],
+      "sum": 25528,
+      "min": 4976,
+      "max": 5465,
+      "median": 5033,
+      "average": 5105.6
+    },
+    "timeBackend": {
+      "values": [
+        9,
+        9,
+        9,
+        9,
+        9,
+        null
+      ],
+      "sum": 45,
+      "min": 9,
+      "max": 9,
+      "median": 9,
+      "average": 9
+    },
+    "timeFrontend": {
+      "values": [
+        91,
+        91,
+        91,
+        91,
+        91,
+        null
+      ],
+      "sum": 455,
+      "min": 91,
+      "max": 91,
+      "median": 91,
+      "average": 91
+    },
+    "windowAlerts": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "windowConfirms": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "windowPrompts": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "bodyHTMLSize": {
+      "values": [
+        7546,
+        7546,
+        7546,
+        7546,
+        7546,
+        null
+      ],
+      "sum": 37730,
+      "min": 7546,
+      "max": 7546,
+      "median": 7546,
+      "average": 7546
+    },
+    "iframesCount": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "imagesWithoutDimensions": {
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "sum": 5,
+      "min": 1,
+      "max": 1,
+      "median": 1,
+      "average": 1
+    },
+    "smallestResponse": {
+      "values": [
+        35,
+        35,
+        35,
+        35,
+        35,
+        null
+      ],
+      "sum": 175,
+      "min": 35,
+      "max": 35,
+      "median": 35,
+      "average": 35
+    },
+    "biggestResponse": {
+      "values": [
+        1038340,
+        1038340,
+        1038340,
+        1038340,
+        1038340,
+        null
+      ],
+      "sum": 5191700,
+      "min": 1038340,
+      "max": 1038340,
+      "median": 1038340,
+      "average": 1038340
+    },
+    "fastestResponse": {
+      "values": [
+        2,
+        4,
+        6,
+        13,
+        17,
+        null
+      ],
+      "sum": 42,
+      "min": 2,
+      "max": 17,
+      "median": 6,
+      "average": 8.4
+    },
+    "slowestResponse": {
+      "values": [
+        4596,
+        4624,
+        4857,
+        4865,
+        4901,
+        null
+      ],
+      "sum": 23843,
+      "min": 4596,
+      "max": 4901,
+      "median": 4857,
+      "average": 4768.6
+    },
+    "smallestLatency": {
+      "values": [
+        2,
+        4,
+        6,
+        13,
+        17,
+        null
+      ],
+      "sum": 42,
+      "min": 2,
+      "max": 17,
+      "median": 6,
+      "average": 8.4
+    },
+    "biggestLatency": {
+      "values": [
+        4596,
+        4602,
+        4738,
+        4753,
+        4786,
+        null
+      ],
+      "sum": 23475,
+      "min": 4596,
+      "max": 4786,
+      "median": 4738,
+      "average": 4695
+    },
+    "medianResponse": {
+      "values": [
+        173,
+        174,
+        178.5,
+        182.5,
+        194,
+        null
+      ],
+      "sum": 902,
+      "min": 173,
+      "max": 194,
+      "median": 178.5,
+      "average": 180.4
+    },
+    "medianLatency": {
+      "values": [
+        169,
+        170,
+        174,
+        180,
+        183,
+        null
+      ],
+      "sum": 876,
+      "min": 169,
+      "max": 183,
+      "median": 174,
+      "average": 175.2
+    }
+  },
+  "offenders": {
+    "htmlCount": [
+      "http://localhost:9000/ (4.44 kB)",
+      "http://localhost:9000/features/header/header.html (1.26 kB)",
+      "http://localhost:9000/features/chart/chart.html (3.07 kB)",
+      "http://localhost:9000/features/labelEffects/labelEffects.html (2.10 kB)",
+      "http://localhost:9000/features/main/main.html (2.19 kB)"
+    ],
+    "cssCount": [
+      "http://localhost:9000/bower_components/font-awesome/css/font-awesome.css (28.07 kB)",
+      "http://localhost:9000/bower_components/angular-motion/dist/angular-motion.css (26.08 kB)",
+      "http://localhost:9000/bower_components/angular-rangeslider/angular.rangeSlider.css (12.25 kB)",
+      "http://localhost:9000/styles/main.css (287.43 kB)",
+      "http://localhost:9000/styles/style.css (13.08 kB)",
+      "http://localhost:9000/styles/pace-theme.css (1.85 kB)",
+      "http://localhost:9000/styles/animate.min.css (52.18 kB)",
+      "http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en (0.99 kB)"
+    ],
+    "jsCount": [
+      "http://localhost:9000/bower_components/jquery/dist/jquery.js (241.79 kB)",
+      "http://localhost:9000/bower_components/angular-cookies/angular-cookies.js (9.45 kB)",
+      "http://localhost:9000/bower_components/angular-resource/angular-resource.js (26.20 kB)",
+      "http://localhost:9000/bower_components/angular-animate/angular-animate.js (130.65 kB)",
+      "http://localhost:9000/bower_components/angular-sanitize/angular-sanitize.js (23.96 kB)",
+      "http://localhost:9000/bower_components/angular-route/angular-route.js (35.07 kB)",
+      "http://localhost:9000/bower_components/angular-touch/angular-touch.js (22.55 kB)",
+      "http://localhost:9000/bower_components/ui-router/release/angular-ui-router.js (159.09 kB)",
+      "http://localhost:9000/bower_components/restangular/dist/restangular.js (46.55 kB)",
+      "http://localhost:9000/bower_components/angular/angular.js (1014.00 kB)",
+      "http://localhost:9000/bower_components/angular-strap/dist/angular-strap.js (161.19 kB)",
+      "http://localhost:9000/bower_components/angular-strap/dist/angular-strap.tpl.js (9.33 kB)",
+      "http://localhost:9000/bower_components/d3/d3.js (328.51 kB)",
+      "http://localhost:9000/bower_components/lodash/lodash.js (398.58 kB)",
+      "http://localhost:9000/bower_components/angular-bootstrap-checkbox/angular-bootstrap-checkbox.js (2.52 kB)",
+      "http://localhost:9000/bower_components/bootstrap-sass/assets/javascripts/bootstrap.js (67.28 kB)",
+      "http://localhost:9000/bower_components/bootstrap/dist/js/bootstrap.js (67.28 kB)",
+      "http://localhost:9000/app.js (1.14 kB)",
+      "http://localhost:9000/bower_components/angular-rangeslider/angular.rangeSlider.js (30.33 kB)",
+      "http://localhost:9000/features/common/APIService.js (2.14 kB)",
+      "http://localhost:9000/features/common/DrugService.js (0.48 kB)",
+      "http://localhost:9000/features/common/IntegrationService.js (0.61 kB)",
+      "http://localhost:9000/features/main/main.js (2.88 kB)",
+      "http://localhost:9000/features/header/header.js (0.31 kB)",
+      "http://localhost:9000/features/about/about.js (0.31 kB)",
+      "http://localhost:9000/features/chart/chart.js (3.54 kB)",
+      "http://localhost:9000/features/chart/stacked.js (2.27 kB)",
+      "http://localhost:9000/features/labelEffects/labelEffects.js (20.87 kB)",
+      "http://localhost:9000/constants.js (0.22 kB)",
+      "http://localhost:9000/vendor/pace.min.js (12.04 kB)",
+      "http://localhost:9000/vendor/classie.js (2.08 kB)",
+      "http://localhost:9000/vendor/cbpAnimatedHeader.js (1.09 kB)",
+      "http://localhost:9000/vendor/wow.min.js (6.92 kB)",
+      "http://localhost:9000/vendor/inspinia.js (0.54 kB)",
+      "http://code.highcharts.com/modules/exporting.js (1.41 kB)",
+      "http://code.highcharts.com/highcharts.js (4.24 kB)",
+      "http://www.google-analytics.com/analytics.js (24.66 kB)",
+      "http://code.highcharts.com/modules/exporting.js (7.59 kB)",
+      "http://code.highcharts.com/highcharts.js (111.70 kB)",
+      "http://code.highcharts.com/modules/exporting.js (4.24 kB)",
+      "http://code.highcharts.com/highcharts.js (29.69 kB)",
+      "http://code.highcharts.com/highcharts.js (2.82 kB)",
+      "http://code.highcharts.com/modules/exporting.js (5.65 kB)",
+      "http://code.highcharts.com/modules/exporting.js (7.06 kB)",
+      "http://code.highcharts.com/highcharts.js (77.77 kB)"
+    ],
+    "jsonCount": [
+      "http://localhost:35729/livereload.js?snipver=1 (32.96 kB)"
+    ],
+    "imageCount": [
+      "http://www.google-analytics.com/r/collect?v=1&_v=j37&a=295644647&t=pageview&_s=1&dl=http%3A%2F%2Flocalhost%2F&ul=en-us&de=UTF-8&dt=MINEMED&sd=32-bit&sr=1280x800&vp=2560x2048&je=0&_u=AEAAAAQAI~&jid=697228112&cid=402401352.1435160491&tid=UA-XXXXX-X&_r=1&z=364770890 (0.03 kB)",
+      "http://localhost:9000/assets/Main_logo.png (2.38 kB)",
+      "http://localhost:9000/assets/Landing_bg.jpg (89.23 kB)",
+      "http://www.google-analytics.com/r/collect?v=1&_v=j37&a=1902397847&t=pageview&_s=1&dl=http%3A%2F%2Flocalhost%2F&ul=en-us&de=UTF-8&dt=MINEMED&sd=32-bit&sr=1280x800&vp=1280x1024&je=0&_u=AEAAAAQAI~&jid=1455934557&cid=1037556295.1435160491&tid=UA-XXXXX-X&_r=1&z=1024296469 (0.03 kB)",
+      "http://www.google-analytics.com/r/collect?v=1&_v=j37&a=1702494181&t=pageview&_s=1&dl=http%3A%2F%2Flocalhost%2F&ul=en-us&de=UTF-8&dt=MINEMED&sd=32-bit&sr=1280x800&vp=1280x1024&je=0&_u=AEAAAAQAI~&jid=948101386&cid=31006088.1435160491&tid=UA-XXXXX-X&_r=1&z=2059248876 (0.03 kB)",
+      "http://www.google-analytics.com/r/collect?v=1&_v=j37&a=1377463890&t=pageview&_s=1&dl=http%3A%2F%2Flocalhost%2F&ul=en-us&de=UTF-8&dt=MINEMED&sd=32-bit&sr=1280x800&vp=1280x1024&je=0&_u=AEAAAAQAI~&jid=1526954785&cid=914307163.1435160491&tid=UA-XXXXX-X&_r=1&z=177151355 (0.03 kB)",
+      "http://www.google-analytics.com/r/collect?v=1&_v=j37&a=1807251048&t=pageview&_s=1&dl=http%3A%2F%2Flocalhost%2F&ul=en-us&de=UTF-8&dt=MINEMED&sd=32-bit&sr=1280x800&vp=1280x1024&je=0&_u=AEAAAAQAI~&jid=240096862&cid=1204367446.1435160491&tid=UA-XXXXX-X&_r=1&z=711340806 (0.03 kB)"
+    ],
+    "cacheHits": [
+      "http://code.highcharts.com/modules/exporting.js",
+      "http://code.highcharts.com/highcharts.js",
+      "http://www.google-analytics.com/analytics.js"
+    ],
+    "cacheMisses": [
+      "http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en",
+      "http://www.google-analytics.com/r/collect?v=1&_v=j37&a=295644647&t=pageview&_s=1&dl=http%3A%2F%2Flocalhost%2F&ul=en-us&de=UTF-8&dt=MINEMED&sd=32-bit&sr=1280x800&vp=2560x2048&je=0&_u=AEAAAAQAI~&jid=697228112&cid=402401352.1435160491&tid=UA-XXXXX-X&_r=1&z=364770890",
+      "http://www.google-analytics.com/r/collect?v=1&_v=j37&a=1902397847&t=pageview&_s=1&dl=http%3A%2F%2Flocalhost%2F&ul=en-us&de=UTF-8&dt=MINEMED&sd=32-bit&sr=1280x800&vp=1280x1024&je=0&_u=AEAAAAQAI~&jid=1455934557&cid=1037556295.1435160491&tid=UA-XXXXX-X&_r=1&z=1024296469",
+      "http://www.google-analytics.com/r/collect?v=1&_v=j37&a=1702494181&t=pageview&_s=1&dl=http%3A%2F%2Flocalhost%2F&ul=en-us&de=UTF-8&dt=MINEMED&sd=32-bit&sr=1280x800&vp=1280x1024&je=0&_u=AEAAAAQAI~&jid=948101386&cid=31006088.1435160491&tid=UA-XXXXX-X&_r=1&z=2059248876",
+      "http://www.google-analytics.com/r/collect?v=1&_v=j37&a=1377463890&t=pageview&_s=1&dl=http%3A%2F%2Flocalhost%2F&ul=en-us&de=UTF-8&dt=MINEMED&sd=32-bit&sr=1280x800&vp=1280x1024&je=0&_u=AEAAAAQAI~&jid=1526954785&cid=914307163.1435160491&tid=UA-XXXXX-X&_r=1&z=177151355",
+      "http://www.google-analytics.com/r/collect?v=1&_v=j37&a=1807251048&t=pageview&_s=1&dl=http%3A%2F%2Flocalhost%2F&ul=en-us&de=UTF-8&dt=MINEMED&sd=32-bit&sr=1280x800&vp=1280x1024&je=0&_u=AEAAAAQAI~&jid=240096862&cid=1204367446.1435160491&tid=UA-XXXXX-X&_r=1&z=711340806"
+    ],
+    "cachingNotSpecified": [
+      "http://www.google-analytics.com/r/collect?v=1&_v=j37&a=295644647&t=pageview&_s=1&dl=http%3A%2F%2Flocalhost%2F&ul=en-us&de=UTF-8&dt=MINEMED&sd=32-bit&sr=1280x800&vp=2560x2048&je=0&_u=AEAAAAQAI~&jid=697228112&cid=402401352.1435160491&tid=UA-XXXXX-X&_r=1&z=364770890",
+      "http://www.google-analytics.com/r/collect?v=1&_v=j37&a=1902397847&t=pageview&_s=1&dl=http%3A%2F%2Flocalhost%2F&ul=en-us&de=UTF-8&dt=MINEMED&sd=32-bit&sr=1280x800&vp=1280x1024&je=0&_u=AEAAAAQAI~&jid=1455934557&cid=1037556295.1435160491&tid=UA-XXXXX-X&_r=1&z=1024296469",
+      "http://www.google-analytics.com/r/collect?v=1&_v=j37&a=1702494181&t=pageview&_s=1&dl=http%3A%2F%2Flocalhost%2F&ul=en-us&de=UTF-8&dt=MINEMED&sd=32-bit&sr=1280x800&vp=1280x1024&je=0&_u=AEAAAAQAI~&jid=948101386&cid=31006088.1435160491&tid=UA-XXXXX-X&_r=1&z=2059248876",
+      "http://www.google-analytics.com/r/collect?v=1&_v=j37&a=1377463890&t=pageview&_s=1&dl=http%3A%2F%2Flocalhost%2F&ul=en-us&de=UTF-8&dt=MINEMED&sd=32-bit&sr=1280x800&vp=1280x1024&je=0&_u=AEAAAAQAI~&jid=1526954785&cid=914307163.1435160491&tid=UA-XXXXX-X&_r=1&z=177151355",
+      "http://www.google-analytics.com/r/collect?v=1&_v=j37&a=1807251048&t=pageview&_s=1&dl=http%3A%2F%2Flocalhost%2F&ul=en-us&de=UTF-8&dt=MINEMED&sd=32-bit&sr=1280x800&vp=1280x1024&je=0&_u=AEAAAAQAI~&jid=240096862&cid=1204367446.1435160491&tid=UA-XXXXX-X&_r=1&z=711340806"
+    ],
+    "cachingTooShort": [
+      "http://code.highcharts.com/modules/exporting.js cached for 86400 s",
+      "http://code.highcharts.com/highcharts.js cached for 86400 s",
+      "http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en cached for 86400 s",
+      "http://www.google-analytics.com/analytics.js cached for 7200 s"
+    ],
+    "cachingDisabled": [
+      "http://localhost:9000/bower_components/font-awesome/css/font-awesome.css",
+      "http://localhost:9000/bower_components/angular-motion/dist/angular-motion.css",
+      "http://localhost:9000/bower_components/angular-rangeslider/angular.rangeSlider.css",
+      "http://localhost:9000/styles/main.css",
+      "http://localhost:9000/bower_components/jquery/dist/jquery.js",
+      "http://localhost:9000/bower_components/angular-cookies/angular-cookies.js",
+      "http://localhost:9000/bower_components/angular-resource/angular-resource.js",
+      "http://localhost:9000/bower_components/angular-animate/angular-animate.js",
+      "http://localhost:9000/bower_components/angular-sanitize/angular-sanitize.js",
+      "http://localhost:9000/bower_components/angular-route/angular-route.js",
+      "http://localhost:9000/bower_components/angular-touch/angular-touch.js",
+      "http://localhost:9000/bower_components/ui-router/release/angular-ui-router.js",
+      "http://localhost:9000/bower_components/restangular/dist/restangular.js",
+      "http://localhost:9000/bower_components/angular/angular.js",
+      "http://localhost:9000/bower_components/angular-strap/dist/angular-strap.js",
+      "http://localhost:9000/bower_components/angular-strap/dist/angular-strap.tpl.js",
+      "http://localhost:9000/bower_components/d3/d3.js",
+      "http://localhost:9000/bower_components/lodash/lodash.js",
+      "http://localhost:9000/bower_components/angular-bootstrap-checkbox/angular-bootstrap-checkbox.js",
+      "http://localhost:9000/bower_components/bootstrap-sass/assets/javascripts/bootstrap.js",
+      "http://localhost:9000/bower_components/bootstrap/dist/js/bootstrap.js",
+      "http://localhost:9000/app.js",
+      "http://localhost:9000/bower_components/angular-rangeslider/angular.rangeSlider.js",
+      "http://localhost:9000/features/common/APIService.js",
+      "http://localhost:9000/features/common/DrugService.js",
+      "http://localhost:9000/features/common/IntegrationService.js",
+      "http://localhost:9000/features/main/main.js",
+      "http://localhost:9000/features/header/header.js",
+      "http://localhost:9000/features/about/about.js",
+      "http://localhost:9000/features/chart/chart.js",
+      "http://localhost:9000/features/chart/stacked.js",
+      "http://localhost:9000/features/labelEffects/labelEffects.js",
+      "http://localhost:9000/constants.js",
+      "http://localhost:9000/vendor/pace.min.js",
+      "http://localhost:9000/vendor/classie.js",
+      "http://localhost:9000/vendor/cbpAnimatedHeader.js",
+      "http://localhost:9000/vendor/wow.min.js",
+      "http://localhost:9000/vendor/inspinia.js",
+      "http://localhost:9000/styles/style.css",
+      "http://localhost:9000/styles/pace-theme.css",
+      "http://localhost:9000/styles/animate.min.css",
+      "http://localhost:9000/assets/Main_logo.png",
+      "http://localhost:9000/assets/Landing_bg.jpg"
+    ],
+    "oldCachingHeaders": [
+      "http://code.highcharts.com/modules/exporting.js - Expires: Thu, 25 Jun 2015 15:20:56 GMT",
+      "http://code.highcharts.com/highcharts.js - Expires: Thu, 25 Jun 2015 15:20:56 GMT",
+      "http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en - Expires: Wed, 24 Jun 2015 15:41:28 GMT",
+      "http://www.google-analytics.com/analytics.js - Expires: Wed, 24 Jun 2015 17:22:15 GMT",
+      "http://www.google-analytics.com/r/collect?v=1&_v=j37&a=295644647&t=pageview&_s=1&dl=http%3A%2F%2Flocalhost%2F&ul=en-us&de=UTF-8&dt=MINEMED&sd=32-bit&sr=1280x800&vp=2560x2048&je=0&_u=AEAAAAQAI~&jid=697228112&cid=402401352.1435160491&tid=UA-XXXXX-X&_r=1&z=364770890 - Pragma: no-cache",
+      "http://www.google-analytics.com/r/collect?v=1&_v=j37&a=295644647&t=pageview&_s=1&dl=http%3A%2F%2Flocalhost%2F&ul=en-us&de=UTF-8&dt=MINEMED&sd=32-bit&sr=1280x800&vp=2560x2048&je=0&_u=AEAAAAQAI~&jid=697228112&cid=402401352.1435160491&tid=UA-XXXXX-X&_r=1&z=364770890 - Expires: Fri, 01 Jan 1990 00:00:00 GMT",
+      "http://www.google-analytics.com/r/collect?v=1&_v=j37&a=1902397847&t=pageview&_s=1&dl=http%3A%2F%2Flocalhost%2F&ul=en-us&de=UTF-8&dt=MINEMED&sd=32-bit&sr=1280x800&vp=1280x1024&je=0&_u=AEAAAAQAI~&jid=1455934557&cid=1037556295.1435160491&tid=UA-XXXXX-X&_r=1&z=1024296469 - Pragma: no-cache",
+      "http://www.google-analytics.com/r/collect?v=1&_v=j37&a=1902397847&t=pageview&_s=1&dl=http%3A%2F%2Flocalhost%2F&ul=en-us&de=UTF-8&dt=MINEMED&sd=32-bit&sr=1280x800&vp=1280x1024&je=0&_u=AEAAAAQAI~&jid=1455934557&cid=1037556295.1435160491&tid=UA-XXXXX-X&_r=1&z=1024296469 - Expires: Fri, 01 Jan 1990 00:00:00 GMT",
+      "http://www.google-analytics.com/r/collect?v=1&_v=j37&a=1702494181&t=pageview&_s=1&dl=http%3A%2F%2Flocalhost%2F&ul=en-us&de=UTF-8&dt=MINEMED&sd=32-bit&sr=1280x800&vp=1280x1024&je=0&_u=AEAAAAQAI~&jid=948101386&cid=31006088.1435160491&tid=UA-XXXXX-X&_r=1&z=2059248876 - Pragma: no-cache",
+      "http://www.google-analytics.com/r/collect?v=1&_v=j37&a=1702494181&t=pageview&_s=1&dl=http%3A%2F%2Flocalhost%2F&ul=en-us&de=UTF-8&dt=MINEMED&sd=32-bit&sr=1280x800&vp=1280x1024&je=0&_u=AEAAAAQAI~&jid=948101386&cid=31006088.1435160491&tid=UA-XXXXX-X&_r=1&z=2059248876 - Expires: Fri, 01 Jan 1990 00:00:00 GMT",
+      "http://www.google-analytics.com/r/collect?v=1&_v=j37&a=1377463890&t=pageview&_s=1&dl=http%3A%2F%2Flocalhost%2F&ul=en-us&de=UTF-8&dt=MINEMED&sd=32-bit&sr=1280x800&vp=1280x1024&je=0&_u=AEAAAAQAI~&jid=1526954785&cid=914307163.1435160491&tid=UA-XXXXX-X&_r=1&z=177151355 - Pragma: no-cache",
+      "http://www.google-analytics.com/r/collect?v=1&_v=j37&a=1377463890&t=pageview&_s=1&dl=http%3A%2F%2Flocalhost%2F&ul=en-us&de=UTF-8&dt=MINEMED&sd=32-bit&sr=1280x800&vp=1280x1024&je=0&_u=AEAAAAQAI~&jid=1526954785&cid=914307163.1435160491&tid=UA-XXXXX-X&_r=1&z=177151355 - Expires: Fri, 01 Jan 1990 00:00:00 GMT",
+      "http://www.google-analytics.com/r/collect?v=1&_v=j37&a=1807251048&t=pageview&_s=1&dl=http%3A%2F%2Flocalhost%2F&ul=en-us&de=UTF-8&dt=MINEMED&sd=32-bit&sr=1280x800&vp=1280x1024&je=0&_u=AEAAAAQAI~&jid=240096862&cid=1204367446.1435160491&tid=UA-XXXXX-X&_r=1&z=711340806 - Pragma: no-cache",
+      "http://www.google-analytics.com/r/collect?v=1&_v=j37&a=1807251048&t=pageview&_s=1&dl=http%3A%2F%2Flocalhost%2F&ul=en-us&de=UTF-8&dt=MINEMED&sd=32-bit&sr=1280x800&vp=1280x1024&je=0&_u=AEAAAAQAI~&jid=240096862&cid=1204367446.1435160491&tid=UA-XXXXX-X&_r=1&z=711340806 - Expires: Fri, 01 Jan 1990 00:00:00 GMT"
+    ],
+    "domains": [
+      "localhost: 49 request(s)",
+      "code.highcharts.com: 2 request(s)",
+      "www.google-analytics.com: 2 request(s)",
+      "fonts.googleapis.com: 1 request(s)"
+    ],
+    "commentsSize": [
+      "body > div[2] > div.ng-scope > section.ng-scope > div.row > form.ng-pristine.ng-valid > div.input-group.input-group-xs.col-xs-6.col-xs-offset-3.spacer-2x > div.input-group-btn > #comment[1] (153 characters)",
+      "body > #comment[4] (65 characters)"
+    ],
+    "nodesWithInlineCSS": [
+      "body > div[2] > div.ng-scope ()",
+      "body > div[2] > div.ng-scope > section.ng-scope (background-image:url('../assets/Landing_bg.jpg');\nbackground-size:100% auto;)",
+      "body > div[2] > div.spacer.ng-scope ()"
+    ],
+    "DOMqueriesByTagName": [
+      "script",
+      "*",
+      "head",
+      "base",
+      "body",
+      "a"
+    ],
+    "DOMqueriesByQuerySelectorAll": [
+      "[ng-jq]",
+      "[data-ng-jq]",
+      "[ng\\:jq]",
+      "[x-ng-jq]",
+      "[ng-csp]",
+      "[data-ng-csp]",
+      "[data-pace-options]",
+      "body",
+      ".pace",
+      "[ng-app]",
+      "[data-ng-animate]",
+      "[ng-animate-ref]"
+    ],
+    "DOMinserts": [
+      "\"script\" appended to \"body\"",
+      "\"div\" appended to \"html\"",
+      "\"DocumentFragment > style[0]\" appended to \"head\"",
+      "\"div.pace.pace-active\" appended to \"body\"",
+      "\"DocumentFragment > div.ng-scope\" appended to \"body > div[2]\"",
+      "\"DocumentFragment > div.spacer.ng-scope\" appended to \"body > div[2]\""
+    ],
+    "DOMqueriesDuplicated": [
+      "tag name \"script\": 14 queries",
+      "selector \"body\": 13 queries",
+      "tag name \"*\": 11 queries",
+      "selector \"[data-ng-animate]\": 4 queries",
+      "selector \"[ng-animate-ref]\": 4 queries",
+      "tag name \"a\": 2 queries",
+      "selector \"body\": 16 queries",
+      "selector \"body\": 12 queries",
+      "selector \"body\": 15 queries"
+    ],
+    "eventsBound": [
+      "\"DOMContentLoaded\" bound to \"#document\"",
+      "\"load\" bound to \"window\"",
+      "\"click\" bound to \"#document\"",
+      "\"blur\" bound to \"#document\"",
+      "\"focus\" bound to \"#document\"",
+      "\"keydown\" bound to \"#document\"",
+      "\"scroll\" bound to \"window\"",
+      "\"LiveReloadShutDown\" bound to \"#document\"",
+      "\"click\" bound to \"body\"",
+      "\"popstate\" bound to \"window\"",
+      "\"hashchange\" bound to \"window\"",
+      "\"$destroy\" bound to \"body > div[2] > div.ng-scope\"",
+      "\"$destroy\" bound to \"body > div[2] > div.spacer.ng-scope\"",
+      "\"submit\" bound to \"body > div[2] > div.ng-scope > section.ng-scope > div.row > form.ng-pristine.ng-valid\"",
+      "\"$destroy\" bound to \"body > div[2] > div.ng-scope > section.ng-scope > div.row > form.ng-pristine.ng-valid\"",
+      "\"compositionstart\" bound to \"body > div[2] > div.ng-scope > section.ng-scope > div.row > form.ng-pristine.ng-valid > div.input-group.input-group-xs.col-xs-6.col-xs-offset-3.spacer-2x > input#searchValue\"",
+      "\"compositionend\" bound to \"body > div[2] > div.ng-scope > section.ng-scope > div.row > form.ng-pristine.ng-valid > div.input-group.input-group-xs.col-xs-6.col-xs-offset-3.spacer-2x > input#searchValue\"",
+      "\"input\" bound to \"body > div[2] > div.ng-scope > section.ng-scope > div.row > form.ng-pristine.ng-valid > div.input-group.input-group-xs.col-xs-6.col-xs-offset-3.spacer-2x > input#searchValue\"",
+      "\"change\" bound to \"body > div[2] > div.ng-scope > section.ng-scope > div.row > form.ng-pristine.ng-valid > div.input-group.input-group-xs.col-xs-6.col-xs-offset-3.spacer-2x > input#searchValue\"",
+      "\"blur\" bound to \"body > div[2] > div.ng-scope > section.ng-scope > div.row > form.ng-pristine.ng-valid > div.input-group.input-group-xs.col-xs-6.col-xs-offset-3.spacer-2x > input#searchValue\""
+    ],
+    "globalVariables": [
+      "jQuery",
+      "GoogleAnalyticsObject",
+      "ga",
+      "$",
+      "angular",
+      "d3",
+      "_",
+      "jQuery214040151145495474341",
+      "requestAnimFrame",
+      "Highcharts",
+      "HighchartsAdapter",
+      "Pace",
+      "gaplugins",
+      "gaGlobal",
+      "classie",
+      "WOW",
+      "LiveReload",
+      "jQuery2140201639726758003231",
+      "jQuery214032044092728756371",
+      "jQuery214040877683646976951",
+      "jQuery214058468152955174451"
+    ],
+    "headersBiggerThanContent": [
+      "http://localhost:9000/constants.js (body: 0.22 kB / headers:0.24 kB)",
+      "http://www.google-analytics.com/r/collect?v=1&_v=j37&a=295644647&t=pageview&_s=1&dl=http%3A%2F%2Flocalhost%2F&ul=en-us&de=UTF-8&dt=MINEMED&sd=32-bit&sr=1280x800&vp=2560x2048&je=0&_u=AEAAAAQAI~&jid=697228112&cid=402401352.1435160491&tid=UA-XXXXX-X&_r=1&z=364770890 (body: 0.03 kB / headers: 0.46 kB)",
+      "http://localhost:9000/constants.js (body: 0.22 kB / headers: 0.24 kB)",
+      "http://www.google-analytics.com/r/collect?v=1&_v=j37&a=1902397847&t=pageview&_s=1&dl=http%3A%2F%2Flocalhost%2F&ul=en-us&de=UTF-8&dt=MINEMED&sd=32-bit&sr=1280x800&vp=1280x1024&je=0&_u=AEAAAAQAI~&jid=1455934557&cid=1037556295.1435160491&tid=UA-XXXXX-X&_r=1&z=1024296469 (body: 0.03 kB / headers: 0.46 kB)",
+      "http://localhost:9000/constants.js (body: 0.22 kB / headers: 0.24kB)",
+      "http://www.google-analytics.com/r/collect?v=1&_v=j37&a=1702494181&t=pageview&_s=1&dl=http%3A%2F%2Flocalhost%2F&ul=en-us&de=UTF-8&dt=MINEMED&sd=32-bit&sr=1280x800&vp=1280x1024&je=0&_u=AEAAAAQAI~&jid=948101386&cid=31006088.1435160491&tid=UA-XXXXX-X&_r=1&z=2059248876 (body: 0.03 kB / headers: 0.46 kB)",
+      "http://www.google-analytics.com/r/collect?v=1&_v=j37&a=1377463890&t=pageview&_s=1&dl=http%3A%2F%2Flocalhost%2F&ul=en-us&de=UTF-8&dt=MINEMED&sd=32-bit&sr=1280x800&vp=1280x1024&je=0&_u=AEAAAAQAI~&jid=1526954785&cid=914307163.1435160491&tid=UA-XXXXX-X&_r=1&z=177151355 (body: 0.03 kB / headers: 0.46 kB)",
+      "http://www.google-analytics.com/r/collect?v=1&_v=j37&a=1807251048&t=pageview&_s=1&dl=http%3A%2F%2Flocalhost%2F&ul=en-us&de=UTF-8&dt=MINEMED&sd=32-bit&sr=1280x800&vp=1280x1024&je=0&_u=AEAAAAQAI~&jid=240096862&cid=1204367446.1435160491&tid=UA-XXXXX-X&_r=1&z=711340806 (body: 0.03 kB / headers: 0.46 kB)"
+    ],
+    "assetsNotGzipped": [
+      "http://localhost:9000/ (HTML)",
+      "http://localhost:9000/bower_components/font-awesome/css/font-awesome.css (CSS)",
+      "http://localhost:9000/bower_components/angular-motion/dist/angular-motion.css (CSS)",
+      "http://localhost:9000/bower_components/angular-rangeslider/angular.rangeSlider.css (CSS)",
+      "http://localhost:9000/styles/main.css (CSS)",
+      "http://localhost:9000/bower_components/jquery/dist/jquery.js (JS)",
+      "http://localhost:9000/bower_components/angular-cookies/angular-cookies.js (JS)",
+      "http://localhost:9000/bower_components/angular-resource/angular-resource.js (JS)",
+      "http://localhost:9000/bower_components/angular-animate/angular-animate.js (JS)",
+      "http://localhost:9000/bower_components/angular-sanitize/angular-sanitize.js (JS)",
+      "http://localhost:9000/bower_components/angular-route/angular-route.js (JS)",
+      "http://localhost:9000/bower_components/angular-touch/angular-touch.js (JS)",
+      "http://localhost:9000/bower_components/ui-router/release/angular-ui-router.js (JS)",
+      "http://localhost:9000/bower_components/restangular/dist/restangular.js (JS)",
+      "http://localhost:9000/bower_components/angular/angular.js (JS)",
+      "http://localhost:9000/bower_components/angular-strap/dist/angular-strap.js (JS)",
+      "http://localhost:9000/bower_components/angular-strap/dist/angular-strap.tpl.js (JS)",
+      "http://localhost:9000/bower_components/d3/d3.js (JS)",
+      "http://localhost:9000/bower_components/lodash/lodash.js (JS)",
+      "http://localhost:9000/bower_components/angular-bootstrap-checkbox/angular-bootstrap-checkbox.js (JS)",
+      "http://localhost:9000/bower_components/bootstrap-sass/assets/javascripts/bootstrap.js (JS)",
+      "http://localhost:9000/bower_components/bootstrap/dist/js/bootstrap.js (JS)",
+      "http://localhost:9000/app.js (JS)",
+      "http://localhost:9000/bower_components/angular-rangeslider/angular.rangeSlider.js (JS)",
+      "http://localhost:9000/features/common/APIService.js (JS)",
+      "http://localhost:9000/features/common/DrugService.js (JS)",
+      "http://localhost:9000/features/common/IntegrationService.js (JS)",
+      "http://localhost:9000/features/main/main.js (JS)",
+      "http://localhost:9000/features/header/header.js (JS)",
+      "http://localhost:9000/features/about/about.js (JS)",
+      "http://localhost:9000/features/chart/chart.js (JS)",
+      "http://localhost:9000/features/chart/stacked.js (JS)",
+      "http://localhost:9000/features/labelEffects/labelEffects.js (JS)",
+      "http://localhost:9000/constants.js (JS)",
+      "http://localhost:9000/vendor/pace.min.js (JS)",
+      "http://localhost:9000/vendor/classie.js (JS)",
+      "http://localhost:9000/vendor/cbpAnimatedHeader.js (JS)",
+      "http://localhost:9000/vendor/wow.min.js (JS)",
+      "http://localhost:9000/vendor/inspinia.js (JS)",
+      "http://localhost:9000/styles/style.css (CSS)",
+      "http://localhost:9000/styles/pace-theme.css (CSS)",
+      "http://localhost:9000/styles/animate.min.css (CSS)",
+      "http://code.highcharts.com/modules/exporting.js (JS)",
+      "http://code.highcharts.com/highcharts.js (JS)",
+      "http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en (CSS)",
+      "http://www.google-analytics.com/analytics.js (JS)",
+      "http://localhost:9000/features/header/header.html (HTML)",
+      "http://localhost:9000/features/chart/chart.html (HTML)",
+      "http://localhost:9000/features/labelEffects/labelEffects.html (HTML)",
+      "http://localhost:9000/features/main/main.html (HTML)"
+    ],
+    "assetsWithQueryString": [
+      "http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en (CSS)",
+      "http://www.google-analytics.com/r/collect?v=1&_v=j37&a=295644647&t=pageview&_s=1&dl=http%3A%2F%2Flocalhost%2F&ul=en-us&de=UTF-8&dt=MINEMED&sd=32-bit&sr=1280x800&vp=2560x2048&je=0&_u=AEAAAAQAI~&jid=697228112&cid=402401352.1435160491&tid=UA-XXXXX-X&_r=1&z=364770890 (IMAGE)",
+      "http://www.google-analytics.com/r/collect?v=1&_v=j37&a=1902397847&t=pageview&_s=1&dl=http%3A%2F%2Flocalhost%2F&ul=en-us&de=UTF-8&dt=MINEMED&sd=32-bit&sr=1280x800&vp=1280x1024&je=0&_u=AEAAAAQAI~&jid=1455934557&cid=1037556295.1435160491&tid=UA-XXXXX-X&_r=1&z=1024296469 (IMAGE)",
+      "http://www.google-analytics.com/r/collect?v=1&_v=j37&a=1702494181&t=pageview&_s=1&dl=http%3A%2F%2Flocalhost%2F&ul=en-us&de=UTF-8&dt=MINEMED&sd=32-bit&sr=1280x800&vp=1280x1024&je=0&_u=AEAAAAQAI~&jid=948101386&cid=31006088.1435160491&tid=UA-XXXXX-X&_r=1&z=2059248876 (IMAGE)",
+      "http://www.google-analytics.com/r/collect?v=1&_v=j37&a=1377463890&t=pageview&_s=1&dl=http%3A%2F%2Flocalhost%2F&ul=en-us&de=UTF-8&dt=MINEMED&sd=32-bit&sr=1280x800&vp=1280x1024&je=0&_u=AEAAAAQAI~&jid=1526954785&cid=914307163.1435160491&tid=UA-XXXXX-X&_r=1&z=177151355 (IMAGE)",
+      "http://www.google-analytics.com/r/collect?v=1&_v=j37&a=1807251048&t=pageview&_s=1&dl=http%3A%2F%2Flocalhost%2F&ul=en-us&de=UTF-8&dt=MINEMED&sd=32-bit&sr=1280x800&vp=1280x1024&je=0&_u=AEAAAAQAI~&jid=240096862&cid=1204367446.1435160491&tid=UA-XXXXX-X&_r=1&z=711340806 (IMAGE)"
+    ],
+    "smallImages": [
+      "http://www.google-analytics.com/r/collect?v=1&_v=j37&a=295644647&t=pageview&_s=1&dl=http%3A%2F%2Flocalhost%2F&ul=en-us&de=UTF-8&dt=MINEMED&sd=32-bit&sr=1280x800&vp=2560x2048&je=0&_u=AEAAAAQAI~&jid=697228112&cid=402401352.1435160491&tid=UA-XXXXX-X&_r=1&z=364770890 (0.03 kB)",
+      "http://www.google-analytics.com/r/collect?v=1&_v=j37&a=1902397847&t=pageview&_s=1&dl=http%3A%2F%2Flocalhost%2F&ul=en-us&de=UTF-8&dt=MINEMED&sd=32-bit&sr=1280x800&vp=1280x1024&je=0&_u=AEAAAAQAI~&jid=1455934557&cid=1037556295.1435160491&tid=UA-XXXXX-X&_r=1&z=1024296469 (0.03 kB)",
+      "http://www.google-analytics.com/r/collect?v=1&_v=j37&a=1702494181&t=pageview&_s=1&dl=http%3A%2F%2Flocalhost%2F&ul=en-us&de=UTF-8&dt=MINEMED&sd=32-bit&sr=1280x800&vp=1280x1024&je=0&_u=AEAAAAQAI~&jid=948101386&cid=31006088.1435160491&tid=UA-XXXXX-X&_r=1&z=2059248876 (0.03 kB)",
+      "http://www.google-analytics.com/r/collect?v=1&_v=j37&a=1377463890&t=pageview&_s=1&dl=http%3A%2F%2Flocalhost%2F&ul=en-us&de=UTF-8&dt=MINEMED&sd=32-bit&sr=1280x800&vp=1280x1024&je=0&_u=AEAAAAQAI~&jid=1526954785&cid=914307163.1435160491&tid=UA-XXXXX-X&_r=1&z=177151355 (0.03 kB)",
+      "http://www.google-analytics.com/r/collect?v=1&_v=j37&a=1807251048&t=pageview&_s=1&dl=http%3A%2F%2Flocalhost%2F&ul=en-us&de=UTF-8&dt=MINEMED&sd=32-bit&sr=1280x800&vp=1280x1024&je=0&_u=AEAAAAQAI~&jid=240096862&cid=1204367446.1435160491&tid=UA-XXXXX-X&_r=1&z=711340806 (0.03 kB)"
+    ],
+    "timeToFirstCss": [
+      "http://localhost:9000/bower_components/font-awesome/css/font-awesome.css received in 476 ms",
+      "http://localhost:9000/bower_components/font-awesome/css/font-awesome.css received in 546 ms",
+      "http://localhost:9000/bower_components/font-awesome/css/font-awesome.css received in 560 ms",
+      "http://localhost:9000/bower_components/font-awesome/css/font-awesome.css received in 581 ms",
+      "http://localhost:9000/bower_components/font-awesome/css/font-awesome.css received in 572 ms"
+    ],
+    "timeToFirstJs": [
+      "http://localhost:9000/bower_components/jquery/dist/jquery.js received in 522 ms",
+      "http://localhost:9000/bower_components/jquery/dist/jquery.js received in 564 ms",
+      "http://localhost:9000/bower_components/jquery/dist/jquery.js received in 591 ms",
+      "http://localhost:9000/bower_components/jquery/dist/jquery.js received in 630 ms",
+      "http://localhost:9000/bower_components/angular-cookies/angular-cookies.js received in 602 ms"
+    ],
+    "timeToFirstImage": [
+      "http://www.google-analytics.com/r/collect?v=1&_v=j37&a=295644647&t=pageview&_s=1&dl=http%3A%2F%2Flocalhost%2F&ul=en-us&de=UTF-8&dt=MINEMED&sd=32-bit&sr=1280x800&vp=2560x2048&je=0&_u=AEAAAAQAI~&jid=697228112&cid=402401352.1435160491&tid=UA-XXXXX-X&_r=1&z=364770890 received in 5927 ms",
+      "http://www.google-analytics.com/r/collect?v=1&_v=j37&a=1902397847&t=pageview&_s=1&dl=http%3A%2F%2Flocalhost%2F&ul=en-us&de=UTF-8&dt=MINEMED&sd=32-bit&sr=1280x800&vp=1280x1024&je=0&_u=AEAAAAQAI~&jid=1455934557&cid=1037556295.1435160491&tid=UA-XXXXX-X&_r=1&z=1024296469 received in 5595 ms",
+      "http://www.google-analytics.com/r/collect?v=1&_v=j37&a=1702494181&t=pageview&_s=1&dl=http%3A%2F%2Flocalhost%2F&ul=en-us&de=UTF-8&dt=MINEMED&sd=32-bit&sr=1280x800&vp=1280x1024&je=0&_u=AEAAAAQAI~&jid=948101386&cid=31006088.1435160491&tid=UA-XXXXX-X&_r=1&z=2059248876 received in 5581 ms",
+      "http://www.google-analytics.com/r/collect?v=1&_v=j37&a=1377463890&t=pageview&_s=1&dl=http%3A%2F%2Flocalhost%2F&ul=en-us&de=UTF-8&dt=MINEMED&sd=32-bit&sr=1280x800&vp=1280x1024&je=0&_u=AEAAAAQAI~&jid=1526954785&cid=914307163.1435160491&tid=UA-XXXXX-X&_r=1&z=177151355 received in 5573 ms",
+      "http://www.google-analytics.com/r/collect?v=1&_v=j37&a=1807251048&t=pageview&_s=1&dl=http%3A%2F%2Flocalhost%2F&ul=en-us&de=UTF-8&dt=MINEMED&sd=32-bit&sr=1280x800&vp=1280x1024&je=0&_u=AEAAAAQAI~&jid=240096862&cid=1204367446.1435160491&tid=UA-XXXXX-X&_r=1&z=711340806 received in 5535 ms"
+    ],
+    "imagesWithoutDimensions": [
+      "body > div[2] > div.ng-scope > section.ng-scope > img.img-responsive.logoTitle"
+    ],
+    "smallestResponse": [
+      "http://www.google-analytics.com/r/collect?v=1&_v=j37&a=295644647&t=pageview&_s=1&dl=http%3A%2F%2Flocalhost%2F&ul=en-us&de=UTF-8&dt=MINEMED&sd=32-bit&sr=1280x800&vp=2560x2048&je=0&_u=AEAAAAQAI~&jid=697228112&cid=402401352.1435160491&tid=UA-XXXXX-X&_r=1&z=364770890 (0.03 kB)",
+      "http://www.google-analytics.com/r/collect?v=1&_v=j37&a=1902397847&t=pageview&_s=1&dl=http%3A%2F%2Flocalhost%2F&ul=en-us&de=UTF-8&dt=MINEMED&sd=32-bit&sr=1280x800&vp=1280x1024&je=0&_u=AEAAAAQAI~&jid=1455934557&cid=1037556295.1435160491&tid=UA-XXXXX-X&_r=1&z=1024296469 (0.03 kB)",
+      "http://www.google-analytics.com/r/collect?v=1&_v=j37&a=1702494181&t=pageview&_s=1&dl=http%3A%2F%2Flocalhost%2F&ul=en-us&de=UTF-8&dt=MINEMED&sd=32-bit&sr=1280x800&vp=1280x1024&je=0&_u=AEAAAAQAI~&jid=948101386&cid=31006088.1435160491&tid=UA-XXXXX-X&_r=1&z=2059248876 (0.03 kB)",
+      "http://www.google-analytics.com/r/collect?v=1&_v=j37&a=1377463890&t=pageview&_s=1&dl=http%3A%2F%2Flocalhost%2F&ul=en-us&de=UTF-8&dt=MINEMED&sd=32-bit&sr=1280x800&vp=1280x1024&je=0&_u=AEAAAAQAI~&jid=1526954785&cid=914307163.1435160491&tid=UA-XXXXX-X&_r=1&z=177151355 (0.03 kB)",
+      "http://www.google-analytics.com/r/collect?v=1&_v=j37&a=1807251048&t=pageview&_s=1&dl=http%3A%2F%2Flocalhost%2F&ul=en-us&de=UTF-8&dt=MINEMED&sd=32-bit&sr=1280x800&vp=1280x1024&je=0&_u=AEAAAAQAI~&jid=240096862&cid=1204367446.1435160491&tid=UA-XXXXX-X&_r=1&z=711340806 (0.03 kB)"
+    ],
+    "biggestResponse": [
+      "http://localhost:9000/bower_components/angular/angular.js (1014.00 kB)"
+    ],
+    "fastestResponse": [
+      "http://localhost:35729/livereload.js?snipver=1 (2 ms)",
+      "http://localhost:9000/assets/Main_logo.png (13 ms)",
+      "http://localhost:35729/livereload.js?snipver=1 (4 ms)",
+      "http://localhost:35729/livereload.js?snipver=1 (17 ms)",
+      "http://localhost:35729/livereload.js?snipver=1 (6 ms)"
+    ],
+    "slowestResponse": [
+      "http://code.highcharts.com/highcharts.js (4624 ms)",
+      "http://code.highcharts.com/highcharts.js (4901 ms)",
+      "http://code.highcharts.com/highcharts.js (4865 ms)",
+      "http://code.highcharts.com/modules/exporting.js (4596 ms)",
+      "http://code.highcharts.com/highcharts.js (4857 ms)"
+    ],
+    "smallestLatency": [
+      "http://localhost:35729/livereload.js?snipver=1 (2 ms)",
+      "http://localhost:9000/assets/Main_logo.png (13 ms)",
+      "http://localhost:35729/livereload.js?snipver=1 (4 ms)",
+      "http://localhost:35729/livereload.js?snipver=1 (17 ms)",
+      "http://localhost:35729/livereload.js?snipver=1 (6 ms)"
+    ],
+    "biggestLatency": [
+      "http://code.highcharts.com/modules/exporting.js (4602 ms)",
+      "http://code.highcharts.com/highcharts.js (4786 ms)",
+      "http://code.highcharts.com/highcharts.js (4753 ms)",
+      "http://code.highcharts.com/modules/exporting.js (4596 ms)",
+      "http://code.highcharts.com/highcharts.js (4738 ms)"
+    ]
+  }
+}
