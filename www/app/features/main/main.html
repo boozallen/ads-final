@@ -7,7 +7,7 @@ background-size:100% auto;">
   </div>
   <div class="row">
     <form>
-      <div class="input-group input-group-lg col-md-6 col-md-offset-3 spacer-2x">
+      <div class="input-group input-group-xs col-xs-6 col-xs-offset-3 spacer-2x">
         <input type="text" class="form-control searchInput" ng-model="searchText" id="searchValue"
         placeholder="Search for a Medication" ng-change="searchDrugs()">
         <div class="input-group-btn">
@@ -31,7 +31,7 @@ background-size:100% auto;">
 </section>
 
 <div id="events-reports" ng-show="selectedDrug" class="features">
-  <div class="col-md-10 col-md-offset-1 well" style="width:80%;">
+  <div class="well" style="margin:20px;">
     <div class="row">
       <br><br>
       <h1>{{selectedDrug.substance_name}}&nbsp;({{selectedDrug.brand_name}}) General Information</h1>
