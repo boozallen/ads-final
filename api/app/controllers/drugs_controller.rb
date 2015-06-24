@@ -1,6 +1,6 @@
 class DrugsController < ApplicationController
   api :GET, '/drugs/:id', 'Shows drug as returned from FDA with parsed effects by :id'
-  param :id, :number, required: true
+  param :id, String, required: true
 
   def show
     render json: drug
