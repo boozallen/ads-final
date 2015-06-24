@@ -27,19 +27,14 @@
   </div>
 
   <div class="col-md-3">
-    <div class="well row">
-      <div class="checkbox" ng-repeat="effect in effects"><label><input type="checkbox" ng-model="effect.checked"> <p bs-tooltip="effect.layman_term" data-placement="right">{{effect.medical_term}}</p></label></div>
-      <div ng-show="!effects">No adverse effects have been detected in the text. Add something you see below!</div>
-    </div>
-
-    <div class="well row">
-      <div class="form-group">
-        <div class="input-group">
-          <input class="form-control" id="selsym" ng-model="selectedSymptom" data-min-length="0" data-html="1" data-auto-select="true" data-animation="am-flip-x" bs-options="symptom for symptom in symptoms" placeholder="Enter adverse effect" bs-typeahead type="text">
-          <div class="input-group-addon" bs-tooltip="adverseTooltip" ng-click="addSelectedSymptom()">Add Adverse Effect</div>
-        </div>
-        <div class="input-group-addon" bs-tooltip="adverseTooltip" ng-click="submitEffects()">Submit Adverse Effects</div>
+    <div class="well row" ng-repeat="effect in displayedEffects">
+      <div >
+        <p>{{effect}}</p>
+        <button ng-click="completeIndex($index,true)">Yes</button><button ng-click="completeIndex($index,false)">No</button><br/><br/>
       </div>
+
+      <!--<div class="checkbox" ng-repeat="effect in effects"><label><input type="checkbox" ng-model="effect.checked"> <p bs-tooltip="effect.layman_term" data-placement="right">{{effect.medical_term}}</p></label></div>-->
+      <!--<div ng-show="!effects">No adverse effects have been detected in the text. Add something you see below!</div>-->
     </div>
   </div>
 </div>
