@@ -61,12 +61,14 @@ angular.module('gapFront')
       console.log(error);
     }
 
-    $scope.completeIndex = function(index, accurate){
-      var term = $scope.displayedEffects.splice(index,1)[0];
-      if($scope.effects.length > 0) addDisplayedEffect();
-      if(accurate){
-        var post = {name:$scope.selectedDrug.brand_name, effects:[term]};
-        APIService.getDrugEffectApi().post(post).then(serviceError,serviceError);
+    $scope.completeIndex = function(index, accurate, first){
+      if (first) {
+        var term = $scope.displayedEffects.splice(index, 1)[0];
+        if ($scope.effects.length > 0) addDisplayedEffect();
+        if (accurate) {
+          var post = {name: $scope.selectedDrug.brand_name, effects: [term]};
+          APIService.getDrugEffectApi().post(post).then(serviceError, serviceError);
+        }
       }
 
     };
