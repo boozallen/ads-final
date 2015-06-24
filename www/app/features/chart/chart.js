@@ -104,10 +104,15 @@ angular.module('gapFront')
           $scope.countDateArray.push(arr);
         });
         console.log($scope.countDateArray);
+        createLineChart();
         
       });
       return true;
     };
+
+    function datesUpdated(){
+      console.log('date changed');
+    }
 
     function parse(str) {
       if(!/^(\d){8}$/.test(str)) return "invalid date";
@@ -174,8 +179,37 @@ angular.module('gapFront')
             series: $scope.counts
 
           });
+        };
+      function createPieChart() {
+        $scope.percentSerious = ($scope.seriousCount / $scope.totalReportedCount) * 100;
+      console.log($scope.percentSerious);
+      $scope.percentNonSerious = ($scope.nonSeriousCount / $scope.totalReportedCount) * 100;
+      console.log($scope.percentNonSerious);
+      var totalReportedCount = $scope.totalReportedCount;
 
-          $('#lineGraphContainer').highcharts({
+      $scope.pieChart = new Highcharts.Chart({
+        chart: {
+            renderTo: 'totalReportedContainer',
+            type: 'pie'
+        },
+        title: {
+          text: 'Total Reported ' + $scope.totalReportedCount
+        },
+        plotOptions: {
+            pie: {
+                innerSize: '60%'
+            }
+        },
+        series: [{
+            data: [
+              ["Serious", $scope.percentSerious], 
+              ["Non-serious", $scope.percentNonSerious]
+            ]}]
+          });
+    };
+
+    function createLineChart() {
+      $('#lineGraphContainer').highcharts({
             chart: {
             type: 'spline'
         },
@@ -221,33 +255,6 @@ angular.module('gapFront')
             data: $scope.countDateArray
         }]
     });
-        };
-      function createPieChart() {
-        $scope.percentSerious = ($scope.seriousCount / $scope.totalReportedCount) * 100;
-      console.log($scope.percentSerious);
-      $scope.percentNonSerious = ($scope.nonSeriousCount / $scope.totalReportedCount) * 100;
-      console.log($scope.percentNonSerious);
-      var totalReportedCount = $scope.totalReportedCount;
-
-      $scope.pieChart = new Highcharts.Chart({
-        chart: {
-            renderTo: 'totalReportedContainer',
-            type: 'pie'
-        },
-        title: {
-          text: 'Total Reported ' + $scope.totalReportedCount
-        },
-        plotOptions: {
-            pie: {
-                innerSize: '60%'
-            }
-        },
-        series: [{
-            data: [
-              ["Serious", $scope.percentSerious], 
-              ["Non-serious", $scope.percentNonSerious]
-            ]}]
-          });
-    };
+    }
 
   });
