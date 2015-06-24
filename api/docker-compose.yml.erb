@@ -1,0 +1,12 @@
+db:
+  image: 52.7.171.102:5000/<%= ENV['DATABASE_IMAGE_NAME'] ||= 'devel_database' %>
+  ports:
+    - "5432:5432"
+backend:
+  image: 52.7.171.102:5000/<%= ENV['BACKEND_IMAGE_NAME'] ||= 'devel_backend' %>
+  ports:
+    - "3000:3000"
+  environment:
+    - RAILS_ENV=docker
+  links:
+    - db

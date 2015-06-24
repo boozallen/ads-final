@@ -26,6 +26,7 @@ angular.module('gapFront')
     });
 
     $scope.setSelectedDrug = function(drug) {
+      $scope.displayedEffects = [];
       $scope.selectedDrug = drug;
       $scope.drugs = [];
       DrugService.setSelectedDrug($scope.selectedDrug);
@@ -94,8 +95,15 @@ angular.module('gapFront')
       console.log(error);
     }
 
-    //$scope.navigateTo = function(path){
-    //  $location.path(path);
-    //}
+    function setTotalLabels(resp){
+      $scope.totalLabels = resp.meta.results.total;
+    }
+
+    function setTotalEvents(resp){
+      $scope.totalEvents = resp.meta.results.total;
+    }
+
+    APIService.queryDrugLabel().then(setTotalLabels, serviceError);
+    APIService.queryDrugEvent().then(setTotalEvents, serviceError);
 
   });

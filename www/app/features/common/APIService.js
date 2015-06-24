@@ -13,8 +13,12 @@ angular.module('gapFront')
       RestangularConfigurer.setBaseUrl('https://api.fda.gov');
     });
 
-    var railsService = Restangular.withConfig(function(RestangularConfigurer) {
+    var railsService = Restangular.withConfig(function(RestangularConfigurer,Restangular) {
       RestangularConfigurer.setBaseUrl('http://52.4.69.219:3000/api/v1');
+      //RestangularProvider.setDefaultHeaders({
+      //  "Content-Type": "application/json",
+      //  "X-Requested-With": "XMLHttpRequest"
+      //});
     });
 
     var pillboxService = Restangular.withConfig(function(RestangularConfigurer) {
@@ -27,7 +31,7 @@ angular.module('gapFront')
     //var drugEvent = drug.all('event.json');
 
 
-    function queryDrugLabel(query, skip, limit, callback, error){
+    function queryDrugLabel(query, skip, limit){
       var params = {
         search:query,
         skip:skip,
@@ -64,6 +68,13 @@ angular.module('gapFront')
       return railsService.all('drugs');
     }
 
+    function getDrugDateReportCount(query, aggregationField){
+      var params = {};
+      params.search = query;
+      params.count = aggregationField;
+      return drug.get('event.json', params);
+    }
+
 
 
 
@@ -72,6 +83,7 @@ angular.module('gapFront')
       queryDrugEvent:queryDrugEvent,
       aggregateDrugLabel:aggregateDrugLabel,
       aggregateDrugEvent:aggregateDrugEvent,
-      getDrugEffectApi:getDrugEffectApi
+      getDrugEffectApi:getDrugEffectApi,
+      getDrugDateReportCount:getDrugDateReportCount
     };
   });

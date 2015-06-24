@@ -1,20 +1,17 @@
 class DrugsController < ApplicationController
-  def index
-    render json: {}
-  end
+  api :GET, '/drugs/:id', 'Shows drug as returned from FDA with parsed effects by :id'
+  param :id, String, required: true
 
   def show
     render json: drug
   end
 
-  def update
-  end
-
-  def delete
-  end
+  api :POST, '/drugs', 'Creates or Updates a drug entry by name'
+  param :name, String, desc: 'Drug Brand Name', required: true
+  param :effects, Array, desc: 'Drug effects that have been experienced'
 
   def create
-    drug = Drug.create drug_params
+    drug = Drug.create! drug_params
     render json: drug_json(drug)
   end
 
@@ -22,13 +19,19 @@ class DrugsController < ApplicationController
 
   def drug
     @_drug = Fda.get params[:id]
-#    fields = %w(adverse_reactions boxed_warnings warnings_and_precautions user_safety_warnings precautions warnings general_precautions)
-    fields = %w(boxed_warnings warnings_and_precautions user_safety_warnings precautions warnings general_precautions)
+    fields = %w(boxed_warnings warnings_and_precautions user_safety_warnings precautions warnings general_precautions warnings_and_cautions adverse_reactions)
     adverse_reactions = fields.map { |f| @_drug.fetch(f, '') }.join('')
-    @_drug['effects'] = EFFECTS_LIST.select do |terms|
-      adverse_reactions.match terms[:medical_term]
+    @_drug.tap do |d|
+      d['effects'] = EFFECTS_LIST.select do |terms|
+        adverse_reactions.match terms[:medical_term]
+      end
+      d['reported_effects'] = Drug.where(name: params[:id]).tag_counts_on(:effects).map do |e|
+        {
+          effect: e.name,
+          reported: e.taggings_count
+        }
+      end
     end
-    @_drug
   end
 
   def drug_params

@@ -68,8 +68,8 @@ h1 {
   padding-left: 15px;
 }
 .navbar-default.navbar-scroll {
-  background-color: #fff;
-  border-color: #fff;
+  background-color: #000;
+  border-color: none;
   padding: 15px 0;
 }
 .navbar-default {
@@ -92,7 +92,7 @@ h1 {
 .navbar-default .navbar-nav > .active > a:hover {
   background: transparent;
   color: #fff;
-  border-top: 6px solid #1ab394;
+  border-top: 6px solid #5dc1dd;
 }
 .navbar-default .navbar-nav > li > a:hover {
   color: #1ab394;
@@ -125,7 +125,7 @@ h1 {
   color: #676a6c;
 }
 .navbar-scroll.navbar-default .nav li a:hover {
-  color: #1ab394;
+  color: #fff;
 }
 .navbar-wrapper .navbar.navbar-scroll {
   padding-top: 0;
@@ -760,8 +760,12 @@ fieldset[disabled] .btn-primary.active {
 .space-30 {
   margin: 30px 0;
 }
+.space-60 {
+  margin: 60px 0;
+}
+
 /* PACE PLUGIN
--------------------------------------------------- */
+---------------------------------------------------- */
 .pace .pace-progress {
   background: #fff;
   position: fixed;

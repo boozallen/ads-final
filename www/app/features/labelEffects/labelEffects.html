@@ -1,44 +1,38 @@
-<div class="features col-md-10 col-md-offset-1" ng-if="selectedDrug">
-  <div class="well col-md-9">
-    <div ng-if="selectedDrug.object.boxed_warning">
-      <h3>Boxed Warnings</h3>
-      <div>{{selectedDrug.object.boxed_warning}}</div>
-    </div>
-    <div ng-if="selectedDrug.object.warnings_and_precautions">
-      <h3>Warnings and Precautions</h3>
-      <div>{{selectedDrug.object.warnings_and_precautions}}</div>
-    </div>
-    <div ng-if="selectedDrug.object.user_safety_warnings">
-      <h3>User Safety Warnings</h3>
-      <div>{{selectedDrug.object.user_safety_warnings}}</div>
-    </div>
-    <div ng-if="selectedDrug.object.precautions">
-      <h3>Precautions</h3>
-      <div>{{selectedDrug.object.precautions}}</div>
-    </div>
-    <div ng-if="selectedDrug.object.warnings">
-      <h3>Warnings</h3>
-      <div>{{selectedDrug.object.warnings.toString()}}</div>
-    </div>
-    <div ng-if="selectedDrug.object.general_precautions">
-      <h3>General Precautions</h3>
-      <div>{{selectedDrug.object.general_precautions}}</div>
+<section class="features col-md-10 col-md-offset-1 spacer-2x" ng-if="selectedDrug">
+  <div class="row well" ng-show="selectedDrug">
+    <div class="progress">
+      <div class="progress-bar" role="progressbar" aria-valuenow="{{getPercentage()}}" aria-valuemin="0" aria-valuemax="100" ng-style="{width : (getPercentage() + '%')}">
+        <span class="sr-only">{{getPercentage()}}% Complete</span>
+      </div>
     </div>
   </div>
 
-  <div class="col-md-3">
-    <div class="well row">
-      <div class="checkbox" ng-repeat="effect in effects"><label><input type="checkbox" ng-model="effect.checked"> <p bs-tooltip="effect.layman_term" data-placement="right">{{effect.medical_term}}</p></label></div>
-      <div ng-show="!effects">No adverse effects have been detected in the text. Add something you see below!</div>
+  <div class="row" ng-repeat="stuff in displayedStuff">
+    <input type="text" ng-model="stuff.effect.medical_term" id="stuffGetter" style="display: none" />
+    <div class="col-md-7">
+      <div ng-class="!$first?'row well disabled spacer-2x':'row well'" id="adverseSentence">
+        {{stuff.sentence}}
+      </div>
     </div>
 
-    <div class="well row">
-      <div class="form-group">
-        <div class="input-group">
-          <input class="form-control" ng-model="selectedSymptom" data-min-length="0" data-html="1" data-auto-select="true" data-animation="am-flip-x" bs-options="symptom for symptom in symptoms" placeholder="Enter adverse effect" bs-typeahead type="text">
-          <div class="input-group-addon" bs-tooltip="adverseTooltip" ng-click="addSelectedSymptom()">Add Adverse Effect</div>
+    <script>
+      setTimeout(function() {
+        $('#adverseSentence').highlight($('#stuffGetter')[0].value)
+      }, 500);
+    </script>
+
+    <div class="col-md-4 col-md-offset-1">
+      <div ng-class="!$first?'row well disabled spacer-2x':'row well'">
+        <div align="center">
+          Is <strong bs-tooltip="stuff.effect.layman_term" data-placement="top">{{stuff.effect.medical_term.toLowerCase()}}</strong> listed on the label as a side effect?<br/><br/>
+
+          <div class="btn-group">
+            <button class="btn btn-primary" ng-click="completeIndex($index, true, $first)">Yes</button>
+            <button class="btn btn-danger" ng-click="completeIndex($index, false, $first)">No</button>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+
+</section>
