@@ -35,7 +35,7 @@
     <div class="well row">
       <div class="form-group">
         <div class="input-group">
-          <input class="form-control" ng-model="selectedSymptom" data-min-length="0" data-html="1" data-auto-select="true" data-animation="am-flip-x" bs-options="symptom for symptom in symptoms" placeholder="Enter adverse effect" bs-typeahead type="text">
+          <input class="form-control" id="selsym" ng-model="selectedSymptom" data-min-length="0" data-html="1" data-auto-select="true" data-animation="am-flip-x" bs-options="symptom for symptom in symptoms" placeholder="Enter adverse effect" bs-typeahead type="text">
           <div class="input-group-addon" bs-tooltip="adverseTooltip" ng-click="addSelectedSymptom()">Add Adverse Effect</div>
         </div>
       </div>

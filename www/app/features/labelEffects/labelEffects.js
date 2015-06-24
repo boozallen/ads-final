@@ -37,8 +37,23 @@ angular.module('gapFront')
     $scope.adverseTooltip = "Add a new adverse affect not currently reported";
 
     $scope.addSelectedSymptom = function () {
-      $scope.effects.push({medical_term: $scope.selectedSymptom, layman_term: $scope.selectedSymptom});
-      $scope.selectedSymptom = '';
+      var elem = $('#selsym')[0];
+      var value = elem.value;
+      if(contains($scope.symptoms,value)){
+        console.log();
+        $scope.effects.push({medical_term: value, layman_term: value, checked:true});
+        $scope.selectedSymptom = '';
+        elem.value = '';
+      }
+    }
+
+    function contains(a, obj) {
+      for (var i = 0; i < a.length; i++) {
+        if (a[i] === obj) {
+          return true;
+        }
+      }
+      return false;
     }
 
   });
