@@ -1,49 +1,31 @@
 <section class="features col-md-10 col-md-offset-1" ng-if="selectedDrug">
-  <div class="well col-md-7">
-    <div ng-if="selectedDrug.object.boxed_warning">
-      <h3>Boxed Warnings</h3>
 
-      <div>{{selectedDrug.object.boxed_warning}}</div>
+  <div class="row" ng-repeat="stuff in displayedStuff">
+    <input type="text" ng-model="stuff.effect.medical_term" id="stuffGetter" style="display: none" />
+    <div class="col-md-7">
+      <div ng-class="!$first?'row well disabled spacer-2x':'row well'" id="adverseSentence">
+        {{stuff.sentence}}
+      </div>
     </div>
-    <div ng-if="selectedDrug.object.warnings_and_precautions">
-      <h3>Warnings and Precautions</h3>
 
-      <div>{{selectedDrug.object.warnings_and_precautions}}</div>
-    </div>
-    <div ng-if="selectedDrug.object.user_safety_warnings">
-      <h3>User Safety Warnings</h3>
+    <script>
+      setTimeout(function() {
+        $('#adverseSentence').highlight($('#stuffGetter')[0].value)
+      }, 500);
+    </script>
 
-      <div>{{selectedDrug.object.user_safety_warnings}}</div>
-    </div>
-    <div ng-if="selectedDrug.object.precautions">
-      <h3>Precautions</h3>
+    <div class="col-md-4 col-md-offset-1">
+      <div ng-class="!$first?'row well disabled spacer-2x':'row well'">
+        <div align="center">
+          Is <strong bs-tooltip="stuff.effect.layman_term" data-placement="top">{{stuff.effect.medical_term.toLowerCase()}}</strong> listed on the label as a side effect?<br/><br/>
 
-      <div>{{selectedDrug.object.precautions}}</div>
-    </div>
-    <div ng-if="selectedDrug.object.warnings">
-      <h3>Warnings</h3>
-
-      <div>{{selectedDrug.object.warnings.toString()}}</div>
-    </div>
-    <div ng-if="selectedDrug.object.general_precautions">
-      <h3>General Precautions</h3>
-
-      <div>{{selectedDrug.object.general_precautions}}</div>
-    </div>
-  </div>
-
-
-  <div class="col-md-4 col-md-offset-1">
-    <div ng-class="!$first?'row well disabled spacer-2x':'row well'" ng-repeat="effect in displayedEffects">
-      <div align="center">
-        Is <strong>{{effect.toLowerCase()}}</strong> listed on the label as a side effect?<br/><br/>
-
-        <div class="btn-group">
-          <button class="btn btn-primary" ng-click="completeIndex($index,true, $first)">Yes</button>
-          <button class="btn btn-danger" ng-click="completeIndex($index,false, $first)">No</button>
+          <div class="btn-group">
+            <button class="btn btn-primary" ng-click="completeIndex($index, true, $first)">Yes</button>
+            <button class="btn btn-danger" ng-click="completeIndex($index, false, $first)">No</button>
+          </div>
         </div>
       </div>
-
     </div>
   </div>
+
 </section>
