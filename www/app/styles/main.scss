@@ -90,9 +90,19 @@ input + .typeahead.ng-hide { display: block !important; visibility: hidden !impo
 }
 
 .appTitle {
-  color:white;
-  margin-left: 15%;
-  margin-right: 15%;
+  color: white;
+  font-size: 18px;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  color: #ccc;
+  font-weight: 300;
+  border-top: 1px solid #454649;
+  padding: 30px 0 0;
+  margin: 30px 0 0;
+}
+
+.appTitle strong{
+font-weight: 700;
+color:#fff;
 }
 
 .logoTitle {
@@ -113,6 +123,15 @@ input + .typeahead.ng-hide { display: block !important; visibility: hidden !impo
 section {
   height: 100vh;
 }
+
+section.landing {
+  background: url("../assets/Landing_bg.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 
 .chartNavButtons {
   margin: 10px;
@@ -136,4 +155,73 @@ section {
   height: 150px;
   clear:both;
   padding-top:20px;
+}
+
+
+
+
+// NAVBAR OVERWRIDE
+.navbar-default {
+  background:#000;
+  border-color: #000;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #fff;
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: normal;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover  {
+  background-color: #000;
+  color: #fff;
+}
+
+
+// FORM
+.form-control{
+  height: 60px;
+  font-size: 16px;
+  color: #6f6f6f;
+}
+
+.search_block .btn {
+  padding:12px 18px;
+  font-size: 24px;
+}
+
+.dropdown-menu {
+  border-radius: 0px;
+}
+
+
+.trending{
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  bottom: 50px;
+}
+
+
+.trending ul{
+  color: #fff;
+  list-style: inline-block;
+}
+
+.trending ul li{
+  list-style-type: none;
+  float: left;
+  margin: 0 0 0 10px;
+  padding: 0 0 0 10px;
+  border-left: 1px solid #ccc;
+  color: #ccc;
+}
+
+.trending ul li:first-child{
+  border-left: none;
+  font-weight: 700;
+}
+
+.trending ul li:nth-child(2){
+  border-left: none;
 }
