@@ -1,7 +1,7 @@
 <section class="features col-md-10 col-md-offset-1" ng-if="selectedDrug">
 
   <div class="row well" ng-show="selectedDrug">
-    <span id="percentage">$ {{getTotal()}} ({{getPercentage()}}%)</span>
+    <span id="percentage">{{getPercentage()}}%</span>
       <div class="progress-bar"
         role="progressbar" aria-valuenow="{{getPercentage()}}" aria-valuemin="0"
         aria-valuemax="100" ng-style="{width : ( getPercentage() + '%' ) }">

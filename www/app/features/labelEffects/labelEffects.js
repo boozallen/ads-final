@@ -15,6 +15,7 @@ angular.module('gapFront')
     $scope.adverseEffects = [];
     $scope.displayedStuff = [];
     $scope.count = 0;
+    $scope.total = 0;
 
     var initLabelEffects = function(params){
       $scope.selectedDrug = DrugService.getSelectedDrug();
@@ -41,6 +42,7 @@ angular.module('gapFront')
       for(var i in res){
         $scope.adverseEffects.push({medical_term: res[i].medical_term, layman_term: res[i].layman_term});
       }
+      $scope.total = $scope.adverseEffects.length;
       addDisplayedStuff();
     }
 
@@ -148,7 +150,10 @@ angular.module('gapFront')
     };
 
     $scope.getPercentage = function() {
-      return (Math.floor(($scope.count/$scope.adverseEffects.length)) * 100);
+      if ($scope.count-1 == $scope.total){ return 100}
+      var div = ($scope.count-1)/$scope.total;
+      var percent = div * 100;
+      return Math.floor(percent);
     };
 
     function effectsContain(obj){
