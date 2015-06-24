@@ -21,8 +21,7 @@ class DrugsController < ApplicationController
 
   def drug
     @_drug = Fda.get params[:id]
-    # fields = %w(adverse_reactions boxed_warnings warnings_and_precautions user_safety_warnings precautions warnings general_precautions)
-    fields = %w(boxed_warnings warnings_and_precautions user_safety_warnings precautions warnings general_precautions)
+    fields = %w(boxed_warnings warnings_and_precautions user_safety_warnings precautions warnings general_precautions warnings_and_cautions adverse_reactions)
     adverse_reactions = fields.map { |f| @_drug.fetch(f, '') }.join('')
     @_drug['effects'] = EFFECTS_LIST.select do |terms|
       adverse_reactions.match terms[:medical_term]
