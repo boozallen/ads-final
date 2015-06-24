@@ -39,12 +39,33 @@ angular.module('gapFront')
     $scope.addSelectedSymptom = function () {
       var elem = $('#selsym')[0];
       var value = elem.value;
-      if(contains($scope.symptoms,value)){
+      if(contains($scope.symptoms,value) && !effectsContain(value)){
         console.log();
         $scope.effects.push({medical_term: value, layman_term: value, checked:true});
         $scope.selectedSymptom = '';
         elem.value = '';
       }
+    };
+
+    $scope.submitEffects = function(){
+      var post = {name:$scope.selectedDrug.brand_name, effects:[]};
+      for(var i in $scope.effects){
+        if($scope.effects[i].checked){
+          post.effects.push($scope.effects[i].medical_term)
+        }
+      }
+      APIService.getDrugEffectApi().post(post).then(serviceError,serviceError);
+
+    };
+
+    function effectsContain(obj){
+      var a = $scope.effects;
+      for (var i = 0; i < a.length; i++) {
+        if (a[i].medical_term == obj) {
+          return true;
+        }
+      }
+      return false;
     }
 
     function contains(a, obj) {
