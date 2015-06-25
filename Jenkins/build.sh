@@ -4,3 +4,4 @@ docker build -t database api/database/postgres
 docker run -p 5432:5432 -d database
 docker build -t api api
 docker run -p 3000:3000 -d api
+ 
