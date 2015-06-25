@@ -23,4 +23,5 @@ COPY Gruntfile.js /usr/src/app/client/
 CMD grunt serve:dist
 COPY . /usr/src/app/client
 EXPOSE 9000
+EXPOSE 9001
 
