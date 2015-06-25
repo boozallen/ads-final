@@ -139,7 +139,7 @@ angular.module('gapFront')
       var hold = [];
       $scope.effects = [];
       var numbers = [];
-      $scope.counts = [{name: "reported Adverse Effects", data: numbers}];
+      $scope.counts = [{name: "Reported Adverse Effects", data: numbers}];
       for (var i in $scope.chart) {
         $scope.effects.push($scope.chart[i].term);
         $scope.counts[0].data.push($scope.chart[i].count);
@@ -148,9 +148,13 @@ angular.module('gapFront')
       $scope.terms = $scope.chart;
     };
 
+        Highcharts.setOptions({
+        colors: ['#23b193', '#bde2d9']
+    });
+
       //angular.element(document).ready();
       function createChart() {
-        var colors = Highcharts.getOptions().colors;
+        // var colors = Highcharts.getOptions().colors;
           $('#chartContainer').highcharts({
             chart: {
                 type: 'bar'
