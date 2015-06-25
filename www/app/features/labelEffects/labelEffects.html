@@ -1,25 +1,26 @@
-<section id="label-accuracy" class="features col-md-10 col-md-offset-1 spacer-2x" ng-if="displayedStuff">
-  <div class="row" ng-show="selectedDrug">
-    <div class="col-md-7 well">
-      <h2>From the label of {{selectedDrug.brand_name}}</h2>
-    </div>
-    <div class="col-md-4 col-md-offset-1 well">
-      <div class="progress" bs-tooltip="percentAnswered()">
-        <div class="progress-bar" role="progressbar" aria-valuenow="{{getPercentage()}}" aria-valuemin="0"
-             aria-valuemax="100" ng-style="{width : (getPercentage() + '%')}">
-          <span class="sr-only">{{getPercentage()}}% Complete</span>
-        </div>
+<section class="col-md-12 spacer-2x spacer-2x label-full-row gray-bg" ng-if="selectedDrug">
+
+<div class="col-md-12 full-row blue-bg cf">
+  <div class="med-info col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+    <h2>Label Accuracy</h2>
+    <p>Sometimes it takes a real, live person. Help us make medication labels more accurate by answering a few questions below. Our computers can scan key terms in labels, but they can't understand the context like a human can. We need your help to read the terms in the text below, and report back to us about whether that term is listed as a side effect.</p>
+  </div>
+</div>
+
+  <div class="full-row gray" ng-show="selectedDrug">
+    <div class="progress col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+      <div class="progress-bar" role="progressbar" aria-valuenow="{{getPercentage()}}" aria-valuemin="0" aria-valuemax="100" ng-style="{width : (getPercentage() + '%')}">
+        <span class="sr-only">{{getPercentage()}}% Complete</span>
       </div>
     </div>
   </div>
 
 
-  <div class="row" ng-repeat="stuff in displayedStuff" style="vertical-align: middle" >
-    <input type="text" ng-model="stuff.effect.medical_term" id="stuffGetter" style="display: none"/>
-
+  <div class="row col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1" ng-repeat="stuff in displayedStuff">
+    <input type="text" ng-model="stuff.effect.medical_term" id="stuffGetter" style="display: none" />
     <div class="col-md-7">
-      <div ng-class="!$first?'row well disabled spacer-2x':'row well'" id="adverseSentence">
-        {{stuff.sentence}}
+      <div ng-class="!$first?'row disabled spacer-2x':'row label-wrap'" id="adverseSentence">
+        <p>{{stuff.sentence}}</p>
       </div>
     </div>
 
@@ -30,7 +31,7 @@
     </script>
 
     <div class="col-md-4 col-md-offset-1">
-      <div ng-class="!$first?'row well disabled spacer-2x':'row well'">
+      <div ng-class="!$first?'row disabled spacer-2x':'row label-wrap'">
         <div align="center">
           Is <strong bs-tooltip="stuff.effect.layman_term" data-placement="top">{{stuff.effect.medical_term.toLowerCase()}}</strong>
           listed on the label as a side effect?<br/><br/>
