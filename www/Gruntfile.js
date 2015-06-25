@@ -34,7 +34,7 @@ module.exports = function (grunt) {
           'http://localhost:9000'
         ],
         resultsFolder: './tests/results',
-        openResults: true,
+        openResults: false,
         timeout: 60
       }
     },
