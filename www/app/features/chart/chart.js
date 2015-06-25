@@ -100,7 +100,8 @@ angular.module('gapFront')
         $scope.dateData = resp.results;
         $scope.countDateArray = [];
         $scope.dateData.map(function(date){
-          var arr = [date.time, date.count];
+
+          var arr = [parse(date.time), date.count];
           $scope.countDateArray.push(arr);
         });
         console.log($scope.countDateArray);
@@ -209,52 +210,38 @@ angular.module('gapFront')
     };
 
     function createLineChart() {
-      $('#lineGraphContainer').highcharts({
+
+      var data = Highcharts.map($scope.countDateArray, function (config){
+        return {
+          x: config[0],
+          y: config[1]
+        };
+      });
+
+          var dataObject = {
+            rangeSelector: {
+                selected: 1,
+                inputEnabled: $('#container').width() > 480
+            },
+            
+            title: {
+                text: 'Reported Adverse Event Counts',
+                subtitle: 'Over Time'
+            },
+            
+            series: [{
+                name: 'Count',
+                data: data,
+                tooltip: {
+                },
+                turboThreshold: 0
+            }],
+            
             chart: {
-            type: 'spline'
-        },
-        title: {
-            text: 'Number of Adverse Reports'
-        },
-        subtitle: {
-            text: 'Over Time'
-        },
-        xAxis: {
-            type: 'datetime',
-            dateTimeLabelFormats: { // don't display the dummy year
-                month: '%e. %b',
-                year: '%b'
-            },
-            title: {
-                text: 'Date'
+                renderTo: 'lineGraphContainer'
             }
-        },
-        yAxis: {
-            title: {
-                text: '# Adverse Reports'
-            },
-            min: 0
-        },
-        tooltip: {
-            headerFormat: 'Adverse Reports'
-        },
-
-        plotOptions: {
-            spline: {
-                marker: {
-                    enabled: true
-                }
-            }
-        },
-
-        series: [{
-            name: "Date",
-            // Define the data points. All series have a dummy year
-            // of 1970/71 in order to be compared on the same x axis. Note
-            // that in JavaScript, months start at 0 for January, 1 for February etc.
-            data: $scope.countDateArray
-        }]
-    });
+        };  
+        var chart = new Highcharts.StockChart(dataObject);
     }
 
   });
