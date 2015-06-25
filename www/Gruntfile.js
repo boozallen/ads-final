@@ -1,6 +1,6 @@
 // Generated on 2015-06-19 using generator-angular 0.11.1
 'use strict';
- 
+
 // # Globbing
 // for performance reasons we're only matching one level down:
 // 'test/spec/{,*/}*.js'
@@ -602,7 +602,6 @@ module.exports = function (grunt) {
     'jshint:test',
     'autoprefixer',
     'connect:test',
-    'devperf',
     'karma'
   ]);
 
