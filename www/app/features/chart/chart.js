@@ -67,7 +67,7 @@
 
       console.log(query);
 
-      APIService.aggregateDrugEvent(query, 25, 'patient.reaction.reactionmeddrapt.exact').then(function(resp){
+      APIService.aggregateDrugEvent(query, 15, 'patient.reaction.reactionmeddrapt.exact').then(function(resp){
         $scope.setChartData(resp.results);
       },function(error){
         console.log(error);
@@ -181,6 +181,10 @@
             series: {
               stacking: 'normal'
             }
+          },
+          rangeSelector: {
+            selected: 1,
+            inputEnabled: $('#chartContainer').height() > 480
           },
 
           series: $scope.counts
