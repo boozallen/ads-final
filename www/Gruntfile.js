@@ -17,7 +17,7 @@ module.exports = function (grunt) {
 
   var modRewrite = require('connect-modrewrite');
   grunt.loadNpmTasks('grunt-ngdocs');
-
+  grunt.loadNpmTasks('grunt-devperf');
 
   // Configurable paths for the application
   var appConfig = {
@@ -28,6 +28,16 @@ module.exports = function (grunt) {
 
   // Define the configuration for all the tasks
   grunt.initConfig({
+    devperf: {
+      options: {
+        urls: [
+          'http://localhost:9000'
+        ],
+        resultsFolder: './tests/results',
+        openResults: true,
+        timeout: 60
+      }
+    },
 
     // Project settings
     yeoman: appConfig,
@@ -87,6 +97,10 @@ module.exports = function (grunt) {
                       '/bower_components',
                       connect.static('./bower_components')
                   ),
+                  connect().use(
+                      '/assets',
+                      connect.static('./assets')
+                  ),
                   connect.static(appConfig.app),
                   connect().use(
                     '/docs/',
@@ -107,6 +121,10 @@ module.exports = function (grunt) {
                 '/bower_components',
                 connect.static('./bower_components')
               ),
+              connect().use(
+                      '/assets',
+                      connect.static('./assets')
+                  ),
               connect.static(appConfig.app)
             ];
           }
@@ -123,6 +141,10 @@ module.exports = function (grunt) {
                   connect().use(
                       '/bower_components',
                       connect.static('./bower_components')
+                  ),
+                  connect().use(
+                      '/assets',
+                      connect.static('./assets')
                   ),
                   connect.static(appConfig.app),
                   connect().use(
@@ -152,6 +174,10 @@ module.exports = function (grunt) {
                   connect().use(
                       '/bower_components',
                       connect.static('./bower_components')
+                  ),
+                  connect().use(
+                      '/assets',
+                      connect.static('./assets')
                   ),
                   connect.static(appConfig.app),
                   connect().use(
@@ -573,8 +599,10 @@ module.exports = function (grunt) {
     'wiredep',
     'ngdocs',
     'concurrent:test',
+    'jshint:test',
     'autoprefixer',
     'connect:test',
+    'devperf',
     'karma'
   ]);
 

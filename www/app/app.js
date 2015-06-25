@@ -17,7 +17,9 @@ angular
     'ngSanitize',
     'ngTouch',
     'restangular',
-    'mgcrea.ngStrap'
+    'ui.checkbox',
+    'mgcrea.ngStrap',
+    'ui-rangeSlider'
   ])
   .config(function ($routeProvider, $locationProvider) {
     $routeProvider
@@ -26,18 +28,20 @@ angular
         controller: 'MainCtrl'
       })
       .when('/about', {
-        templateUrl: 'features/about/about.html',
-        controller: 'AboutCtrl'
+        templateUrl: 'features/routeView/routeView.html'
       })
       .when('/chart', {
         templateUrl: 'features/chart/chart.html',
         controller: 'ChartCtrl'
       })
+      .when('/labelEffects', {
+        templateUrl: 'features/labelEffects/labelEffects.html',
+        controller: 'LabelEffectsCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
-      $locationProvider
-  .html5Mode(true);
+      $locationProvider.html5Mode(true);
   });
 
   // .run(function(Restangular) {

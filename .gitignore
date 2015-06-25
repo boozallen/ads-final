@@ -16,3 +16,4 @@
 # Ignore RubyMine dir
 .idea/
 .DS_Store
+www/tests/results

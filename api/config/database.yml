@@ -20,11 +20,19 @@ production:
   <<: *default
   database: ads_production
 
-docker:
+docker: &docker
   adapter: postgresql
-  encoding: unicode
-  database: postgres
-  pool: 5
+  database: ads_development
+  encoding: utf8
   username: postgres
   password:
   host: db
+  pool: 5
+
+docker-test:
+  <<: *docker
+  database: ads_test
+
+docker-prod:
+  <<: *docker
+  database: ads_production

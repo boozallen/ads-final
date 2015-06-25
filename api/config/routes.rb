@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
+  # Documentation
+  apipie
+
   scope '/api/v1', except: [:new, :edit], defaults: { format: :json } do
-    resources :fda, only: [:index, :show], path: :drugs do
-      resource :reactions
-    end
+    resources :drugs, only: [:show, :create]
   end
 end

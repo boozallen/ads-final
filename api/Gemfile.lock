@@ -36,6 +36,10 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    acts-as-taggable-on (3.5.0)
+      activerecord (>= 3.2, < 5)
+    apipie-rails (0.2.6)
+      json
     arel (6.0.0)
     ast (2.0.0)
     astrolabe (1.3.0)
@@ -51,6 +55,9 @@ GEM
       sass (~> 3.0)
       terminal-table (~> 1.4)
     builder (3.2.2)
+    coderay (1.1.0)
+    database_cleaner (1.3.0)
+    diff-lcs (1.2.5)
     domain_name (0.5.24)
       unf (>= 0.0.5, < 1.0.0)
     dotenv (2.0.2)
@@ -58,6 +65,11 @@ GEM
       dotenv (= 2.0.2)
       railties (~> 4.0)
     erubis (2.7.0)
+    factory_girl (4.5.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.5.0)
+      factory_girl (~> 4.5.0)
+      railties (>= 3.0.0)
     fastercsv (1.5.5)
     globalid (0.3.5)
       activesupport (>= 4.1.0)
@@ -72,6 +84,7 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    method_source (0.8.2)
     mime-types (2.6.1)
     mini_portile (0.6.2)
     minitest (5.7.0)
@@ -83,9 +96,14 @@ GEM
       ast (>= 1.1, < 3.0)
     pg (0.18.2)
     powerpack (0.1.1)
+    pry (0.10.1)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
     puma (2.11.3)
       rack (>= 1.1, < 2.0)
     rack (1.6.2)
+    rack-cors (0.4.0)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.2.1)
@@ -121,12 +139,31 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
+    rspec-core (3.3.1)
+      rspec-support (~> 3.3.0)
+    rspec-expectations (3.3.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.3.0)
+    rspec-mocks (3.3.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.3.0)
+    rspec-rails (3.3.2)
+      actionpack (>= 3.0, < 4.3)
+      activesupport (>= 3.0, < 4.3)
+      railties (>= 3.0, < 4.3)
+      rspec-core (~> 3.3.0)
+      rspec-expectations (~> 3.3.0)
+      rspec-mocks (~> 3.3.0)
+      rspec-support (~> 3.3.0)
+    rspec-support (3.3.0)
     rubocop (0.31.0)
       astrolabe (~> 1.3)
       parser (>= 2.2.2.1, < 3.0)
       powerpack (~> 0.1)
       rainbow (>= 1.99.1, < 3.0)
       ruby-progressbar (~> 1.4)
+    rubocop-checkstyle_formatter (0.2.0)
+      rubocop (>= 0.20.1)
     ruby-progressbar (1.7.5)
     ruby2ruby (2.1.4)
       ruby_parser (~> 3.1)
@@ -135,6 +172,9 @@ GEM
       sexp_processor (~> 4.1)
     sass (3.4.13)
     sexp_processor (4.5.1)
+    shoulda-matchers (2.8.0)
+      activesupport (>= 3.0.0)
+    slop (3.6.0)
     spring (1.3.6)
     sprockets (3.2.0)
       rack (~> 1.0)
@@ -156,14 +196,23 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts-as-taggable-on
+  apipie-rails (~> 0.2.6)
   brakeman
+  database_cleaner (~> 1.3.0)
   dotenv-rails
+  factory_girl_rails (~> 4.0)
   pg (~> 0.18.2)
+  pry
   puma
+  rack-cors
   rails (= 4.2.1)
   rails-api
   rest-client
+  rspec-rails (~> 3.0)
   rubocop
+  rubocop-checkstyle_formatter
+  shoulda-matchers
   spring
 
 BUNDLED WITH
