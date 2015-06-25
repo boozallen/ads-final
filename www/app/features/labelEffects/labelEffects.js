@@ -63,6 +63,7 @@ angular.module('gapFront')
 
     function findMatchingSentence(drugObject, effect) {
       var textToSearch = [];
+      console.log(drugObject);
 
       if (drugObject['boxed_warnings']) {
         textToSearch.push.apply(textToSearch, drugObject['boxed_warnings']);
