@@ -180,6 +180,11 @@ h3 {
   color: #fff;
 }
 
+.navbar-default a.main-logo img{
+  height: 30px;
+  margin: 15px 0;
+}
+
 
 // FORM
 .form-control{
@@ -277,9 +282,14 @@ h3 {
 }
 
 .data-source{
-  font: normal normal 22px/1.5 'Helvetica Neue', Helvetica, sans-serif;
+  font: normal normal 16px/1.5 'Helvetica Neue', Helvetica, sans-serif;
   color: white;
 }
+
+.data-source a{
+  color:#1ab394;
+}
+
 .label-wrap{
   background: #fff;
   padding: 30px;
@@ -292,6 +302,10 @@ h3 {
 }
 
 // CHART BUTTONS
+.highcharts-container{
+  margin: 16px 0 0;
+}
+
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus{
   background-color:#5bc0de;
 }

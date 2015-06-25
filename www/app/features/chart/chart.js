@@ -161,7 +161,12 @@
             type: 'bar'
           },
           title: {
-            text: 'Top 25 Reported Adverse Effects for ' + $scope.selectedDrug.brand_name
+            text: 'Top 25 Reported Adverse Effects for ' + $scope.selectedDrug.brand_name,
+            style: {
+                color: '#333',
+                fontWeight: 'normal',
+                fontSize: 14,
+            }
           },
           xAxis: {
             categories: $scope.effects
@@ -204,7 +209,14 @@
             type: 'pie'
           },
           title: {
-            text: 'Total Reported ' + $scope.totalReportedCount
+            text: 'Total Reported ' + $scope.totalReportedCount,
+              style: {
+                color: '#333',
+                fontWeight: 'normal',
+                fontSize: 14,
+                align: "left"
+            }
+
           },
           plotOptions: {
             pie: {
@@ -235,8 +247,13 @@
           },
 
           title: {
-            text: 'Reported Adverse Event Counts',
-            subtitle: 'Over Time'
+            text: 'Reported Adverse Event Counts Over Time',
+            style: {
+                color: '#333',
+                fontWeight: 'normal',
+                fontSize: 14,
+                align: "left"
+            }
           },
 
           series: [{

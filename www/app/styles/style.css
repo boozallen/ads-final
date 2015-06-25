@@ -779,6 +779,11 @@ fieldset[disabled] .btn-primary.active {
   margin: 60px 0;
 }
 
+.space-top-60 {
+  margin: 30px 0 0;
+}
+
+
 /* PACE PLUGIN
 ---------------------------------------------------- */
 .pace .pace-progress {
