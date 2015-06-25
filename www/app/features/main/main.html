@@ -12,7 +12,7 @@
     <form>
       <div class="search_block input-group input-group-xs col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1 spacer-2x">
         <input type="text" class="form-control searchInput" ng-model="searchText" id="searchValue"
-        placeholder="Search for a Medication" ng-change="searchDrugs()">
+        placeholder="Search for a Drug..." ng-change="searchDrugs()">
         <div class="input-group-btn">
           <button class="btn searchButton searchInput" type="button" ng-click="navigateTo('/labelEffects')"><i class="fa fa-search searchIcon"></i></button>
         </div>
@@ -48,16 +48,15 @@
 </section>
 
 <div id="events-reports" ng-show="selectedDrug" class="features">
-  <div class="well" style="margin:20px;">
-    <div class="row">
-      <br><br>
-      <h1>{{selectedDrug.substance_name}}&nbsp;({{selectedDrug.brand_name}}) General Information</h1>
+    <div class="full-row cf">
+      <div class="med-info col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+      <h2>Manufacturer Details for: {{selectedDrug.substance_name}}&nbsp;({{selectedDrug.brand_name}}) General Information</h2>
       <br>
-      <h5>{{selectedDrug.object.package_label_principal_display_panel.toString()}}</h5>
+      <p>{{selectedDrug.object.package_label_principal_display_panel.toString()}}</p>
       <br>
-      <h5>{{selectedDrug.object.indications_and_usage.toString()}}</h5>
+      <p>{{selectedDrug.object.indications_and_usage.toString()}}</p>
       <br>
-      <h5>{{selectedDrug.object.dosage_and_administration}}</h5>
+      <p>{{selectedDrug.object.dosage_and_administration}}</p>
     </div>
-  </div>
+    </div>
 </div>
