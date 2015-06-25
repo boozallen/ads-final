@@ -49,18 +49,8 @@ angular.module('gapFront')
       for (var i in res) {
         $scope.adverseEffects.push({medical_term: res[i].medical_term, layman_term: res[i].layman_term});
       }
-      var count;
-      $scope.total = $scope.adverseEffects.length;
-      if ($scope.total < 3) {
-        count = $scope.total;
-      } else {
-        count = 3;
-      }
-      console.log($scope.total);
-      console.log($scope.adverseEffects);
-      for (var j = 0; j < count; j++) {
-        addDisplayedStuff();
-      }
+
+      addDisplayedStuff();
     }
 
     function addDisplayedStuff() {
