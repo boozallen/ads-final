@@ -43,12 +43,28 @@ h1 {
   font-size: 30px;
   font-weight: 200;
 }
+h2 {
+  font: normal normal 20px/1.5 'Helvetica Neue', Helvetica, sans-serif;
+}
+h3 {
+  font: normal normal 14px/1.5 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+
 .navy-line {
   width: 60px;
   height: 1px;
   margin: 60px auto 0;
   border-bottom: 2px solid #1ab394;
 }
+
+/* CLEAR FLOAT */
+.cf { zoom: 1; }
+.cf:before,
+.cf:after {content: ""; display: table;}
+.cf:after {clear: both;}
+
+
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
 .navbar-wrapper {
