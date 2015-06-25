@@ -13,14 +13,14 @@
 
   <div class="row col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1 spacer" ng-hide="getPercentage() == 100">
     <div class="col-md-7 med-info">
-      <h2><small>Label information for {{selectedDrug.brand_name}}</small></h2>
+      <h4>Help us fix this portion of the label for: {{selectedDrug.brand_name}}</h4>
     </div>
 
     <div class="progress col-md-4 col-md-offset-1">
-      <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="{{getPercentage()}}" aria-valuemin="0"
+      <div class="progress-bar active" role="progressbar" aria-valuenow="{{getPercentage()}}" aria-valuemin="0"
            aria-valuemax="100" ng-style="{width : (getPercentage() + '%')}">
-        <span>{{getPercentage()}}% Complete</span>
       </div>
+              <span>{{getPercentage()}}% Complete</span>
     </div>
   </div>
 
@@ -50,15 +50,18 @@
     </script>
 
     <div class="col-md-4 col-md-offset-1">
-      <div ng-class="!$first?'row disabled spacer-2x':'row label-wrap'">
-        <div align="center">
-          Is <strong bs-tooltip="stuff.effect.layman_term" data-placement="top">{{stuff.effect.medical_term.toLowerCase()}}</strong>
-          listed on the label as a side effect?<br/><br/>
+      <div ng-class="!$first?'row disabled spacer-2x':'row label-wrap confirm'">
+          <p>Is <strong bs-tooltip="stuff.effect.layman_term" data-placement="top">{{stuff.effect.medical_term.toLowerCase()}}</strong>
+          listed on the label as a side effect?</p>
 
           <div class="btn-group">
-            <button class="btn btn-primary" ng-click="completeIndex($index, true, $first)">Yes</button>
-            <button class="btn btn-danger" ng-click="completeIndex($index, false, $first)">No</button>
-          </div>
+            <ul class="nav nav-pills " data-toggle="buttons">
+              <li class='yes-btn' role="presentation" ng-click="completeIndex($index, true, $first)"><a href="">YES</a></li>
+              <li class='no-btn' role="presentation" ng-click="completeIndex($index, false, $first)"><a href="">NO</a></li>
+            </ul>
+
+<!-- <button class="btn btn-primary" ng-click="completeIndex($index, true, $first)">Yes</button>
+            <button class="btn btn-danger" ng-click="completeIndex($index, false, $first)">No</button> -->
         </div>
       </div>
     </div>
