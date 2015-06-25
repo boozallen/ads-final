@@ -6,7 +6,7 @@
 
 [![Build Status](http://52.0.92.86:8080/buildStatus/icon?job=Release_FrontEnd_Builder)](http://52.0.92.86:8080/view/Release/job/Release_FrontEnd_Builder/)[![Build Status](http://52.0.92.86:8080/buildStatus/icon?job=Release_API_Builder)](http://52.0.92.86:8080/view/Release/job/Release_API_Builder/)Release Branch Server: http://54.175.96.243:9000/
 
-[![Build Status](http://52.0.92.86:8080/buildStatus/icon?job=Master_FrontEnd_Builder)](http://52.0.92.86:8080/view/Master/job/Master_FrontEnd_Builder/)[![Build Status](http://52.0.92.86:8080/buildStatus/icon?job=Master_API_Builder)](http://52.0.92.86:8080/view/Master/job/Master_API_Builder/)Master Branch Server: http://54.175.139.167:9000/
+[![Build Status](http://52.0.92.86:8080/buildStatus/icon?job=Master_FrontEnd_Builder)](http://52.0.92.86:8080/view/Master/job/Master_FrontEnd_Builder/)[![Build Status](http://52.0.92.86:8080/buildStatus/icon?job=Master_API_Builder)](http://52.0.92.86:8080/view/Master/job/Master_API_Builder/)Master Branch Server: http://52.0.46.33:9000/ or www.crowdmed.io
 
 Crowd Med is a crowd-sourcing platform for cataloging the adverse reactions found on drug labels in order to determine whether manufacturers have accurately reported the adverse reactions compared to what is reported by end users.  Data from the platform is searchable on the site by drug and also is accessible via API for integration with other applications.   The platform provides the foundation for additional improvements in FDA data quality required to gain the most value from the data.
 
