@@ -233,7 +233,6 @@ angular.module('gapFront')
                 name: 'Count',
                 data: data,
                 tooltip: {
-                    valueDecimals: 2
                 },
                 turboThreshold: 0
             }],
