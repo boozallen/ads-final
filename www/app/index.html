@@ -26,8 +26,8 @@
     <div ng-view></div>
     <div>
         <div id="headerDiv" ng-include src="'features/header/header.html'" style="display:none;"></div>
-        <div ng-controller= "ChartCtrl" class="spacer" ng-include src="'features/chart/chart.html'"></div>
-        <div ng-controller= "LabelEffectsCtrl" class="spacer" ng-include src="'features/labelEffects/labelEffects.html'"></div>
+        <div ng-controller= "ChartCtrl" class="spacer" ng-include src="'features/chart/chart.html'" ng-show="selectedDrug"></div>
+        <div ng-controller= "LabelEffectsCtrl" class="spacer" ng-include src="'features/labelEffects/labelEffects.html'" ng-show="selectedDrug"></div>
     </div>
 
   </div>
