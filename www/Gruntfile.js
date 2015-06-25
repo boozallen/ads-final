@@ -602,6 +602,7 @@ module.exports = function (grunt) {
     'jshint:test',
     'autoprefixer',
     'connect:test',
+    'devperf',
     'karma'
   ]);
 
