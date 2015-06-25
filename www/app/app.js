@@ -28,8 +28,7 @@ angular
         controller: 'MainCtrl'
       })
       .when('/about', {
-        templateUrl: 'features/about/about.html',
-        controller: 'AboutCtrl'
+        templateUrl: 'features/routeView/routeView.html'
       })
       .when('/chart', {
         templateUrl: 'features/chart/chart.html',

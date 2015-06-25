@@ -1,11 +1,13 @@
-<section class="landing">
+<section class="landing" id="searchSplashScreen">
   <div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1">
-    <img src="../assets/Main_logo.png" align="middle" class="img-responsive logoTitle" alt="Responsive image">
+    <img src="../assets/crowd_med_logo.png" align="middle" class="img-responsive logoTitle" alt="Responsive image">
   </div>
   <div class="row">
     <br/>
     <div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1">
-      <p class="appTitle" align="center"><strong>{{totalEvents}}</strong> people have reported side effects for medications <strong>{{totalLabels}}</strong> Help us make sure these side effects reach your label.</p>
+      <p class="appTitle" align="center"><strong>{{totalEvents}}</strong> people have reported side effects for medications <strong>{{totalLabels}}</strong> 
+      <br>
+      Help us make sure these side effects reach your label.</p>
     </div>
   </div>
   <div class="row">
@@ -29,6 +31,8 @@
       </div>
     </form>
   </div>
+      <h3 align="center" class="data-source" style="margin: 60px 0px;">Data Source: <a href="https://open.fda.gov/">open.fda.org</a></h3>
+
   <div class="row space-60">
     <div class="trending col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
       <ul>
@@ -46,7 +50,7 @@
     </div>
   </div>
 </section>
-
+<br></br>
 <div id="events-reports" ng-show="selectedDrug" class="features">
     <div class="full-row cf">
       <div class="med-info col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
