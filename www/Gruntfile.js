@@ -433,7 +433,7 @@ module.exports = function (grunt) {
 
     // ng-docs is a Grunt plugin to create a documentation like AngularJS
     ngdocs: {
-      all: ['app/scripts/**/*.js'],
+      all: ['app/features/**/*.js'],
       options: {
         dest: 'docs',
         html5Mode: true,
