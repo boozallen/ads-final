@@ -124,7 +124,8 @@ angular.module('gapFront')
       if (found == true) {
         return (splitText.slice(i-1, i+1).join('.'));
       } else {
-        return splitText;
+        var idx = Math.floor(Math.random() * splitText.length);
+        return (splitText.slice(idx-1, idx+1).join('.'));
       }
     }
 
