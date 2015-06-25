@@ -111,7 +111,7 @@ color:#fff;
 }
 
 .searchButton{
-  background-color: #2CC6C7;
+  background-color: #5bc0de;
 }
 .searchIcon{
   color: white;
@@ -197,6 +197,11 @@ h3 {
   border-radius: 0px;
 }
 
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus{
+  background: #1ab394;
+  color: #fff;
+  cursor: pointer;
+}
 
 .trending{
   padding: 10px;
@@ -230,9 +235,24 @@ h3 {
 }
 
 .full-row{
-  background: #f3f3f4;
   padding: 60px 0;
 }
+
+.full-row.blue{
+    background: #e7f6fa;
+  }
+
+.label-full-row{
+  padding: 0 0;
+}
+
+.gray-bg{
+  background: #f3f3f4;
+}
+
+.blue-bg{
+    background: #e7f6fa;
+  }
 
 
 // NEED TO ADD SHOW MORE BTN
@@ -246,7 +266,7 @@ h3 {
   font-size: 20px;
 }
 
-.med-info p {
+.med-info p{
   color: #666;
   font-size: 12px;
   line-height: 1.7em;
@@ -259,4 +279,48 @@ h3 {
 .data-source{
   font: normal normal 22px/1.5 'Helvetica Neue', Helvetica, sans-serif;
   color: white;
+}
+.label-wrap{
+  background: #fff;
+  padding: 30px;
+}
+
+.label-wrap p {
+  color: #676a6c;
+  font-size: 12px;
+  line-height: 1.9em;
+}
+
+// CHART BUTTONS
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus{
+  background-color:#5bc0de;
+}
+
+.nav-pills > li > a {
+  border-radius: 4px;
+  background-color: #ebebeb;
+  color: #989898;
+  font-size: 11px;
+  padding: 5px 12px;
+  margin: 2px;
+}
+
+.ngrs-range-slider{
+  border:none;
+  box-shadow: none;
+}
+
+.ngrs-runner:before{
+  content: " ";
+  background: #ccc;
+  display: block;
+  height: 2px;
+  position: absolute;
+  top: 8px;
+  width: 100%;
+}
+
+.ngrs-range-slider .ngrs-join{
+  margin: -1px 0 0 0;
+  height: 2px;
 }
