@@ -10,7 +10,6 @@
 angular.module('gapFront')
   .controller('MainCtrl', function ($scope, $anchorScroll, $location, $route, APIService, IntegrationService, DrugService) {
     $scope.drugs = [];
-    //$scope.selectedDrug;
 
     $scope.searchText = '';
 
@@ -26,9 +25,13 @@ angular.module('gapFront')
     });
 
     $scope.setSelectedDrug = function(drug) {
-      $scope.displayedEffects = [];
-      $scope.selectedDrug = drug;
+      $scope.adverseEffects = [];
+      $scope.displayedStuff = [];
+      $scope.count = 1;
+      $scope.total = 0;
       $scope.drugs = [];
+      $scope.selectedDrug = drug;
+
       DrugService.setSelectedDrug($scope.selectedDrug);
       IntegrationService.callIntegrationMethod('initChart',{});
       IntegrationService.callIntegrationMethod('initLabelEffects',{});
