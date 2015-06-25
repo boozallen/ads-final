@@ -1,14 +1,22 @@
-<section class="features col-md-10 col-md-offset-1 spacer-2x" ng-if="selectedDrug">
-  <div class="row well" ng-show="selectedDrug">
-    <div class="progress">
-      <div class="progress-bar" role="progressbar" aria-valuenow="{{getPercentage()}}" aria-valuemin="0" aria-valuemax="100" ng-style="{width : (getPercentage() + '%')}">
-        <span class="sr-only">{{getPercentage()}}% Complete</span>
+<section class="features col-md-10 col-md-offset-1 spacer-2x" ng-if="displayedStuff">
+  <div class="row" ng-show="selectedDrug">
+    <div class="col-md-7 well">
+      <h2>From the label of {{selectedDrug.brand_name}}</h2>
+    </div>
+    <div class="col-md-4 col-md-offset-1 well">
+      <div class="progress" bs-tooltip="percentAnswered()">
+        <div class="progress-bar" role="progressbar" aria-valuenow="{{getPercentage()}}" aria-valuemin="0"
+             aria-valuemax="100" ng-style="{width : (getPercentage() + '%')}">
+          <span class="sr-only">{{getPercentage()}}% Complete</span>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="row" ng-repeat="stuff in displayedStuff">
-    <input type="text" ng-model="stuff.effect.medical_term" id="stuffGetter" style="display: none" />
+
+  <div class="row" ng-repeat="stuff in displayedStuff" style="vertical-align: middle" >
+    <input type="text" ng-model="stuff.effect.medical_term" id="stuffGetter" style="display: none"/>
+
     <div class="col-md-7">
       <div ng-class="!$first?'row well disabled spacer-2x':'row well'" id="adverseSentence">
         {{stuff.sentence}}
@@ -16,7 +24,7 @@
     </div>
 
     <script>
-      setTimeout(function() {
+      setTimeout(function () {
         $('#adverseSentence').highlight($('#stuffGetter')[0].value)
       }, 500);
     </script>
@@ -24,7 +32,8 @@
     <div class="col-md-4 col-md-offset-1">
       <div ng-class="!$first?'row well disabled spacer-2x':'row well'">
         <div align="center">
-          Is <strong bs-tooltip="stuff.effect.layman_term" data-placement="top">{{stuff.effect.medical_term.toLowerCase()}}</strong> listed on the label as a side effect?<br/><br/>
+          Is <strong bs-tooltip="stuff.effect.layman_term" data-placement="top">{{stuff.effect.medical_term.toLowerCase()}}</strong>
+          listed on the label as a side effect?<br/><br/>
 
           <div class="btn-group">
             <button class="btn btn-primary" ng-click="completeIndex($index, true, $first)">Yes</button>
