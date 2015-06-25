@@ -126,7 +126,7 @@ h3 {
   background: #17a185;
   color: #fff;
 }
-.navbar-default .navbar-brand {
+/*.navbar-default .navbar-brand {
   color: #fff;
   height: auto;
   display: block;
@@ -137,7 +137,7 @@ h3 {
   font-weight: 700;
   transition: all 0.3s ease-in-out 0s;
 }
-.navbar-scroll.navbar-default .nav li a {
+*/.navbar-scroll.navbar-default .nav li a {
   color: #676a6c;
 }
 .navbar-scroll.navbar-default .nav li a:hover {
@@ -159,7 +159,6 @@ h3 {
   margin-top: 15px;
   border-radius: 5px;
   font-size: 12px;
-  padding: 10px;
   height: auto;
 }
 /* BACKGROUNDS SLIDER

@@ -32,8 +32,10 @@ angular.module('gapFront')
       DrugService.setSelectedDrug($scope.selectedDrug);
       IntegrationService.callIntegrationMethod('initChart',{});
       IntegrationService.callIntegrationMethod('initLabelEffects',{});
-      $location.hash('events-reports');
-      $anchorScroll();
+      $("#headerDiv").css('display', 'block');
+      $("#searchSplashScreen").remove();
+      // $location.hash('events-reports');
+      // $anchorScroll();
     };
 
     $scope.searchDrugs = function() {

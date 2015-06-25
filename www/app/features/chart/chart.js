@@ -7,13 +7,13 @@
  * # ChartCtrl
  * Controller of the gapFront
  */
-angular.module('gapFront')
-  .controller('ChartCtrl', function ($scope, IntegrationService, APIService, DrugService) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+ angular.module('gapFront')
+ .controller('ChartCtrl', function ($scope, IntegrationService, APIService, DrugService) {
+  $scope.awesomeThings = [
+  'HTML5 Boilerplate',
+  'AngularJS',
+  'Karma'
+  ];
     $scope.filterType = "hospitalizations" //
     $scope.seriousness = "all";
     $scope.outcome = "all";
@@ -118,8 +118,8 @@ angular.module('gapFront')
     function parse(str) {
       if(!/^(\d){8}$/.test(str)) return "invalid date";
       var y = str.substr(0,4),
-          m = str.substr(4,2),
-          d = str.substr(6,2);
+      m = str.substr(4,2),
+      d = str.substr(6,2);
       return new Date(y,m,d).getTime();
     }
 
@@ -152,96 +152,97 @@ angular.module('gapFront')
       //angular.element(document).ready();
       function createChart() {
         var colors = Highcharts.getOptions().colors;
-          $('#chartContainer').highcharts({
-            chart: {
-                type: 'bar'
-            },
+        $('#chartContainer').highcharts({
+          chart: {
+            type: 'bar'
+          },
+          title: {
+            text: 'Top 25 Reported Adverse Effects for ' + $scope.selectedDrug.brand_name
+          },
+          xAxis: {
+            categories: $scope.effects
+          },
+          yAxis: {
+            min: 0,
             title: {
-                text: 'Top 25 Reported Adverse Effects for ' + $scope.selectedDrug.brand_name
+              text: 'Counts'
             },
-            xAxis: {
-                categories: $scope.effects
-            },
-            yAxis: {
-                min: 0,
-                title: {
-                    text: 'Counts'
-                }
-            },
-            legend: {
-                reversed: true
-            },
-            plotOptions: {
-                series: {
-                    stacking: 'normal'
-                }
-            },
+            lineColor: '#666666'
+          },
+          legend: {
+            reversed: true
+          },
+          plotOptions: {
+            series: {
+              stacking: 'normal'
+            }
+          },
 
-            series: $scope.counts
+          series: $scope.counts
 
-          });
-        };
+        });
+      };
       function createPieChart() {
         $scope.percentSerious = ($scope.seriousCount / $scope.totalReportedCount) * 100;
-      console.log($scope.percentSerious);
-      $scope.percentNonSerious = ($scope.nonSeriousCount / $scope.totalReportedCount) * 100;
-      console.log($scope.percentNonSerious);
-      var totalReportedCount = $scope.totalReportedCount;
+        console.log($scope.percentSerious);
+        $scope.percentNonSerious = ($scope.nonSeriousCount / $scope.totalReportedCount) * 100;
+        console.log($scope.percentNonSerious);
+        var totalReportedCount = $scope.totalReportedCount;
 
-      $scope.pieChart = new Highcharts.Chart({
-        chart: {
+        $scope.pieChart = new Highcharts.Chart({
+          chart: {
             renderTo: 'totalReportedContainer',
             type: 'pie'
-        },
-        title: {
-          text: 'Total Reported ' + $scope.totalReportedCount
-        },
-        plotOptions: {
+          },
+          title: {
+            text: 'Total Reported ' + $scope.totalReportedCount
+          },
+          plotOptions: {
             pie: {
-                innerSize: '60%'
+              innerSize: '60%'
             }
-        },
-        series: [{
+          },
+          series: [{
             data: [
-              ["Serious", $scope.percentSerious], 
-              ["Non-serious", $scope.percentNonSerious]
+            ["Serious", $scope.percentSerious], 
+            ["Non-serious", $scope.percentNonSerious]
             ]}]
           });
-    };
+      };
 
-    function createLineChart() {
+      function createLineChart() {
 
-      var data = Highcharts.map($scope.countDateArray, function (config){
-        return {
-          x: config[0],
-          y: config[1]
-        };
-      });
+        var data = Highcharts.map($scope.countDateArray, function (config){
+          return {
+            x: config[0],
+            y: config[1]
+          };
+        });
 
-          var dataObject = {
-            rangeSelector: {
-                selected: 1,
-                inputEnabled: $('#container').width() > 480
+        var dataObject = {
+          rangeSelector: {
+            selected: 1,
+            inputEnabled: $('#container').width() > 480
+          },
+
+          title: {
+            text: 'Reported Adverse Event Counts',
+            subtitle: 'Over Time'
+          },
+
+          series: [{
+            name: 'Count',
+            data: data,
+            tooltip: {
             },
-            
-            title: {
-                text: 'Reported Adverse Event Counts',
-                subtitle: 'Over Time'
-            },
-            
-            series: [{
-                name: 'Count',
-                data: data,
-                tooltip: {
-                },
-                turboThreshold: 0
-            }],
-            
-            chart: {
-                renderTo: 'lineGraphContainer'
-            }
+            turboThreshold: 0
+          }],
+
+          chart: {
+            renderTo: 'lineGraphContainer'
+          }
         };  
         var chart = new Highcharts.StockChart(dataObject);
-    }
+      }
 
-  });
+    });
