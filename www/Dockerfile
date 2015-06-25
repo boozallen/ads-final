@@ -6,6 +6,7 @@ WORKDIR /usr/src/app/client
 
 
 RUN apt-get update && apt-get install -y git npm nodejs
+RUN apt-get install -y build-essential chrpath git-core libssl-dev libfontconfig1-dev
 
 RUN npm install -g bower
 RUN npm install -g grunt-cli
