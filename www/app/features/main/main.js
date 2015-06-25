@@ -42,8 +42,16 @@ angular.module('gapFront')
     };
 
     $scope.searchDrugs = function() {
-      var text = $scope.searchText;
-      //text = text.replace(' ','+');
+      var bla = $('#searchTextResultView').val();
+
+      if(bla){
+        $scope.drugs = [];
+        console.log('here');
+        var text = bla;
+      }
+      else{
+        var text = $scope.searchText;
+      }
 
       if (text) {
         var query = 'openfda.generic_name:' + text + ' openfda.brand_name:' + text + ' openfda.substance_name:' + text;
