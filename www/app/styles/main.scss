@@ -91,7 +91,7 @@ input + .typeahead.ng-hide { display: block !important; visibility: hidden !impo
 
 .appTitle {
   color: white;
-  font-size: 18px;
+  font-size: 22px;
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
   color: #ccc;
   font-weight: 300;
@@ -261,12 +261,15 @@ h3 {
 
 
 // NEED TO ADD SHOW MORE BTN
-.med-info {
-  // max-height: 400px;
-  // overflow: auto;
-}
+// .med-info {}
 .med-info h2{
   color: #1d86c4;
+  font: normal normal 20px/1.5 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+.med-info h4 {
+  color: #333;
   font: normal normal 20px/1.5 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 20px;
 }
@@ -278,7 +281,9 @@ h3 {
 }
 
 .highlight {
-  background-color: cyan;
+  background-color: #f8ac59;
+  padding: 4px;
+  color: #fff;
 }
 
 .data-source{
@@ -290,6 +295,8 @@ h3 {
   color:#1ab394;
 }
 
+
+// YES - NO SECTION
 .label-wrap{
   background: #fff;
   padding: 30px;
@@ -297,8 +304,54 @@ h3 {
 
 .label-wrap p {
   color: #676a6c;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1.9em;
+
+
+}
+
+.label-wrap.confirm p{
+  color:#676a6c;
+  font-size: 16px;
+  line-height: 22px;
+  margin: 0 0 20px 0;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: 200;
+}
+
+.label-wrap.confirm p strong{
+  color:#f8ac59;
+}
+
+.nav-pills li.yes-btn a, .nav-pills li.no-btn a {
+  color: #fff;
+  text-decoration: uppercase;
+  font-weight: 300;
+  font-size: 18px;
+  padding: 6px 30px;
+}
+
+.nav-pills li.yes-btn a{
+  background-color: #1ab394;
+  margin: 0 10px 0 0;
+}
+
+.nav-pills li.yes-btn a:hover{
+  background-color:#18a689;
+}
+
+.nav-pills li.no-btn a{
+  background-color: #ed5565;
+}
+
+.nav-pills li.no-btn a:hover{
+  background-color: #ec4758;
+}
+
+
+.progress{
+ background: #fff;
+ border: 1px solid #dfdedf;
 }
 
 // CHART BUTTONS
