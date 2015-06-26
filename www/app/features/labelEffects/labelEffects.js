@@ -2,9 +2,9 @@
 
 /**
  * @ngdoc function
- * @name gapFront.controller:ChartCtrl
+ * @name gapFront.controller:LabelEffectsCtrl
  * @description
- * # ChartCtrl
+ * # LabelEffectsCtrl
  * Controller of the gapFront
  */
 angular.module('gapFront')

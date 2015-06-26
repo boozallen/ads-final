@@ -2,9 +2,9 @@
 
 /**
  * @ngdoc function
- * @name gapFront.servece:APIService
+ * @name gapFront.servece:IntegrationService
  * @description
- * # APIService
+ * # IntegrationService
  * Angular Service providing access to the FDA Drug APIs
  */
 angular.module('gapFront')
