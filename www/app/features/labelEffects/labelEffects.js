@@ -33,7 +33,7 @@ angular.module('gapFront')
       $scope.adverseEffects = [];
       $scope.displayedStuff = [];
 
-      APIService.getDrugEffectApi().get($scope.selectedDrug.brand_name).then(updateList, serviceError)
+      APIService.getDrugsApi().get($scope.selectedDrug.brand_name).then(updateList, serviceError)
     };
 
     function addFdaList(resp) {
@@ -124,14 +124,15 @@ angular.module('gapFront')
       }
     }
 
+    // Called every time you finish one question
     $scope.completeIndex = function (index, accurate, first) {
       $scope.count += 1;
       if (first) {
         var term = $scope.displayedStuff.splice(index, 1)[0];
         if ($scope.adverseEffects.length > 0) addDisplayedStuff();
         if (accurate) {
-          var post = {name: $scope.selectedDrug.brand_name, effects: [term]};
-          APIService.getDrugEffectApi().post(post).then(serviceError, serviceError);
+          var post = {name: $scope.selectedDrug.brand_name, effect: term};
+          APIService.getEffectsApi().post(post).then(serviceError, serviceError);
         }
       }
     };
@@ -146,17 +147,6 @@ angular.module('gapFront')
         $scope.selectedSymptom = '';
         elem.value = '';
       }
-    };
-
-    $scope.submitEffects = function () {
-      var post = {name: $scope.selectedDrug.brand_name, effects: []};
-      for (var i in $scope.effects) {
-        if ($scope.effects[i].checked) {
-          post.effects.push($scope.effects[i].medical_term)
-        }
-      }
-      APIService.getDrugEffectApi().post(post).then(serviceError, serviceError);
-
     };
 
     $scope.getPercentage = function () {
