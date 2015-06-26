@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'effects/create'
+
+  get 'drugs_controller/create'
+
   # Documentation
   apipie
 
