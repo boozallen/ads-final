@@ -17,9 +17,9 @@ describe('Controller: ChartCtrl', function () {
   }));
 
   it('should attach seriousness to the scope set to app', function () {
-    $scope.seriousness = "all";
-    $scope.outcome = "all";
-    $scope.age = "all";
+    scope.seriousness = 'all';
+    scope.outcome = 'all';
+    scope.age = 'all';
     expect(scope.seriousness).to.equal('app');
   });
 });
