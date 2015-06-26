@@ -3,7 +3,7 @@
 /**
  * @ngdoc function
  * @name gapFront.servece:APIService
- * @description
+ * @description Calls the Open FDA api for drug information as well as our local api.
  * # APIService
  * Angular Service providing access to the FDA Drug APIs
  */
@@ -30,7 +30,14 @@ angular.module('gapFront')
     //var drugLabel = drug.all('label.json');
     //var drugEvent = drug.all('event.json');
 
-
+    /**
+    * @ngdoc function
+    * @name queryDrugLabel
+    * @description calls the Food and Drug Administration's api and queries it.
+    * @param {string} query - The query to send to open fda api.
+    * @param {integer} skip - For dealing with paginated results.
+    * @param {integer} limit - The number of results to request.
+    */ 
     function queryDrugLabel(query, skip, limit){
       var params = {
         search:query,

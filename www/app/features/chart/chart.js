@@ -3,7 +3,7 @@
 /**
  * @ngdoc function
  * @name gapFront.controller:ChartCtrl
- * @description
+ * @description Gathers data for and creates the bar graph, line graph, tree map, and pie chart. Also controlls toggle buttons and filters for each.
  * # ChartCtrl
  * Controller of the gapFront
  */
