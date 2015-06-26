@@ -130,7 +130,6 @@ angular.module('gapFront')
       var term = $scope.displayedStuff.splice(index, 1)[0];
       if ($scope.adverseEffects.length > 0) addDisplayedStuff();
       if (accurate) {
-        console.log(term);
         var post = {drug_name: $scope.selectedDrug.brand_name, effect: term.effect, response: accurate};
         APIService.getEffectsApi().post(post).then(serviceError, serviceError);
       }
