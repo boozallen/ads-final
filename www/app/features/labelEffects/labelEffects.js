@@ -129,10 +129,8 @@ angular.module('gapFront')
       $scope.count += 1;
       var term = $scope.displayedStuff.splice(index, 1)[0];
       if ($scope.adverseEffects.length > 0) addDisplayedStuff();
-      if (accurate) {
-        var post = {drug_name: $scope.selectedDrug.brand_name, effect: term.effect, response: accurate};
-        APIService.getEffectsApi().post(post).then(serviceError, serviceError);
-      }
+      var post = {drug_name: $scope.selectedDrug.brand_name, effect: term.effect, response: accurate};
+      APIService.getEffectsApi().post(post).then(serviceError, serviceError);
     };
 
     $scope.adverseTooltip = "Add a new adverse affect not currently reported";

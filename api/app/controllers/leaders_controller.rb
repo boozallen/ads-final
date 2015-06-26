@@ -9,7 +9,7 @@ class LeadersController < ApplicationController
       leader.count += count
       render json: leader.save
     else
-      render json: Leader.create! leader_params
+      render json: Leader.create!(leader_params)
     end
   end
 
