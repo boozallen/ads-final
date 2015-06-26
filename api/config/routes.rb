@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :leaders, except: [:new, :edit]
   get 'effects/create'
 
   get 'drugs_controller/create'
