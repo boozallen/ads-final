@@ -1,13 +1,37 @@
 <section class="gray-section">
   <div class="row">
-    <div class="col-md-8">
+    <div align="center" class="col-md-8">
       <h2>Way to go!</h2>
       <p>
         You've helped make the {{selectedDrug.brand_name}} labels more accurate. Enter your name to be recognized as a contributor.
       </p>
+      <br>
+      <input style="width:80%" placeholder="Enter your name..."/>
+      <br><br>
+      <div align="center"><h3>Remaining Comparisons</h3></div>
+      <br>
+      <div class="row">
+        <div class="col-md-4" align="center" style="background-color:white;">
+          <div class="numberCircle">
+            11%
+            <br>
+            <p>Completed</p>
+          </div>
+
+        </div>
+        <div class="col-md-4" align="center" style="background-color:white;">
+          <div class="numberCircle">11%</div>
+        </div>
+        <div class="col-md-4" align="center" style="background-color:white;">
+          <div class="numberCircle">11%</div>
+        </div>
+      </div>
     </div>
     <div class="col-md-4">
-
+      <p>Recent Contributors</p>
+      <ul style="list-style-type: none;">
+        <li ng-repeat="leader in leaders" class="leaders">{{leader}}</li>
+      </ul>
     </div>
   </div>
 </section>

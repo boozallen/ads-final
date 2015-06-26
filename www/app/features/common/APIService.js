@@ -14,7 +14,7 @@ angular.module('gapFront')
     });
 
     var railsService = Restangular.withConfig(function(RestangularConfigurer,Restangular) {
-      RestangularConfigurer.setBaseUrl('http://52.4.69.219:3000//api/v1');
+    RestangularConfigurer.setBaseUrl('http://52.4.69.219:3000//api/v1');
       //RestangularProvider.setDefaultHeaders({
       //  "Content-Type": "application/json",
       //  "X-Requested-With": "XMLHttpRequest"
@@ -37,7 +37,7 @@ angular.module('gapFront')
     * @param {string} query - The query to send to open fda api.
     * @param {integer} skip - For dealing with paginated results.
     * @param {integer} limit - The number of results to request.
-    */ 
+    */
     function queryDrugLabel(query, skip, limit){
       var params = {
         search:query,
@@ -94,6 +94,10 @@ angular.module('gapFront')
       return drug.get('event.json', params);
     }
 
+    function getLeaderBoard(){
+      return railsService.all('leaders');
+    }
+
     return {
       queryDrugLabel:queryDrugLabel,
       queryDrugEvent:queryDrugEvent,
@@ -103,6 +107,7 @@ angular.module('gapFront')
       getLeadersApi:getLeadersApi,
       getEffectsApi:getEffectsApi,
       getDrugDateReportCount:getDrugDateReportCount,
-      getVerifiedApi:getVerifiedApi
+      getVerifiedApi:getVerifiedApi,
+      getLeaderBoard:getLeaderBoard
     };
   });
