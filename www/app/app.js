@@ -38,6 +38,9 @@ angular
         templateUrl: 'features/labelEffects/labelEffects.html',
         controller: 'LabelEffectsCtrl'
       })
+      .when('/about', {
+        templateUrl: 'features/about/about.html'
+      })
       .otherwise({
         redirectTo: '/'
       });

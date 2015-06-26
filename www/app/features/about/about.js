@@ -9,9 +9,5 @@
  */
 angular.module('gapFront')
   .controller('AboutCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+    $("#navbar-links").remove();
   });
