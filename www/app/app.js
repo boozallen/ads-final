@@ -42,6 +42,11 @@ angular
         redirectTo: '/'
       });
       $locationProvider.html5Mode(true);
+  })
+  .config(function($modalProvider) {
+    angular.extend($modalProvider.defaults, {
+      html: true
+    });
   });
 
   // .run(function(Restangular) {
