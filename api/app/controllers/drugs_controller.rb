@@ -15,9 +15,8 @@ class DrugsController < ApplicationController
   param :effects, Array, desc: 'Drug effects that have been experienced'
 
   def create
-    effects2 = params[:effects]
     drug = Drug.create! drug_params
-    effect = Effect.create!(drug: drug, name: effects2.effect.medical_term)
+    effects = Drug.effects
     render json: drug_json(drug)
   end
 
