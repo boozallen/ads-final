@@ -18,11 +18,10 @@ angular.module('gapFront')
       return $scope.getPercentage() + '% of possible side effects addressed'
     };
 
-    $scope.count = 1;
-    $scope.total = 0;
-
     var initLabelEffects = function (params) {
       $scope.selectedDrug = DrugService.getSelectedDrug();
+      $scope.count = 1;
+      $scope.total = 0;
       var query = 'patient.drug.medicinalproduct:' + $scope.selectedDrug.brand_name;
       APIService.aggregateDrugEvent(query, 50, 'patient.reaction.reactionmeddrapt.exact').then(addFdaList, serviceError)
     };

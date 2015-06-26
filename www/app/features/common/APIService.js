@@ -94,10 +94,6 @@ angular.module('gapFront')
       return drug.get('event.json', params);
     }
 
-    function getLeaderBoard(){
-      return railsService.all('leaders');
-    }
-
     return {
       queryDrugLabel:queryDrugLabel,
       queryDrugEvent:queryDrugEvent,
@@ -107,7 +103,6 @@ angular.module('gapFront')
       getLeadersApi:getLeadersApi,
       getEffectsApi:getEffectsApi,
       getDrugDateReportCount:getDrugDateReportCount,
-      getVerifiedApi:getVerifiedApi,
-      getLeaderBoard:getLeaderBoard
+      getVerifiedApi:getVerifiedApi
     };
   });

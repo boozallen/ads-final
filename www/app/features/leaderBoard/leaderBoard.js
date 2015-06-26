@@ -1,32 +1,27 @@
-  'use strict';
+'use strict';
 
-<<<<<<< Updated upstream
 /**
  * @ngdoc function
  * @name gapFront.controller:LeaderBoardCtrl
- * @description
+ * @description A simple controller to update leader board.
  * # LeaderBoardCtrl
  * Controller of the gapFront
  */
 angular.module('gapFront')
   .controller('LeaderBoardCtrl', function ($scope, APIService) {
-    getLeadersApi().then(function(resp){
-      console.log(resp);
+    APIService.getLeadersApi().getList().then(function(resp) {
+      $scope.leaders = resp;
     });
-  });
-=======
-  /**
-   * @ngdoc function
-   * @name gapFront.controller:LeaderBoardCtrl
-   * @description A simple controller to update leader board.
-   * # LeaderBoardCtrl
-   * Controller of the gapFront
-   */
-  angular.module('gapFront')
-    .controller('LeaderBoardCtrl', function ($scope, APIService) {
-      APIService.getLeaderBoard().then(function(resp) {
-        $scope.leaders = resp;
-      });
-      // $scope.leaders = ["Steve S.", "Jason P.", "Sami M.", "Sameer D.", "Fred J.", "George B.", "Shelly R."];
-    });
->>>>>>> Stashed changes
+
+    $scope.addLeader = function(name){
+      var post = {name: name};
+      console.log("Adding leader");
+      APIService.getLeadersApi().post(post).then(serviceError, serviceError);
+      APIService.getEffectsApi().post(post).then(serviceError, serviceError);
+    };
+
+    function serviceError(error) {
+    }
+
+    // $scope.leaders = ["Steve S.", "Jason P.", "Sami M.", "Sameer D.", "Fred J.", "George B.", "Shelly R."];
+});

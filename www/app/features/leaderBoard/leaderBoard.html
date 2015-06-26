@@ -6,7 +6,14 @@
         You've helped make the {{selectedDrug.brand_name}} labels more accurate. Enter your name to be recognized as a contributor.
       </p>
       <br>
-      <input style="width:80%" placeholder="Enter your name..."/>
+
+      <form>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" placeholder="Name" ng-model="leader.name">
+        </div>
+        <button type="submit" class="btn btn-default" ng-click="addLeader(leader.name)">Submit</button>
+      </form>
       <br><br>
       <div align="center"><h3>Remaining Comparisons</h3></div>
       <br>
