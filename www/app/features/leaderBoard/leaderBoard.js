@@ -2,12 +2,14 @@
 
 /**
  * @ngdoc function
- * @name gapFront.controller:LabelBoardCtrl
+ * @name gapFront.controller:LeaderBoardCtrl
  * @description
- * # LabelBoardCtrl
+ * # LeaderBoardCtrl
  * Controller of the gapFront
  */
 angular.module('gapFront')
-  .controller('LabelBoardCtrl', function ($scope, IntegrationService, APIService, DrugService) {
-
+  .controller('LeaderBoardCtrl', function ($scope, APIService) {
+    getLeadersApi().then(function(resp){
+      console.log(resp);
+    });
   });
