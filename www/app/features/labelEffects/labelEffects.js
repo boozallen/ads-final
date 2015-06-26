@@ -125,15 +125,13 @@ angular.module('gapFront')
     }
 
     // Called every time you finish one question
-    $scope.completeIndex = function (index, accurate, first) {
+    $scope.completeIndex = function (index, accurate) {
       $scope.count += 1;
-      if (first) {
-        var term = $scope.displayedStuff.splice(index, 1)[0];
-        if ($scope.adverseEffects.length > 0) addDisplayedStuff();
-        if (accurate) {
-          var post = {name: $scope.selectedDrug.brand_name, effect: term};
-          APIService.getEffectsApi().post(post).then(serviceError, serviceError);
-        }
+      var term = $scope.displayedStuff.splice(index, 1)[0];
+      if ($scope.adverseEffects.length > 0) addDisplayedStuff();
+      if (accurate) {
+        var post = {name: $scope.selectedDrug.brand_name, effect: term, response: accurate};
+        APIService.getEffectsApi().post(post).then(serviceError, serviceError);
       }
     };
 
