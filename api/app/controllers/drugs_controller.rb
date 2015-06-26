@@ -16,8 +16,7 @@ class DrugsController < ApplicationController
 
   def create
     drug = Drug.create! drug_params
-    effects = Drug.effects
-    render json: drug_json(drug)
+    render json: {drug: drug_json(drug), effects: Drug.effects}
   end
 
   private
