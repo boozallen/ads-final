@@ -5,15 +5,25 @@
   <div class="row">
     <br/>
 
-    <div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1">
+<!--     <div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1">
       <p class="appTitle" align="center">Improving the accuracy of drug labels</p>
       <p align="center">There’s a lot of raw label data. However, today it’s difficult to easily identify the list of adverse effects. In addition, new adverse are reported daily but it takes a long time to update labels. You can help us identify adverse effects and shorten the time it takes to update labels.</p>
-    </div>
+    </div> -->
 
 <!-- OLD TEXT -->
 <!--     <div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1">
       <p class="appTitle" align="center"><strong>{{totalEvents}}</strong> people have reported side effects for <strong>{{totalLabels}}</strong> medications <br> Help us make sure these side effects reach your label.</p>
     </div> -->
+
+    <div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1">
+      <p class="appTitle" align="center">Improving the accuracy of drug labels</p>
+      <br>
+      <p align="center">
+        <strong>
+          {{totalEvents | number}} people have reported side effects for {{totalLabels | number}} medications. Wow! That’s a lot.  New side effects are reported to the FDA daily, and aren’t on your label yet. Help fix label text – and shorten time to up-to-date labels.
+        </strong>
+      </p>
+    </div>
   </div>
   <div class="row">
     <form>

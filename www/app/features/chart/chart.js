@@ -8,7 +8,7 @@
  * Controller of the gapFront
  */
  angular.module('gapFront')
- .controller('ChartCtrl', function ($scope, IntegrationService, APIService, DrugService) {
+ .controller('ChartCtrl', function ($scope, $filter, IntegrationService, APIService, DrugService) {
   $scope.awesomeThings = [
   'HTML5 Boilerplate',
   'AngularJS',
@@ -228,7 +228,7 @@
             type: 'pie'
           },
           title: {
-            text: 'Total Reported ' + $scope.totalReportedCount,
+            text: 'Total Reported ' + $filter('number')($scope.totalReportedCount),
               style: {
                 color: '#333',
                 fontWeight: 'normal',
