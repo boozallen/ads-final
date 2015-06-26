@@ -26,14 +26,17 @@
     $scope.dateChartData = [];
     $scope.toggleCharts = true;
 
-    $scope.crowdVerified = ["DRUG INEFFECTIVE", "PAIN", "NAUSEA", "HEADACHE", "FATIGUE", "DIZZINESS", "VOMITING", "DYSPNOEA", "ANXIETY", "DIARRHOEA", "ABDOMINAL PAIN UPPER", "MALAISE", "RASH", "INSOMNIA", "PRURITUS"];
-    $scope.crowdVerifiedBool = [true,false,false, true, true, true, false, false, true, false, true, true, false, false, true];
-
     $scope.least=0;
     $scope.greatest=100;
 
     var initChart = function(params){
       $scope.selectedDrug = DrugService.getSelectedDrug();
+      APIService.getDrugsApi().get($scope.selectedDrug.brand_name).then(function(resp){
+        DrugService.setSelectedDrugInfo(resp);
+        $scope.drugEffects = resp.effects;
+        console.log($scope.drugEffects);
+        $scope.setChartData();
+      });
       $scope.searchDrugEvents();
     };
 
@@ -70,7 +73,7 @@
       }
 
       APIService.aggregateDrugEvent(query, 15, 'patient.reaction.reactionmeddrapt.exact').then(function(resp){
-        $scope.setChartData(resp.results);
+        $scope.setChartData(resp.results, resp.effects);
       },function(error){
       });
 
@@ -126,6 +129,7 @@
     };
 
     $scope.setChartData = function(data){
+      console.log($scope.selectedDrug);
       $scope.crowdVerified = data;
       $scope.chart = data;
 
@@ -138,19 +142,39 @@
         // $scope.crowdVerified.push($scope.chart[i].term);
         $scope.effects.push($scope.chart[i].term);
         $scope.counts[0].data.push($scope.chart[i].count);
-        $scope.treeData.push({name: $scope.chart[i].term, value: $scope.chart[i].count, colorValue: i%3});
+
+        if($scope.drugEffects){
+          if ($scope.drugEffects.yes_answers[$scope.chart[i].term]) {
+            if $scope.drugEffects.no_answers[$scope.chart[i].term]) {
+              if($scope.drugEffects.yes_answers[$scope.chart[i].term] > $scope.drugEffects.no_answers[$scope.chart[i].term]){ // more in yes
+                $scope.treeData.push({name: $scope.chart[i].term, value: $scope.chart[i].count, colorValue: 2});
+              }
+              else if($scope.drugEffects.yes_answers[$scope.chart[i].term] == $scope.drugEffects.no_answers[$scope.chart[i].term]){ // equal yes and no votes
+                $scope.treeData.push({name: $scope.chart[i].term, value: $scope.chart[i].count, colorValue: 0});
+              }
+              else {
+                $scope.treeData.push({name: $scope.chart[i].term, value: $scope.chart[i].count, colorValue: 1}); // more in no
+              }
+            } else {
+              $scope.treeData.push({name: $scope.chart[i].term, value: $scope.chart[i].count, colorValue: 2});
+            }
+          } else if ($scope.drugEffects.no_answers[$scope.chart[i].term]){
+            $scope.treeData.push({name: $scope.chart[i].term, value: $scope.chart[i].count, colorValue: 0});
+          } else {
+            $scope.treeData.push({name: $scope.chart[i].term, value: $scope.chart[i].count, colorValue: 1}); // more in no
+          }
+        }
       }
       createChart();
       createTreeChart();
       $scope.terms = $scope.chart;
-      //console.log($scope.treeData);
+      console.log($scope.treeData);
 
       // APIService.getVerifiedApi().post($scope.crowdVerified).then(function(){
       //   console.log("sent");
       // }, function(){
       //   console.log("Error");
       // });
-    };
 
         Highcharts.setOptions({
           colors: ['#23b193', '#bde2d9']
