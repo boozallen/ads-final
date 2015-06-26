@@ -24,6 +24,7 @@
     $scope.startDate = 19000101;
     $scope.endDate = 20500101;
     $scope.dateChartData = [];
+    $scope.toggleCharts = true;
 
     $scope.crowdVerified = ["DRUG INEFFECTIVE", "PAIN", "NAUSEA", "HEADACHE", "FATIGUE", "DIZZINESS", "VOMITING", "DYSPNOEA", "ANXIETY", "DIARRHOEA", "ABDOMINAL PAIN UPPER", "MALAISE", "RASH", "INSOMNIA", "PRURITUS"];
     $scope.crowdVerifiedBool = [true,false,false, true, true, true, false, false, true, false, true, true, false, false, true];
@@ -161,6 +162,9 @@
         var chartContainerWidth = $('#chartContainer').width();
         //console.log(chartContainerWidth);
         $('#chartContainer').highcharts({
+          exporting: {
+                enabled: false
+              },
           chart: {
             type: 'bar'
           },
@@ -173,7 +177,6 @@
             }
           },
           xAxis: [{
-            offset: -290,
             tickWidth: 0,
             lineWidth: 0,
             categories: $scope.effects,
@@ -181,7 +184,7 @@
               x: chartContainerWidth * (5/11),
               useHTML: true,
               formatter: function() {
-                return '<img src="http://highcharts.com/demo/gfx/sun.png"><img>&nbsp;';
+                // return '<img src="http://highcharts.com/demo/gfx/sun.png"><img>&nbsp;';
               }
             }
           }, {
@@ -219,6 +222,9 @@
         var totalReportedCount = $scope.totalReportedCount;
 
         $scope.pieChart = new Highcharts.Chart({
+          exporting: {
+                enabled: false
+              },
           chart: {
             renderTo: 'totalReportedContainer',
             type: 'pie'
@@ -256,6 +262,9 @@
         });
 
         var dataObject = {
+          exporting: {
+                enabled: false
+              },
           rangeSelector: {
             selected: 1,
             inputEnabled: $('#container').width() > 480
@@ -288,6 +297,9 @@
 
       function createTreeChart(){
             $('#createTreeChart').highcharts({
+              exporting: {
+                enabled: false
+              },
         colorAxis: {
             minColor: '#FFFFFF',
             maxColor: Highcharts.getOptions().colors[0],

@@ -6,9 +6,6 @@
     </div>
 
 <br>
-      <div id="createTreeChart" style="min-width:300px; max-width:600px; margin: 0 auto;"></div>
-
-<br>
     <div class="med-info col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1 space-top-60">
       <h2>Reported Side Effects for: {{selectedDrug.substance_name}}&nbsp;({{selectedDrug.brand_name}}) General Information</h2>
     </div>
@@ -34,6 +31,12 @@
 
         <h3>Age Group</h3>
         <div range-slider min="0" max="100" model-min="least" model-max="greatest" on-handle-up="searchDrugEvents()"></div>
+
+        <h3>Switch Graphs</h3>
+        <ul class="nav nav-pills" data-toggle="buttons">
+          <li role="presentation" ng-click="toggleCharts = !toggleCharts" ng-class="toggleCharts==true?'active':''"><a href="">Bar</a></li>
+          <li role="presentation" ng-click="toggleCharts = !toggleCharts" ng-class="toggleCharts==false?'active':''"><a href="">Tree</a></li>
+        </ul>
       </div>
       <!--          <form name="datepickerForm" class="form-inline" role="form">
                  <div class="form-group">
@@ -49,7 +52,8 @@
 
       <div class="col-xs-10 col-xs-offset-1 col-md-7 col-md-offset-0">
         <div style="height:680px;">
-          <div id="chartContainer" style="min-width: 310px; height: 680px; margin: 0 auto"></div>
+          <div id="chartContainer" ng-show="toggleCharts" style="min-width: 310px; height: 680px; margin: 0 auto"></div>
+          <div id="createTreeChart" ng-hide="toggleCharts" style="height: 680px;"></div>
         </div>
       </div>
       <div class="col-xs-10 col-xs-offset-1 col-md-1 col-md-offset-0">
