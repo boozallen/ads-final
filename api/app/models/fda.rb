@@ -10,4 +10,18 @@ class Fda
       nil
     end
   end
+
+  def self.get_events(drug_name)
+    url = "https://api.fda.gov/drug/event.json?count=patient.reaction.reactionmeddrapt.exact&limit=1000&search=patient.drug.medicinalproduct:#{drug_name}"
+    events = []
+    begin
+      JSON.parse(RestClient.get(url, accept: :json))['results'].each do |event|
+        events.push(event['term'].downcase)
+      end
+    rescue StandardError => e
+      Rails.logger.error e
+      nil
+    end
+    events
+  end
 end
