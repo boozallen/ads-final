@@ -1,6 +1,6 @@
 class LeadersController < ApplicationController
   def index
-    Leader.all.sort_by(&:count)
+    Leader.all.order(:count)
   end
 
   def create
@@ -11,6 +11,10 @@ class LeadersController < ApplicationController
     else
       Leader.create! leader_params
     end
+  end
+
+  def latest
+    Leader.all.order(:updated_at).limit(10)
   end
 
   private

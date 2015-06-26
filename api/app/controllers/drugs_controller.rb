@@ -27,7 +27,6 @@ class DrugsController < ApplicationController
     end
   end
 
-
   api :POST, '/drugs', 'Creates or Updates a drug entry by name'
   param :name, String, desc: 'Drug Brand Name', required: true
   param :effects, Array, desc: 'Drug effects that have been experienced'
@@ -61,8 +60,8 @@ class DrugsController < ApplicationController
       end
       d['reported_effects'] = Drug.where(name: params[:id]).tag_counts_on(:effects).map do |e|
         {
-          effect: e.name,
-          reported: e.taggings_count
+            effect: e.name,
+            reported: e.taggings_count
         }
       end
     end
@@ -74,8 +73,8 @@ class DrugsController < ApplicationController
 
   def drug_json(drug)
     {
-      name: drug.name,
-      effects: drug.effect_list
+        name: drug.name,
+        effects: drug.effect_list
     }.as_json
   end
 end

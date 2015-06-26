@@ -11,5 +11,6 @@ Rails.application.routes.draw do
     resources :drugs, only: [:show, :create]
     resources :effects, only: [:create]
     resources :leaders, only: [:index, :create]
+    get 'leaders/latest', to: 'leaders#latest'
   end
 end
