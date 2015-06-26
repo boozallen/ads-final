@@ -116,6 +116,11 @@ angular.module('gapFront')
       $scope.totalEvents = resp.meta.results.total;
     }
 
+    $scope.modal = {
+      title: "Manufacturer Details for: ",
+      content: "Hello Modal<br>This is a multiline message!"
+    };
+
     APIService.queryDrugLabel().then(setTotalLabels, serviceError);
     APIService.queryDrugEvent().then(setTotalEvents, serviceError);
 
