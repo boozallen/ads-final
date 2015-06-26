@@ -64,6 +64,7 @@ angular.module('gapFront')
     function serviceError(error) {
     }
 
+    // Function which greps through the drug object to find adverse effects
     function findMatchingSentence(drugObject, effect) {
       var textToSearch = [];
 
@@ -99,17 +100,14 @@ angular.module('gapFront')
         textToSearch.push.apply(textToSearch, drugObject['adverse_reactions']);
       }
 
-      var i, j;
-
       var found = false;
-
 
       if (Array.isArray(textToSearch)) {
         textToSearch = textToSearch.join('.');
       }
 
       var splitText = textToSearch.split('.');
-      for (i = 0; i < splitText.length; i++) {
+      for (var i = 0; i < splitText.length; i++) {
         if (splitText[i].match(effect)) {
           found = true;
           break;
