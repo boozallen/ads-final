@@ -46,7 +46,6 @@ angular.module('gapFront')
 
       if(bla){
         $scope.drugs = [];
-        console.log('here');
         var text = bla;
       }
       else{

@@ -38,7 +38,6 @@ angular.module('gapFront')
 
     function addFdaList(resp) {
       var res = resp.results;
-      console.log(resp.results);
       for (var i in res) {
         $scope.effects.push(res[i].term);
       }
@@ -48,7 +47,6 @@ angular.module('gapFront')
     function updateList(resp) {
       $scope.adverseEffects = resp.drug.effects;
       $scope.total = $scope.adverseEffects.length;
-      console.log($scope.adverseEffects);
       addDisplayedStuff();
     }
 
@@ -68,7 +66,6 @@ angular.module('gapFront')
 
     function findMatchingSentence(drugObject, effect) {
       var textToSearch = [];
-      console.log(drugObject);
 
       if (drugObject['boxed_warnings']) {
         textToSearch.push.apply(textToSearch, drugObject['boxed_warnings']);
@@ -131,7 +128,6 @@ angular.module('gapFront')
       $scope.count += 1;
       if (first) {
         var term = $scope.displayedStuff.splice(index, 1)[0];
-        console.log(term);
         if ($scope.adverseEffects.length > 0) addDisplayedStuff();
         if (accurate) {
           var post = {name: $scope.selectedDrug.brand_name, effects: [term]};

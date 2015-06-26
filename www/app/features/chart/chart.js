@@ -14,7 +14,7 @@
   'AngularJS',
   'Karma'
   ];
-    $scope.filterType = "hospitalizations" //
+    $scope.filterType = "hospitalizations";
     $scope.seriousness = "all";
     $scope.outcome = "all";
     $scope.age = "all";
@@ -107,9 +107,6 @@
       return true;
     };
 
-    function datesUpdated(){
-    }
-
     function parse(str) {
       if(!/^(\d){8}$/.test(str)) return "invalid date";
       var y = str.substr(0,4),
@@ -125,13 +122,12 @@
     $scope.filtersUpdated = function(paramName, paramValue){
       $scope[paramName] = paramValue;
       $scope.searchDrugEvents();
-    }
+    };
 
     $scope.setChartData = function(data){
       $scope.crowdVerified = data;
       $scope.chart = data;
 
-      var hold = [];
       $scope.effects = [];
       $scope.treeData = [];
       $scope.crowdVerified = [];
@@ -146,7 +142,7 @@
       createChart();
       createTreeChart();
       $scope.terms = $scope.chart;
-      console.log($scope.treeData);
+      //console.log($scope.treeData);
 
       // APIService.getVerifiedApi().post($scope.crowdVerified).then(function(){
       //   console.log("sent");
@@ -163,7 +159,7 @@
       function createChart() {
         var colors = Highcharts.getOptions().colors;
         var chartContainerWidth = $('#chartContainer').width();
-        console.log(chartContainerWidth);
+        //console.log(chartContainerWidth);
         $('#chartContainer').highcharts({
           chart: {
             type: 'bar'
