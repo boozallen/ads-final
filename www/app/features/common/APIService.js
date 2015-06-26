@@ -64,8 +64,16 @@ angular.module('gapFront')
       return drug.get('event.json', params);
     }
 
-    function getDrugEffectApi(){
+    function getDrugsApi(){
       return railsService.all('drugs');
+    }
+
+    function getEffectsApi(){
+      return railsService.all('effects');
+    }
+
+    function getLeadersApi(){
+      return railsService.all('leaders')
     }
 
     function getVerifiedApi(array) {
@@ -84,7 +92,9 @@ angular.module('gapFront')
       queryDrugEvent:queryDrugEvent,
       aggregateDrugLabel:aggregateDrugLabel,
       aggregateDrugEvent:aggregateDrugEvent,
-      getDrugEffectApi:getDrugEffectApi,
+      getDrugsApi:getDrugsApi,
+      getLeadersApi:getLeadersApi,
+      getEffectsApi:getEffectsApi,
       getDrugDateReportCount:getDrugDateReportCount,
       getVerifiedApi:getVerifiedApi
     };
