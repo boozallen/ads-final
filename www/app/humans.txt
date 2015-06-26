@@ -1,0 +1,78 @@
+/* TEAM */
+	
+	Product Manager: Haluk Saker
+	Contact: saker_haluk [at] bah.com
+	From: Herndon, VA, USA
+
+	Tech Architect: Wyatt Chaffee
+	Contact: chaffee_wyatt [at] bah.com
+	From: Herndon, VA, USA
+
+	Interaction Designer / User Researcher / Usability Tester: Sarah Weise
+	Contact: weise_sarah [at] bah.com
+	From: Herndon, VA, USA
+
+	Visual Designer: Matt Rice
+	Contact: Rice_Matthew [at] bah.com
+	From: Vienna, VA, USA
+
+	Visual Designer: Destin Frasier
+	Contact: Frasier_Eugene [at] bah.com
+	From: Vienna, VA, USA
+
+	Front-End Developer: Sami Mirimiri
+	Contact: mirimiri_sami [at] bah.com
+	From: Manassas, VA
+
+	Front-End Developer: Sameer Dhar
+	Contact: dhar_sameer [at] bah.com
+	From: Richmond, VA
+
+	Back-End Developer: Chris Kacerguis
+	Contact: kacerguis_chris [at] bah.com
+	From: San Antonio, TX
+
+	Back-End Developer: Michael Stack
+	Contact: stack_michael [at] bah.com
+	From: San Antonio, TX
+
+	Backend Developer: Debanjan Dasgupta
+	Contact: Dasgupta_Debanjan [at] bah.com
+	From: Fairfax, VA
+
+	DevOps Engineer: Martin Folkoff
+	Contact: folkoff_martin [at] bah.com
+	From: Herndon, VA, USA
+
+	DevOps Engineer: Eugene Raether
+	Contact: raether_eugene [at] bah.com
+	From: Herndon, VA, USA	
+	
+	DevOps Engineer: Saurab Joshi
+	Contact: joshi_saurab [at] bah.com
+	From: Herndon, VA
+
+	DevOps Engineer: Will Jackson
+	Contact: jackson_william [at] bah.com
+	From: Herndon, VA
+
+	Delivery Manager: Nico Botha
+	Contact: Botha_Nico [at] bah.com
+	From: Herndon, VA
+
+	Agile Coach: Luke Lackrone
+	Contact: Lackrone_Luke [at] bah.com
+	Twitter: @lackrone
+	From: Fulton, MD, USA
+
+	
+
+	
+/* THANKS */
+	Product Owner: Bill Ott
+	From: McLean, VA, USA
+
+/* SITE */
+	Language: English
+	Doctype:HTML5
+	IDE: Sublime Text, Webstorm, vim
