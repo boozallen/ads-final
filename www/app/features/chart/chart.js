@@ -65,33 +65,28 @@
         query += ' AND patient.patientonsetage:['+this.least+' TO ' + this.greatest + ']';
       }
 
-      console.log(query);
 
       APIService.aggregateDrugEvent(query, 15, 'patient.reaction.reactionmeddrapt.exact').then(function(resp){
         $scope.setChartData(resp.results);
       },function(error){
-        console.log(error);
       });
 
       query = 'patient.drug.medicinalproduct:'+$scope.selectedDrug.brand_name+' AND serious:2';
       APIService.aggregateDrugEvent(query, null, null).then(function(resp){
         $scope.nonSeriousCount = resp.meta.results.total;
         createPieChart();
-        console.log($scope.nonSeriousCount);
       });
 
       query = 'patient.drug.medicinalproduct:'+$scope.selectedDrug.brand_name+' AND serious:1';
       APIService.aggregateDrugEvent(query, null, null).then(function(resp){
         $scope.seriousCount = resp.meta.results.total;
         createPieChart();
-        console.log($scope.seriousCount);
       });
 
       query = 'patient.drug.medicinalproduct:'+$scope.selectedDrug.brand_name;
       APIService.aggregateDrugEvent(query, null, null).then(function(resp){
         $scope.totalReportedCount = resp.meta.results.total;
         createPieChart();
-        console.log($scope.totalReportedCount);
       });
 
       query = 'patient.drug.medicinalproduct:'+$scope.selectedDrug.brand_name;
@@ -104,15 +99,13 @@
           var arr = [parse(date.time), date.count];
           $scope.countDateArray.push(arr);
         });
-        console.log($scope.countDateArray);
         createLineChart();
-        
+
       });
       return true;
     };
 
     function datesUpdated(){
-      console.log('date changed');
     }
 
     function parse(str) {
@@ -125,13 +118,11 @@
 
     $scope.setFilterType = function(filterType){
       $scope.filterType = filterType;
-      console.log($scope.filterType);
     };
 
     $scope.filtersUpdated = function(paramName, paramValue){
       $scope[paramName] = paramValue;
       $scope.searchDrugEvents();
-      console.log($scope.seriousness, $scope.dmeCases, $scope.outcome, $scope.age);
     }
 
     $scope.setChartData = function(data){
@@ -195,12 +186,10 @@
           series: $scope.counts
 
         });
-      };
+      }
       function createPieChart() {
         $scope.percentSerious = ($scope.seriousCount / $scope.totalReportedCount) * 100;
-        console.log($scope.percentSerious);
         $scope.percentNonSerious = ($scope.nonSeriousCount / $scope.totalReportedCount) * 100;
-        console.log($scope.percentNonSerious);
         var totalReportedCount = $scope.totalReportedCount;
 
         $scope.pieChart = new Highcharts.Chart({
@@ -225,11 +214,11 @@
           },
           series: [{
             data: [
-            ["Serious", $scope.percentSerious], 
+            ["Serious", $scope.percentSerious],
             ["Non-serious", $scope.percentNonSerious]
             ]}]
           });
-      };
+      }
 
       function createLineChart() {
 
@@ -267,7 +256,7 @@
           chart: {
             renderTo: 'lineGraphContainer'
           }
-        };  
+        };
         var chart = new Highcharts.StockChart(dataObject);
       }
 

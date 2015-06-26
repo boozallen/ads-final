@@ -6,7 +6,7 @@ class DrugsController < ApplicationController
     if drug.nil?
       render nothing: true, status: 404
     else
-      render json: drug
+      render json: {drug: drug, effects: Effect.where(drug: params[:id])}
     end
   end
 
@@ -15,7 +15,9 @@ class DrugsController < ApplicationController
   param :effects, Array, desc: 'Drug effects that have been experienced'
 
   def create
+    effects2 = params[:effects]
     drug = Drug.create! drug_params
+    effect = Effect.create!(drug: drug, name: effects2.effect.medical_term)
     render json: drug_json(drug)
   end
 
@@ -33,8 +35,11 @@ class DrugsController < ApplicationController
     fields = %w(boxed_warnings warnings_and_precautions user_safety_warnings precautions warnings general_precautions warnings_and_cautions adverse_reactions)
     adverse_reactions = fields.map { |f| @_drug.fetch(f, '') }.join('')
     @_drug.tap do |d|
-      d['effects'] = EFFECTS_LIST.select do |terms|
-        adverse_reactions.match terms[:medical_term]
+      d['effects'] = []
+      Fda.get_events(@_drug['openfda']['brand_name'][0]).each do |term|
+        if adverse_reactions.match term
+          d['effects'].push(term)
+        end
       end
       d['reported_effects'] = Drug.where(name: params[:id]).tag_counts_on(:effects).map do |e|
         {

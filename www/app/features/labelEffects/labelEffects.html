@@ -35,7 +35,7 @@
   </div>
 
   <div class="row col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1" ng-repeat="stuff in displayedStuff">
-    <input type="text" ng-model="stuff.effect.medical_term" id="stuffGetter" style="display: none"/>
+    <input type="text" ng-model="stuff.effect" id="stuffGetter" style="display: none"/>
 
     <div class="col-md-7">
       <div ng-class="!$first?'row disabled spacer-2x':'row label-wrap'" id="adverseSentence">
@@ -52,7 +52,7 @@
     <div class="col-md-4 col-md-offset-1">
       <div ng-class="!$first?'row disabled spacer-2x':'row label-wrap'">
         <div align="center">
-          Is <strong bs-tooltip="stuff.effect.layman_term" data-placement="top">{{stuff.effect.medical_term.toLowerCase()}}</strong>
+          Is <strong>{{stuff.effect}}</strong>
           listed on the label as a side effect?<br/><br/>
 
           <div class="btn-group">
