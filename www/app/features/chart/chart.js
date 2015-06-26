@@ -25,10 +25,13 @@
     $scope.endDate = 20500101;
     $scope.dateChartData = [];
 
+    $scope.crowdVerified = ["DRUG INEFFECTIVE", "PAIN", "NAUSEA", "HEADACHE", "FATIGUE", "DIZZINESS", "VOMITING", "DYSPNOEA", "ANXIETY", "DIARRHOEA", "ABDOMINAL PAIN UPPER", "MALAISE", "RASH", "INSOMNIA", "PRURITUS"];
+    $scope.crowdVerifiedBool = [true,false,false, true, true, true, false, false, true, false, true, true, false, false, true];
+
     $scope.least=0;
     $scope.greatest=100;
 
-    var  initChart = function(params){
+    var initChart = function(params){
       $scope.selectedDrug = DrugService.getSelectedDrug();
       $scope.searchDrugEvents();
     };
@@ -66,6 +69,7 @@
       }
 
       console.log(query);
+      console.log($scope.selectedDrug);
 
       APIService.aggregateDrugEvent(query, 15, 'patient.reaction.reactionmeddrapt.exact').then(function(resp){
         $scope.setChartData(resp.results);
@@ -135,27 +139,42 @@
     }
 
     $scope.setChartData = function(data){
+      $scope.crowdVerified = data;
       $scope.chart = data;
 
       var hold = [];
       $scope.effects = [];
+      $scope.treeData = [];
+      $scope.crowdVerified = [];
       var numbers = [];
       $scope.counts = [{name: "Reported Adverse Effects", data: numbers}];
       for (var i in $scope.chart) {
+        // $scope.crowdVerified.push($scope.chart[i].term);
         $scope.effects.push($scope.chart[i].term);
         $scope.counts[0].data.push($scope.chart[i].count);
+        $scope.treeData.push({name: $scope.chart[i].term, value: $scope.chart[i].count, colorValue: i%3});
       }
       createChart();
+      createTreeChart();
       $scope.terms = $scope.chart;
+      console.log($scope.treeData);
+
+      // APIService.getVerifiedApi().post($scope.crowdVerified).then(function(){
+      //   console.log("sent");
+      // }, function(){
+      //   console.log("Error");
+      // });
     };
 
         Highcharts.setOptions({
-        colors: ['#23b193', '#bde2d9']
-    });
+          colors: ['#23b193', '#bde2d9']
+        });
 
       //angular.element(document).ready();
       function createChart() {
         var colors = Highcharts.getOptions().colors;
+        var chartContainerWidth = $('#chartContainer').width();
+        console.log(chartContainerWidth);
         $('#chartContainer').highcharts({
           chart: {
             type: 'bar'
@@ -168,9 +187,22 @@
                 fontSize: 14,
             }
           },
-          xAxis: {
+          xAxis: [{
+            offset: -290,
+            tickWidth: 0,
+            lineWidth: 0,
+            categories: $scope.effects,
+            labels: {
+              x: chartContainerWidth * (5/11),
+              useHTML: true,
+              formatter: function() {
+                return '<img src="http://highcharts.com/demo/gfx/sun.png"><img>&nbsp;';
+              }
+            }
+          }, {
+            linkedTo: 0,
             categories: $scope.effects
-          },
+          }],
           yAxis: {
             min: 0,
 
@@ -269,6 +301,57 @@
           }
         };  
         var chart = new Highcharts.StockChart(dataObject);
+      }
+
+      function createTreeChart(){
+            $('#createTreeChart').highcharts({
+        colorAxis: {
+            minColor: '#FFFFFF',
+            maxColor: Highcharts.getOptions().colors[0],
+            stops: [
+                [0, '#3060cf'],
+                [0.5, Highcharts.getOptions().colors[1]],
+                [0.9, Highcharts.getOptions().colors[0]]
+            ]
+        },
+        series: [{
+            type: "treemap",
+            layoutAlgorithm: 'squarified',
+            data: $scope.treeData
+            // [{
+            //     name: 'A',
+            //     value: 6,
+            //     colorValue: 1
+            // }, {
+            //     name: 'B',
+            //     value: 6,
+            //     colorValue: 2
+            // }, {
+            //     name: 'C',
+            //     value: 4,
+            //     colorValue: 3
+            // }, {
+            //     name: 'D',
+            //     value: 3,
+            //     colorValue: 4
+            // }, {
+            //     name: 'E',
+            //     value: 2,
+            //     colorValue: 5
+            // }, {
+            //     name: 'F',
+            //     value: 2,
+            //     colorValue: 6
+            // }, {
+            //     name: 'G',
+            //     value: 1,
+            //     colorValue: 7
+            // }]
+        }],
+        title: {
+            text: 'Highcharts Treemap'
+        }
+    });
       }
 
     });

@@ -68,6 +68,10 @@ angular.module('gapFront')
       return railsService.all('drugs');
     }
 
+    function getVerifiedApi(array) {
+      return railsService.all('verified');
+    }
+
     function getDrugDateReportCount(query, aggregationField){
       var params = {};
       params.search = query;
@@ -76,14 +80,13 @@ angular.module('gapFront')
     }
 
 
-
-
     return {
       queryDrugLabel:queryDrugLabel,
       queryDrugEvent:queryDrugEvent,
       aggregateDrugLabel:aggregateDrugLabel,
       aggregateDrugEvent:aggregateDrugEvent,
       getDrugEffectApi:getDrugEffectApi,
-      getDrugDateReportCount:getDrugDateReportCount
+      getDrugDateReportCount:getDrugDateReportCount,
+      getVerifiedApi:getVerifiedApi
     };
   });
