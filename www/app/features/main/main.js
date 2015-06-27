@@ -36,7 +36,7 @@ angular.module('gapFront')
       IntegrationService.callIntegrationMethod('initChart',{});
       IntegrationService.callIntegrationMethod('initLabelEffects',{});
       $("#headerDiv").css('display', 'block');
-      $("#searchSplashScreen").remove();
+      // $("#searchSplashScreen").remove();
       // $location.hash('events-reports');
       // $anchorScroll();
     };
