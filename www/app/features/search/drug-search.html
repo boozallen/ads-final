@@ -1,23 +1,20 @@
-<div class="row">
-  <div class="col-sm-6 col-sm-offset-3">
-    <div class="input-group">
-      <input type="text" class="drug-search__input" ng-model="vm.drug" placeholder="Search for a Drug..."
-             ng-change="vm.search()">
+<div class="col-sm-6 col-sm-offset-3">
+  <div class="input-group">
+    <input type="text" class="drug-search__input" ng-model="vm.drug" placeholder="Search for a Drug..."
+           ng-change="vm.search()">
 
-      <div class="input-group-btn">
-        <button class="drug-search__button"><i class="fa fa-search"></i></button>
-      </div>
+    <div class="input-group-btn">
+      <button class="drug-search__button"><i class="fa fa-search"></i></button>
     </div>
+  </div>
 
-    <div ng-show="vm.options.length" class="col-xs-12">
-      <div ng-class="!vm.options.length == 0 ? 'dropdown clearfix open' : 'dropdown clearfix'">
-        <ul class="dropdown-menu" style="width: 100%">
-          <li ng-repeat="drug in vm.options track by $index">
-            <a ng-click="vm.selectedDrug(drug)">{{ drug.brand_name }}</a>
-          </li>
-        </ul>
-      </div>
+  <div ng-show="vm.options.length" class="col-xs-12">
+    <div ng-class="!vm.options.length == 0 ? 'dropdown clearfix open' : 'dropdown clearfix'">
+      <ul class="dropdown-menu" style="width: 100%">
+        <li ng-repeat="drug in vm.options track by $index">
+          <a ng-click="vm.selectedDrug(drug)">{{ drug.brand_name }}</a>
+        </li>
+      </ul>
     </div>
-
   </div>
 </div>
