@@ -13,12 +13,6 @@ angular.module('gapFront')
 
     $scope.searchText = '';
 
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-
     var lastRoute = $route.current;
     $scope.$on('$locationChangeSuccess', function(event) {
         $route.current = lastRoute;

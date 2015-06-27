@@ -1,15 +1,15 @@
-'use strict';
+(function() {
+  'use strict';
 
-/**
- * @ngdoc overview
- * @name gapFront
- * @description
- * # gapFront
- *
- * Main module of the application.
- */
-angular
-  .module('gapFront', [
+  /**
+   * @ngdoc overview
+   * @name gapFront
+   * @description
+   * # gapFront
+   *
+   * Main module of the application.
+   */
+  angular.module('gapFront', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
@@ -20,39 +20,29 @@ angular
     'ui.checkbox',
     'mgcrea.ngStrap',
     'ui-rangeSlider'
-  ])
-  .config(function ($routeProvider, $locationProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'features/main/main.html',
-        controller: 'MainCtrl'
-      })
-      .when('/about', {
-        templateUrl: 'features/routeView/routeView.html'
-      })
-      .when('/chart', {
-        templateUrl: 'features/chart/chart.html',
-        controller: 'ChartCtrl'
-      })
-      .when('/labelEffects', {
-        templateUrl: 'features/labelEffects/labelEffects.html',
-        controller: 'LabelEffectsCtrl'
-      })
-      .when('/about', {
-        templateUrl: 'features/about/about.html'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-      $locationProvider.html5Mode(true);
-  })
-  .config(function($modalProvider) {
-    angular.extend($modalProvider.defaults, {
-      html: true
-    });
-  });
+  ]).config(routing)
+    .config(modals);
 
-  // .run(function(Restangular) {
-  //   RestangularProvider.setBaseUrl('http://www.google.com');
-  //   RestangularProvider.setRequestSuffix('.json');
-  // })
+  function routing($routeProvider, $locationProvider) {
+    $routeProvider.when('/', {
+      templateUrl: 'features/main/main.html',
+      controller: 'MainCtrl'
+    }).when('/chart', {
+      templateUrl: 'features/chart/chart.html',
+      controller: 'ChartCtrl'
+    }).when('/labelEffects', {
+      templateUrl: 'features/labelEffects/labelEffects.html',
+      controller: 'LabelEffectsCtrl'
+    }).when('/about', {
+      templateUrl: 'features/about/about.html'
+    }).otherwise({
+      redirectTo: '/'
+    });
+
+    $locationProvider.html5Mode(true);
+  }
+
+  function modals($modalProvider) {
+    angular.extend($modalProvider.defaults, {html: true});
+  }
+})();

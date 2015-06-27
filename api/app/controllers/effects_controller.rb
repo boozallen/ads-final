@@ -8,6 +8,6 @@ class EffectsController < ApplicationController
   private
 
   def effect_params
-    params.permit :drug_name, :name, :response
+    params.permit!.slice(:drug_name, :effect, :response).tap { |p| p[:name] = p.delete :effect }
   end
 end

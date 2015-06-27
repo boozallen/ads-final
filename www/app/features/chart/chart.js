@@ -144,32 +144,18 @@
         $scope.counts[0].data.push($scope.chart[i].count);
 
         if($scope.drugEffects){
-          console.log($scope.chart[i].term.toLowerCase());
-          console.log($scope.drugEffects.yes_answers);
-          if($scope.chart[i].term.toLowerCase() in $scope.drugEffects.yes_answers) { //is in yes
-            console.log('b');
-            if ($scope.chart[i].term.toLowerCase() in $scope.drugEffects.no_answers) { // also in no
-              console.log('c');
-              if($scope.drugEffects.yes_answers[$scope.chart[i].term.toLowerCase()] > $scope.drugEffects.no_answers[$scope.chart[i].term.toLowerCase()]){ // more in yes
-                console.log('d');
-                $scope.treeData.push({name: $scope.chart[i].term.toLowerCase(), value: $scope.chart[i].count, colorValue: 2});
-              } else if($scope.drugEffects.yes_answers[$scope.chart[i].term.toLowerCase()] == $scope.drugEffects.no_answers[$scope.chart[i].term.toLowerCase()]){ // equal yes and no votes
-                console.log('e');
-                $scope.treeData.push({name: $scope.chart[i].term.toLowerCase(), value: $scope.chart[i].count, colorValue: 0});
-              } else {
-                console.log('f');
-                $scope.treeData.push({name: $scope.chart[i].term.toLowerCase(), value: $scope.chart[i].count, colorValue: 1}); // more in no
-              }
-            } else { // not in no
-              console.log('g');
-              $scope.treeData.push({name: $scope.chart[i].term.toLowerCase(), value: $scope.chart[i].count, colorValue: 2});
+          var effect = $scope.chart[i].term.toLowerCase();
+          if ($scope.drugEffects.answers[effect]) {
+            var answers = $scope.drugEffects.answers[effect];
+            if (answers.yes > answers.no) {
+              $scope.treeData.push({name: effect, value: $scope.chart[i].count, colorValue: 2});
+            } else if (answers.yes == answers.no) {
+              $scope.treeData.push({name: effect, value: $scope.chart[i].count, colorValue: 0});
+            } else {
+              $scope.treeData.push({name: effect, value: $scope.chart[i].count, colorValue: 1});
             }
-          } else if ($scope.chart[i].term.toLowerCase() in $scope.drugEffects.no_answers) { // in no but not yes
-            console.log('h');
-            $scope.treeData.push({name: $scope.chart[i].term.toLowerCase(), value: $scope.chart[i].count, colorValue: 1}); // more in no
-          } else { // in neither
-            console.log('i');
-            $scope.treeData.push({name: $scope.chart[i].term.toLowerCase(), value: $scope.chart[i].count, colorValue: 0});
+          } else {
+            $scope.treeData.push({name: effect, value: $scope.chart[i].count, colorValue: 0});
           }
         }
       }
