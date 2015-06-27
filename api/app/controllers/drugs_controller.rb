@@ -18,7 +18,6 @@ class DrugsController < ApplicationController
       yes_answers.each do |effect|
         total_effects.delete effect[0]
       end
-
       no_answers.each do |effect|
         total_effects.delete effect[0]
       end

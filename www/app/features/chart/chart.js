@@ -26,15 +26,18 @@
     $scope.dateChartData = [];
     $scope.toggleCharts = true;
 
-    $scope.crowdVerified = ["DRUG INEFFECTIVE", "PAIN", "NAUSEA", "HEADACHE", "FATIGUE", "DIZZINESS", "VOMITING", "DYSPNOEA", "ANXIETY", "DIARRHOEA", "ABDOMINAL PAIN UPPER", "MALAISE", "RASH", "INSOMNIA", "PRURITUS"];
-    $scope.crowdVerifiedBool = [true,false,false, true, true, true, false, false, true, false, true, true, false, false, true];
-
     $scope.least=0;
     $scope.greatest=100;
 
     var initChart = function(params){
       $scope.selectedDrug = DrugService.getSelectedDrug();
-      $scope.searchDrugEvents();
+      APIService.getDrugsApi().get($scope.selectedDrug.brand_name).then(function(resp){
+        DrugService.setSelectedDrugInfo(resp);
+        $scope.drugEffects = resp.effects;
+        console.log($scope.drugEffects);
+        $scope.setChartData();
+        $scope.searchDrugEvents();
+      });
     };
 
     IntegrationService.registerIntegrationMethod('initChart', initChart);
@@ -70,7 +73,7 @@
       }
 
       APIService.aggregateDrugEvent(query, 15, 'patient.reaction.reactionmeddrapt.exact').then(function(resp){
-        $scope.setChartData(resp.results);
+        $scope.setChartData(resp.results, resp.effects);
       },function(error){
       });
 
@@ -126,24 +129,64 @@
     };
 
     $scope.setChartData = function(data){
+      console.log($scope.selectedDrug);
       $scope.crowdVerified = data;
       $scope.chart = data;
 
       $scope.effects = [];
       $scope.treeData = [];
       $scope.crowdVerified = [];
+      $scope.barLabels = {};
       var numbers = [];
       $scope.counts = [{name: "Reported Adverse Effects", data: numbers}];
       for (var i in $scope.chart) {
-        // $scope.crowdVerified.push($scope.chart[i].term);
-        $scope.effects.push($scope.chart[i].term);
+        // $scope.crowdVerified.push($scope.chart[i].term.toLowerCase());
+        $scope.effects.push($scope.chart[i].term.toLowerCase());
         $scope.counts[0].data.push($scope.chart[i].count);
-        $scope.treeData.push({name: $scope.chart[i].term, value: $scope.chart[i].count, colorValue: i%3});
+
+        if($scope.drugEffects){
+          console.log($scope.chart[i].term.toLowerCase());
+          console.log($scope.drugEffects.yes_answers);
+          if($scope.chart[i].term.toLowerCase() in $scope.drugEffects.yes_answers) { //is in yes
+            console.log('b');
+            if ($scope.chart[i].term.toLowerCase() in $scope.drugEffects.no_answers) { // also in no
+              console.log('c');
+              if($scope.drugEffects.yes_answers[$scope.chart[i].term.toLowerCase()] > $scope.drugEffects.no_answers[$scope.chart[i].term.toLowerCase()]){ // more in yes
+                console.log('d');
+                $scope.treeData.push({name: $scope.chart[i].term.toLowerCase(), value: $scope.chart[i].count, colorValue: 2});
+                $scope.barLabels[$scope.chart[i].term.toLowerCase()] = " <i class='fa fa-check-circle'></i>";
+              } else if($scope.drugEffects.yes_answers[$scope.chart[i].term.toLowerCase()] == $scope.drugEffects.no_answers[$scope.chart[i].term.toLowerCase()]){ // equal yes and no votes
+                console.log('e');
+                $scope.treeData.push({name: $scope.chart[i].term.toLowerCase(), value: $scope.chart[i].count, colorValue: 0});
+                $scope.barLabels[$scope.chart[i].term.toLowerCase()] = " <i class='fa fa-exclamation-circle'></i>";
+              } else {
+                console.log('f');
+                $scope.treeData.push({name: $scope.chart[i].term.toLowerCase(), value: $scope.chart[i].count, colorValue: 1}); // more in no
+                $scope.barLabels[$scope.chart[i].term.toLowerCase()] = " <i class='fa fa-minus-circle'></i>";
+              }
+            } else { // not in no
+              console.log('g');
+              $scope.barLabels[$scope.chart[i].term.toLowerCase()] = " <i class='fa fa-check-circle'></i>";
+              $scope.treeData.push({name: $scope.chart[i].term.toLowerCase(), value: $scope.chart[i].count, colorValue: 2});
+            }
+          } else if ($scope.chart[i].term.toLowerCase() in $scope.drugEffects.no_answers) { // in no but not yes
+            console.log('h');
+            $scope.barLabels[$scope.chart[i].term.toLowerCase()] = " <i class='fa fa-minus-circle'></i>";
+            $scope.treeData.push({name: $scope.chart[i].term.toLowerCase(), value: $scope.chart[i].count, colorValue: 1}); // more in no
+          } else { // in neither
+            console.log('i');
+            $scope.barLabels[$scope.chart[i].term.toLowerCase()] = " <i class='fa fa-exclamation-circle'></i>";
+            $scope.treeData.push({name: $scope.chart[i].term.toLowerCase(), value: $scope.chart[i].count, colorValue: 0});
+          }
+        }
       }
+
+      console.log($scope.effects);
+
       createChart();
       createTreeChart();
-      $scope.terms = $scope.chart;
-      //console.log($scope.treeData);
+      $scope.terms= $scope.chart;
+      console.log($scope.barLabels);
 
       // APIService.getVerifiedApi().post($scope.crowdVerified).then(function(){
       //   console.log("sent");
@@ -181,10 +224,9 @@
             lineWidth: 0,
             categories: $scope.effects,
             labels: {
-              x: chartContainerWidth * (5/11),
               useHTML: true,
               formatter: function() {
-                // return '<img src="http://highcharts.com/demo/gfx/sun.png"><img>&nbsp;';
+                return $scope.barLabels[this.value];
               }
             }
           }, {

@@ -63,6 +63,7 @@ angular.module('gapFront')
     function serviceError(error) {
     }
 
+    // Function which greps through the drug object to find adverse effects
     function findMatchingSentence(drugObject, effect) {
       var textToSearch = [];
 
@@ -98,17 +99,14 @@ angular.module('gapFront')
         textToSearch.push.apply(textToSearch, drugObject['adverse_reactions']);
       }
 
-      var i, j;
-
       var found = false;
-
 
       if (Array.isArray(textToSearch)) {
         textToSearch = textToSearch.join('.');
       }
 
       var splitText = textToSearch.split('.');
-      for (i = 0; i < splitText.length; i++) {
+      for (var i = 0; i < splitText.length; i++) {
         if (splitText[i].match(effect)) {
           found = true;
           break;
@@ -124,16 +122,12 @@ angular.module('gapFront')
     }
 
     // Called every time you finish one question
-    $scope.completeIndex = function (index, accurate, first) {
+    $scope.completeIndex = function (index, accurate) {
       $scope.count += 1;
-      if (first) {
-        var term = $scope.displayedStuff.splice(index, 1)[0];
-        if ($scope.adverseEffects.length > 0) addDisplayedStuff();
-        if (accurate) {
-          var post = {name: $scope.selectedDrug.brand_name, effect: term};
-          APIService.getEffectsApi().post(post).then(serviceError, serviceError);
-        }
-      }
+      var term = $scope.displayedStuff.splice(index, 1)[0];
+      if ($scope.adverseEffects.length > 0) addDisplayedStuff();
+      var post = {drug_name: $scope.selectedDrug.brand_name, effect: term.effect, response: accurate};
+      APIService.getEffectsApi().post(post).then(serviceError, serviceError);
     };
 
     $scope.adverseTooltip = "Add a new adverse affect not currently reported";
