@@ -136,6 +136,7 @@
       $scope.effects = [];
       $scope.treeData = [];
       $scope.crowdVerified = [];
+      $scope.barLabels = {};
       var numbers = [];
       $scope.counts = [{name: "Reported Adverse Effects", data: numbers}];
       for (var i in $scope.chart) {
@@ -153,30 +154,39 @@
               if($scope.drugEffects.yes_answers[$scope.chart[i].term.toLowerCase()] > $scope.drugEffects.no_answers[$scope.chart[i].term.toLowerCase()]){ // more in yes
                 console.log('d');
                 $scope.treeData.push({name: $scope.chart[i].term.toLowerCase(), value: $scope.chart[i].count, colorValue: 2});
+                $scope.barLabels[$scope.chart[i].term.toLowerCase()] = " <i class='fa fa-check-circle'></i>";
               } else if($scope.drugEffects.yes_answers[$scope.chart[i].term.toLowerCase()] == $scope.drugEffects.no_answers[$scope.chart[i].term.toLowerCase()]){ // equal yes and no votes
                 console.log('e');
                 $scope.treeData.push({name: $scope.chart[i].term.toLowerCase(), value: $scope.chart[i].count, colorValue: 0});
+                $scope.barLabels[$scope.chart[i].term.toLowerCase()] = " <i class='fa fa-exclamation-circle'></i>";
               } else {
                 console.log('f');
                 $scope.treeData.push({name: $scope.chart[i].term.toLowerCase(), value: $scope.chart[i].count, colorValue: 1}); // more in no
+                $scope.barLabels[$scope.chart[i].term.toLowerCase()] = " <i class='fa fa-minus-circle'></i>";
               }
             } else { // not in no
               console.log('g');
+              $scope.barLabels[$scope.chart[i].term.toLowerCase()] = " <i class='fa fa-check-circle'></i>";
               $scope.treeData.push({name: $scope.chart[i].term.toLowerCase(), value: $scope.chart[i].count, colorValue: 2});
             }
           } else if ($scope.chart[i].term.toLowerCase() in $scope.drugEffects.no_answers) { // in no but not yes
             console.log('h');
+            $scope.barLabels[$scope.chart[i].term.toLowerCase()] = " <i class='fa fa-minus-circle'></i>";
             $scope.treeData.push({name: $scope.chart[i].term.toLowerCase(), value: $scope.chart[i].count, colorValue: 1}); // more in no
           } else { // in neither
             console.log('i');
+            $scope.barLabels[$scope.chart[i].term.toLowerCase()] = " <i class='fa fa-exclamation-circle'></i>";
             $scope.treeData.push({name: $scope.chart[i].term.toLowerCase(), value: $scope.chart[i].count, colorValue: 0});
           }
         }
       }
+
+      console.log($scope.effects);
+
       createChart();
       createTreeChart();
       $scope.terms= $scope.chart;
-      console.log($scope.treeData);
+      console.log($scope.barLabels);
 
       // APIService.getVerifiedApi().post($scope.crowdVerified).then(function(){
       //   console.log("sent");
@@ -214,10 +224,9 @@
             lineWidth: 0,
             categories: $scope.effects,
             labels: {
-              x: chartContainerWidth * (5/11),
               useHTML: true,
               formatter: function() {
-                // return '<img src="http://highcharts.com/demo/gfx/sun.png"><img>&nbsp;';
+                return $scope.barLabels[this.value];
               }
             }
           }, {
