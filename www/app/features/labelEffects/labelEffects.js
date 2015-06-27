@@ -145,6 +145,9 @@ angular.module('gapFront')
     $scope.getPercentage = function () {
       var div = ($scope.count - 1) / $scope.total;
       var percent = div * 100;
+      if(percent == 100){
+        $scope.showThanks = true;
+      }
       return Math.floor(percent);
     };
 

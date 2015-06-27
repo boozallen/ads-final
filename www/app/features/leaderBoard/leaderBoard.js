@@ -8,10 +8,20 @@
  * Controller of the gapFront
  */
 angular.module('gapFront')
-  .controller('LeaderBoardCtrl', function ($scope, APIService) {
-    APIService.getLeadersApi().getList().then(function(resp) {
-      $scope.leaders = resp;
-    });
+  .controller('LeaderBoardCtrl', function ($scope, APIService, IntegrationService) {
+
+    IntegrationService.registerIntegrationMethod('initLeaderBoard', initLeaderBoard);
+
+    var initLeaderBoard = function(params){
+      $scope.selectedDrug = DrugService.getSelectedDrug();
+
+      APIService.getLeadersApi().getList().then(function(resp) {
+        $scope.leaders = resp;
+      });
+
+    }
+
+    
 
     $scope.addLeader = function(name){
       var post = {name: name};
