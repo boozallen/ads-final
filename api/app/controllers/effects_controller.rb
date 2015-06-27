@@ -2,6 +2,12 @@ class EffectsController < ApplicationController
   api :POST, '/events', 'Record new events response to question.'
 
   def create
-    render json: Effect.create!(drug_name: params[:drug_name], name: params[:effect], response: params[:response])
+    render json: Effect.create!(effect_params)
+  end
+
+  private
+
+  def effect_params
+    params.permit :drug_name, :name, :response
   end
 end

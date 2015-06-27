@@ -1,7 +1,8 @@
 FactoryGirl.define do
   factory :leader do
-    name "MyString"
-count 1
+    sequence :name do |n|
+      "Leader #{n}"
+    end
+    count 1
   end
-
 end
