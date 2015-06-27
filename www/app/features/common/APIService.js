@@ -11,7 +11,7 @@
     });
 
     var railsService = Restangular.withConfig(function(RestangularConfigurer) {
-      RestangularConfigurer.setBaseUrl('http://52.4.69.219:3000//api/v1');
+      RestangularConfigurer.setBaseUrl('http://127.0.0.1:3000//api/v1');
     });
 
     var pillboxService = Restangular.withConfig(function(RestangularConfigurer) {

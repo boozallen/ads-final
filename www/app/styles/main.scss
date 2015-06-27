@@ -9,6 +9,8 @@ $fa-font-path: '/fonts/font-awesome';
 @import 'animate.min.css';
 @import 'pace-theme.css';
 
+@import '../features/search/drug-search';
+
 .spacer {
   margin-top: 3em;
 }
@@ -160,7 +162,7 @@ section.landing {
 h3 {
   font: normal normal 14px/1.5 'Helvetica Neue', Helvetica, sans-serif;
 }
- 
+
 
 // NAVBAR OVERWRIDE
 .navbar-default, .navbar-wrapper .navbar.navbar-scroll {

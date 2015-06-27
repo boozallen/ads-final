@@ -25,7 +25,7 @@
     }
 
     /** @ngInject */
-    function DrugSearchController($scope, DrugService, IntegrationService, APIService) {
+    function DrugSearchController(APIService) {
       var vm = this;
 
       vm.drug = '';
@@ -36,16 +36,16 @@
       vm.selectedDrug = selectedDrug;
 
       function activate() {
-        $scope.$on('$typeahead.select', selectedDrug);
       }
 
       function search() {
         // Avoid searching with the object after drug selection.
-        if (!_.isString(vm.drug)) {
+        if ('' == vm.drug) {
+          vm.options.length = 0;
           return;
         }
 
-        APIService.queryDrugLabel(vm.drug, 0, 10).then(processLabelResults, serviceError);
+        APIService.queryDrugLabel('openfda.brand_name:'+vm.drug, 0, 10).then(processLabelResults, serviceError);
 
         function processLabelResults(data) {
           vm.options.length = 0;
@@ -54,6 +54,7 @@
         }
 
         function serviceError(error) {
+          vm.options.length = 0;
           console.error(error);
         }
 
@@ -80,21 +81,20 @@
         }
 
         function sortDrugs(a, b) {
-          if (a.effective_time > b.effective_time) {
-            return -1;
-          }
-          if (b.effective_time > a.effective_time) {
+          if (a.lowercase_name > b.lowercase_name) {
             return 1;
+          }
+          if (b.lowercase_name > a.lowercase_name) {
+            return -1;
           }
 
           return 0;
         }
       }
 
-      function selectedDrug(event, value, index) {
-        DrugService.setSelectedDrug(vm.drug);
-        IntegrationService.callIntegrationMethod('initChart', {});
-        IntegrationService.callIntegrationMethod('initLabelEffects', {});
+      function selectedDrug(drug) {
+        vm.options.length = 0;
+        vm.onSelected({drug: drug});
       }
     }
   }
