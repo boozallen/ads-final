@@ -25,7 +25,6 @@ angular.module('gapFront')
     });
 
     $scope.setSelectedDrug = function(drug) {
-      $anchorScroll('#events-reports');
       $scope.drugs = [];
       $scope.selectedDrug = drug;
 
@@ -34,8 +33,8 @@ angular.module('gapFront')
       IntegrationService.callIntegrationMethod('initLabelEffects',{});
       $("#headerDiv").css('display', 'block');
       // $("#searchSplashScreen").remove();
-      // $location.hash('events-reports');
-      // $anchorScroll();
+      $location.hash('events-reports');
+      $anchorScroll();
     };
 
     $scope.searchDrugs = function() {
