@@ -9,6 +9,7 @@
  */
 angular.module('gapFront')
   .controller('LeaderBoardCtrl', function ($scope, APIService, IntegrationService) {
+    console.log('in leaderboard');
 
     IntegrationService.registerIntegrationMethod('initLeaderBoard', initLeaderBoard);
 
@@ -19,9 +20,9 @@ angular.module('gapFront')
         $scope.leaders = resp;
       });
 
-    }
+    };
 
-    
+
 
     $scope.addLeader = function(name){
       var post = {name: name};
