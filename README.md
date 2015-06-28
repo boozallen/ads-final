@@ -1,4 +1,4 @@
-# 18F Agile Delivery Services – Booz Allen – Prototype: Crowd Med
+# 18F Agile Delivery Services – Booz Allen – Prototype: Label Craft
 
 ## Prototype Overview
 
@@ -8,7 +8,7 @@
 
 [![Build Status](http://52.0.92.86:8080/buildStatus/icon?job=Master_FrontEnd_Builder)](http://52.0.92.86:8080/view/Master/job/Master_FrontEnd_Builder/)[![Build Status](http://52.0.92.86:8080/buildStatus/icon?job=Master_API_Builder)](http://52.0.92.86:8080/view/Master/job/Master_API_Builder/)Master Branch Server: http://52.0.46.33:9000/ or www.crowdmed.io
 
-Crowd Med is a crowd-sourcing platform for cataloging the adverse reactions found on drug labels in order to determine whether manufacturers have accurately reported the adverse reactions compared to what is reported by end users.  Data from the platform is searchable on the site by drug and also is accessible via API for integration with other applications.   The platform provides the foundation for additional improvements in FDA data quality required to gain the most value from the data.
+Label Craft is a crowd-sourcing platform for cataloging the adverse reactions found on drug labels in order to determine whether manufacturers have accurately reported the adverse reactions compared to what is reported by end users.  Data from the platform is searchable on the site by drug and also is accessible via API for integration with other applications.   The platform provides the foundation for additional improvements in FDA data quality required to gain the most value from the data.
 
 Our approach on this challenge and the resulting outputs showcase the value that Booz Allen brings to the 18F BPA including the following:
 
@@ -63,6 +63,9 @@ Our architecture consist of Modern Technologies and best practices.  Our selecti
 *	Security – Sophos Firewall
 
 Technologies Employed:
+
+![Application Stack](https://cloud.githubusercontent.com/assets/8406690/8394816/b3587f9a-1d17-11e5-9292-16c2fd68e51b.png)
+
 *	DevOps:
   *	Docker Containers with Machine and Compose.
   *	Continuous Integration / Deployment using Jenkins
