@@ -1,6 +1,6 @@
 # 18F Agile Delivery Services – Booz Allen – Prototype: Label Craft
 
-Prototype URL: http://52.0.46.33:9000/
+Prototype Submission URL: http://52.0.46.33:9000/
 
 ## Prototype Overview
 
