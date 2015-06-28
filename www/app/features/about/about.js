@@ -10,11 +10,12 @@
 angular.module('gapFront')
   .controller('AboutCtrl', function ($scope) {
 
-    removeNavLinks();
-
-    function removeNavLinks() {
+    $scope.removeNavLinks = function removeNavLinks() {
       /** remove navbar links in header on about page since they're for the single page app page
       allows us to reuse. */
       $("#navbar-links").remove();
     }
+
+    $scope.removeNavLinks();
+
   });
