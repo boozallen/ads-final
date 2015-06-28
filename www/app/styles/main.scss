@@ -154,10 +154,8 @@ section.landing {
 }
 .footer {
   position: relative;
-  margin-top: -150px; /* negative value of footer height */
-  height: 150px;
-  clear:both;
-  padding-top:20px;
+  height: 60px;
+  background-color:black;
 }
 
 h3 {
@@ -394,4 +392,26 @@ h3 {
 .ngrs-range-slider .ngrs-join{
   margin: -1px 0 0 0;
   height: 2px;
+}
+
+.numberCircle {
+  border-radius: 50%;
+  behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+
+  width: 115px;
+  height: 115px;
+  padding: 8px;
+
+  background: #fff;
+  border: 2px solid #1A9BFC;
+  color: #666;
+  text-align: center;
+
+  font: 32px Arial, sans-serif;
+}
+
+.leaders {
+  background-color: #528989;
+  color: white;
+  margin-bottom: 20px;
 }

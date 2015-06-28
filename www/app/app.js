@@ -40,6 +40,10 @@
       url: '/drug-info',
       templateUrl: 'features/drugInfo/drug-info.html',
       controller: 'DrugInfoController as vm'
+    }).state('leaderboard', {
+      url: '/leader',
+      templateUrl: 'features/leaderBoard/leaderBoard.html',
+      controller: 'DrugInfoController as vm'
     }).state('about', {
       url: '/about',
       templateUrl: 'features/about/about.html'

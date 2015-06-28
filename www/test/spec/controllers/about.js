@@ -16,7 +16,9 @@ describe('Controller: AboutCtrl', function () {
     });
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(scope.awesomeThings.length).toBe(3);
-  });
+   it('should remove nav links on about page when removeNavLinks is called', function () {
+     //expect('#navbar-links').toBeInDOM();
+     //scope.removeNavLinks();
+     expect('#navbar-links').not.toBeInDOM();
+   });
 });

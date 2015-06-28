@@ -39,11 +39,17 @@ module.exports = function(config) {
       'bower_components/angular-rangeslider/angular.rangeSlider.js',
       'bower_components/jquery-highlight/jquery.highlight.js',
       'bower_components/momentjs/moment.js',
+      'bower_components/jasmine/lib/jasmine-core/jasmine.js',
+      'bower_components/jasmine-jquery/lib/jasmine-jquery.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/**/*.js',
-      'test/mock/**/*.js',
-      'test/spec/**/*.js'
+      //'test/mock/**/*.js',
+      'test/spec/**/*.js',
+      'http://code.highcharts.com/stock/highstock.js',
+      'http://code.highcharts.com/stock/modules/exporting.js',
+      'http://code.highcharts.com/modules/heatmap.js',
+      'http://code.highcharts.com/modules/treemap.js'
     ],
 
     // list of files / patterns to exclude
@@ -65,10 +71,21 @@ module.exports = function(config) {
       'PhantomJS'
     ],
 
+    // Code coverage report
+    reporters: ['progress', 'coverage'],
+    preprocessors: {
+      'app/features/**/*.js': ['coverage']
+    },
+    coverageReporter: {
+      type: 'html',
+      dir: 'coverage'
+    },
+
     // Which plugins to enable
     plugins: [
       'karma-phantomjs-launcher',
-      'karma-jasmine'
+      'karma-jasmine',
+      'karma-coverage'
     ],
 
     // Continuous Integration mode
