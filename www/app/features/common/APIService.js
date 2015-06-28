@@ -21,7 +21,6 @@
       queryDrugEvent: queryDrugEvent,
       aggregateDrugLabel: aggregateDrugLabel,
       aggregateDrugEvent: aggregateDrugEvent,
-      getDrugsApi: getDrugsApi,
       getLeadersApi: getLeadersApi,
       getEffectsApi: getEffectsApi,
       getDrugDateReportCount: getDrugDateReportCount,
@@ -68,10 +67,6 @@
       if (limit) params.limit = limit;
       if (aggregationField) params.count = aggregationField;
       return drug.get('event.json', params);
-    }
-
-    function getDrugsApi() {
-      return railsService.all('drugs');
     }
 
     function getEffectsApi() {

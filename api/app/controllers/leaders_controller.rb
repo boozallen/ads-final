@@ -6,9 +6,9 @@ class LeadersController < ApplicationController
   end
 
   api :POST, '/leaders', 'Create or updates existing leaders found by name'
-  param :name, String, 'Leader name'
-  param :total, Integer, 'Leader total'
-  param :zipcode, String, 'Leader zipcode'
+  param :name, String, desc: 'Leader name'
+  param :total, Integer, desc: 'Leader total'
+  param :zipcode, String, desc: 'Leader zipcode'
 
   def create
     leader.increment! :count

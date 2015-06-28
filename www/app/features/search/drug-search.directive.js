@@ -95,7 +95,7 @@
 
       function selectedDrug(drug) {
         vm.options.length = 0;
-        APIService.getDrugsApi().get(drug.brand_name).then(handleResult);
+        APIService.getEffectsApi().get(drug.brand_name).then(handleResult);
 
         function handleResult(result) {
           DrugService.setSelectedDrugInfo(result);
