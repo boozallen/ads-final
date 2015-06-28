@@ -19,12 +19,13 @@ angular.module('gapFront')
         $scope.leaders = resp;
       });
 
-    }
+    };
 
 
 
     $scope.addLeader = function(name){
       var post = {name: name};
+      $scope.newLeader = name;
       console.log("Adding leader");
       APIService.getLeadersApi().post(post).then(serviceError, serviceError);
       APIService.getEffectsApi().post(post).then(serviceError, serviceError);

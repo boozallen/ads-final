@@ -104,20 +104,20 @@ angular.module('gapFront')
       console.log(error);
     }
 
-    function setTotalLabels(resp){
+    $scope.setTotalLabels = function setTotalLabels(resp){
       $scope.totalLabels = resp.meta.results.total;
-    }
+    };
 
-    function setTotalEvents(resp){
+    $scope.setTotalEvents = function setTotalEvents(resp){
       $scope.totalEvents = resp.meta.results.total;
-    }
+    };
 
     $scope.modal = {
       title: "Manufacturer Details for: ",
       content: "Hello Modal<br>This is a multiline message!"
     };
 
-    APIService.queryDrugLabel().then(setTotalLabels, serviceError);
-    APIService.queryDrugEvent().then(setTotalEvents, serviceError);
+    APIService.queryDrugLabel().then($scope.setTotalLabels, serviceError);
+    APIService.queryDrugEvent().then($scope.setTotalEvents, serviceError);
 
   });
