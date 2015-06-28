@@ -4,13 +4,13 @@
            ng-change="vm.search()">
 
     <div class="input-group-btn">
-      <button class="drug-search__button"><i class="fa fa-search"></i></button>
+      <button class="drug-search__button" ng-click="vm.search()"><i class="fa fa-search"></i></button>
     </div>
   </div>
 
   <div ng-show="vm.options.length" class="col-xs-12">
-    <div ng-class="!vm.options.length == 0 ? 'dropdown clearfix open' : 'dropdown clearfix'">
-      <ul class="dropdown-menu" style="width: 100%">
+    <div class="dropdown clearfix" ng-class="{'open': vm.options.length}">
+      <ul class="drug-search__list">
         <li ng-repeat="drug in vm.options track by $index">
           <a ng-click="vm.selectedDrug(drug)">{{ drug.brand_name }}</a>
         </li>

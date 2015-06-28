@@ -21,16 +21,8 @@
   <!-- endbuild -->
 </head>
 <body ng-app="gapFront" id="page-top">
-
 <div>
   <div ng-view></div>
-  <div>
-    <div id="headerDiv" ng-include src="'features/header/header.html'" style="display:none;"></div>
-    <div ng-controller="ChartCtrl" ng-include src="'features/chart/chart.html'" ng-show="selectedDrug"></div>
-    <div ng-controller="LabelEffectsCtrl" ng-include src="'features/labelEffects/labelEffects.html'"
-         ng-show="selectedDrug"></div>
-  </div>
-
 </div>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -56,6 +48,7 @@
 <script src="bower_components/angular-route/angular-route.js"></script>
 <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
 <script src="bower_components/angular-touch/angular-touch.js"></script>
+<script src="bower_components/angular-aria/angular-aria.js"></script>
 <script src="bower_components/ui-router/release/angular-ui-router.js"></script>
 <script src="bower_components/d3/d3.js"></script>
 <script src="bower_components/lodash/lodash.js"></script>

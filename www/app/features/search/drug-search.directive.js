@@ -9,6 +9,7 @@
     var directive = {
       restrict: 'AE',
       scope: {
+        term: '@?',
         onSelected: '&'
       },
       link: link,
@@ -28,7 +29,6 @@
     function DrugSearchController(APIService) {
       var vm = this;
 
-      vm.drug = '';
       vm.options = [];
 
       vm.activate = activate;
@@ -36,6 +36,7 @@
       vm.selectedDrug = selectedDrug;
 
       function activate() {
+        vm.drug = vm.term || '';
       }
 
       function search() {

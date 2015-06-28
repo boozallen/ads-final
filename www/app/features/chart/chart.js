@@ -9,11 +9,6 @@
  */
  angular.module('gapFront')
  .controller('ChartCtrl', function ($scope, $filter, IntegrationService, APIService, DrugService) {
-  $scope.awesomeThings = [
-  'HTML5 Boilerplate',
-  'AngularJS',
-  'Karma'
-  ];
     $scope.filterType = "hospitalizations";
     $scope.seriousness = "all";
     $scope.outcome = "all";
