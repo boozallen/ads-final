@@ -25,10 +25,7 @@ angular.module('gapFront')
     });
 
     $scope.setSelectedDrug = function(drug) {
-      $scope.adverseEffects = [];
-      $scope.displayedStuff = [];
-      $scope.count = 1;
-      $scope.total = 0;
+      $anchorScroll('#events-reports');
       $scope.drugs = [];
       $scope.selectedDrug = drug;
 
