@@ -28,6 +28,7 @@
 
       vm.count = 0;
       vm.total = 0;
+      vm.complete = false;
       vm.effects = [];
       vm.adverseEffects = [];
       vm.displayedStuff = [];
@@ -55,6 +56,11 @@
         var post = {drug_name: vm.drug.brand_name, effect: term.effect, response: accurate};
 
         vm.count += 1;
+
+        if (vm.count == vm.total) {
+          vm.complete = true;
+        }
+
         if (vm.adverseEffects.length > 0) {
           addDisplayedStuff();
         }
@@ -75,6 +81,7 @@
 
         vm.count = 0;
         vm.total = 0;
+        vm.complete = false;
         vm.effects = [];
         vm.adverseEffects = [];
         vm.displayedStuff = [];

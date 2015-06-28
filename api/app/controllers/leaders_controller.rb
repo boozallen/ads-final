@@ -8,6 +8,7 @@ class LeadersController < ApplicationController
   api :POST, '/leaders', 'Create or updates existing leaders found by name'
   param :name, String, 'Leader name'
   param :total, Integer, 'Leader total'
+  param :zipcode, String, 'Leader zipcode'
 
   def create
     leader.increment! :count
@@ -23,7 +24,7 @@ class LeadersController < ApplicationController
   private
 
   def leader_params
-    params.require(:leader).permit!(:name, :total)
+    params.permit!(:name, :total, :zipcode)
   end
 
   def leaders
