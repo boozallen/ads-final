@@ -56,8 +56,3 @@ angular
       html: true
     });
   });
-
-  // .run(function(Restangular) {
-  //   RestangularProvider.setBaseUrl('http://www.google.com');
-  //   RestangularProvider.setRequestSuffix('.json');
-  // })
