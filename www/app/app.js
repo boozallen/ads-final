@@ -43,7 +43,7 @@
     }).state('leaderboard', {
       url: '/leader',
       templateUrl: 'features/leaderBoard/leaderBoard.html',
-      controller: 'DrugInfoController as vm'
+      controller: 'LeaderBoardCtrl'
     }).state('about', {
       url: '/about',
       templateUrl: 'features/about/about.html'
