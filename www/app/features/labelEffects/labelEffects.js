@@ -18,6 +18,9 @@ angular.module('gapFront')
       return $scope.getPercentage() + '% of possible side effects addressed'
     };
 
+    $scope.count = 0;
+    $scope.total = 0;
+
     var initLabelEffects = function (params) {
       $scope.selectedDrug = DrugService.getSelectedDrug();
       $scope.count = 1;
@@ -45,7 +48,7 @@ angular.module('gapFront')
 
     function updateList(resp) {
       $scope.adverseEffects = resp.drug.effects;
-      $scope.total = $scope.adverseEffects.length;
+      $scope.total = $scope.adverseEffects.length > 18? 18 : $scope.adverseEffects.length;
       addDisplayedStuff();
     }
 
@@ -143,7 +146,8 @@ angular.module('gapFront')
     };
 
     $scope.getPercentage = function () {
-      var div = ($scope.count - 1) / $scope.total;
+      console.log('count: ' + $scope.count + ' total: ' + $scope.total);
+      var div = $scope.count / $scope.total;
       var percent = div * 100;
       if(percent == 100){
         $scope.showThanks = true;

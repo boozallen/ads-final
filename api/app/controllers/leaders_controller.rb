@@ -1,6 +1,6 @@
 class LeadersController < ApplicationController
   def index
-    render json: Leader.all.order(:count)
+    render json: Leader.all.order(:updated_at).limit(10)
   end
 
   def create
@@ -20,6 +20,6 @@ class LeadersController < ApplicationController
   private
 
   def leader_params
-    params.require(:leader).permit!(:name, :total)
+    params.require(:leader).permit!(:name, :total, :zipcode)
   end
 end

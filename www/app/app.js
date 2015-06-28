@@ -45,6 +45,7 @@ angular
         templateUrl: 'features/leaderBoard/leaderBoard.html',
         controller: 'LeaderBoardCtrl'
       })
+
       .otherwise({
         redirectTo: '/'
       });
