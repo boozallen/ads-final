@@ -64,7 +64,7 @@ Our architecture consist of Modern Technologies and best practices.  Our selecti
 
 Technologies Employed:
 
-[Application Stack](https://cloud.githubusercontent.com/assets/8406690/8394816/b3587f9a-1d17-11e5-9292-16c2fd68e51b.png)
+![Application Stack](https://cloud.githubusercontent.com/assets/8406690/8394816/b3587f9a-1d17-11e5-9292-16c2fd68e51b.png)
 
 *	DevOps:
   *	Docker Containers with Machine and Compose.
