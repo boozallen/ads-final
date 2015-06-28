@@ -13,9 +13,9 @@
     'ngAnimate',
     'ngCookies',
     'ngResource',
-    'ngRoute',
     'ngSanitize',
     'ngTouch',
+    'ui.router',
     'restangular',
     'ui.checkbox',
     'mgcrea.ngStrap',
@@ -23,21 +23,29 @@
   ]).config(routing)
     .config(modals);
 
-  function routing($routeProvider, $locationProvider) {
-    $routeProvider.when('/', {
+  function routing($stateProvider, $urlRouterProvider, $locationProvider) {
+    $stateProvider.state('main', {
+      url: '/',
       templateUrl: 'features/main/main.html',
-      controller: 'MainCtrl'
-    }).when('/chart', {
+      controller: 'MainCtrl as vm'
+    }).state('charts', {
+      url: '/charts',
       templateUrl: 'features/chart/chart.html',
       controller: 'ChartCtrl'
-    }).when('/labelEffects', {
+    }).state('label-effects', {
+      url: '/label-effects',
       templateUrl: 'features/labelEffects/labelEffects.html',
       controller: 'LabelEffectsCtrl'
-    }).when('/about', {
+    }).state('drug-info', {
+      url: '/drug-info',
+      templateUrl: 'features/drugInfo/drug-info.html',
+      controller: 'DrugInfoController as vm'
+    }).state('about', {
+      url: '/about',
       templateUrl: 'features/about/about.html'
-    }).otherwise({
-      redirectTo: '/'
     });
+
+    $urlRouterProvider.otherwise('/');
 
     $locationProvider.html5Mode(true);
   }

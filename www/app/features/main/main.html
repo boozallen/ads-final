@@ -19,7 +19,7 @@
     </div>
   </div>
 
-  <drug-search on-selected="setSelectedDrug(drug)"></drug-search>
+  <drug-search on-selected="vm.setSelectedDrug(drug)"></drug-search>
 
   <h3 align="center" class="data-source" style="margin: 60px 0px;">Data Source: <a href="https://open.fda.gov/">open.fda.org</a>
   </h3>
@@ -40,26 +40,3 @@
     </div>
   </div>
 </section>
-<div id="events-reports" ng-show="selectedDrug" class="features container-fluid">
-  <div class="row spacer-2x">
-    <drug-search on-selected="setSelectedDrug(drug)"></drug-search>
-  </div>
-  <br>
-
-  <div class="col-md-12 full-row blue-bg cf">
-
-    <div class="med-info col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
-      <h2>Manufacturer Details for: {{selectedDrug.substance_name}}&nbsp;({{selectedDrug.brand_name}})
-        <button type="button" class="btn btn-lg btn-primary" data-animation="am-fade-and-slide-top"
-                data-template="drugInfo.tpl.html" bs-modal="modal">+
-        </button>
-      </h2>
-    </div>
-  </div>
-</div>
-<div>
-  <div id="headerDiv" ng-include src="'features/header/header.html'" style="display:none;"></div>
-  <div ng-controller="ChartCtrl" ng-include src="'features/chart/chart.html'" ng-show="selectedDrug"></div>
-  <div ng-controller="LabelEffectsCtrl" ng-include src="'features/labelEffects/labelEffects.html'"
-       ng-show="selectedDrug"></div>
-</div>

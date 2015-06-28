@@ -26,7 +26,7 @@
     }
 
     /** @ngInject */
-    function DrugSearchController(APIService) {
+    function DrugSearchController(APIService, DrugService) {
       var vm = this;
 
       vm.options = [];
@@ -95,7 +95,13 @@
 
       function selectedDrug(drug) {
         vm.options.length = 0;
-        vm.onSelected({drug: drug});
+        APIService.getDrugsApi().get(drug.brand_name).then(handleResult);
+
+        function handleResult(result) {
+          DrugService.setSelectedDrugInfo(result);
+          DrugService.setSelectedDrug(drug);
+          vm.onSelected({drug: drug});
+        }
       }
     }
   }

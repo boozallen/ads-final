@@ -8,15 +8,6 @@
  * Controller of the gapFront
  */
 angular.module('gapFront')
-  .controller('HeaderCtrl', function ($scope, $location) {
-
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-    
+  .controller('HeaderCtrl', function($scope, $location) {
     $scope.about = $location.path();
-    console.log($location.path());
-
   });

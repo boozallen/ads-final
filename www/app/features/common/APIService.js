@@ -14,10 +14,6 @@
       RestangularConfigurer.setBaseUrl('http://52.4.69.219:3000//api/v1');
     });
 
-    var pillboxService = Restangular.withConfig(function(RestangularConfigurer) {
-      RestangularConfigurer.setBaseUrl('http://pillbox.nlm.nih.gov/PHP/pillboxAPIService.php');
-    });
-
     var drug = FDAService.all('drug');
 
     return {
