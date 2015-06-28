@@ -25,6 +25,7 @@ angular.module('gapFront')
     });
 
     $scope.setSelectedDrug = function(drug) {
+      console.log("drug: " + drug);
       $scope.drugs = [];
       $scope.selectedDrug = drug;
 
