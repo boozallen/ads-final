@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for common/APIService.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../prettify.css">
+    <link rel="stylesheet" href="../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">common/APIService.js</span></h1>
+    <h2>
+        Statements: <span class="metric">48.15% <small>(26 / 54)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">16.67% <small>(3 / 18)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">42.86% <small>(6 / 14)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">57.78% <small>(26 / 45)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../index.html">All files</a> &#187; <a href="index.html">common/</a> &#187; APIService.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+/**
+ * @ngdoc function
+ * @name gapFront.servece:APIService
+ * @description Calls the Open FDA api for drug information as well as our local api.
+ * # APIService
+ * Angular Service providing access to the FDA Drug APIs
+ */
+angular.module('gapFront')
+  .service('APIService', function (Restangular) {
+    var FDAService = Restangular.withConfig(function(RestangularConfigurer) {
+      RestangularConfigurer.setBaseUrl('https://api.fda.gov');
+    });
+&nbsp;
+    var railsService = Restangular.withConfig(function(RestangularConfigurer,Restangular) {
+    RestangularConfigurer.setBaseUrl('http://52.4.69.219:3000//api/v1');
+      //RestangularProvider.setDefaultHeaders({
+      //  "Content-Type": "application/json",
+      //  "X-Requested-With": "XMLHttpRequest"
+      //});
+    });
+&nbsp;
+    var pillboxService = Restangular.withConfig(function(RestangularConfigurer) {
+      RestangularConfigurer.setBaseUrl('http://pillbox.nlm.nih.gov/PHP/pillboxAPIService.php');
+    });
+&nbsp;
+&nbsp;
+    var drug = FDAService.all('drug');
+    //var drugLabel = drug.all('label.json');
+    //var drugEvent = drug.all('event.json');
+&nbsp;
+    /**
+    * @ngdoc function
+    * @name queryDrugLabel
+    * @description calls the Food and Drug Administration's api and queries it.
+    * @param {string} query - The query to send to open fda api.
+    * @param {integer} skip - For dealing with paginated results.
+    * @param {integer} limit - The number of results to request.
+    */
+    function queryDrugLabel(query, skip, limit){
+      var params = {
+        search:query,
+        skip:skip,
+        limit:limit
+      };
+      return drug.get('label.json', params);
+    }
+&nbsp;
+    function queryDrugEvent(query, skip, limit){
+      var params = {};
+      <span class="missing-if-branch" title="if path not taken" >I</span>if(query) <span class="cstat-no" title="statement not covered" >params.search = query;</span>
+      <span class="missing-if-branch" title="if path not taken" >I</span>if(skip) <span class="cstat-no" title="statement not covered" >params.skip = skip;</span>
+      <span class="missing-if-branch" title="if path not taken" >I</span>if(limit) <span class="cstat-no" title="statement not covered" >params.limit = limit;</span>
+      return drug.get('event.json', params);
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function aggregateDrugLabel(query, limit, aggregationField){</span>
+<span class="cstat-no" title="statement not covered" >      var params = {};</span>
+<span class="cstat-no" title="statement not covered" >      if(query) <span class="cstat-no" title="statement not covered" >params.search = query;</span></span>
+<span class="cstat-no" title="statement not covered" >      if(limit) <span class="cstat-no" title="statement not covered" >params.limit = limit;</span></span>
+<span class="cstat-no" title="statement not covered" >      if(aggregationField) <span class="cstat-no" title="statement not covered" >params.count = aggregationField;</span></span>
+<span class="cstat-no" title="statement not covered" >      return drug.get('label.json', params);</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function aggregateDrugEvent(query, limit, aggregationField){</span>
+<span class="cstat-no" title="statement not covered" >      var params = {};</span>
+<span class="cstat-no" title="statement not covered" >      if(query) <span class="cstat-no" title="statement not covered" >params.search = query;</span></span>
+<span class="cstat-no" title="statement not covered" >      if(limit) <span class="cstat-no" title="statement not covered" >params.limit = limit;</span></span>
+<span class="cstat-no" title="statement not covered" >      if(aggregationField) <span class="cstat-no" title="statement not covered" >params.count = aggregationField;</span></span>
+<span class="cstat-no" title="statement not covered" >      return drug.get('event.json', params);</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function getDrugsApi(){</span>
+<span class="cstat-no" title="statement not covered" >      return railsService.all('drugs');</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function getEffectsApi(){</span>
+<span class="cstat-no" title="statement not covered" >      return railsService.all('effects');</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function getLeadersApi(){</span>
+<span class="cstat-no" title="statement not covered" >      return railsService.all('leaders')</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function getVerifiedApi(array) {</span>
+<span class="cstat-no" title="statement not covered" >      return railsService.all('verified');</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function getDrugDateReportCount(query, aggregationField){</span>
+<span class="cstat-no" title="statement not covered" >      var params = {};</span>
+<span class="cstat-no" title="statement not covered" >      params.search = query;</span>
+<span class="cstat-no" title="statement not covered" >      params.count = aggregationField;</span>
+<span class="cstat-no" title="statement not covered" >      return drug.get('event.json', params);</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function getLeaderBoard(){</span>
+<span class="cstat-no" title="statement not covered" >      return railsService.all('leaders');</span>
+    }
+&nbsp;
+    return {
+      queryDrugLabel:queryDrugLabel,
+      queryDrugEvent:queryDrugEvent,
+      aggregateDrugLabel:aggregateDrugLabel,
+      aggregateDrugEvent:aggregateDrugEvent,
+      getDrugsApi:getDrugsApi,
+      getLeadersApi:getLeadersApi,
+      getEffectsApi:getEffectsApi,
+      getDrugDateReportCount:getDrugDateReportCount,
+      getVerifiedApi:getVerifiedApi,
+      getLeaderBoard:getLeaderBoard
+    };
+  });
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Jun 28 2015 13:00:24 GMT-0400 (EDT)</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

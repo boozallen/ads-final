@@ -41,6 +41,11 @@ angular
       .when('/about', {
         templateUrl: 'features/about/about.html'
       })
+      .when('/leader', {
+        templateUrl: 'features/leaderBoard/leaderBoard.html',
+        controller: 'LeaderBoardCtrl'
+      })
+
       .otherwise({
         redirectTo: '/'
       });

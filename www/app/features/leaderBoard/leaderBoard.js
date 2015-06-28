@@ -21,7 +21,7 @@ angular.module('gapFront')
 
     }
 
-    
+
 
     $scope.addLeader = function(name){
       var post = {name: name};
