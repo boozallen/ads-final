@@ -14,6 +14,8 @@
   'AngularJS',
   'Karma'
   ];
+
+  $scope.initializeVariables = function initializeVariables() {
     $scope.filterType = "hospitalizations";
     $scope.seriousness = "all";
     $scope.outcome = "all";
@@ -28,8 +30,10 @@
 
     $scope.least=0;
     $scope.greatest=100;
+  }
 
     var initChart = function(params){
+      $scope.initializeVariables();
       $scope.selectedDrug = DrugService.getSelectedDrug();
       APIService.getDrugsApi().get($scope.selectedDrug.brand_name).then(function(resp){
         DrugService.setSelectedDrugInfo(resp);
