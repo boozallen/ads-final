@@ -1,5 +1,7 @@
 # 18F Agile Delivery Services – Booz Allen – Prototype: Label Craft
 
+Prototype URL: http://52.0.46.33:9000/
+
 ## Prototype Overview
 
 [![Build Status](http://52.0.92.86:8080/buildStatus/icon?job=Development_FrontEnd_Builder)](http://52.0.92.86:8080/view/Development/job/Development_FrontEnd_Builder/)[![Build Status](http://52.0.92.86:8080/buildStatus/icon?job=Development_API_Builder)](http://52.0.92.86:8080/view/Development/job/Development_API_Builder/)Development Branch Server: http://52.4.69.219:9000/
