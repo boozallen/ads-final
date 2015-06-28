@@ -23,6 +23,8 @@ angular.module('gapFront')
 
     var initLabelEffects = function (params) {
       $scope.selectedDrug = DrugService.getSelectedDrug();
+      $scope.count = 1;
+      $scope.total = 0;
       var query = 'patient.drug.medicinalproduct:' + $scope.selectedDrug.brand_name;
       APIService.aggregateDrugEvent(query, 50, 'patient.reaction.reactionmeddrapt.exact').then(addFdaList, serviceError)
     };
@@ -147,6 +149,9 @@ angular.module('gapFront')
       console.log('count: ' + $scope.count + ' total: ' + $scope.total);
       var div = $scope.count / $scope.total;
       var percent = div * 100;
+      if(percent == 100){
+        $scope.showThanks = true;
+      }
       return Math.floor(percent);
     };
 

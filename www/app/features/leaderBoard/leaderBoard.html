@@ -1,0 +1,33 @@
+<section class="col-md-12 label-full-row gray-bg" style="background-color: #74C4C6">
+<div class="row" style="color:white;">
+    <div align="" class="col-md-4 col-md-offset-2">
+      <h2 style="font-size:100px;">Way to go!</h2>
+      <p style="color:white;">
+        You've helped make the {{selectedDrug.brand_name}} labels more accurate. Enter your name to be recognized as a contributor.
+      </p>
+      <br>
+
+      <form>
+        <div class="form-group">
+          <input type="text" class="form-control" id="firstName" placeholder="What's your first name?" ng-model="leader.firstName">
+          <br>
+          <input type="text" class="form-control" id="lastName" placeholder="What's your last name?" ng-model="leader.lastName">
+          <br>
+          <input type="text" class="form-control" id="zipCode" placeholder="What's your zip code?" ng-model="leader.lastName">
+        </div>
+        <button type="submit" class="btn btn-default pull-right" ng-click="addLeader(leader.name)" style="background-color:#396162; color:white;">Submit</button>
+      </form>
+      <br>
+      <hr>
+      <h1 style="color:white;">Other drug labels that need your help.</h1>
+      <br>
+
+    </div>
+    <div align="center" class="col-md-4 col-md-offset-2">
+      <p>Recent Contributors</p>
+      <ul style="list-style-type: none;">
+        <li ng-repeat="leader in leaders" class="leaders">{{leader}}</li>
+      </ul>
+    </div>
+  </div>
+</section>
