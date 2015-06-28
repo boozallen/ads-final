@@ -13,9 +13,9 @@
           <br>
           <input type="text" class="form-control" id="lastName" placeholder="What's your last name?" ng-model="leader.lastName">
           <br>
-          <input type="text" class="form-control" id="zipCode" placeholder="What's your zip code?" ng-model="leader.lastName">
+          <input type="text" class="form-control" id="zipCode" placeholder="What's your zip code?" ng-model="leader.zipcode">
         </div>
-        <button type="submit" class="btn btn-default pull-right" ng-click="addLeader(leader.name)" style="background-color:#396162; color:white;">Submit</button>
+        <button type="submit" class="btn btn-default pull-right" ng-submit="addLeader(leader.firstName, leader.lastName, leader.zipcode)" style="background-color:#396162; color:white;">Submit</button>
       </form>
       <br>
       <hr>
