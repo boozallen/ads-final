@@ -20,6 +20,6 @@ class LeadersController < ApplicationController
   private
 
   def leader_params
-    params.require(:leader).permit!(:name, :total, :zipcode)
+    params.require(:leader).permit!
   end
 end

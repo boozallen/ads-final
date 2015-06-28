@@ -26,7 +26,7 @@
     <div align="center" class="col-md-4 col-md-offset-2">
       <p>Recent Contributors</p>
       <ul style="list-style-type: none;">
-        <li ng-repeat="leader in leaders" class="leaders">{{leader}}</li>
+        <li ng-repeat="leader in leaders" class="leaders">{{leader.name}} <strong>{{leader.zipcode}}</strong></li>
       </ul>
     </div>
   </div>
