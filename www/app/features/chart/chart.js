@@ -158,28 +158,28 @@
               if($scope.drugEffects.yes_answers[$scope.chart[i].term.toLowerCase()] > $scope.drugEffects.no_answers[$scope.chart[i].term.toLowerCase()]){ // more in yes
                 console.log('d');
                 $scope.treeData.push({name: $scope.chart[i].term.toLowerCase(), value: $scope.chart[i].count, colorValue: 2});
-                $scope.barLabels[$scope.chart[i].term.toLowerCase()] = " <i class='fa fa-check-circle'></i>";
+                $scope.barLabels[$scope.chart[i].term.toLowerCase()] = " <span class='glyphicon glyphicon-ok-sign' style='color:#5bc0de; font-size: 17px;'></span>";
               } else if($scope.drugEffects.yes_answers[$scope.chart[i].term.toLowerCase()] == $scope.drugEffects.no_answers[$scope.chart[i].term.toLowerCase()]){ // equal yes and no votes
                 console.log('e');
                 $scope.treeData.push({name: $scope.chart[i].term.toLowerCase(), value: $scope.chart[i].count, colorValue: 0});
-                $scope.barLabels[$scope.chart[i].term.toLowerCase()] = " <i class='fa fa-exclamation-circle'></i>";
+                $scope.barLabels[$scope.chart[i].term.toLowerCase()] = " <span class='glyphicon glyphicon-exclamation-sign'  style='color:#f8ac59; font-size: 17px;'></span>";
               } else {
                 console.log('f');
                 $scope.treeData.push({name: $scope.chart[i].term.toLowerCase(), value: $scope.chart[i].count, colorValue: 1}); // more in no
-                $scope.barLabels[$scope.chart[i].term.toLowerCase()] = " <i class='fa fa-minus-circle'></i>";
+                $scope.barLabels[$scope.chart[i].term.toLowerCase()] = " <span class='glyphicon glyphicon-ban-circle' style='color:#ed5565; font-size: 17px;'></span>";
               }
             } else { // not in no
               console.log('g');
-              $scope.barLabels[$scope.chart[i].term.toLowerCase()] = " <i class='fa fa-check-circle'></i>";
+              $scope.barLabels[$scope.chart[i].term.toLowerCase()] = " <span class='glyphicon glyphicon-ok-sign' style='color:#5bc0de; font-size: 17px;'></span>";
               $scope.treeData.push({name: $scope.chart[i].term.toLowerCase(), value: $scope.chart[i].count, colorValue: 2});
             }
           } else if ($scope.chart[i].term.toLowerCase() in $scope.drugEffects.no_answers) { // in no but not yes
             console.log('h');
-            $scope.barLabels[$scope.chart[i].term.toLowerCase()] = " <i class='fa fa-minus-circle'></i>";
+            $scope.barLabels[$scope.chart[i].term.toLowerCase()] = " <span class='glyphicon glyphicon-ban-circle' style='color:#ed5565; font-size: 17px;'></span>";
             $scope.treeData.push({name: $scope.chart[i].term.toLowerCase(), value: $scope.chart[i].count, colorValue: 1}); // more in no
           } else { // in neither
             console.log('i');
-            $scope.barLabels[$scope.chart[i].term.toLowerCase()] = " <i class='fa fa-exclamation-circle'></i>";
+            $scope.barLabels[$scope.chart[i].term.toLowerCase()] = " <span class='glyphicon glyphicon-exclamation-sign' style='color:#f8ac59; font-size: 17px;'></span>";
             $scope.treeData.push({name: $scope.chart[i].term.toLowerCase(), value: $scope.chart[i].count, colorValue: 0});
           }
         }
@@ -246,7 +246,10 @@
             lineColor: '#666666'
           },
           legend: {
-            reversed: true
+            reversed: true,
+            useHTML: true,
+            labelFormatter: function(){
+              return '<img src="../assets/chart_key.jpg"/>'}
           },
           plotOptions: {
             series: {
