@@ -11,6 +11,7 @@ angular.module('gapFront')
   .controller('LabelEffectsCtrl', function ($scope, IntegrationService, APIService, DrugService) {
 
     $scope.effects = [];
+    $scope.alerts = [];
     $scope.selectedSymptom = '';
     $scope.adverseEffects = [];
     $scope.displayedStuff = [];
@@ -18,12 +19,15 @@ angular.module('gapFront')
       return $scope.getPercentage() + '% of possible side effects addressed'
     };
 
+    $scope.$on('scanner-started', function(event, args) {
+      $scope.alerts.push(args.message);
+    });
+
     $scope.count = 0;
     $scope.total = 1;
 
     var initLabelEffects = function (params) {
       $scope.selectedDrug = DrugService.getSelectedDrug();
-      $scope.alerts = DrugService.getAlerts();
       $scope.count = 0;
       $scope.total = 1;
       var query = 'patient.drug.medicinalproduct:' + $scope.selectedDrug.brand_name;

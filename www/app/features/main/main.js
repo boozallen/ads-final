@@ -25,21 +25,20 @@ angular.module('gapFront')
         $route.current = lastRoute;
     });
 
+    $scope.$on('scanner-started', function(event, args) {
+      $scope.alerts.push(args.message);
+    });
+
     $scope.setSelectedDrug = function(drug) {
       $scope.drugs = [];
+      $scope.alerts = [];
       $scope.selectedDrug = drug;
 
       DrugService.setSelectedDrug($scope.selectedDrug);
       IntegrationService.callIntegrationMethod('initChart',{});
       IntegrationService.callIntegrationMethod('initLabelEffects',{});
 
-      $scope.alerts = DrugService.getAlerts();
-      if ($scope.alerts.length == 0) {
-        $("#headerDiv").css('display', 'block');
-        // $("#searchSplashScreen").remove();
-        $location.hash('events-reports');
-        $anchorScroll();
-      }
+      // $("#searchSplashScreen").remove();
     };
 
     $scope.searchDrugs = function() {
