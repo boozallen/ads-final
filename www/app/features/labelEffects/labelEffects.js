@@ -23,7 +23,7 @@ angular.module('gapFront')
 
     var initLabelEffects = function (params) {
       $scope.selectedDrug = DrugService.getSelectedDrug();
-      $scope.count = 1;
+      $scope.count = 0;
       $scope.total = 0;
       var query = 'patient.drug.medicinalproduct:' + $scope.selectedDrug.brand_name;
       APIService.aggregateDrugEvent(query, 50, 'patient.reaction.reactionmeddrapt.exact').then(addFdaList, serviceError)
