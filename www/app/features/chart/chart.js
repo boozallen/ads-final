@@ -253,11 +253,20 @@
             reversed: true,
             useHTML: true,
             labelFormatter: function(){
-              return '<img src="../assets/chart_key.jpg"/>'}
+              console.log(this);
+              return " <span class='glyphicon glyphicon-ok-sign' style='color:#5bc0de; font-size: 17px;'></span> : Reported and verified on label: <br>"
+                + " <span class='glyphicon glyphicon-exclamation-sign' style='color:#f8ac59; font-size: 17px;'></span> : Reported but not listed on label: <br>"
+                + " <span class='glyphicon glyphicon-ban-circle' style='color:#ed5565; font-size: 17px;'></span> : Reported but incorrectly described"
+            }
           },
           plotOptions: {
             series: {
-              stacking: 'normal'
+              stacking: 'normal',
+              events: {
+                legendItemClick: function () {
+                  return false;
+                }
+              }
             }
           },
           rangeSelector: {
@@ -360,20 +369,20 @@
           dataClasses:[{
             from: 0,
             to: 0,
-            name: 'Reported and verified on label',
-            color: Highcharts.getOptions().colors[2]
+            name: 'Reported but not listed on label',
+            color: Highcharts.getOptions().colors[3]
           },
             {
               from: 1,
               to: 1,
-              name: 'Reported but described inaccurately on label',
-              color: Highcharts.getOptions().colors[3]
+              name: 'Reported but incorrectly described',
+              color: Highcharts.getOptions().colors[4]
             },
             {
               from: 2,
               to: 2,
-              name: 'Reported but not found on label',
-              color: Highcharts.getOptions().colors[4]
+              name: 'Reported and verified on label',
+              color: Highcharts.getOptions().colors[2]
 
             }]
 

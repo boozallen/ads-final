@@ -146,7 +146,7 @@ angular.module('gapFront')
     };
 
     $scope.getPercentage = function () {
-      console.log('count: ' + $scope.count + ' total: ' + $scope.total);
+      //console.log('count: ' + $scope.count + ' total: ' + $scope.total);
       var div = $scope.count / $scope.total;
       var percent = div * 100;
       if(percent == 100){

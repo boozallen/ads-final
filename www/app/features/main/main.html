@@ -54,13 +54,13 @@
       </div>
     </form>
   </div>
-  
+
   <div class="row">
     <div class="random_drug_link col-md-4 col-md-offset-4 col-xs-10 col-xs-offset-1">
       <a href='#'>Show me a label that needs my help!</a>
 </div>
 </div>
-  
+
   </h3>
 
 <!-- REMOVED FOR DEMO
@@ -81,7 +81,35 @@
     </div>
   </div> -->
 </section>
+<div id="events-reports" ng-show="selectedDrug" class="features">
+  <br>
+    <div id="fixedSearch" style="display:none; position: fixed; top:72px; z-index: 2;">
+      <form>
+        <div class="search_block input-group input-group-xs col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1 spacer-2x">
+          <input type="text" class="form-control searchInput" ng-model="searchFixed" id="searchFixed"
+                 placeholder="Search for a Drug..." ng-change="searchDrugs()">
+
+          <div class="input-group-btn">
+            <button class="btn searchButton searchInput" type="button" ng-click="setSelectedDrug(drugs[0])"><i
+              class="fa fa-search searchIcon"></i></button>
+          </div>
+
+        </div>
+        <div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1" ng-show="drugs">
+          <div ng-class="!drugs.length==0?'dropdown clearfix open':'dropdown clearfix'">
+            <ul class="dropdown-menu" style="width: 100%">
+              <li ng-repeat="drug in drugs track by $index">
+                <a ng-click="setSelectedDrug(drug)">{{drug.brand_name}}</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </form>
+
+    </div>
+  <br>
 <!-- <div id="events-reports" ng-show="selectedDrug" class="features">
+>>>>>>> 19f37fb62b1f2c12216c91dde5180e53d68ee5bb
     <div class="col-md-12 full-row blue-bg cf">
       <div class="med-info col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
       <h2>Manufacturer Details for: {{selectedDrug.substance_name}}&nbsp;({{selectedDrug.brand_name}})
@@ -91,3 +119,4 @@
     </div>
   </div>
 </div> -->
+</div>
