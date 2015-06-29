@@ -44,7 +44,7 @@
         $scope.searchDrugEvents();
       }, function(error){
         $scope.alerts.push(error.data.message);
-        DrugService.setSelectedDrug();
+        DrugService.setAlerts($scope.alerts);
       });
     };
 

@@ -12,6 +12,7 @@ angular.module('gapFront')
 
     var selectedDrug;
     var selectedDrugInfo;
+    var alerts;
 
     function setSelectedDrug(drug){
       selectedDrug = drug;
@@ -29,10 +30,20 @@ angular.module('gapFront')
       return selectedDrugInfo;
     }
 
+    function setAlerts(selectedAlerts){
+      alerts = selectedAlerts;
+    }
+
+    function getAlerts(){
+      return alerts;
+    }
+
     return {
       setSelectedDrug:setSelectedDrug,
       getSelectedDrug:getSelectedDrug,
       setSelectedDrugInfo:setSelectedDrugInfo,
-      getSelectedDrugInfo:getSelectedDrugInfo
+      getSelectedDrugInfo:getSelectedDrugInfo,
+      setAlerts:setAlerts,
+      getAlerts:getAlerts
     };
   });

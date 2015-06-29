@@ -23,6 +23,7 @@ angular.module('gapFront')
 
     var initLabelEffects = function (params) {
       $scope.selectedDrug = DrugService.getSelectedDrug();
+      $scope.alerts = DrugService.getAlerts();
       $scope.count = 0;
       $scope.total = 1;
       var query = 'patient.drug.medicinalproduct:' + $scope.selectedDrug.brand_name;
@@ -68,6 +69,7 @@ angular.module('gapFront')
 
     // Function which greps through the drug object to find adverse effects
     function findMatchingSentence(drugObject, effect) {
+      console.log(drugObject);
       var textToSearch = [];
 
       if (drugObject['boxed_warnings']) {
@@ -146,7 +148,6 @@ angular.module('gapFront')
     };
 
     $scope.getPercentage = function () {
-      console.log('count: ' + $scope.count + ' total: ' + $scope.total);
       var div = $scope.count / $scope.total;
       var percent = div * 100;
       if(percent == 100){

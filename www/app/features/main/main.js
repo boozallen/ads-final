@@ -12,6 +12,7 @@ angular.module('gapFront')
     $scope.drugs = [];
 
     $scope.searchText = '';
+    $scope.alerts = [];
 
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
@@ -25,17 +26,19 @@ angular.module('gapFront')
     });
 
     $scope.setSelectedDrug = function(drug) {
-      console.log("drug: " + drug);
       $scope.drugs = [];
       $scope.selectedDrug = drug;
 
       DrugService.setSelectedDrug($scope.selectedDrug);
       IntegrationService.callIntegrationMethod('initChart',{});
       IntegrationService.callIntegrationMethod('initLabelEffects',{});
-      $("#headerDiv").css('display', 'block');
-      // $("#searchSplashScreen").remove();
-      $location.hash('events-reports');
-      $anchorScroll();
+      $scope.alerts = DrugService.getAlerts();
+      if ($scope.alerts.length == 0) {
+        $("#headerDiv").css('display', 'block');
+        // $("#searchSplashScreen").remove();
+        $location.hash('events-reports');
+        $anchorScroll();
+      }
     };
 
     $scope.searchDrugs = function() {
