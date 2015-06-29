@@ -1,10 +1,10 @@
-
+$icon-font-path: '../bower_components/bootstrap-sass/assets/fonts/bootstrap/';
 
 // bower:scss
 @import "bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
-
 $fa-font-path: '/fonts/font-awesome';
+
 @import 'style.css';
 @import 'animate.min.css';
 @import 'pace-theme.css';
