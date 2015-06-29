@@ -254,19 +254,18 @@
             useHTML: true,
             labelFormatter: function(){
               console.log(this);
-              return "<tspan>" + this.name + "</tspan><br>"
-                + " Reported and verified on label: <span class='glyphicon glyphicon-ok-sign' style='color:#5bc0de; font-size: 17px;'></span><br>"
-                + " Reported but not listed on label: <span class='glyphicon glyphicon-exclamation-sign' style='color:#f8ac59; font-size: 17px;'></span><br>"
-                + " Reported but incorrectly described: <span class='glyphicon glyphicon-ban-circle' style='color:#ed5565; font-size: 17px;'></span>"
+              return " <span class='glyphicon glyphicon-ok-sign' style='color:#5bc0de; font-size: 17px;'></span> : Reported and verified on label: <br>"
+                + " <span class='glyphicon glyphicon-exclamation-sign' style='color:#f8ac59; font-size: 17px;'></span> : Reported but not listed on label: <br>"
+                + " <span class='glyphicon glyphicon-ban-circle' style='color:#ed5565; font-size: 17px;'></span> : Reported but incorrectly described"
             }
           },
           plotOptions: {
             series: {
-              stacking: 'normal'
-            },
-            column: {
-              legendItemClick: function() {
-                return false;
+              stacking: 'normal',
+              events: {
+                legendItemClick: function () {
+                  return false;
+                }
               }
             }
           },
