@@ -224,10 +224,18 @@
             style: {
                 color: '#333',
                 fontWeight: 'normal',
-                fontSize: 14,
+                fontSize: 14
             }
           },
           xAxis: [{
+            title: {
+              text: 'Verified?',
+              align: "high",
+              rotation: 0,
+              textAlign: 'left',
+              x: -10,
+              y: -10
+            },
             tickWidth: 0,
             lineWidth: 0,
             categories: $scope.effects,
@@ -239,15 +247,16 @@
             }
           }, {
             linkedTo: 0,
-            categories: $scope.effects
+            categories: $scope.effects,
+            offset: 50
           }],
           yAxis: {
             min: 0,
-
             title: {
               text: 'Counts'
             },
             lineColor: '#666666'
+
           },
           legend: {
             reversed: true,
@@ -361,7 +370,7 @@
           Highcharts.setOptions({
             colors: ['#23b193', '#bde2d9', '#5bc0de', '#f8ac59', '#ed5565']
           });
-            $('#createTreeChart').highcharts({
+            $scope.treeChart = $('#createTreeChart').highcharts({
               exporting: {
                 enabled: false
               },
@@ -397,6 +406,17 @@
         },
         title: {
             text: 'Highcharts Treemap'
+        },
+        plotOptions: {
+          series: {
+            events: {
+              load: function () {
+                $scope.treeChart.redraw();
+                $(window).resize();
+                $scope.treeChart.redraw();
+              }
+            }
+          }
         }
     });
       }
