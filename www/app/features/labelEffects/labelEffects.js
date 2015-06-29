@@ -11,7 +11,7 @@ angular.module('gapFront')
   .controller('LabelEffectsCtrl', function ($scope, IntegrationService, APIService, DrugService) {
 
     $scope.effects = [];
-    $scope.alerts = [];
+    $scope.alerts = ['alert'];
     $scope.selectedSymptom = '';
     $scope.adverseEffects = [];
     $scope.displayedStuff = [];
@@ -27,6 +27,7 @@ angular.module('gapFront')
     $scope.total = 1;
 
     var initLabelEffects = function (params) {
+      $scope.alerts = [];
       $scope.selectedDrug = DrugService.getSelectedDrug();
       $scope.count = 0;
       $scope.total = 1;

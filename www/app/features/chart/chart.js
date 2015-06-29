@@ -45,6 +45,14 @@
         $scope.alerts = [];
 
         $("#headerDiv").css('display', 'block');
+        var stickEl;
+        var $window = $(window),
+          stickEl = $('#searchFixed'),
+          elTop = stickEl.offset().top;
+
+        $window.scroll(function() {
+          stickEl.toggleClass('sticky', $window.scrollTop() > elTop);
+        });
         $location.hash('events-reports');
         $anchorScroll();
       }, function(error){
