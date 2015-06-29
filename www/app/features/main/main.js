@@ -8,7 +8,7 @@
  * Controller of the gapFront
  */
 angular.module('gapFront')
-  .controller('MainCtrl', function ($scope, $anchorScroll, $location, $route, APIService, IntegrationService, DrugService) {
+  .controller('MainCtrl', function ($scope, $location, $route, APIService, IntegrationService, DrugService) {
     $scope.drugs = [];
 
     $scope.searchText = '';
@@ -34,11 +34,11 @@ angular.module('gapFront')
       $scope.alerts = [];
       $scope.selectedDrug = drug;
 
+      $location.hash('');
+
       DrugService.setSelectedDrug($scope.selectedDrug);
       IntegrationService.callIntegrationMethod('initChart',{});
       IntegrationService.callIntegrationMethod('initLabelEffects',{});
-
-      // $("#searchSplashScreen").remove();
     };
 
     $scope.searchDrugs = function() {
