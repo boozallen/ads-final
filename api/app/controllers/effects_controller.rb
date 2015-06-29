@@ -1,6 +1,12 @@
 class EffectsController < ApplicationController
-  api :GET, '/effects/:id', 'Shows drug as returned from FDA with parsed effects by :id (Brand name of drug)'
-  param :id, String, required: true, desc: 'Brand name of drug'
+  swagger_controller :effects, 'Reported Drug Effects'
+
+  swagger_api :show do
+    summary 'Returns all reported effects for a drug.'
+    notes 'Effects can be reported as not existing or existing on the drug label'
+    param :path, :id, :string, :required, 'Brand name of drug'
+    response :not_found
+  end
 
   def show
     if drug.nil?
@@ -28,10 +34,26 @@ class EffectsController < ApplicationController
     end
   end
 
-  api :POST, '/events', 'Record new events response to question.'
+  swagger_api :create do
+    summary 'Create a new drug effect report.'
+    notes 'Effects can be reported as not existing or existing on the drug label'
+    param :form, :drug_name, :string, :required, 'Brand name of drug'
+    param :form, :effect, :string, :required, 'Effect name (lowercased)'
+    param :form, :response, :boolean, :required, 'Effect exists in label or has been experienced'
+    response :not_acceptable
+  end
 
   def create
     render json: Effect.create!(effect_params)
+  end
+
+  # Effect Model definition
+  swagger_model :Effect do
+    description 'Reported drug effect'
+    property :id, :integer, :required, 'Report id'
+    property :drug_name, :string, :required, 'Brand name of drug'
+    property :name, :string, :required, 'Effect name (lowercased)'
+    property :response, :boolean, :required, 'Effect exists in label or has been experienced'
   end
 
   private

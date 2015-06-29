@@ -1,24 +1,44 @@
 class LeadersController < ApplicationController
-  api :GET, '/leaders', 'Returns all leaders'
+  swagger_controller :leaders, 'Leaderboard submissions'
+
+  swagger_api :index do
+    summary 'Returns all leaderboard submissions.'
+    notes 'Names are returned ordered by the number of submissions'
+  end
 
   def index
     render json: leaders
   end
 
-  api :POST, '/leaders', 'Create or updates existing leaders found by name'
-  param :name, String, desc: 'Leader name'
-  param :total, Integer, desc: 'Leader total'
-  param :zipcode, String, desc: 'Leader zipcode'
+  swagger_api :create do
+    summary 'Create a new leaderboard submission.'
+    param :form, :name, :string, :required, 'Participant name'
+    param :form, :total, :integer, :required, 'Number of ...'
+    param :form, :zipcode, :string, :required, 'Participant zipcode'
+    response :not_acceptable
+  end
 
   def create
     leader.increment! :count
     render json: leader
   end
 
-  api :GET, '/leaders/latest', 'Returns 10 leaders sorted by updated_at'
+  swagger_api :latest do
+    summary 'Returns the 10 most recent leaderboard submissions.'
+    notes 'Names are returned ordered by the submission time'
+  end
 
   def latest
     render json: Leader.order(:updated_at).limit(10)
+  end
+
+  # Leader Model definition
+  swagger_model :Leader do
+    description 'Leaderboard particpant submission'
+    property :id, :integer, :required, 'Submission id'
+    property :name, :string, :required, 'Participant'
+    property :count, :integer, :required, 'Count of ...'
+    property :zipcode, :string, :required, 'Participant zipcode'
   end
 
   private

@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  # Documentation
-  apipie
-
   scope '/api/v1', except: [:new, :edit], defaults: { format: :json } do
     resources :effects, only: [:show, :create]
     resources :leaders, only: [:index, :create] do
