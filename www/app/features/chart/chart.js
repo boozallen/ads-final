@@ -27,10 +27,11 @@
     $scope.endDate = 20500101;
     $scope.dateChartData = [];
     $scope.toggleCharts = true;
+    $scope.alerts = [];
 
     $scope.least=0;
     $scope.greatest=100;
-  }
+  };
 
     var initChart = function(params){
       $scope.initializeVariables();
@@ -41,6 +42,9 @@
         console.log($scope.drugEffects);
         $scope.setChartData();
         $scope.searchDrugEvents();
+      }, function(error){
+        $scope.alerts.push(error.data.message);
+        DrugService.setSelectedDrug();
       });
     };
 

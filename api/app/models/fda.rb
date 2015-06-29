@@ -1,6 +1,6 @@
 class Fda
   def self.get(drug_name)
-    url = "https://api.fda.gov/drug/label.json?limit=100&search=openfda.brand_name.exact:#{drug_name}"
+    url = "https://api.fda.gov/drug/label.json?limit=100&search=openfda.brand_name.exact:#{drug_name.replace}"
     begin
       JSON.parse(RestClient.get(url, accept: :json))['results'].sort do |a, b|
         b['effective_time'].to_i <=> a['effective_time'].to_i
