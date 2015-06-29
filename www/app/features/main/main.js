@@ -32,6 +32,7 @@ angular.module('gapFront')
       DrugService.setSelectedDrug($scope.selectedDrug);
       IntegrationService.callIntegrationMethod('initChart',{});
       IntegrationService.callIntegrationMethod('initLabelEffects',{});
+
       $scope.alerts = DrugService.getAlerts();
       if ($scope.alerts.length == 0) {
         $("#headerDiv").css('display', 'block');
