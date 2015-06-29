@@ -54,7 +54,7 @@ and questions we believe are intended to be answered during the execution of any
 digital program.  Our responses to the checklist are contained in the artifact
 linked below:
 
-[Link to the Digital Services Checklist] (USDS\_CHECKLIST.docx)
+[Link to the Digital Services Checklist] (https://github.com/booz-allen-agile-delivery/ads-final/wiki/U.S.-Digital-Services-Playbook-Evidence)
 
 ### 18F
 he 18F five key principles provide an imporant emphasis to Agile concepts aimed
