@@ -1,17 +1,22 @@
 <section class="landing" id="searchSplashScreen">
   <div class="main_logo_wrap col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1">
     <img src="../assets/label_craft_logo.png" align="middle" class="img-responsive logoTitle" alt="Responsive image">
+
     <h3>Crowds make drug labels more accurate</h3>
   </div>
   <div class="row">
     <br/>
+
     <div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1">
-      <p class='logo_subtext'><strong>{{totalEvents | number}}</strong> people have reported side effects for <strong>{{totalLabels | number}}</strong> drugs. Wow! That’s a lot.  New side effects are reported daily to the FDA, and aren’t on your label yet. Together we can help produce better labels, faster.</p>
+      <p class='logo_subtext'><strong>{{totalEvents | number}}</strong> people have reported side effects for <strong>{{totalLabels
+        | number}}</strong> drugs. Wow! That’s a lot. New side effects are reported daily to the FDA, and aren’t on your
+        label yet. Together we can help produce better labels, faster.</p>
     </div>
   </div>
   <div class="row">
     <div class="steps col-md-4 col-md-offset-4 col-xs-10 col-xs-offset-1">
       <h3>Help us in <strong>three</strong> simple steps...</h3>
+
       <div class='step_block-wrap col-md-4 col-xs-12'>
         <div class='step_block-inner'>
           <div class='step-circle'><p>step <strong>1</strong></p></div>
@@ -32,6 +37,9 @@
       </div>
     </div>
   </div>
+
+
+
   <div class="row">
     <form>
       <div class="search_block input-group input-group-xs col-md-4 col-md-offset-4 col-xs-10 col-xs-offset-1">
@@ -61,25 +69,15 @@
 </div>
 </div>
 
-  </h3>
 
-<!-- REMOVED FOR DEMO
-
-   <div class="row space-60">
-    <div class="trending col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
-      <ul style="width: 70%;margin: auto;">
-        <li>Trending:</li>
-        <li>Viagra</li>
-        <li>Adderall</li>
-        <li>Xanax</li>
-        <li>Lipitor</li>
-        <li>Synthroid</li>
-        <li>Crestor</li>
-        <li>Nexium</li>
-        <li>Dovian</li>
-      </ul>
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4 col-xs-10 col-xs-offset-1">
+      <div class="alert alert-danger" role="alert" ng-repeat="alert in alerts">
+        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+        {{alert}}
+      </div>
     </div>
-  </div> -->
+  </div>
 </section>
 <div id="events-reports" ng-show="selectedDrug" class="features">
   <br>
@@ -120,3 +118,4 @@
   </div>
 </div> -->
 </div>
+

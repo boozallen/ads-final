@@ -8,7 +8,7 @@
  * Controller of the gapFront
  */
  angular.module('gapFront')
- .controller('ChartCtrl', function ($scope, $filter, IntegrationService, APIService, DrugService) {
+ .controller('ChartCtrl', function ($scope, $filter, IntegrationService, APIService, DrugService, $rootScope, $location, $anchorScroll) {
   $scope.awesomeThings = [
   'HTML5 Boilerplate',
   'AngularJS',
@@ -27,13 +27,13 @@
     $scope.endDate = 20500101;
     $scope.dateChartData = [];
     $scope.toggleCharts = true;
-    $scope.alerts = [];
+    $scope.alerts = ['alert'];
 
     $scope.least=0;
     $scope.greatest=100;
   };
 
-    var initChart = function(params){
+    var initChart = function(){
       $scope.initializeVariables();
       $scope.selectedDrug = DrugService.getSelectedDrug();
       APIService.getDrugsApi().get($scope.selectedDrug.brand_name).then(function(resp){
@@ -42,9 +42,14 @@
         console.log($scope.drugEffects);
         $scope.setChartData();
         $scope.searchDrugEvents();
+        $scope.alerts = [];
+
+        $("#headerDiv").css('display', 'block');
+        $location.hash('events-reports');
+        $anchorScroll();
       }, function(error){
         $scope.alerts.push(error.data.message);
-        DrugService.setSelectedDrug();
+        $rootScope.$broadcast('scanner-started', { message: error.data.message });
       });
     };
 

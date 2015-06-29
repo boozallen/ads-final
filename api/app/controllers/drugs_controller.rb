@@ -4,7 +4,7 @@ class DrugsController < ApplicationController
 
   def show
     if drug.nil?
-      render json: { message: "No drug information found for #{params[:id]}. Try searching for another drug above." }, status: 404
+      render json: { message: "Not enough information found for #{params[:id]}. Try searching for another drug above." }, status: 404
     else
       yes_answers = Effect.where(drug_name: params[:id], response: true).group(:name).count
       no_answers = Effect.where(drug_name: params[:id], response: false).group(:name).count
