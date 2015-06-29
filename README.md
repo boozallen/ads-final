@@ -71,22 +71,22 @@ to promote the success of delivery in programs, especially those for the Govt.
 5.  Work in the open
 
  
+Our process applied by our Agile team demonstated each of these principles.  
 
-Our process applied by our Agile team demonstated each of these principles.  Our
-ux team constructed user personas and conducted numerous usability tests to
-ensure the product addressed user needs.  We assigned a product owner to assess
-the value of each feature.  Our DevOps team deployed the software to servers
-continously and automatically.  Our Delivery Manager tracked blockers and worked
-to resolve them.  Finally, the efforts of all our team members can be seen
-clearly in our GitHub repository and the artifacts uploaded to the corresponding
-wiki.
+1. Our User Experience team constructed user personas and conducted numerous usability tests to ensure the product addressed user needs.  
 
-  
+2. Our DevOps team deployed the software to servers continously and automatically.  Our Agile team followed four hour sprints and daily releases.
+ 
+3. Our Delivery Manager tracked blockers according to Agile best practices and worked to quickly resolve them.
+
+4. We also assigned a product owner to assess the value of each feature.   This feedback is essential to an important part of Agile process.
+
+5. Finally, the efforts of all our team members can be seen clearly in our GitHub repository and the artifacts uploaded to the corresponding wiki.  We used open source technology.
+
 For a more detailed mapping of our process to the 18F tenets, see the artifact
 below:
 
 [Link to 18F Tenets] (18F\_TENETS.md)
-
 
 
 ### Architecture/Tools
