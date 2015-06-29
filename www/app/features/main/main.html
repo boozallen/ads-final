@@ -1,53 +1,25 @@
-<section class="landing" id="searchSplashScreen">
+<section class="container-fluid landing" id="searchSplashScreen">
   <div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1">
     <img src="../assets/label_craft_logo.png" align="middle" class="img-responsive logoTitle" alt="Responsive image">
   </div>
   <div class="row">
     <br/>
 
-<!--     <div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1">
-      <p class="appTitle" align="center">Improving the accuracy of drug labels</p>
-      <p align="center">There’s a lot of raw label data. However, today it’s difficult to easily identify the list of adverse effects. In addition, new adverse are reported daily but it takes a long time to update labels. You can help us identify adverse effects and shorten the time it takes to update labels.</p>
-    </div> -->
-
-<!-- OLD TEXT -->
-<!--     <div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1">
-      <p class="appTitle" align="center"><strong>{{totalEvents}}</strong> people have reported side effects for <strong>{{totalLabels}}</strong> medications <br> Help us make sure these side effects reach your label.</p>
-    </div> -->
-
     <div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1">
       <p class="appTitle" align="center">Improving the accuracy of drug labels</p>
       <br>
+
       <p align="center">
         <strong>
-          {{totalEvents | number}} people have reported side effects for {{totalLabels | number}} medications. Wow! That’s a lot.  New side effects are reported to the FDA daily, and aren’t on your label yet. Help fix label text – and shorten time to up-to-date labels.
+          {{totalEvents | number}} people have reported side effects for {{totalLabels | number}} medications. Wow!
+          That’s a lot. New side effects are reported to the FDA daily, and aren’t on your label yet. Help fix label
+          text – and shorten time to up-to-date labels.
         </strong>
       </p>
     </div>
   </div>
-  <div class="row">
-    <form>
-      <div class="search_block input-group input-group-xs col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1 spacer-2x">
-        <input type="text" class="form-control searchInput" ng-model="searchText" id="searchValue"
-               placeholder="Search for a Drug..." ng-change="searchDrugs()">
 
-        <div class="input-group-btn">
-          <button class="btn searchButton searchInput" type="button" ng-click="setSelectedDrug(drugs[0])"><i
-            class="fa fa-search searchIcon"></i></button>
-        </div>
-
-      </div>
-      <div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1" ng-show="drugs">
-        <div ng-class="!drugs.length==0?'dropdown clearfix open':'dropdown clearfix'">
-          <ul class="dropdown-menu" style="width: 100%">
-            <li ng-repeat="drug in drugs track by $index">
-              <a ng-click="setSelectedDrug(drug)">{{drug.brand_name}}</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </form>
-  </div>
+  <drug-search on-selected="vm.setSelectedDrug(drug)"></drug-search>
 
   <h3 align="center" class="data-source" style="margin: 60px 0px;">Data Source: <a href="https://open.fda.gov/">open.fda.org</a>
   </h3>
@@ -68,15 +40,3 @@
     </div>
   </div>
 </section>
-<div id="events-reports" ng-show="selectedDrug" class="features">
-  <br><br>
-    <br>
-    <div class="col-md-12 full-row blue-bg cf">
-      <div class="med-info col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
-      <h2>Manufacturer Details for: {{selectedDrug.substance_name}}&nbsp;({{selectedDrug.brand_name}})
-      <button type="button" class="btn btn-lg btn-primary" data-animation="am-fade-and-slide-top" data-template="drugInfo.tpl.html" bs-modal="modal">+
-      </button>
-      </h2>
-    </div>
-  </div>
-</div>

@@ -1,0 +1,20 @@
+<div class="col-sm-6 col-sm-offset-3">
+  <div class="input-group">
+    <input type="text" class="drug-search__input" ng-model="vm.drug" placeholder="Search for a Drug..."
+           ng-change="vm.search()">
+
+    <div class="input-group-btn">
+      <button class="drug-search__button" ng-click="vm.search()"><i class="fa fa-search"></i></button>
+    </div>
+  </div>
+
+  <div ng-show="vm.options.length" class="col-xs-12">
+    <div class="dropdown clearfix" ng-class="{'open': vm.options.length}">
+      <ul class="drug-search__list">
+        <li ng-repeat="drug in vm.options track by $index">
+          <a ng-click="vm.selectedDrug(drug)">{{ drug.brand_name }}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

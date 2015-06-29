@@ -1,28 +1,30 @@
-'use strict';
+(function() {
+  'use strict';
 
-/**
- * @ngdoc function
- * @name gapFront.servece:IntegrationService
- * @description
- * # IntegrationService
- * Angular Service providing access to the FDA Drug APIs
- */
-angular.module('gapFront')
-  .service('IntegrationService', function () {
+  /**
+   * @ngdoc function
+   * @name gapFront.servece:IntegrationService
+   * @description
+   * # IntegrationService
+   * Angular Service providing access to the FDA Drug APIs
+   */
+  angular.module('gapFront')
+    .service('IntegrationService', IntegrationService);
+
+  function IntegrationService() {
     var integrationMethods = {};
 
-    function registerIntegrationMethod(name, func){
+    return {
+      registerIntegrationMethod: registerIntegrationMethod,
+      callIntegrationMethod: callIntegrationMethod
+    };
+
+    function registerIntegrationMethod(name, func) {
       integrationMethods[name] = func;
     }
 
-    function callIntegrationMethod(name,params){
-      var func = integrationMethods[name];
-      func(params);
+    function callIntegrationMethod(name, params) {
+      integrationMethods[name](params);
     }
-
-    return {
-      registerIntegrationMethod:registerIntegrationMethod,
-      callIntegrationMethod:callIntegrationMethod
-    };
-
-  });
+  }
+})();

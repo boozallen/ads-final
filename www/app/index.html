@@ -21,23 +21,14 @@
   <!-- endbuild -->
 </head>
 <body ng-app="gapFront" id="page-top">
-
 <div>
-  <div ng-view></div>
-  <div>
-    <div id="headerDiv" ng-include src="'features/header/header.html'" style="display:none;"></div>
-    <div ng-controller="ChartCtrl" ng-include src="'features/chart/chart.html'" ng-show="selectedDrug"></div>
-    <div ng-controller="LabelEffectsCtrl" ng-include src="'features/labelEffects/labelEffects.html'"
-         ng-show="selectedDrug"></div>
-    <!--<div ng-include src="'features/footer/footer.html'"></div>-->
-  </div>
-
+  <div ui-view></div>
 </div>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
 <script>
-  !function (A, n, g, u, l, a, r) {
-    A.GoogleAnalyticsObject = l, A[l] = A[l] || function () {
+  !function(A, n, g, u, l, a, r) {
+    A.GoogleAnalyticsObject = l, A[l] = A[l] || function() {
         (A[l].q = A[l].q || []).push(arguments)
       }, A[l].l = +new Date, a = n.createElement(g),
       r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
@@ -54,9 +45,9 @@
 <script src="bower_components/angular-animate/angular-animate.js"></script>
 <script src="bower_components/angular-cookies/angular-cookies.js"></script>
 <script src="bower_components/angular-resource/angular-resource.js"></script>
-<script src="bower_components/angular-route/angular-route.js"></script>
 <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
 <script src="bower_components/angular-touch/angular-touch.js"></script>
+<script src="bower_components/angular-aria/angular-aria.js"></script>
 <script src="bower_components/ui-router/release/angular-ui-router.js"></script>
 <script src="bower_components/d3/d3.js"></script>
 <script src="bower_components/lodash/lodash.js"></script>
@@ -68,6 +59,7 @@
 <script src="bower_components/angular-bootstrap-checkbox/angular-bootstrap-checkbox.js"></script>
 <script src="bower_components/angular-rangeslider/angular.rangeSlider.js"></script>
 <script src="bower_components/jquery-highlight/jquery.highlight.js"></script>
+<script src="bower_components/momentjs/moment.js"></script>
 <script src="bower_components/jasmine/lib/jasmine-core/jasmine.js"></script>
 <script src="bower_components/jasmine-jquery/lib/jasmine-jquery.js"></script>
 <!-- endbower -->
@@ -87,9 +79,11 @@
 <script src="features/main/main.js"></script>
 <script src="features/header/header.js"></script>
 <script src="features/about/about.js"></script>
-<script src="features/chart/chart.js"></script>
 <script src="features/chart/stacked.js"></script>
-<script src="features/labelEffects/labelEffects.js"></script>
+<script src="features/search/drug-search.directive.js"></script>
+<script src="features/charts/charts.directive.js"></script>
+<script src="features/labelEffects/label-effects.directive.js"></script>
+<script src="features/drugInfo/drug-info.controller.js"></script>
 <script src="features/leaderBoard/leaderBoard.js"></script>
 
 <script src="constants.js"></script>

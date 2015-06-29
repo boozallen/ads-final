@@ -12,7 +12,7 @@ body {
   color: #676a6c;
   font-family: 'Open Sans', helvetica, arial, sans-serif;
 }
-#content, .container-fluid, .span9
+#content, .span9
 {
     border: 1px solid #000;
     overflow-y:auto;
@@ -86,7 +86,7 @@ h3 {
 .navbar-default.navbar-scroll {
   background-color: #000;
   border-color: none;
-  padding: 15px 0;
+  padding: 0;
 }
 .navbar-default {
   background-color: transparent;
@@ -117,10 +117,10 @@ h3 {
   background: transparent;
   color: #fff;
 }
-.navbar-default.navbar-scroll .navbar-nav > .active > a:focus {
-  background: transparent;
-  color: inherit;
-}
+/*.navbar-default.navbar-scroll .navbar-nav > .active > a:focus {*/
+  /*background: transparent;*/
+  /*color: inherit;*/
+/*}*/
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
   background: #17a185;
@@ -137,24 +137,25 @@ h3 {
   font-weight: 700;
   transition: all 0.3s ease-in-out 0s;
 }
-*/.navbar-scroll.navbar-default .nav li a {
-  color: #676a6c;
-}
-.navbar-scroll.navbar-default .nav li a:hover {
-  color: #fff;
-}
-.navbar-wrapper .navbar.navbar-scroll {
-  padding-top: 0;
-  padding-bottom: 5px;
-  border-bottom: 1px solid #e7eaec;
-  border-radius: 0;
-}
+*/
+/*.navbar-scroll.navbar-default .nav li a {*/
+  /*color: #676a6c;*/
+/*}*/
+/*.navbar-scroll.navbar-default .nav li a:hover {*/
+  /*color: #fff;*/
+/*}*/
+/*.navbar-wrapper .navbar.navbar-scroll {*/
+  /*padding-top: 0;*/
+  /*padding-bottom: 5px;*/
+  /*border-bottom: 1px solid #e7eaec;*/
+  /*border-radius: 0;*/
+/*}*/
 .nav > li > a {
   padding: 25px 10px 15px 10px;
 }
-.navbar-scroll .navbar-nav > li > a {
-  padding: 20px 10px;
-}
+/*.navbar-scroll .navbar-nav > li > a {*/
+  /*padding: 20px 10px;*/
+/*}*/
 .navbar.navbar-scroll .navbar-brand {
   margin-top: 15px;
   border-radius: 5px;

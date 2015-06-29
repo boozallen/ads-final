@@ -502,5 +502,216 @@
       "show_in_doc": 1,
       "recorded": true
     }
+  ],
+  "effects#create": [
+    {
+      "verb": "POST",
+      "path": "/api/v1/effects",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+        "drug_name": "Advil",
+        "name": "pain",
+        "response": true
+      },
+      "response_data": {
+        "id": 1,
+        "name": null,
+        "drug_id": null,
+        "created_at": "2015-06-28T22:10:19.065Z",
+        "updated_at": "2015-06-28T22:10:19.065Z",
+        "response": true,
+        "drug_name": "Advil"
+      },
+      "code": "200",
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "effects#show": [
+    {
+      "verb": "GET",
+      "path": "/api/v1/effects/Advil",
+      "versions": [
+        "1.0"
+      ],
+      "query": "",
+      "request_data": null,
+      "response_data": {
+        "drug": {
+          "set_id": "1f01c10a-9434-91a4-2ee4-352315a6b610",
+          "indications_and_usage": [
+            "USES temporarily relieves minor aches and pains due to: headache toothache backache menstrual cramps the common cold muscular aches minor pain of arthritis temporarily reduces fever"
+          ],
+          "stop_use": [
+            "Stop use and ask a doctor if you experience any of the following signs of stomach bleeding: feel faint vomit blood have bloody or black stools have stomach pain that does not get better pain gets worse or lasts more than 10 days fever gets worse or lasts more than 3 days redness or swelling is present in the painful area any new symptoms appear"
+          ],
+          "keep_out_of_reach_of_children": [
+            "Keep out of reach of children. In case of overdose, get medical help or contact a Poison Control Center right away."
+          ],
+          "ask_doctor": [
+            "Ask a doctor before use if stomach bleeding warning applies to you you have problems or serious side effects from taking pain relievers or fever reducers you have a history of stomach problems, such as heartburn you have high blood pressure, heart disease, liver cirrhosis, kidney disease, or asthma you are taking a diuretic"
+          ],
+          "questions": [
+            "QUESTIONS OR COMMENTS? call toll free 1-800-88-ADVIL"
+          ],
+          "dosage_and_administration": [
+            "DIRECTIONS do not take more than directed the smallest effective dose should be used adults and children 12 years and over: take 1 capsule every 4 to 6 hours while symptoms persist if pain or fever does not respond to 1 capsule, 2 capsules may be used do not exceed 6 capsules in 24 hours, unless directed by a doctor children under 12 years: ask a doctor"
+          ],
+          "purpose": [
+            "PURPOSE Pain reliever/Fever reducer"
+          ],
+          "ask_doctor_or_pharmacist": [
+            "Ask a doctor or pharmacist before use if you are under a doctor's care for any serious condition taking aspirin for heart attack or stroke, because ibuprofen may decrease this benefit of aspirin taking any other drug"
+          ],
+          "do_not_use": [
+            "Do not use if you have ever had an allergic reaction to any other pain reliever/fever reducer right before or after heart surgery"
+          ],
+          "version": "9",
+          "id": "e7e97dde-915b-40c3-ba9c-f14846f65e3a",
+          "package_label_principal_display_panel": [
+            "PRINCIPAL DISPLAY PANEL - 80 Capsule Bottle Label Advil® LIQUI-GELS ® Solubilized Ibuprofen Capsules, 200 mg Pain Reliever/Fever Reducer (NSAID) 80 Liquid Filled Capsules Liquid Filled Capsules READ AND KEEP CARTON FOR COMPLETE WARNINGS AND INFORMATION PRINCIPAL DISPLAY PANEL - 80 Capsule Bottle Label",
+            "PRODUCT PACKAGING The product packaging shown below represents a sample of that currently in use. Additional packaging may also be available. Advil Liqui-Gels Solubilized Ibuprofen Capsules, 200 mg Pain Reliever/Fever Reducer (NSAID) 80 Liqui-Gels* *Liquid Filled Capsules Liquid Filled Capsules Distributed by: Pfizer Madison, NJ 07940 USA ©2011 Pfizer Inc. LIQUI-GELS is a trademark or registered trademark of Catalent Pharma Solutions. Advil Liqui-Gels Packaging"
+          ],
+          "pregnancy_or_breast_feeding": [
+            "If pregnant or breast-feeding, ask a health professional before use. It is especially important not to use ibuprofen during the last 3 months of pregnancy unless definitely directed to do so by a doctor because it may cause problems in the unborn child or complications during delivery."
+          ],
+          "active_ingredient": [
+            "ACTIVE INGREDIENT (IN EACH CAPSULE) Solubilized ibuprofen equal to 200 mg ibuprofen (NSAID)* (present as the free acid and potassium salt) *nonsteroidal anti-inflammatory drug"
+          ],
+          "inactive_ingredient": [
+            "INACTIVE INGREDIENTS FD&C green no. 3, gelatin, light mineral oil, pharmaceutical ink, polyethylene glycol, potassium hydroxide, purified water, sorbitan, sorbitol"
+          ],
+          "@epoch": 1432336729.773203,
+          "effective_time": "20150511",
+          "openfda": {
+            "unii": [
+              "WK2XYI10QM"
+            ],
+            "spl_id": [
+              "fa7252d0-96a9-46ce-9912-1d6782aab8f0"
+            ],
+            "product_ndc": [
+              "0573-0169"
+            ],
+            "substance_name": [
+              "IBUPROFEN"
+            ],
+            "rxcui": [
+              "731533",
+              "310964"
+            ],
+            "spl_set_id": [
+              "1f01c10a-9434-91a4-2ee4-352315a6b610"
+            ],
+            "product_type": [
+              "HUMAN OTC DRUG"
+            ],
+            "pharm_class_cs": [
+              "Nonsteroidal Anti-inflammatory Compounds [Chemical/Ingredient]"
+            ],
+            "upc": [
+              "0305730169400"
+            ],
+            "manufacturer_name": [
+              "Pfizer Consumer Healthcare"
+            ],
+            "brand_name": [
+              "Advil"
+            ],
+            "is_original_packager": [
+              true
+            ],
+            "route": [
+              "ORAL"
+            ],
+            "nui": [
+              "N0000000160",
+              "N0000175722",
+              "N0000175721"
+            ],
+            "pharm_class_moa": [
+              "Cyclooxygenase Inhibitors [MoA]"
+            ],
+            "package_ndc": [
+              "0573-0169-13",
+              "0573-0169-49",
+              "0573-0169-31",
+              "0573-0169-89",
+              "0573-0169-43",
+              "0573-0169-86",
+              "0573-0169-52",
+              "0573-0169-40",
+              "0573-0169-20",
+              "0573-0169-22",
+              "0573-0169-30",
+              "0573-0169-17",
+              "0573-0169-11",
+              "0573-0169-51",
+              "0573-0169-08",
+              "0573-0169-19",
+              "0573-0169-02"
+            ],
+            "pharm_class_epc": [
+              "Nonsteroidal Anti-inflammatory Drug [EPC]"
+            ],
+            "generic_name": [
+              "IBUPROFEN"
+            ],
+            "application_number": [
+              "NDA020402"
+            ]
+          },
+          "spl_product_data_elements": [
+            "Advil ibuprofen IBUPROFEN IBUPROFEN FD&C GREEN NO. 3 GELATIN LIGHT MINERAL OIL POLYETHYLENE GLYCOLS POTASSIUM HYDROXIDE SORBITAN SORBITOL WATER Transparent green to blue green oblong softgel Advil Advil ibuprofen IBUPROFEN IBUPROFEN FD&C GREEN NO. 3 GELATIN LIGHT MINERAL OIL POLYETHYLENE GLYCOLS POTASSIUM HYDROXIDE WATER SORBITAN SORBITOL Transparent green to blue green oblong softgel Advil"
+          ],
+          "warnings": [
+            "WARNINGS Allergy alert: Ibuprofen may cause a severe allergic reaction, especially in people allergic to aspirin. Symptoms may include: hives facial swelling asthma (wheezing) shock skin reddening rash blisters If an allergic reaction occurs, stop use and seek medical help right away. Stomach bleeding warning: This product contains an NSAID, which may cause severe stomach bleeding. The chance is higher if you are age 60 or older have had stomach ulcers or bleeding problems take a blood thinning (anticoagulant) or steroid drug take other drugs containing prescription or nonprescription NSAIDs [aspirin, ibuprofen, naproxen, or others] have 3 or more alcoholic drinks every day while using this product take more or for a longer time than directed Do not use if you have ever had an allergic reaction to any other pain reliever/fever reducer right before or after heart surgery Ask a doctor before use if stomach bleeding warning applies to you you have problems or serious side effects from taking pain relievers or fever reducers you have a history of stomach problems, such as heartburn you have high blood pressure, heart disease, liver cirrhosis, kidney disease, or asthma you are taking a diuretic Ask a doctor or pharmacist before use if you are under a doctor's care for any serious condition taking aspirin for heart attack or stroke, because ibuprofen may decrease this benefit of aspirin taking any other drug When using this product take with food or milk if stomach upset occurs the risk of heart attack or stroke may increase if you use more than directed or for longer than directed Stop use and ask a doctor if you experience any of the following signs of stomach bleeding: feel faint vomit blood have bloody or black stools have stomach pain that does not get better pain gets worse or lasts more than 10 days fever gets worse or lasts more than 3 days redness or swelling is present in the painful area any new symptoms appear If pregnant or breast-feeding, ask a health professional before use. It is especially important not to use ibuprofen during the last 3 months of pregnancy unless definitely directed to do so by a doctor because it may cause problems in the unborn child or complications during delivery. Keep out of reach of children. In case of overdose, get medical help or contact a Poison Control Center right away."
+          ],
+          "when_using": [
+            "When using this product take with food or milk if stomach upset occurs the risk of heart attack or stroke may increase if you use more than directed or for longer than directed"
+          ],
+          "spl_unclassified_section": [
+            "DRUG FACTS",
+            "OTHER INFORMATION each capsule contains: potassium 20 mg read all warnings and directions before use. Keep carton. store at 20-25°C (68-77°F) avoid excessive heat above 40°C (104°F)"
+          ],
+          "effects": [
+            "pain",
+            "rash",
+            "overdose",
+            "swelling",
+            "blister",
+            "asthma",
+            "wheezing",
+            "ulcer",
+            "shock",
+            "surgery",
+            "pregnancy"
+          ]
+        },
+        "effects": {
+          "answers": {
+          },
+          "effects": [
+            "pain",
+            "rash",
+            "overdose",
+            "swelling",
+            "blister",
+            "asthma",
+            "wheezing",
+            "ulcer",
+            "shock",
+            "surgery",
+            "pregnancy"
+          ]
+        }
+      },
+      "code": "200",
+      "show_in_doc": 1,
+      "recorded": true
+    }
   ]
 }

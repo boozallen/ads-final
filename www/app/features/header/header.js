@@ -8,9 +8,6 @@
  * Controller of the gapFront
  */
 angular.module('gapFront')
-  .controller('HeaderCtrl', function ($scope, $location) {
-
+  .controller('HeaderCtrl', function($scope, $location) {
     $scope.about = $location.path();
-    console.log($location.path());
-
   });
