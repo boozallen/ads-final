@@ -385,9 +385,10 @@ h3 {
 // NEED TO ADD SHOW MORE BTN
 // .med-info {}
 .med-info h2{
-  color: #1d86c4;
-  font: normal normal 20px/1.5 'Helvetica Neue', Helvetica, sans-serif;
-  font-size: 20px;
+  color: #6d6f71;
+  font: normal 200 24px/1.5 'Helvetica Neue', Helvetica, sans-serif;
+  padding: 0 0 10px 0;
+  border-bottom: 1px solid #dcdddf;
 }
 
 .med-info h4 {
@@ -396,9 +397,14 @@ h3 {
   font-size: 20px;
 }
 
+.med-info h5 {
+  color: #676a6c;
+  font: normal normal 18px/1.5 'Helvetica Neue', Helvetica, sans-serif;
+}
+
 .med-info p{
-  color: #666;
-  font-size: 12px;
+  color: #6d6f71;
+  font-size: 16px;
   line-height: 1.7em;
 }
 
