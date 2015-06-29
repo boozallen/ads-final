@@ -10,94 +10,129 @@ Prototype Submission URL: http://52.0.46.33:9000/
 
 [![Build Status](http://52.0.92.86:8080/buildStatus/icon?job=Master_FrontEnd_Builder)](http://52.0.92.86:8080/view/Master/job/Master_FrontEnd_Builder/)[![Build Status](http://52.0.92.86:8080/buildStatus/icon?job=Master_API_Builder)](http://52.0.92.86:8080/view/Master/job/Master_API_Builder/)Master Branch Server: http://52.0.46.33:9000/ or www.crowdmed.io
 
-Label Craft is a crowd-sourcing platform for cataloging the adverse reactions found on drug labels in order to determine whether manufacturers have accurately reported the adverse reactions compared to what is reported by end users.  Data from the platform is searchable on the site by drug and also is accessible via API for integration with other applications.   The platform provides the foundation for additional improvements in FDA data quality required to gain the most value from the data.
+Label Craft is a crowd-sourcing platform for cataloging the adverse reactions
+found on drug labels. This information on labels must be converted into
+structured data to be able to identify whether drug labels have accurately
+captured the adverse effects that end users are experiencing.
 
-Our approach on this challenge and the resulting outputs showcase the value that Booz Allen brings to the 18F BPA including the following:
+Data collected by the platform is displayed on the site for each drug and also
+is made accessible via a public API for integration with third-party
+applications. The Label Craft platform provides the foundation for additional
+improvements to the quality of FDA data through crowd-sourcing.
 
-*	Time-tested Agile Delivery Process – Our firm’s extensive experience in successfully performing Agile Delivery for small and large IT programs results [reliable and proficient application of Agile practices].
-*	A Culture of Innovation - We applied our SIG (Culture of Innovation, Importance for the business raised to enterprise level w/u the company, growth platform going forward, bleeding edge of stuff.).
-*	Experienced Staff – Booz Allen was able to quickly assemble a high-skilled, cross-functional team in order to support the challenge.  We were able to tap a set of domain experts at the firm with multiple years of experience in FDA and even the FDA data set.   We focus on (Domain Expertise, Hot Skills / Bench, Building Skills) …
+Our approach taken on this challenge and the resulting outputs showcase the
+value that Booz Allen brings to the 18F BPA including the following:
+
+-   Proven Agile Delivery – Our firm’s extensive experience in the successful
+    delivery of both small and large Agile programs [ensures that we will be
+    successful in the BPA.]
+
+-   A Culture of Innovation - Booz Allen's dedication to creating a culture of
+    innovation resulted in formation of the Strategic Innovation Group (SIG)
+    whose mission it is to ensure there is focus on innovation in all programs.
+
+-   Experienced Staff – Booz Allen was able to quickly assemble a
+    highly-skilled, cross-functional team in order to support the ADS challenge.
+    We were also able to tap into a set of domain experts across the firm each
+    of whom had multiple years of experience in FDA.
 
 ## Understanding:
 
-### RFQ –
-We understand 18f’s goal for the Agile BPA to procure digital services and agile methodologies through our ability to provide the appropriate resources to the execution of a sample prototype.
+### RFQ
 
-Our prototype is a demonstration of our process and capabilities.
+We understand 18f’s goal to select a candidate to the Agile BPA to deliver
+digital services and agile methodologies based on their ability to provide
+appropriate resources demonstrated through a sample prototype.  We believe our
+prototype is an exceptional demonstration of our ability to provide these
+resources to the Agile BPA.
 
 ### Digital Services Playbook
-We believe in the US Digital Services playbook as an effective set of guidelines for delivery of digital programs.  The playbook includes a set of checklists and questions that should be answered during the execution of a program..  Our responses to the checklist are contained in the artifact linked below:
 
-[Link to the Digital Services Checklist] (USDS_CHECKLIST.docx)
+The US Digital Services playbook provides an invaluable set of guidelines for
+the delivery of digital programs. The USDS playbook includes a set of checklists
+and questions we believe are intended to be answered during the execution of any
+digital program.  Our responses to the checklist are contained in the artifact
+linked below:
+
+[Link to the Digital Services Checklist] (USDS\_CHECKLIST.docx)
 
 ### 18F
-We understand the 18F five key principles guide.
+he 18F five key principles provide an imporant emphasis to Agile concepts aimed
+to promote the success of delivery in programs, especially those for the Govt.
 
-1.	Put the needs of users first
-2.	Release early, iteratively, and often 
-3.	Don’t slow down delivery
-4.	Only do it if it adds value
-5.	Work in the open
+1.  Put the needs of users first
 
-A description of how understanding of 18F tenets is contained in the following artifact:
+2.  Release early, iteratively, and often
 
-[Link to 18F Tenets] (18F_TENETS.md)
+3.  Don’t slow down delivery
 
-{Some example Text: We applied a user-centric approach to our Agile process starting with visioning session, selecting a concept, and building personas.   We released often, using continuous builds/deployment with multiple releases to production following GitFlow.   We moved quickly, pivoting when needed and eradicating blockers rapidly.  We analyzed the value of each decision, and consulted the product owner the deficiencies in the FDA data and problems that come from that. All code developed in GitHub.}
-H2 – Section 3 - Approach:
-H3 - Agile Process
-The Agile Process we applied for this challenge was tailored for the five day process.   Our applied Scrum in the form of 4-hour sprints with daily releases.
+4.  Only do it if it adds value
 
-•	HCI – 
-•	Agile / Lean - 
-•	Dev Ops – 
+5.  Work in the open
 
-Link
+ 
+
+Our process applied by our Agile team demonstated each of these principles.  Our
+ux team constructed user personas and conducted numerous usability tests to
+ensure the product addressed user needs.  We assigned a product owner to assess
+the value of each feature.  Our DevOps team deployed the software to servers
+continously and automatically.  Our Delivery Manager tracked blockers and worked
+to resolve them.  Finally, the efforts of all our team members can be seen
+clearly in our GitHub repository and the artifacts uploaded to the corresponding
+wiki.
+
+  
+For a more detailed mapping of our process to the 18F tenets, see the artifact
+below:
+
+[Link to 18F Tenets] (18F\_TENETS.md)
+
+
 
 ### Architecture/Tools
 
+Instructions to build the software are provided in the artifact below:
+
 [Build Instructions] (Link to INSTALL.md)
 
-Our architecture consist of Modern Technologies and best practices.  Our selection of technologies was based on the following value propositions:
-*	Support for multiple cloud environments through Docker 
-*	Technologies fit for task (Ruby for backend, Node.js)
-*	Production Best Practices - Configuration Management using GitFlow
-*	Security – Sophos Firewall
+ 
 
-Technologies Employed:
+Our architecture consists of a modern technology stack that reflect current best
+practices for web application development.  The selection of technologies was
+driven by the following value propositions:
+
+-   Support for multiple cloud environments through Docker and Docker Machine
+
+-   Technologies appropriate for task (Ruby for backend, Angular for Front-End
+    Single-Page-App (SPA))
+
+-   DevOps Best Practices - Configuration Management using GitFlow
+
+-   Security – Sophos Firewall, AWS VPC and Security Groups
+
 
 ![Application Stack](https://cloud.githubusercontent.com/assets/8406690/8394816/b3587f9a-1d17-11e5-9292-16c2fd68e51b.png)
 
-*	DevOps:
-  *	Docker Containers with Machine and Compose.
-  *	Continuous Integration / Deployment using Jenkins
-  *	Monitoring: cAdvisor, PerfMon
-  *	Load Testing: Bees with Machine Guns
-  *	Security Firewall: Sophos
-  *	IaaS: AWS
-*	Backend:
-  *	Ruby / Rails
-  *	Security: Brakeman
-  *	RuboCop
-  *	Rspec
-*	Front-End:
-  *	Node.JS
-  *	AngularJS
-  *	Karma
+
+For more information on our architecture, see the artifact below:
+
+[Link to Architecture Image] (ARCHITECTURE\_DOCUMENTATION.MD)
 
 
-Open Source Usage:
 
-[Open Source License] (Link to OPEN_SOURCE_LICENSE.md)
+### Open Source Usage:
+
+ 
+
+[Open Source License] (Link to OPEN\_SOURCE\_LICENSE.md)
 
 All of the software that we used.
 
-
-
-
-[Link to Architecture Image] (ARCHITECTURE_DOCUMENTATION.MD)
+ 
 
 ### Evidence
-We met each of the attachment E criteria.  This and supporting evidence are linked here.
+
+We met each of the attachment E criteria. This and supporting evidence are
+linked here.
 
 [Link to Attachment E] (ATTACHMENT-E.xls)
