@@ -356,20 +356,20 @@
           dataClasses:[{
             from: 0,
             to: 0,
-            name: 'Reported and verified on label',
-            color: Highcharts.getOptions().colors[2]
+            name: 'Reported but not listed on label',
+            color: Highcharts.getOptions().colors[3]
           },
             {
               from: 1,
               to: 1,
-              name: 'Reported but described inaccurately on label',
-              color: Highcharts.getOptions().colors[3]
+              name: 'Reported but incorrectly described',
+              color: Highcharts.getOptions().colors[4]
             },
             {
               from: 2,
               to: 2,
-              name: 'Reported but not found on label',
-              color: Highcharts.getOptions().colors[4]
+              name: 'Reported and verified on label',
+              color: Highcharts.getOptions().colors[2]
 
             }]
 
