@@ -12,12 +12,15 @@ angular.module('gapFront')
     $scope.drugs = [];
 
     $scope.searchText = '';
+    $scope.searchFixed = '';
 
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
+
+
 
     var lastRoute = $route.current;
     $scope.$on('$locationChangeSuccess', function(event) {
@@ -32,17 +35,29 @@ angular.module('gapFront')
       DrugService.setSelectedDrug($scope.selectedDrug);
       IntegrationService.callIntegrationMethod('initChart',{});
       IntegrationService.callIntegrationMethod('initLabelEffects',{});
+      //$("#fixedSearch").css('display', 'block');
       $("#headerDiv").css('display', 'block');
+      var stickEl;
+      var $window = $(window),
+        stickEl = $('#searchFixed'),
+        elTop = stickEl.offset().top;
+
+      $window.scroll(function() {
+        stickEl.toggleClass('sticky', $window.scrollTop() > elTop);
+      });
       // $("#searchSplashScreen").remove();
       $location.hash('events-reports');
       $anchorScroll();
     };
 
     $scope.searchDrugs = function() {
-      var bla = $('#searchTextResultView').val();
+      console.log($scope.searchFixed);
+      var bla = $scope.searchFixed;
 
       if(bla){
+        console.log('second');
         $scope.drugs = [];
+        console.log('here');
         var text = bla;
       }
       else{

@@ -249,11 +249,21 @@
             reversed: true,
             useHTML: true,
             labelFormatter: function(){
-              return '<img src="../assets/chart_key.jpg"/>'}
+              console.log(this);
+              return "<tspan>" + this.name + "</tspan><br>"
+                + " Reported and verified on label: <span class='glyphicon glyphicon-ok-sign' style='color:#5bc0de; font-size: 17px;'></span><br>"
+                + " Reported but not listed on label: <span class='glyphicon glyphicon-exclamation-sign' style='color:#f8ac59; font-size: 17px;'></span><br>"
+                + " Reported but incorrectly described: <span class='glyphicon glyphicon-ban-circle' style='color:#ed5565; font-size: 17px;'></span>"
+            }
           },
           plotOptions: {
             series: {
               stacking: 'normal'
+            },
+            column: {
+              legendItemClick: function() {
+                return false;
+              }
             }
           },
           rangeSelector: {
