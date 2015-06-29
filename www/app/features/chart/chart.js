@@ -345,53 +345,43 @@
       }
 
       function createTreeChart(){
+          Highcharts.setOptions({
+            colors: ['#23b193', '#bde2d9', '#5bc0de', '#f8ac59', '#ed5565']
+          });
             $('#createTreeChart').highcharts({
               exporting: {
                 enabled: false
               },
         colorAxis: {
-            minColor: '#FFFFFF',
-            maxColor: Highcharts.getOptions().colors[0],
-            stops: [
-                [0, '#3060cf'],
-                [0.5, Highcharts.getOptions().colors[1]],
-                [0.9, Highcharts.getOptions().colors[0]]
-            ]
+          dataClasses:[{
+            from: 0,
+            to: 0,
+            name: 'Reported and verified on label',
+            color: Highcharts.getOptions().colors[2]
+          },
+            {
+              from: 1,
+              to: 1,
+              name: 'Reported but described inaccurately on label',
+              color: Highcharts.getOptions().colors[3]
+            },
+            {
+              from: 2,
+              to: 2,
+              name: 'Reported but not found on label',
+              color: Highcharts.getOptions().colors[4]
+
+            }]
+
         },
         series: [{
             type: "treemap",
             layoutAlgorithm: 'squarified',
             data: $scope.treeData
-            // [{
-            //     name: 'A',
-            //     value: 6,
-            //     colorValue: 1
-            // }, {
-            //     name: 'B',
-            //     value: 6,
-            //     colorValue: 2
-            // }, {
-            //     name: 'C',
-            //     value: 4,
-            //     colorValue: 3
-            // }, {
-            //     name: 'D',
-            //     value: 3,
-            //     colorValue: 4
-            // }, {
-            //     name: 'E',
-            //     value: 2,
-            //     colorValue: 5
-            // }, {
-            //     name: 'F',
-            //     value: 2,
-            //     colorValue: 6
-            // }, {
-            //     name: 'G',
-            //     value: 1,
-            //     colorValue: 7
-            // }]
         }],
+        legend: {
+          enabled: true
+        },
         title: {
             text: 'Highcharts Treemap'
         }
