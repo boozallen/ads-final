@@ -116,9 +116,7 @@ driven by the following value propositions:
 
 For more information on our architecture, see the artifact below:
 
-[Link to Architecture Image] (ARCHITECTURE\_DOCUMENTATION.MD)
-
-
+[Link to Architecture Image] (https://github.com/booz-allen-agile-delivery/ads-final/wiki/Architecture-Diagrams)
 
 ### Open Source Usage:
 
