@@ -40,6 +40,9 @@ module.exports = function(config) {
       'bower_components/jquery-highlight/jquery.highlight.js',
       'bower_components/jasmine/lib/jasmine-core/jasmine.js',
       'bower_components/jasmine-jquery/lib/jasmine-jquery.js',
+      'bower_components/highcharts-release/highcharts.js',
+      'bower_components/highcharts-release/highcharts-more.js',
+      'bower_components/highcharts-release/modules/exporting.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/**/*.js',
