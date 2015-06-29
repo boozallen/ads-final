@@ -89,10 +89,13 @@ input + .typeahead.ng-hide { display: block !important; visibility: hidden !impo
     line-height: 20px;
 }
 
-.appTitle {
+.main_logo_wrap {
+font-family: 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+.main_logo_wrap .appTitle {
   color: white;
   font-size: 22px;
-  font-family: 'Helvetica Neue', Helvetica, sans-serif;
   color: #ccc;
   font-weight: 300;
   border-top: 1px solid #454649;
@@ -100,15 +103,119 @@ input + .typeahead.ng-hide { display: block !important; visibility: hidden !impo
   margin: 30px 0 0;
 }
 
-.appTitle strong{
-font-weight: 700;
-color:#fff;
+.main_logo_wrap .logoTitle {
+  margin: 0 auto;
+  padding-top: 10%;
 }
 
-.logoTitle {
-  margin: 0 auto;
-  padding-top: 20%;
+.main_logo_wrap h3 {
+  color: #2cc6c7;
+  text-align: right;
+  font-style: italic;
+  font-size: 20px;
+  font-weight: 200;
+  margin: 0;
+  padding: 0;
 }
+
+@media (max-width: 500px) {
+  .main_logo_wrap h3 {
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+p.logo_subtext{
+  font-size:14px;
+  line-height: 24px;
+  text-align: justify;
+  color: #ccc;
+  padding: 20px 0;
+  margin: 20px 0;
+  border-top: 1px solid #393f42;
+  border-bottom: 1px solid #393f42;
+}
+
+p.logo_subtext strong {
+  color: #fff;
+}
+
+
+.steps{
+    padding: 0 !important;
+    margin-bottom: 20px;
+}
+
+.steps h3{
+  color: #fff;
+  font-size: 30px;
+  font-weight: 100;
+  text-align: center;
+  margin: 0 0 10px;
+
+}
+.steps h3 strong{
+  color: #f8ac59;
+}
+
+.steps .step_block_wrap{
+  padding-left:0;
+}
+
+.steps .step_block-inner{
+  background: rgba(255, 255, 255, 0.1);
+  text-align: center;
+  color: #fff;
+  min-height: 124px;
+  padding: 10px 0 0;
+}
+
+.steps .step_block-inner p{
+  color:#fff;
+  margin: 10px 4px;
+  font-size: 12px;
+}
+
+.steps .step_block-inner .step-circle{
+  background:#f8ac59;
+  border-radius: 60px;
+  -moz-border-radius: 60px;
+  -webkit-border-radius: 60px;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  color: #fff;
+  display: block;
+  margin: 0 auto;
+}
+
+.steps .step_block-inner .step-circle p{
+  margin: 0;
+  padding: 5px 0 0;
+  color: #fff;
+}
+
+.steps .step_block-inner .step-circle p strong{
+  display: block;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+@media (max-width: 970px) {
+  .steps .step_block-inner p.label-text{text-align: left; font-size: 18px; line-height:51px; margin:5px}
+  .steps .step_block-inner{min-height: 80px;}
+  .steps .step_block-inner .step-circle{float: left; margin: 0 20px;}
+}
+
+
+@media (max-width: 500px) {
+  .steps h3 {
+    font-size: 24px;
+    text-align: center;
+  }
+}
+
 
 .searchButton{
   background-color: #5bc0de;
@@ -149,8 +256,10 @@ section.landing {
   line-height: 26px;
 
 }
+
 .footer {
-  position: relative;
+  position: absolute;
+  bottom: 0;
   height: 60px;
   background-color:black;
 }
@@ -191,6 +300,11 @@ h3 {
   color: #6f6f6f;
 }
 
+.input-group[class*="col-"]{
+  padding-left:15px;
+  padding-right: 15px;
+}
+
 .search_block .btn {
   padding:12px 18px;
   font-size: 24px;
@@ -204,6 +318,16 @@ h3 {
   background: #1ab394;
   color: #fff;
   cursor: pointer;
+}
+
+.random_drug_link {
+  text-align: right;
+}
+.random_drug_link a{
+  color: #fff;
+  text-align: right;
+  font-size: 11px;
+  line-height: 25px;
 }
 
 .trending{
@@ -261,9 +385,10 @@ h3 {
 // NEED TO ADD SHOW MORE BTN
 // .med-info {}
 .med-info h2{
-  color: #1d86c4;
-  font: normal normal 20px/1.5 'Helvetica Neue', Helvetica, sans-serif;
-  font-size: 20px;
+  color: #6d6f71;
+  font: normal 200 24px/1.5 'Helvetica Neue', Helvetica, sans-serif;
+  padding: 0 0 10px 0;
+  border-bottom: 1px solid #dcdddf;
 }
 
 .med-info h4 {
@@ -272,9 +397,14 @@ h3 {
   font-size: 20px;
 }
 
+.med-info h5 {
+  color: #676a6c;
+  font: normal normal 18px/1.5 'Helvetica Neue', Helvetica, sans-serif;
+}
+
 .med-info p{
-  color: #666;
-  font-size: 12px;
+  color: #6d6f71;
+  font-size: 16px;
   line-height: 1.7em;
 }
 
@@ -304,8 +434,6 @@ h3 {
   color: #676a6c;
   font-size: 13px;
   line-height: 1.9em;
-
-
 }
 
 .label-wrap.confirm p{
@@ -345,7 +473,6 @@ h3 {
 .nav-pills li.no-btn a:hover{
   background-color: #ec4758;
 }
-
 
 .progress{
  background: #fff;
@@ -393,7 +520,6 @@ h3 {
 .numberCircle {
   border-radius: 50%;
   behavior: url(PIE.htc); /* remove if you don't care about IE8 */
-
   width: 115px;
   height: 115px;
   padding: 8px;
@@ -402,7 +528,6 @@ h3 {
   border: 2px solid #1A9BFC;
   color: #666;
   text-align: center;
-
   font: 32px Arial, sans-serif;
 }
 

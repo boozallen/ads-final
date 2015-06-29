@@ -26,10 +26,10 @@
   <div ng-view></div>
   <div>
     <div id="headerDiv" ng-include src="'features/header/header.html'" style="display:none;"></div>
-    <div ng-controller="ChartCtrl" ng-include src="'features/chart/chart.html'" ng-show="selectedDrug"></div>
+    <div ng-controller="ChartCtrl" ng-include src="'features/chart/chart.html'" ng-show="selectedDrug" id="events-reports"></div>
     <div ng-controller="LabelEffectsCtrl" ng-include src="'features/labelEffects/labelEffects.html'"
          ng-show="selectedDrug"></div>
-    <!--<div ng-include src="'features/footer/footer.html'"></div>-->
+    <!-- <div ng-include src="'features/footer/footer.html'"></div> -->
   </div>
 
 </div>
