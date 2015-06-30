@@ -10,7 +10,7 @@
 html, body {height: 100%;}
 body {
   color: #676a6c;
-  font-family: 'Open Sans', helvetica, arial, sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
 }
 #content, .container-fluid, .span9
 {
@@ -50,6 +50,7 @@ h3 {
   font: normal normal 14px/1.5 'Helvetica Neue', Helvetica, sans-serif;
 }
 
+p{ font-weight: 200}
 
 .navy-line {
   width: 60px;
@@ -783,6 +784,7 @@ fieldset[disabled] .btn-primary.active {
   margin: 30px 0 0;
 }
 
+.no-padding{padding:0 !important}
 
 /* PACE PLUGIN
 ---------------------------------------------------- */

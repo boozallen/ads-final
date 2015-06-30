@@ -33,6 +33,9 @@ angular.module('gapFront')
       $scope.total = 1;
       var query = 'patient.drug.medicinalproduct:' + $scope.selectedDrug.brand_name;
       APIService.aggregateDrugEvent(query, 50, 'patient.reaction.reactionmeddrapt.exact').then(addFdaList, serviceError)
+      APIService.getLeadersApi().getList().then(function(resp) {
+        $scope.leaders = resp;
+      });
     };
 
     IntegrationService.registerIntegrationMethod('initLabelEffects', initLabelEffects);
