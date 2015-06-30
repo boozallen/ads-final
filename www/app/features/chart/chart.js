@@ -33,6 +33,26 @@ angular.module('gapFront')
       $scope.greatest=100;
     };
 
+    $scope.initializePie = function initializePie() {
+      var query = 'patient.drug.medicinalproduct:'+$scope.selectedDrug.brand_name+' AND serious:2';
+      APIService.aggregateDrugEvent(query, null, null).then(function(resp){
+        $scope.nonSeriousCount = resp.meta.results.total;
+        createPieChart();
+      });
+
+      query = 'patient.drug.medicinalproduct:'+$scope.selectedDrug.brand_name+' AND serious:1';
+      APIService.aggregateDrugEvent(query, null, null).then(function(resp){
+        $scope.seriousCount = resp.meta.results.total;
+        createPieChart();
+      });
+
+      query = 'patient.drug.medicinalproduct:'+$scope.selectedDrug.brand_name;
+      APIService.aggregateDrugEvent(query, null, null).then(function(resp){
+        $scope.totalReportedCount = resp.meta.results.total;
+        createPieChart();
+      });
+    };
+
     var initChart = function(){
       $scope.initializeVariables();
       $scope.selectedDrug = DrugService.getSelectedDrug();
@@ -41,6 +61,7 @@ angular.module('gapFront')
         $scope.drugEffects = resp.effects;
         console.log($scope.drugEffects);
         $scope.setChartData();
+        $scope.initializePie();
         $scope.searchDrugEvents();
         $scope.alerts = [];
 
@@ -96,24 +117,6 @@ angular.module('gapFront')
       APIService.aggregateDrugEvent(query, 15, 'patient.reaction.reactionmeddrapt.exact').then(function(resp){
         $scope.setChartData(resp.results, resp.effects);
       },function(error){
-      });
-
-      query = 'patient.drug.medicinalproduct:'+$scope.selectedDrug.brand_name+' AND serious:2';
-      APIService.aggregateDrugEvent(query, null, null).then(function(resp){
-        $scope.nonSeriousCount = resp.meta.results.total;
-        createPieChart();
-      });
-
-      query = 'patient.drug.medicinalproduct:'+$scope.selectedDrug.brand_name+' AND serious:1';
-      APIService.aggregateDrugEvent(query, null, null).then(function(resp){
-        $scope.seriousCount = resp.meta.results.total;
-        createPieChart();
-      });
-
-      query = 'patient.drug.medicinalproduct:'+$scope.selectedDrug.brand_name;
-      APIService.aggregateDrugEvent(query, null, null).then(function(resp){
-        $scope.totalReportedCount = resp.meta.results.total;
-        createPieChart();
       });
 
       query = 'patient.drug.medicinalproduct:'+$scope.selectedDrug.brand_name;
@@ -196,13 +199,13 @@ angular.module('gapFront')
             $scope.treeData.push({name: $scope.chart[i].term.toLowerCase(), value: $scope.chart[i].count, colorValue: 1}); // more in no
           } else { // in neither
             console.log('i');
-            $scope.barLabels[$scope.chart[i].term.toLowerCase()] = " <span class='glyphicon glyphicon-exclamation-sign' style='color:#f8ac59; font-size: 17px;'></span>";
+            $scope.barLabels[$scope.chart[i].term.toLowerCase()] = " <span class='glyphicon glyphicon-question-sign' style='color:#d3d3d3; font-size: 17px;'></span>";
             $scope.treeData.push({name: $scope.chart[i].term.toLowerCase(), value: $scope.chart[i].count, colorValue: 0});
           }
         }
       }
 
-      console.log($scope.effects);
+      console.log($scope.barLabels);
 
       createChart();
       createTreeChart();
@@ -276,9 +279,10 @@ angular.module('gapFront')
           useHTML: true,
           labelFormatter: function(){
             console.log(this);
-            return " <span class='glyphicon glyphicon-ok-sign' style='color:#5bc0de; font-size: 17px;'></span> : Reported and verified on label: <br>"
-              + " <span class='glyphicon glyphicon-exclamation-sign' style='color:#f8ac59; font-size: 17px;'></span> : Reported but not listed on label: <br>"
-              + " <span class='glyphicon glyphicon-ban-circle' style='color:#ed5565; font-size: 17px;'></span> : Reported but incorrectly described"
+            return " <span class='glyphicon glyphicon-ok-sign' style='color:#5bc0de; font-size: 17px;'></span> : Reported and verified on label <br>"
+              + " <span class='glyphicon glyphicon-exclamation-sign' style='color:#f8ac59; font-size: 17px;'></span> : Reported but not verified <br>"
+              + " <span class='glyphicon glyphicon-ban-circle' style='color:#ed5565; font-size: 17px;'></span> : Reported but incorrectly described <br>"
+              + " <span class='glyphicon glyphicon-question-sign' style='color:#d3d3d3; font-size: 17px;'></span> : No crowd data"
           }
         },
         plotOptions: {

@@ -15,12 +15,24 @@ angular.module('gapFront')
     $scope.searchFixed = '';
     $scope.alerts = [];
 
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+    $(window).bind('scroll', function() {
+        var $elem = $("#searchValue");
+        var $window = $(window);
 
+        var docViewTop = $window.scrollTop();
+        var docViewBottom = docViewTop + $window.height();
+
+        var elemTop = $elem.offset().top;
+        var elemBottom = elemTop + $elem.height();
+
+        if((elemBottom <= docViewBottom) && (elemTop >= docViewTop)){
+          $("#fixedSearch").css("display", "none");
+        }
+        else{
+          $("#fixedSearch").css("display", "block");
+        }
+        return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+    });
 
 
     var lastRoute = $route.current;
@@ -30,9 +42,12 @@ angular.module('gapFront')
 
     $scope.$on('scanner-started', function(event, args) {
       $scope.alerts.push(args.message);
+      $("#fixedSearch").css("display", "none");
+      $scope.searchText = '';
     });
 
     $scope.setSelectedDrug = function(drug) {
+      $("#fixedSearch").css("display","block");
       $scope.drugs = [];
       $scope.alerts = [];
       $scope.selectedDrug = drug;

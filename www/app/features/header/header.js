@@ -13,4 +13,10 @@ angular.module('gapFront')
     $scope.about = $location.path();
     console.log($location.path());
 
+    $scope.scrollToLabel = function scrollToLabel(){
+      $('html, body').animate({
+        scrollTop: $("#label-accuracy").offset().top
+      }, 1000);
+    };
+
   });
