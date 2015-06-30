@@ -13,10 +13,24 @@ angular.module('gapFront')
     $scope.about = $location.path();
     console.log($location.path());
 
-    $scope.scrollToLabel = function scrollToLabel(){
+    $scope.scrollToEventReports = function scrollToEventReports(){
+      console.log('scrolling');
       $('html, body').animate({
-        scrollTop: $("#label-accuracy").offset().top
-      }, 1000);
+        scrollTop: $("#events-reports").offset().top
+      }, 500);
     };
 
+    $scope.scrollToLabelAccuracy = function scrollToLabelAccuracy(){
+      console.log('scrolling');
+      $('html, body').animate({
+        scrollTop: $("#label-accuracy").offset().top
+      }, 500);
+    }
+
+    $scope.scrollToSearch = function scrollToSearch(){
+      console.log('scrolling');
+      $('html, body').animate({
+        scrollTop: $("#searchSplashScreen").offset().top
+      }, 500);
+    }
   });
