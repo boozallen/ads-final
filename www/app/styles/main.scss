@@ -126,8 +126,8 @@ font-family: 'Helvetica Neue', Helvetica, sans-serif;
 }
 
 p.logo_subtext{
-  font-size:14px;
-  line-height: 24px;
+  font-size:24px;
+  line-height: 34px;
   text-align: justify;
   color: #ccc;
   padding: 20px 0;
@@ -379,6 +379,7 @@ h3 {
 
 .blue-bg{
     background: #e7f6fa;
+    border-bottom: 1px solid #fff;
   }
 
 
@@ -432,11 +433,11 @@ h3 {
 
 .label-wrap p {
   color: #676a6c;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1.9em;
 }
 
-.label-wrap.confirm p{
+.label-wrap p.confirm{
   color:#676a6c;
   font-size: 16px;
   line-height: 22px;
@@ -445,7 +446,7 @@ h3 {
   font-weight: 200;
 }
 
-.label-wrap.confirm p strong{
+.label-wrap p.confirm strong{
   color:#f8ac59;
 }
 
@@ -477,6 +478,16 @@ h3 {
 .progress{
  background: #fff;
  border: 1px solid #dfdedf;
+}
+
+.progress-bar {
+  background-color:#5bc0de;
+  margin: 0px;
+}
+
+.progress-complete{
+  font-size: 14px;
+  color: #676a6c;
 }
 
 // CHART BUTTONS
@@ -523,12 +534,48 @@ h3 {
   width: 115px;
   height: 115px;
   padding: 8px;
-
   background: #fff;
   border: 2px solid #1A9BFC;
   color: #666;
   text-align: center;
   font: 32px Arial, sans-serif;
+}
+
+.way-to-go-wrap{
+  background-color: #23c6c8;
+}
+
+.way-to-go-wrap h2, .way-to-go-wrap h3, .way-to-go-wrap p{
+  color: #fff
+}
+
+.way-to-go-wrap h2 {
+  font-size: 70px;
+}
+
+.way-to-go-wrap h3 {
+  font-size: 24px;
+  font-weight: 200;
+}
+
+.way-to-go-wrap p{
+  font-size: 16px;
+  margin: 0 0 20px;
+}
+
+.way-to-go-wrap .form-group .form-control {
+  display: block;
+}
+
+.way-to-go-wrap .form-group .form-control {
+  margin: 0 10px 20px 0;
+}
+
+
+.way-to-go-wrap .btn {
+  background: #0f6162;
+  color: #fff;
+  margin: 10px 30px;
 }
 
 .leaders {
