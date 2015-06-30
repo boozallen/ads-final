@@ -4,7 +4,7 @@ class DrugsController < ApplicationController
 
   def show
     if drug.nil?
-      render nothing: true, status: 404
+      render json: { message: "Not enough information found for #{params[:id]}. Try searching for another drug above." }, status: 404
     else
       yes_answers = Effect.where(drug_name: params[:id], response: true).group(:name).count
       no_answers = Effect.where(drug_name: params[:id], response: false).group(:name).count
@@ -41,7 +41,7 @@ class DrugsController < ApplicationController
     @_drug = Fda.get params[:id]
     @effects = []
 
-    return nil if @_drug.nil?
+    return nil if @_drug.nil? || @_drug['openfda'].empty?
     #if @_drug.nil?
     #  render nothing: true, status: 404
     #  fail

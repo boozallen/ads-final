@@ -26,7 +26,7 @@
   <div ng-view></div>
   <div>
     <div id="headerDiv" ng-include src="'features/header/header.html'" style="display:none;"></div>
-    <div ng-controller="ChartCtrl" ng-include src="'features/chart/chart.html'" ng-show="selectedDrug"></div>
+    <div ng-controller="ChartCtrl" ng-include src="'features/chart/chart.html'" ng-show="selectedDrug" id="events-reports"></div>
     <div ng-controller="LabelEffectsCtrl" ng-include src="'features/labelEffects/labelEffects.html'"
          ng-show="selectedDrug"></div>
     <!-- <div ng-include src="'features/footer/footer.html'"></div> -->
@@ -70,9 +70,6 @@
 <script src="bower_components/jquery-highlight/jquery.highlight.js"></script>
 <script src="bower_components/jasmine/lib/jasmine-core/jasmine.js"></script>
 <script src="bower_components/jasmine-jquery/lib/jasmine-jquery.js"></script>
-<script src="bower_components/highcharts-release/highcharts.js"></script>
-<script src="bower_components/highcharts-release/highcharts-more.js"></script>
-<script src="bower_components/highcharts-release/modules/exporting.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 <!-- build:js({.tmp,app}) scripts/scripts.js -->

@@ -11,6 +11,7 @@ angular.module('gapFront')
   .controller('LabelEffectsCtrl', function ($scope, IntegrationService, APIService, DrugService) {
 
     $scope.effects = [];
+    $scope.alerts = ['alert'];
     $scope.selectedSymptom = '';
     $scope.adverseEffects = [];
     $scope.displayedStuff = [];
@@ -18,10 +19,15 @@ angular.module('gapFront')
       return $scope.getPercentage() + '% of possible side effects addressed'
     };
 
+    $scope.$on('scanner-started', function(event, args) {
+      $scope.alerts.push(args.message);
+    });
+
     $scope.count = 0;
     $scope.total = 1;
 
     var initLabelEffects = function (params) {
+      $scope.alerts = [];
       $scope.selectedDrug = DrugService.getSelectedDrug();
       $scope.count = 0;
       $scope.total = 1;
@@ -68,6 +74,7 @@ angular.module('gapFront')
 
     // Function which greps through the drug object to find adverse effects
     function findMatchingSentence(drugObject, effect) {
+      console.log(drugObject);
       var textToSearch = [];
 
       if (drugObject['boxed_warnings']) {
@@ -146,7 +153,6 @@ angular.module('gapFront')
     };
 
     $scope.getPercentage = function () {
-      console.log('count: ' + $scope.count + ' total: ' + $scope.total);
       var div = $scope.count / $scope.total;
       var percent = div * 100;
       if(percent == 100){

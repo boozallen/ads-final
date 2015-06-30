@@ -1,4 +1,4 @@
-<div class="features" ng-if="selectedDrug">
+<div class="features" ng-if="selectedDrug && (alerts.length == 0)">
   <div class="">
     <div id="tooltip" class="hidden">
       <p><span id="value">100</span>
@@ -10,6 +10,7 @@
       <h2>Top 25 Reported Side Effects for: {{selectedDrug.substance_name}}&nbsp;({{selectedDrug.brand_name}}) General Information</h2>
     </div>
     <div class="row col-md-8 col-md-offset-2">
+      <br>
       <div class="col-xs-10 col-xs-offset-1 col-md-2 col-md-offset-0">
         <h3>Seriousness</h3>
         <ul class="nav nav-pills" data-toggle="buttons">
@@ -34,13 +35,13 @@
         <h3>Switch Graphs</h3>
         <ul class="nav nav-pills" data-toggle="buttons">
           <li role="presentation" ng-click="toggleCharts = !toggleCharts" ng-class="toggleCharts==true?'active':''"><a href="">Bar</a></li>
-          <li role="presentation" ng-click="toggleCharts = !toggleCharts" ng-class="toggleCharts==false?'active':''"><a href="">Tree</a></li>
+          <li role="presentation" ng-click="toggleCharts = !toggleCharts; treeChart.redraw();" ng-class="toggleCharts==false?'active':''"><a href="">Tree</a></li>
         </ul>
       </div>
       <div class="col-xs-10 col-xs-offset-1 col-md-7 col-md-offset-0">
         <div style="height:680px;">
           <div id="chartContainer" ng-show="toggleCharts" style="min-width: 310px; height: 680px; margin: 0 auto"></div>
-          <div id="createTreeChart" ng-hide="toggleCharts" style="max-width: 850px; height: 680px; margin: 0 auto"></div>
+          <div id="createTreeChart" ng-hide="toggleCharts" style="height: 550px;"></div>
         </div>
       </div>
       <div class="col-xs-10 col-xs-offset-1 col-md-2 col-md-offset-0">
