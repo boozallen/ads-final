@@ -7,33 +7,33 @@
  * # ChartCtrl
  * Controller of the gapFront
  */
- angular.module('gapFront')
- .controller('ChartCtrl', function ($scope, $filter, IntegrationService, APIService, DrugService) {
-  $scope.awesomeThings = [
-  'HTML5 Boilerplate',
-  'AngularJS',
-  'Karma'
-  ];
+angular.module('gapFront')
+  .controller('ChartCtrl', function ($scope, $filter, IntegrationService, APIService, DrugService, $rootScope, $location, $anchorScroll) {
+    $scope.awesomeThings = [
+      'HTML5 Boilerplate',
+      'AngularJS',
+      'Karma'
+    ];
 
-  $scope.initializeVariables = function initializeVariables() {
-    $scope.filterType = "hospitalizations";
-    $scope.seriousness = "all";
-    $scope.outcome = "all";
-    $scope.age = "all";
-    $scope.totalReportedCount = 0;
-    $scope.percentSerious = 50;
-    $scope.percentNonSerious = 50;
-    $scope.startDate = 19000101;
-    $scope.endDate = 20500101;
-    $scope.dateChartData = [];
-    $scope.toggleCharts = true;
-    $scope.alerts = [];
+    $scope.initializeVariables = function initializeVariables() {
+      $scope.filterType = "hospitalizations";
+      $scope.seriousness = "all";
+      $scope.outcome = "all";
+      $scope.age = "all";
+      $scope.totalReportedCount = 0;
+      $scope.percentSerious = 50;
+      $scope.percentNonSerious = 50;
+      $scope.startDate = 19000101;
+      $scope.endDate = 20500101;
+      $scope.dateChartData = [];
+      $scope.toggleCharts = true;
+      $scope.alerts = ['alert'];
 
-    $scope.least=0;
-    $scope.greatest=100;
-  };
+      $scope.least=0;
+      $scope.greatest=100;
+    };
 
-    var initChart = function(params){
+    var initChart = function(){
       $scope.initializeVariables();
       $scope.selectedDrug = DrugService.getSelectedDrug();
       APIService.getDrugsApi().get($scope.selectedDrug.brand_name).then(function(resp){
@@ -42,9 +42,22 @@
         console.log($scope.drugEffects);
         $scope.setChartData();
         $scope.searchDrugEvents();
+        $scope.alerts = [];
+
+        $("#headerDiv").css('display', 'block');
+        var stickEl;
+        var $window = $(window),
+          stickEl = $('#searchFixed'),
+          elTop = stickEl.offset().top;
+
+        $window.scroll(function() {
+          stickEl.toggleClass('sticky', $window.scrollTop() > elTop);
+        });
+        $location.hash('events-reports');
+        $anchorScroll();
       }, function(error){
         $scope.alerts.push(error.data.message);
-        DrugService.setSelectedDrug();
+        $rootScope.$broadcast('scanner-started', { message: error.data.message });
       });
     };
 
@@ -122,8 +135,8 @@
     function parse(str) {
       if(!/^(\d){8}$/.test(str)) return "invalid date";
       var y = str.substr(0,4),
-      m = str.substr(4,2),
-      d = str.substr(6,2);
+        m = str.substr(4,2),
+        d = str.substr(6,2);
       return new Date(y,m,d).getTime();
     }
 
@@ -203,177 +216,178 @@
       // });
     };
 
-        Highcharts.setOptions({
-          colors: ['#23b193', '#bde2d9']
-        });
+    Highcharts.setOptions({
+      colors: ['#23b193', '#bde2d9']
+    });
 
-      //angular.element(document).ready();
-      function createChart() {
-        var colors = Highcharts.getOptions().colors;
-        var chartContainerWidth = $('#chartContainer').width();
-        //console.log(chartContainerWidth);
-        $('#chartContainer').highcharts({
-          exporting: {
-                enabled: false
-              },
-          chart: {
-            type: 'bar'
-          },
+    //angular.element(document).ready();
+    function createChart() {
+      var colors = Highcharts.getOptions().colors;
+      var chartContainerWidth = $('#chartContainer').width();
+      //console.log(chartContainerWidth);
+      $('#chartContainer').highcharts({
+        exporting: {
+          enabled: false
+        },
+        chart: {
+          type: 'bar'
+        },
+        title: {
+          text: 'Top 25 Reported Adverse Effects for ' + $scope.selectedDrug.brand_name,
+          style: {
+            color: '#333',
+            fontWeight: 'normal',
+            fontSize: 14
+          }
+        },
+        xAxis: [{
           title: {
-            text: 'Top 25 Reported Adverse Effects for ' + $scope.selectedDrug.brand_name,
-            style: {
-                color: '#333',
-                fontWeight: 'normal',
-                fontSize: 14
-            }
+            text: 'Verified?',
+            align: "high",
+            rotation: 0,
+            textAlign: 'left',
+            x: -10,
+            y: -10
           },
-          xAxis: [{
-            title: {
-              text: 'Verified?',
-              align: "high",
-              rotation: 0,
-              textAlign: 'left',
-              x: -10,
-              y: -10
-            },
-            tickWidth: 0,
-            lineWidth: 0,
-            categories: $scope.effects,
-            labels: {
-              useHTML: true,
-              formatter: function() {
-                return $scope.barLabels[this.value];
-              }
-            }
-          }, {
-            linkedTo: 0,
-            categories: $scope.effects,
-            offset: 50
-          }],
-          yAxis: {
-            min: 0,
-            title: {
-              text: 'Counts'
-            },
-            lineColor: '#666666'
-
-          },
-          legend: {
-            reversed: true,
+          tickWidth: 0,
+          lineWidth: 0,
+          categories: $scope.effects,
+          labels: {
             useHTML: true,
-            labelFormatter: function(){
-              console.log(this);
-              return " <span class='glyphicon glyphicon-ok-sign' style='color:#5bc0de; font-size: 17px;'></span> : Reported and verified on label: <br>"
-                + " <span class='glyphicon glyphicon-exclamation-sign' style='color:#f8ac59; font-size: 17px;'></span> : Reported but not listed on label: <br>"
-                + " <span class='glyphicon glyphicon-ban-circle' style='color:#ed5565; font-size: 17px;'></span> : Reported but incorrectly described"
+            formatter: function() {
+              return $scope.barLabels[this.value];
             }
+          }
+        }, {
+          linkedTo: 0,
+          categories: $scope.effects,
+          offset: 50
+        }],
+        yAxis: {
+          min: 0,
+          title: {
+            text: 'Counts'
           },
-          plotOptions: {
-            series: {
-              stacking: 'normal',
-              events: {
-                legendItemClick: function () {
-                  return false;
-                }
+          lineColor: '#666666'
+
+        },
+        legend: {
+          reversed: true,
+          useHTML: true,
+          labelFormatter: function(){
+            console.log(this);
+            return " <span class='glyphicon glyphicon-ok-sign' style='color:#5bc0de; font-size: 17px;'></span> : Reported and verified on label: <br>"
+              + " <span class='glyphicon glyphicon-exclamation-sign' style='color:#f8ac59; font-size: 17px;'></span> : Reported but not listed on label: <br>"
+              + " <span class='glyphicon glyphicon-ban-circle' style='color:#ed5565; font-size: 17px;'></span> : Reported but incorrectly described"
+          }
+        },
+        plotOptions: {
+          series: {
+            stacking: 'normal',
+            events: {
+              legendItemClick: function () {
+                return false;
               }
             }
-          },
-          rangeSelector: {
-            selected: 1,
-            inputEnabled: $('#chartContainer').height() > 480
-          },
+          }
+        },
+        rangeSelector: {
+          selected: 1,
+          inputEnabled: $('#chartContainer').height() > 480
+        },
 
-          series: $scope.counts
+        series: $scope.counts
 
-        });
-      }
-      function createPieChart() {
-        $scope.percentSerious = ($scope.seriousCount / $scope.totalReportedCount) * 100;
-        $scope.percentNonSerious = ($scope.nonSeriousCount / $scope.totalReportedCount) * 100;
-        var totalReportedCount = $scope.totalReportedCount;
+      });
+    }
+    function createPieChart() {
+      $scope.percentSerious = ($scope.seriousCount / $scope.totalReportedCount) * 100;
+      $scope.percentNonSerious = ($scope.nonSeriousCount / $scope.totalReportedCount) * 100;
+      var totalReportedCount = $scope.totalReportedCount;
 
-        $scope.pieChart = new Highcharts.Chart({
-          exporting: {
-                enabled: false
-              },
-          chart: {
-            renderTo: 'totalReportedContainer',
-            type: 'pie'
-          },
-          title: {
-            text: 'Total Reported ' + $filter('number')($scope.totalReportedCount),
-              style: {
-                color: '#333',
-                fontWeight: 'normal',
-                fontSize: 14,
-                align: "left"
-            }
+      $scope.pieChart = new Highcharts.Chart({
+        exporting: {
+          enabled: false
+        },
+        chart: {
+          renderTo: 'totalReportedContainer',
+          type: 'pie'
+        },
+        title: {
+          text: 'Total Reported ' + $filter('number')($scope.totalReportedCount),
+          style: {
+            color: '#333',
+            fontWeight: 'normal',
+            fontSize: 14,
+            align: "left"
+          }
 
-          },
-          plotOptions: {
-            pie: {
-              innerSize: '60%'
-            }
-          },
-          series: [{
-            data: [
+        },
+        plotOptions: {
+          pie: {
+            innerSize: '60%'
+          }
+        },
+        series: [{
+          data: [
             ["Serious", $scope.percentSerious],
             ["Non-serious", $scope.percentNonSerious]
-            ]}]
-          });
-      }
+          ]}]
+      });
+    }
 
-      function createLineChart() {
+    function createLineChart() {
 
-        var data = Highcharts.map($scope.countDateArray, function (config){
-          return {
-            x: config[0],
-            y: config[1]
-          };
-        });
-
-        var dataObject = {
-          exporting: {
-                enabled: false
-              },
-          rangeSelector: {
-            selected: 1,
-            inputEnabled: $('#container').width() > 480
-          },
-
-          title: {
-            text: 'Reported Adverse Event Counts Over Time',
-            style: {
-                color: '#333',
-                fontWeight: 'normal',
-                fontSize: 14,
-                align: "left"
-            }
-          },
-
-          series: [{
-            name: 'Count',
-            data: data,
-            tooltip: {
-            },
-            turboThreshold: 0
-          }],
-
-          chart: {
-            renderTo: 'lineGraphContainer'
-          }
+      var data = Highcharts.map($scope.countDateArray, function (config){
+        return {
+          x: config[0],
+          y: config[1]
         };
-        var chart = new Highcharts.StockChart(dataObject);
-      }
+      });
 
-      function createTreeChart(){
-          Highcharts.setOptions({
-            colors: ['#23b193', '#bde2d9', '#5bc0de', '#f8ac59', '#ed5565']
-          });
-            $scope.treeChart = $('#createTreeChart').highcharts({
-              exporting: {
-                enabled: false
-              },
+      var dataObject = {
+        exporting: {
+          enabled: false
+        },
+        rangeSelector: {
+          selected: 1,
+          inputEnabled: $('#container').width() > 480
+        },
+
+        title: {
+          text: 'Reported Adverse Event Counts Over Time',
+          style: {
+            color: '#333',
+            fontWeight: 'normal',
+            fontSize: 14,
+            align: "left"
+          }
+        },
+
+        series: [{
+          name: 'Count',
+          data: data,
+          tooltip: {
+          },
+          turboThreshold: 0
+        }],
+
+        chart: {
+          renderTo: 'lineGraphContainer'
+        }
+      };
+      var chart = new Highcharts.StockChart(dataObject);
+    }
+
+    function createTreeChart(){
+      Highcharts.setOptions({
+        colors: ['#23b193', '#bde2d9', '#5bc0de', '#f8ac59', '#ed5565']
+      });
+      $scope.treeChart = $('#createTreeChart').highcharts({
+        width: $("#"),
+        exporting: {
+          enabled: false
+        },
         colorAxis: {
           dataClasses:[{
             from: 0,
@@ -397,15 +411,15 @@
 
         },
         series: [{
-            type: "treemap",
-            layoutAlgorithm: 'squarified',
-            data: $scope.treeData
+          type: "treemap",
+          layoutAlgorithm: 'squarified',
+          data: $scope.treeData
         }],
         legend: {
           enabled: true
         },
         title: {
-            text: 'Highcharts Treemap'
+          text: 'Highcharts Treemap'
         },
         plotOptions: {
           series: {
@@ -418,7 +432,7 @@
             }
           }
         }
-    });
-      }
+      });
+    }
 
-    });
+  });

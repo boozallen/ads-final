@@ -8,11 +8,12 @@
  * Controller of the gapFront
  */
 angular.module('gapFront')
-  .controller('MainCtrl', function ($scope, $anchorScroll, $location, $route, APIService, IntegrationService, DrugService) {
+  .controller('MainCtrl', function ($scope, $location, $route, APIService, IntegrationService, DrugService) {
     $scope.drugs = [];
 
     $scope.searchText = '';
     $scope.searchFixed = '';
+    $scope.alerts = [];
 
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
@@ -27,27 +28,20 @@ angular.module('gapFront')
         $route.current = lastRoute;
     });
 
+    $scope.$on('scanner-started', function(event, args) {
+      $scope.alerts.push(args.message);
+    });
+
     $scope.setSelectedDrug = function(drug) {
-      console.log("drug: " + drug);
       $scope.drugs = [];
+      $scope.alerts = [];
       $scope.selectedDrug = drug;
+
+      $location.hash('');
 
       DrugService.setSelectedDrug($scope.selectedDrug);
       IntegrationService.callIntegrationMethod('initChart',{});
       IntegrationService.callIntegrationMethod('initLabelEffects',{});
-      //$("#fixedSearch").css('display', 'block');
-      $("#headerDiv").css('display', 'block');
-      var stickEl;
-      var $window = $(window),
-        stickEl = $('#searchFixed'),
-        elTop = stickEl.offset().top;
-
-      $window.scroll(function() {
-        stickEl.toggleClass('sticky', $window.scrollTop() > elTop);
-      });
-      // $("#searchSplashScreen").remove();
-      $location.hash('events-reports');
-      $anchorScroll();
     };
 
     $scope.searchDrugs = function() {
