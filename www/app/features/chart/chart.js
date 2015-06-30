@@ -56,10 +56,10 @@ angular.module('gapFront')
     var initChart = function(){
       $scope.initializeVariables();
       $scope.selectedDrug = DrugService.getSelectedDrug();
-      APIService.getDrugsApi().get($scope.selectedDrug.brand_name).then(function(resp){
-        DrugService.setSelectedDrugInfo(resp);
+      APIService.getDrugsApi().post({drug: $scope.selectedDrug}).then(function(resp){
+        DrugService.setSelectedDrugInfo(resp.drug);
+        IntegrationService.callIntegrationMethod('initLabelEffects',{});
         $scope.drugEffects = resp.effects;
-        console.log($scope.drugEffects);
         $scope.setChartData();
         $scope.initializePie();
         $scope.searchDrugEvents();
