@@ -41,17 +41,16 @@ angular.module('gapFront')
 
       DrugService.setSelectedDrug($scope.selectedDrug);
       IntegrationService.callIntegrationMethod('initChart',{});
-      IntegrationService.callIntegrationMethod('initLabelEffects',{});
     };
 
     $scope.searchDrugs = function() {
-      console.log($scope.searchFixed);
+      //console.log($scope.searchFixed);
       var bla = $scope.searchFixed;
 
       if(bla){
-        console.log('second');
+        //console.log('second');
         $scope.drugs = [];
-        console.log('here');
+        //console.log('here');
         var text = bla;
       }
       else{
@@ -110,7 +109,7 @@ angular.module('gapFront')
     }
 
     function serviceError(error) {
-      console.log(error);
+      //console.log(error);
     }
 
     $scope.setTotalLabels = function setTotalLabels(resp){

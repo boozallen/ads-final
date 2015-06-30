@@ -36,10 +36,10 @@ angular.module('gapFront')
     var initChart = function(){
       $scope.initializeVariables();
       $scope.selectedDrug = DrugService.getSelectedDrug();
-      APIService.getDrugsApi().get($scope.selectedDrug.brand_name).then(function(resp){
-        DrugService.setSelectedDrugInfo(resp);
+      APIService.getDrugsApi().post({drug: $scope.selectedDrug}).then(function(resp){
+        DrugService.setSelectedDrugInfo(resp.drug);
+        IntegrationService.callIntegrationMethod('initLabelEffects',{});
         $scope.drugEffects = resp.effects;
-        console.log($scope.drugEffects);
         $scope.setChartData();
         $scope.searchDrugEvents();
         $scope.alerts = [];
@@ -150,7 +150,7 @@ angular.module('gapFront')
     };
 
     $scope.setChartData = function(data){
-      console.log($scope.selectedDrug);
+      //console.log($scope.selectedDrug);
       $scope.crowdVerified = data;
       $scope.chart = data;
 
@@ -166,48 +166,48 @@ angular.module('gapFront')
         $scope.counts[0].data.push($scope.chart[i].count);
 
         if($scope.drugEffects){
-          console.log($scope.chart[i].term.toLowerCase());
-          console.log($scope.drugEffects.yes_answers);
+          //console.log($scope.chart[i].term.toLowerCase());
+          //console.log($scope.drugEffects.yes_answers);
           if($scope.chart[i].term.toLowerCase() in $scope.drugEffects.yes_answers) { //is in yes
-            console.log('b');
+            //console.log('b');
             if ($scope.chart[i].term.toLowerCase() in $scope.drugEffects.no_answers) { // also in no
-              console.log('c');
+              //console.log('c');
               if($scope.drugEffects.yes_answers[$scope.chart[i].term.toLowerCase()] > $scope.drugEffects.no_answers[$scope.chart[i].term.toLowerCase()]){ // more in yes
-                console.log('d');
+                //console.log('d');
                 $scope.treeData.push({name: $scope.chart[i].term.toLowerCase(), value: $scope.chart[i].count, colorValue: 2});
                 $scope.barLabels[$scope.chart[i].term.toLowerCase()] = " <span class='glyphicon glyphicon-ok-sign' style='color:#5bc0de; font-size: 17px;'></span>";
               } else if($scope.drugEffects.yes_answers[$scope.chart[i].term.toLowerCase()] == $scope.drugEffects.no_answers[$scope.chart[i].term.toLowerCase()]){ // equal yes and no votes
-                console.log('e');
+                //console.log('e');
                 $scope.treeData.push({name: $scope.chart[i].term.toLowerCase(), value: $scope.chart[i].count, colorValue: 0});
                 $scope.barLabels[$scope.chart[i].term.toLowerCase()] = " <span class='glyphicon glyphicon-exclamation-sign'  style='color:#f8ac59; font-size: 17px;'></span>";
               } else {
-                console.log('f');
+                //console.log('f');
                 $scope.treeData.push({name: $scope.chart[i].term.toLowerCase(), value: $scope.chart[i].count, colorValue: 1}); // more in no
                 $scope.barLabels[$scope.chart[i].term.toLowerCase()] = " <span class='glyphicon glyphicon-ban-circle' style='color:#ed5565; font-size: 17px;'></span>";
               }
             } else { // not in no
-              console.log('g');
+              //console.log('g');
               $scope.barLabels[$scope.chart[i].term.toLowerCase()] = " <span class='glyphicon glyphicon-ok-sign' style='color:#5bc0de; font-size: 17px;'></span>";
               $scope.treeData.push({name: $scope.chart[i].term.toLowerCase(), value: $scope.chart[i].count, colorValue: 2});
             }
           } else if ($scope.chart[i].term.toLowerCase() in $scope.drugEffects.no_answers) { // in no but not yes
-            console.log('h');
+            //console.log('h');
             $scope.barLabels[$scope.chart[i].term.toLowerCase()] = " <span class='glyphicon glyphicon-ban-circle' style='color:#ed5565; font-size: 17px;'></span>";
             $scope.treeData.push({name: $scope.chart[i].term.toLowerCase(), value: $scope.chart[i].count, colorValue: 1}); // more in no
           } else { // in neither
-            console.log('i');
+            //console.log('i');
             $scope.barLabels[$scope.chart[i].term.toLowerCase()] = " <span class='glyphicon glyphicon-exclamation-sign' style='color:#f8ac59; font-size: 17px;'></span>";
             $scope.treeData.push({name: $scope.chart[i].term.toLowerCase(), value: $scope.chart[i].count, colorValue: 0});
           }
         }
       }
 
-      console.log($scope.effects);
+      //console.log($scope.effects);
 
       createChart();
       createTreeChart();
       $scope.terms= $scope.chart;
-      console.log($scope.barLabels);
+      //console.log($scope.barLabels);
 
       // APIService.getVerifiedApi().post($scope.crowdVerified).then(function(){
       //   console.log("sent");
@@ -275,7 +275,7 @@ angular.module('gapFront')
           reversed: true,
           useHTML: true,
           labelFormatter: function(){
-            console.log(this);
+            //console.log(this);
             return " <span class='glyphicon glyphicon-ok-sign' style='color:#5bc0de; font-size: 17px;'></span> : Reported and verified on label: <br>"
               + " <span class='glyphicon glyphicon-exclamation-sign' style='color:#f8ac59; font-size: 17px;'></span> : Reported but not listed on label: <br>"
               + " <span class='glyphicon glyphicon-ban-circle' style='color:#ed5565; font-size: 17px;'></span> : Reported but incorrectly described"

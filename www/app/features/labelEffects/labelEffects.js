@@ -44,7 +44,11 @@ angular.module('gapFront')
       $scope.adverseEffects = [];
       $scope.displayedStuff = [];
 
-      APIService.getDrugsApi().get($scope.selectedDrug.brand_name).then(updateList, serviceError)
+      var drug = DrugService.getSelectedDrugInfo();
+      console.log(drug);
+      $scope.adverseEffects = drug.effects;
+      $scope.total = $scope.adverseEffects.length > 18? 18 : $scope.adverseEffects.length;
+      addDisplayedStuff();
     };
 
     function addFdaList(resp) {
@@ -53,12 +57,6 @@ angular.module('gapFront')
         $scope.effects.push(res[i].term);
       }
       $scope.fetchDrugEffects();
-    }
-
-    function updateList(resp) {
-      $scope.adverseEffects = resp.drug.effects;
-      $scope.total = $scope.adverseEffects.length > 18? 18 : $scope.adverseEffects.length;
-      addDisplayedStuff();
     }
 
     function addDisplayedStuff() {
@@ -77,7 +75,7 @@ angular.module('gapFront')
 
     // Function which greps through the drug object to find adverse effects
     function findMatchingSentence(drugObject, effect) {
-      console.log(drugObject);
+      //console.log(drugObject);
       var textToSearch = [];
 
       if (drugObject['boxed_warnings']) {
@@ -129,8 +127,9 @@ angular.module('gapFront')
       if (found == true) {
         return (splitText.slice(i-1, i+1).join('.'));
       } else {
-        var idx = Math.floor(Math.random() * splitText.length);
-        return (splitText.slice(idx-1, idx+1).join('.'));
+        //console.log(textToSearch);
+        //console.log(effect);
+        return splitText.join('.');
       }
     }
 
