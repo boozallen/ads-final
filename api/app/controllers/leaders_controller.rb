@@ -4,9 +4,9 @@ class LeadersController < ApplicationController
   end
 
   def create
-    if Leader.find_by_name(params[:name])
-      leader = Leader.find_by_name(params[:name])
-      leader.count += count
+    if Leader.find_by_name(params[:leader][:name])
+      leader = Leader.find_by_name(params[:leader][:name])
+      leader.count += params[:leader][:count]
       render json: leader.save
     else
       render json: Leader.create!(leader_params)

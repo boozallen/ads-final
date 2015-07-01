@@ -14,11 +14,7 @@ angular.module('gapFront')
     });
 
     var railsService = Restangular.withConfig(function(RestangularConfigurer,Restangular) {
-    RestangularConfigurer.setBaseUrl('http://52.4.69.219:3000/api/v1');
-      //RestangularProvider.setDefaultHeaders({
-      // "Content-Type": "application/json",
-      // "X-Requested-With": "XMLHttpRequest"
-      //});
+      RestangularConfigurer.setBaseUrl('http://52.4.69.219:3000/api/v1');
     });
 
     var pillboxService = Restangular.withConfig(function(RestangularConfigurer) {
