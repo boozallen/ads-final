@@ -211,7 +211,7 @@ angular.module('gapFront')
             load: function() {
               $("#headerDiv").css('display', 'block');
               $('html, body').animate({
-                scrollTop: $("#events-reports").offset().top
+                scrollTop: $("#events-reports").offset().top-70
               }, 500);
             }
           }
