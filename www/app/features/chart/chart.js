@@ -9,6 +9,11 @@
  */
 angular.module('gapFront')
   .controller('ChartCtrl', function ($scope, $filter, IntegrationService, APIService, DrugService, $rootScope, $location, $anchorScroll) {
+    $scope.awesomeThings = [
+      'HTML5 Boilerplate',
+      'AngularJS',
+      'Karma'
+    ];
 
     $scope.initializeVariables = function initializeVariables() {
       $scope.filterType = "hospitalizations";
@@ -60,7 +65,10 @@ angular.module('gapFront')
         $scope.searchDrugEvents();
         $scope.alerts = [];
 
+        $("#headerDiv").css('display', 'block');
 
+        $location.hash('events-reports');
+        $anchorScroll();
       }, function(error){
         $scope.alerts.push(error.data.message);
         $rootScope.$broadcast('scanner-started', { message: error.data.message });
@@ -209,7 +217,6 @@ angular.module('gapFront')
           type: 'bar',
           events: {
             load: function() {
-              $("#headerDiv").css('display', 'block');
               $('html, body').animate({
                 scrollTop: $("#events-reports").offset().top
               }, 500);
@@ -217,7 +224,14 @@ angular.module('gapFront')
           }
         },
         title: {
-          text: null
+          text: 'Top 25 Reported Adverse Effects for ' + $scope.selectedDrug.brand_name,
+          style: {
+            color: '#333',
+            fontWeight: 'normal',
+            fontSize: 14
+          },
+          textAlign: 'center',
+          y: -100
         },
         xAxis: [{
           title: {
@@ -237,7 +251,8 @@ angular.module('gapFront')
               return $scope.barLabels[this.value];
             }
           }
-        }, {
+        },
+          {
           linkedTo: 0,
           categories: $scope.effects,
           offset: 50
@@ -313,12 +328,12 @@ angular.module('gapFront')
           data: [{
             name: "Serious",
             y: $scope.percentSerious,
-            color: "#1C7DC2"
+            color: "#FFCC99"
           },
             {
               name: "Non-serious",
               y: $scope.percentNonSerious,
-              color: "#4FB8E8"
+              color: "#CCCCB3"
             }
             //["Serious", $scope.percentSerious, "#000000"],
             //["Non-serious", $scope.percentNonSerious]
@@ -357,7 +372,6 @@ angular.module('gapFront')
         series: [{
           name: 'Count',
           data: data,
-          color: "#1C7DC2",
           tooltip: {
           },
           turboThreshold: 0
