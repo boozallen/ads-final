@@ -1,9 +1,12 @@
-<section id="label-accuracy" class="col-md-12 spacer-2x spacer-2x label-full-row gray-bg" ng-show="alerts.length == 0" style="padding-bottom: 1000px">
+<section id="label-accuracy" class="col-md-12 spacer-2x spacer-2x label-full-row gray-bg" ng-show="alerts.length == 0"
+         style="padding-bottom: 1000px">
 
   <div class="col-md-12 full-row blue-bg cf">
     <div class="med-info col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1">
       <h2>Answer a few questions to help improve a label</h2>
-      <p>Together we can improve the accuracy of drug labels. Let us know if the term below is listed as a side effect.</p>
+
+      <p>Together we can improve the accuracy of drug labels. Let us know if the term below is listed as a side
+        effect.</p>
     </div>
   </div>
 
@@ -16,26 +19,16 @@
     </div>
   </div>
 
-  <div class="row col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1" ng-repeat="stuff in displayedStuff" >
+  <div class="row col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1" ng-repeat="stuff in displayedStuff">
     <input type="text" ng-model="stuff.effect" id="stuffGetter" style="display: none"/>
 
     <div class="col-md-7">
       <span class='progress-complete'><strong>{{count}}</strong> of <strong>{{total}}</strong> complete</span>
-      <div class="progress">
-        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="{{getPercentage()}}" aria-valuemin="0" aria-valuemax="100" ng-style="{width : (getPercentage() + '%')}">
-        </div>
-      </div>
 
-      <div ng-show="count >= total">
-        <h2>Way to go!</h2>
-        <p>You've helped make the <strong>{{selectedDrug.brand_name}}</strong> labels more accurate. Enter your name to be recognized as a contributor.</p>
-        <form>
-          <div class="form-group cf">
-            <input type="text" class="form-control" id="firstName" placeholder="What's your name?" ng-model="name">
-            <button type="submit" class="btn btn-default pull-right" ng-click="addLeader(name)">Submit</button>
-          </div>
-        </form>
-        <h3>Other drug labels that need your help.</h3>
+      <div class="progress">
+        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="{{getPercentage()}}"
+             aria-valuemin="0" aria-valuemax="100" ng-style="{width : (getPercentage() + '%')}">
+        </div>
       </div>
 
       <div ng-class="!$first?'row disabled spacer-2x':'row label-wrap '" ng-show="count < total">
@@ -44,38 +37,62 @@
 
           <div class="btn-group">
             <ul class="nav nav-pills " data-toggle="buttons">
-              <li class='yes-btn' role="presentation" ng-click="completeIndex($index, true, $first)"><a href="">YES</a></li>
-              <li class='no-btn' role="presentation" ng-click="completeIndex($index, false, $first)"><a href="">NO</a></li>
+              <li class='yes-btn' role="presentation" ng-click="completeIndex($index, true, $first)"><a href="">YES</a>
+              </li>
+              <li class='no-btn' role="presentation" ng-click="completeIndex($index, false, $first)"><a href="">NO</a>
+              </li>
             </ul>
           </div>
         </div>
       </div>
-      <div ng-class="!$first?'row disabled spacer-2x':'row label-wrap'" id="adverseSentence" ng-show="count < total" style="overflow: auto">
+      <div ng-class="!$first?'row disabled spacer-2x':'row label-wrap'" id="adverseSentence" ng-show="count < total"
+           style="overflow: auto">
         <p>{{stuff.sentence}}</p>
       </div>
     </div>
+    <div class="col-md-4 col-md-offset-1" ng-show="count < total">
+      <h3>Recent Contributors</h3>
+      <ul ng-repeat="leader in leaders" class="leaders"><strong>{{leader.name}}</strong></ul>
+    </div>
+  </div>
 
-    <script>
-      setTimeout(function () {
-        $('#adverseSentence').highlight($('#stuffGetter')[0].value)
-      }, 500);
-    </script>
+  <div class="row col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1" ng-show="count >= total">
+    <div class="col-md-7">
+      <h2>Way to go!</h2>
 
+      <p>You've helped make the <strong>{{selectedDrug.brand_name}}</strong> labels more accurate. Enter your name to be
+        recognized as a contributor.</p>
+
+      <form>
+        <div class="form-group cf">
+          <input type="text" class="form-control" id="firstName" placeholder="What's your name?" ng-model="name">
+          <button type="submit" class="btn btn-default pull-right" ng-click="addLeader(name)">Submit</button>
+        </div>
+      </form>
+      <h3>Other drug labels that need your help.</h3>
+    </div>
     <div class="col-md-4 col-md-offset-1">
       <h3>Recent Contributors</h3>
       <ul ng-repeat="leader in leaders" class="leaders"><strong>{{leader.name}}</strong></ul>
     </div>
   </div>
 
+  <script>
+    setTimeout(function () {
+      $('#adverseSentence').highlight($('#stuffGetter')[0].value)
+    }, 500);
+  </script>
+
 </section>
 <br>
 <footer>
-    <div class="row" style="padding: 10px; background-color: #000000;font-size: 20px;color:white; margin-top: 1000px;">
-      <div class="col-xs-6 col-xs-offset-1">
-        <p>Proudly Crafted by Booz Allen Digital</p>
-      </div>
-      <div class="col-xs-5">
-        <p>Data Source: <a href="http://open.fda.org">open.fda.org</a> | Checkout our <a>API</a> | <a href="/about">Meet the team</a></p>
-      </div>
+  <div class="row" style="padding: 10px; background-color: #000000;font-size: 20px;color:white; margin-top: 1000px;">
+    <div class="col-xs-6 col-xs-offset-1">
+      <p>Proudly Crafted by Booz Allen Digital</p>
     </div>
+    <div class="col-xs-5">
+      <p>Data Source: <a href="http://open.fda.org">open.fda.org</a> | Checkout our <a>API</a> | <a href="/about">Meet
+        the team</a></p>
+    </div>
+  </div>
 </footer>
