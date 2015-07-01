@@ -61,6 +61,13 @@ angular.module('gapFront')
       IntegrationService.callIntegrationMethod('initChart',{});
     };
 
+    $scope.searchDrug = function(drug){
+      APIService.getDrugLabel(drug).then(function(resp) {
+        processLabelResults(resp);
+        $scope.setSelectedDrug($scope.drugs[0]);
+      }, serviceError)
+    };
+
     $scope.searchDrugs = function() {
       //console.log($scope.searchFixed);
       var bla = $scope.searchFixed;

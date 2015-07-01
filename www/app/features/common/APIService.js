@@ -47,6 +47,12 @@ angular.module('gapFront')
       return drug.get('label.json', params);
     }
 
+    function getDrugLabel(brand_name){
+      var params = {};
+      params.search = 'openfda.brand_name.exact:' + '"' + brand_name + '"';
+      return drug.get('label.json', params)
+    }
+
     function queryDrugEvent(query, skip, limit){
       var params = {};
       if(query) params.search = query;
@@ -100,6 +106,7 @@ angular.module('gapFront')
 
     return {
       queryDrugLabel:queryDrugLabel,
+      getDrugLabel:getDrugLabel,
       queryDrugEvent:queryDrugEvent,
       aggregateDrugLabel:aggregateDrugLabel,
       aggregateDrugEvent:aggregateDrugEvent,
