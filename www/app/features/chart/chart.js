@@ -224,22 +224,24 @@ angular.module('gapFront')
           }
         },
         title: {
-          text: 'Side Effects',
+          text: 'Side ',
           style: {
-            color: '#333',
+            color: '#707070',
             fontWeight: 'normal',
-            fontSize: 14
+            fontSize: 12
           },
           textAlign: 'center',
-          y: -100
+          x: -160,
+          y: 18
         },
         xAxis: [{
           title: {
-            text: 'Status',
+            useHtml: true,
+            text: "Side Effects",
             align: "high",
             rotation: 0,
             textAlign: 'left',
-            x: -10,
+            x: -100,
             y: -10
           },
           tickWidth: 0,
@@ -255,7 +257,8 @@ angular.module('gapFront')
           {
           linkedTo: 0,
           categories: $scope.effects,
-          offset: 50
+          offset: 50,
+            alternateGridColor: '#F7F7F7'
         }],
         yAxis: {
           min: 0,
