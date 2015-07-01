@@ -320,9 +320,18 @@ angular.module('gapFront')
           }
         },
         series: [{
-          data: [
-            ["Serious", $scope.percentSerious],
-            ["Non-serious", $scope.percentNonSerious]
+          data: [{
+            name: "Serious",
+            y: $scope.percentSerious,
+            color: "#1C7DC2"
+          },
+            {
+              name: "Non-serious",
+              y: $scope.percentNonSerious,
+              color: "#4FB8E8"
+            }
+            //["Serious", $scope.percentSerious, "#000000"],
+            //["Non-serious", $scope.percentNonSerious]
           ]}]
       });
     }
@@ -358,6 +367,7 @@ angular.module('gapFront')
         series: [{
           name: 'Count',
           data: data,
+          color: "#1C7DC2",
           tooltip: {
           },
           turboThreshold: 0
