@@ -224,7 +224,7 @@ angular.module('gapFront')
           }
         },
         title: {
-          text: 'Top 25 Reported Adverse Effects for ' + $scope.selectedDrug.brand_name,
+          text: 'Side Effects',
           style: {
             color: '#333',
             fontWeight: 'normal',
@@ -235,7 +235,7 @@ angular.module('gapFront')
         },
         xAxis: [{
           title: {
-            text: 'Verified?',
+            text: 'Status',
             align: "high",
             rotation: 0,
             textAlign: 'left',

@@ -14,6 +14,11 @@
     <div class="row col-md-10 col-md-offset-1">
       <br>
       <div class="col-xs-10 col-xs-offset-1 col-md-2 col-md-offset-0">
+        <h3>Switch Graphs</h3>
+        <ul class="nav nav-pills" data-toggle="buttons">
+          <li role="presentation" ng-click="toggleCharts = !toggleCharts" ng-class="toggleCharts==true?'active':''"><a href="">Bar</a></li>
+          <li role="presentation" ng-click="toggleCharts = !toggleCharts; treeChart.redraw();" ng-class="toggleCharts==false?'active':''"><a href="">Tree</a></li>
+        </ul>
         <h3>Seriousness</h3>
         <ul class="nav nav-pills" data-toggle="buttons">
           <li role="presentation" class="active" ng-click="filtersUpdated('seriousness','all')" ng-class="seriousness=='all'?'active':''"><a href="">All</a></li>
@@ -33,12 +38,6 @@
 
         <h3>Age Group</h3>
         <div range-slider min="0" max="100" model-min="least" model-max="greatest" on-handle-up="searchDrugEvents()"></div>
-
-        <h3>Switch Graphs</h3>
-        <ul class="nav nav-pills" data-toggle="buttons">
-          <li role="presentation" ng-click="toggleCharts = !toggleCharts" ng-class="toggleCharts==true?'active':''"><a href="">Bar</a></li>
-          <li role="presentation" ng-click="toggleCharts = !toggleCharts; treeChart.redraw();" ng-class="toggleCharts==false?'active':''"><a href="">Tree</a></li>
-        </ul>
       </div>
       <div class="col-xs-10 col-xs-offset-1 col-md-7 col-md-offset-0">
         <div style="height:680px;">
@@ -47,11 +46,10 @@
         </div>
       </div>
       <div class="col-xs-10 col-xs-offset-1 col-md-2 col-md-offset-0">
-        <!--<h3>Total Reported {{totalReportedCount}}</h3>-->
         <div>
           <div id="totalReportedContainer" style="height: 200px; width: 300px;"></div>
         </div>
-        <br>
+        <br><br><br>
         <div id="lineGraphContainer" style="width: 300px; height: 300px;"></div>
       </div>
     </div>
@@ -62,7 +60,7 @@
       </div>
       <div class="col-xs-9">
         <div class="col-xs-3">
-          <span class='glyphicon glyphicon-question-sign' style='color:#d3d3d3; font-size: 17px;'></span> : Needs Crowdsourcing
+          <span class='glyphicon glyphicon-question-sign' style='color:#d3d3d3; font-size: 17px;'></span> : Needs Review
         </div>
         <div class="col-xs-3">
           <span class='glyphicon glyphicon-ok-sign' style='color:#5bc0de; font-size: 17px;'></span> : On Label - Side Effect <br>
