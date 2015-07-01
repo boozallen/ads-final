@@ -147,8 +147,9 @@ p.logo_subtext strong {
   text-align: left;
   color: #ccc;
   font: normal 200 20px/1.5 'Helvetica Neue', Helvetica, sans-serif;
-
+  margin: 40px 0 10px;
 }
+
 .most_prescribed_drug a{
   color: #5bc0de;
   font-size: 16px;
@@ -314,6 +315,7 @@ background-color:#fff;
   margin: 0 8px 0 0;
   background: #bfbfbf;
   color: #fff;
+  border-radius: 25px;
 }
 
 .nav.navbar-nav.navbar-right li.active a{
@@ -472,6 +474,7 @@ h3 {
   margin: 0 8px 0 0;
   background: #f8ac59;
   color: #fff;
+  border-radius: 25px;
 }
 
 
@@ -484,6 +487,7 @@ h3 {
 .med-info h5 {
   color: #676a6c;
   font: normal normal 18px/1.5 'Helvetica Neue', Helvetica, sans-serif;
+  margin: 0 0 4px;
 }
 
 .med-info p{
@@ -513,11 +517,13 @@ h3 {
 }
 
 
+
 // YES - NO SECTION
 .label-wrap{
   background: #fff;
   padding: 30px;
   margin-bottom: 20px;
+  margin: 0;
 }
 
 .label-wrap p {
@@ -547,6 +553,8 @@ h3 {
   padding: 6px 30px;
 }
 
+.submit_btn{}
+
 .nav-pills li.yes-btn a{
   background-color: #1ab394;
   margin: 0 10px 0 0;
@@ -564,9 +572,14 @@ h3 {
   background-color: #ec4758;
 }
 
+.progress-wrapper{
+  margin: 20px 0 0;
+}
+
 .progress{
  background: #fff;
  border: 1px solid #dfdedf;
+ margin-bottom: 0;
 }
 
 .progress-bar {
@@ -577,6 +590,8 @@ h3 {
 .progress-complete{
   font-size: 14px;
   color: #676a6c;
+  float: left;
+  margin: 0 20px 0 0;
 }
 
 // CHART BUTTONS
