@@ -10,6 +10,7 @@
 angular.module('gapFront')
   .controller('LabelEffectsCtrl', function ($scope, $location, $window, IntegrationService, APIService, DrugService) {
 
+    $scope.leaderAdded = false;
     $scope.effects = [];
     $scope.alerts = ['alert'];
     $scope.selectedSymptom = '';
@@ -46,6 +47,7 @@ angular.module('gapFront')
       APIService.getLeadersApi().post(post).then(function() {
         APIService.getLeadersApi().getList().then(function(resp) {
           $scope.leaders = resp;
+          $scope.leaderAdded = true;
         });
       }, serviceError);
     };

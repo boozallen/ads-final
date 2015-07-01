@@ -62,7 +62,11 @@
     </div>
   </div>
 
-  <div class="row col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1" ng-show="count >= total">
+  <div class="row col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1" ng-show="count >= total && leaderAdded">
+    Thanks for submitting!
+  </div>
+
+  <div class="row col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1" ng-show="count >= total && !leaderAdded">
     <div class="col-md-7">
       <h2>Way to go!</h2>
 
