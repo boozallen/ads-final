@@ -26,11 +26,9 @@ angular.module('gapFront')
         var elemBottom = elemTop + $elem.height();
 
         if((elemBottom <= docViewBottom) && (elemTop >= docViewTop)){
-          console.log('hide it');
           $("#fixedSearch").css("display", "none");
         }
         else{
-          console.log('show it');
           $("#fixedSearch").css("display", "block");
         }
         return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));

@@ -1,4 +1,4 @@
-<section id="label-accuracy" class="col-md-12 spacer-2x spacer-2x label-full-row gray-bg" ng-if="count < total && (alerts.length == 0)">
+<section id="label-accuracy" class="col-md-12 spacer-2x spacer-2x label-full-row gray-bg" ng-show="count < total && (alerts.length == 0)">
 
   <div class="col-md-12 full-row blue-bg cf">
     <div class="med-info col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1">
@@ -56,5 +56,5 @@
 
 </section>
 
-<div ng-controller="LeaderBoardCtrl" ng-include src="'features/leaderBoard/leaderBoard.html'" ng-if="count >= total"></div>
+<div ng-controller="LeaderBoardCtrl" ng-include src="'features/leaderBoard/leaderBoard.html'" ng-show="count >= total"></div>
 

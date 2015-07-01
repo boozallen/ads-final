@@ -214,7 +214,14 @@ angular.module('gapFront')
           enabled: false
         },
         chart: {
-          type: 'bar'
+          type: 'bar',
+          events: {
+            load: function() {
+              $('html, body').animate({
+                scrollTop: $("#events-reports").offset().top
+              }, 500);
+            }
+          }
         },
         title: {
           text: 'Top 25 Reported Adverse Effects for ' + $scope.selectedDrug.brand_name,
