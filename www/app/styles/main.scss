@@ -240,6 +240,55 @@ section.landing {
 }
 
 
+// FIXED-NAV
+.navbar-fixed-top{
+  background-color: #fff;
+  height: 100px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+  border: none;
+}
+
+.nav.navbar-nav.navbar-right{
+background-color:#fff;
+}
+
+.nav.navbar-nav.navbar-right li a{
+  cursor: pointer;
+  height: 100px;
+  line-height: 100px;
+  padding: 0 20px;
+  margin: 0;
+  font-weight: 600;
+  color: #bfbfbf;
+}
+
+.nav.navbar-nav.navbar-right li a:hover{
+  background-color: #f5f5f5;
+}
+
+.nav.navbar-nav.navbar-right li a .number_block{
+  padding: 3px 8px 4px;
+  margin: 0 2px 0 0;
+  background: #bfbfbf;
+  color: #fff;
+}
+
+.nav.navbar-nav.navbar-right li.active a{
+  background-color:#f8ac59;
+  color: #fff;
+  // border-top: 10px solid #f8ac59
+}
+
+.nav.navbar-nav.navbar-right li.active a .number_block{
+  background: #fff;
+  color: #f8ac59;
+}
+
+.navbar-toggle {
+  margin-top:29px; 
+}
+
+
 .chartNavButtons {
   margin: 10px;
   border-radius: 5px;

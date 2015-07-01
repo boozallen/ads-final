@@ -1,5 +1,5 @@
-<nav id="fixedSearch" class="navbar navbar-default navbar-fixed-top" style="background-color: #000000; display: none">
-  <div class="container-fluid">
+<nav id="fixedSearch" class="navbar navbar-default navbar-fixed-top" style="display: none">
+  <div class="col-md-10 col-md-offset-1 col-xs-12 col-xs-offset-0">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
               aria-expanded="false" aria-controls="navbar">
@@ -8,19 +8,15 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand main-logo" href="#"><img src="../assets/label_craft_logo.png"/></a>
+      <a class="navbar-brand main-logo" href="#"><img src="../assets/label_craft_logo_dark.png"/></a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-
-      </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li class="active"><a ng-click="scrollToSearch()">Search <span class="sr-only">(current)</span></a></li>
-        <li><a ng-click="scrollToEventReports()">Reported Side Effects</a></li>
-        <li><a ng-click="scrollToLabelAccuracy()">Label Accuracy</a></li>
+        <li class="active"><a ng-click="scrollToSearch()"><span class="number_block">1</span> SEARCH <span class="sr-only">(current)</span></a></li>
+        <li><a ng-click="scrollToEventReports()"><span class="number_block">2</span> Reported Side Effects</a></li>
+        <li><a ng-click="scrollToLabelAccuracy()"><span class="number_block">3</span> Label Accuracy</a></li>
       </ul>
     </div>
     <!--/.nav-collapse -->
   </div>
-  <!--/.container-fluid -->
 </nav>
