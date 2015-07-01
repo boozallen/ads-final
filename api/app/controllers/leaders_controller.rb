@@ -1,6 +1,6 @@
 class LeadersController < ApplicationController
   def index
-    render json: Leader.all.order(:updated_at).limit(10)
+    render json: Leader.all.order(updated_at: :desc).limit(10)
   end
 
   def create
