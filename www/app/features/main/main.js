@@ -50,7 +50,7 @@ angular.module('gapFront')
     });
 
     $scope.setSelectedDrug = function(drug) {
-      $("#fixedSearch").css("display","block");
+      //$("#fixedSearch").css("display","block");
       $scope.drugs = [];
       $scope.alerts = [];
       $scope.selectedDrug = drug;
