@@ -8,7 +8,7 @@
  * Controller of the gapFront
  */
 angular.module('gapFront')
-  .controller('LabelEffectsCtrl', function ($scope, IntegrationService, APIService, DrugService) {
+  .controller('LabelEffectsCtrl', function ($scope, $location, $window, IntegrationService, APIService, DrugService) {
 
     $scope.effects = [];
     $scope.alerts = ['alert'];
@@ -190,5 +190,9 @@ angular.module('gapFront')
         }
       }
       return false;
+    }
+
+    $scope.toAbout = function toAbout() {
+      $window.location.href = "/about";
     }
   });

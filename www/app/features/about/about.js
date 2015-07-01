@@ -14,8 +14,12 @@ angular.module('gapFront')
       /** remove navbar links in header on about page since they're for the single page app page
       allows us to reuse. */
       $("#navbar-links").remove();
-    }
+    };
 
-    $scope.removeNavLinks();
+    $scope.$on('$viewContentLoaded', function() {
+      console.log('here');
+      $("#fixedSearch").css("display", "block");
+      $scope.removeNavLinks();
+    });
 
   });
