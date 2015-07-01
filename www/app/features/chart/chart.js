@@ -263,6 +263,7 @@ angular.module('gapFront')
 
         },
         legend: {
+          enabled: false,
           reversed: true,
           useHTML: true,
           labelFormatter: function(){

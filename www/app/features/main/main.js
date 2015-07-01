@@ -17,6 +17,7 @@ angular.module('gapFront')
 
     $(window).bind('scroll', function() {
         var $elem = $("#searchValue");
+        var eventsReportTop = $("#events-reports").top;
         var $window = $(window);
 
         var docViewTop = $window.scrollTop();
@@ -27,9 +28,11 @@ angular.module('gapFront')
 
         if((elemBottom <= docViewBottom) && (elemTop >= docViewTop)){
           $("#fixedSearch").css("display", "none");
+          $("#footerDiv").css("display", "none");
         }
         else{
           $("#fixedSearch").css("display", "block");
+          $("#footerDiv").css("display", "block");
         }
         return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
     });
