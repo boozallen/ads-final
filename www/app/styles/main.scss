@@ -130,8 +130,8 @@ p.logo_subtext{
   line-height: 30px;
   text-align: left;
   color: #ccc;
-  padding: 20px 0;
-  margin: 20px 0;
+  padding: 20px 0 0;
+  margin: 0 0 60px;
   // border-top: 1px solid #393f42;
   // border-bottom: 1px solid #393f42;
 }
@@ -140,16 +140,21 @@ p.logo_subtext strong {
   color: #fff;
 }
 
-.most_prescribed_drug .drug-block {
+.most_prescribed_drug .drug-block {}
+
+
+.most_prescribed_drug h6{
+  text-align: left;
+  color: #ccc;
+  font: normal 200 20px/1.5 'Helvetica Neue', Helvetica, sans-serif;
 
 }
-
 .most_prescribed_drug a{
-  color: #ccc;
+  color: #5bc0de;
   font-size: 16px;
   text-align: center;
   padding: 10px 0;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.3);
   display: block;
 }
 
@@ -157,7 +162,7 @@ p.logo_subtext strong {
 .most_prescribed_drug a:hover{
   cursor: pointer;
   text-decoration: none;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .steps{
@@ -185,14 +190,23 @@ p.logo_subtext strong {
   background: rgba(255, 255, 255, 0.1);
   text-align: center;
   color: #fff;
-  min-height: 124px;
+  height: 120px;
   padding: 10px 0 0;
+  margin: 0 0 5px;
 }
 
-.steps .step_block-inner p{
+.steps .step_block-inner p.label-text{
   color:#fff;
-  margin: 10px 4px;
-  font-size: 12px;
+  margin: 0 0 0 10px;
+  font-size: 18px;
+  font-weight: 600;
+  float: left;
+  text-align: left;
+  width: 55%;
+  position: relative;
+  top: 50%; 
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
 }
 
 .steps .step_block-inner .step-circle{
@@ -205,26 +219,36 @@ p.logo_subtext strong {
   text-align: center;
   color: #fff;
   display: block;
-  margin: 0 auto;
+  margin: 24px 0 0 20px;
+  float: left;
 }
 
 .steps .step_block-inner .step-circle p{
   margin: 0;
   padding: 5px 0 0;
   color: #fff;
+  float: none;
 }
 
 .steps .step_block-inner .step-circle p strong{
   display: block;
   font-size: 30px;
   font-weight: 700;
-  line-height: 26px;
+  line-height: 48px;
 }
 
-@media (max-width: 970px) {
-  .steps .step_block-inner p.label-text{text-align: left; font-size: 18px; line-height:51px; margin:5px}
-  .steps .step_block-inner{min-height: 80px;}
+@media (max-width: 1100px) {
+  .steps .step_block-inner p.label-text{font-size: 16px; width:51%;}
+}
+
+@media (max-width: 950px) {
+  .steps .step_block-wrap{margin: 0 0 5px 0;}
+  .steps .step_block-inner p.label-text{text-align: left; font-size: 16px; margin:0 0 0 5px; width:60%}
+  .steps .step_block-inner{height: 80px;}
   .steps .step_block-inner .step-circle{float: left; margin: 0 20px;}
+
+  .most_prescribed_drug .drug-block {margin-bottom:10px;}
+  section.landing{height:100%}
 }
 
 
@@ -287,7 +311,7 @@ background-color:#fff;
 
 .nav.navbar-nav.navbar-right li a .number_block{
   padding: 3px 8px 4px;
-  margin: 0 2px 0 0;
+  margin: 0 8px 0 0;
   background: #bfbfbf;
   color: #fff;
 }
@@ -337,24 +361,6 @@ h3 {
 }
 
 
-// NAVBAR OVERWRIDE
-//.navbar-default, .navbar-wrapper .navbar.navbar-scroll {
-//  background:#000;
-//  border-color: #000;
-//  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
-//}
-//
-//.navbar-default .navbar-nav > li > a {
-//  color: #fff;
-//  font-family: 'Helvetica Neue', Helvetica, sans-serif;
-//  font-weight: normal;
-//}
-//
-//.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover  {
-//  background-color: #000;
-//  color: #fff;
-//}
-//
 .navbar-default a.main-logo img{
   height: 30px;
   margin: 15px 0;
@@ -372,6 +378,8 @@ h3 {
   padding-left:15px;
   padding-right: 15px;
 }
+
+.search_block{margin-top: 20px;}
 
 .search_block .btn {
   padding:12px 18px;
@@ -430,7 +438,7 @@ h3 {
 }
 
 .full-row{
-  padding: 60px 0;
+  padding: 60px 0 0;
 }
 
 .full-row.blue{
@@ -455,10 +463,17 @@ h3 {
 // .med-info {}
 .med-info h2{
   color: #6d6f71;
-  font: normal 200 24px/1.5 'Helvetica Neue', Helvetica, sans-serif;
+  font: normal 200 40px/1.5 'Helvetica Neue', Helvetica, sans-serif;
   padding: 0 0 10px 0;
-  border-bottom: 1px solid #dcdddf;
 }
+
+.med-info h2 .number_block{
+  padding: 0px 16px 2px;
+  margin: 0 8px 0 0;
+  background: #f8ac59;
+  color: #fff;
+}
+
 
 .med-info h4 {
   color: #333;
@@ -475,6 +490,11 @@ h3 {
   color: #6d6f71;
   font-size: 16px;
   line-height: 1.7em;
+}
+
+.med-info p:last-child{
+  border-bottom: 1px solid #d1d2d4;
+  padding: 0 0 30px;
 }
 
 .highlight {
@@ -497,11 +517,12 @@ h3 {
 .label-wrap{
   background: #fff;
   padding: 30px;
+  margin-bottom: 20px;
 }
 
 .label-wrap p {
   color: #676a6c;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.9em;
 }
 
