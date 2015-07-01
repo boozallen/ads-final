@@ -217,12 +217,7 @@ angular.module('gapFront')
           }
         },
         title: {
-          text: 'Top 25 Reported Adverse Effects for ' + $scope.selectedDrug.brand_name,
-          style: {
-            color: '#333',
-            fontWeight: 'normal',
-            fontSize: 14
-          }
+          text: null
         },
         xAxis: [{
           title: {
