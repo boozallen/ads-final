@@ -49,6 +49,12 @@
            style="overflow: auto">
         <p>{{stuff.sentence}}</p>
       </div>
+      <script>
+        setTimeout(function () {
+          $('#adverseSentence').highlight($('#stuffGetter')[0].value)
+        }, 500);
+      </script>
+
     </div>
     <div class="col-md-4 col-md-offset-1" ng-show="count < total">
       <h3>Recent Contributors</h3>
@@ -77,29 +83,18 @@
     </div>
   </div>
 
-  <script>
-    setTimeout(function () {
-      $('#adverseSentence').highlight($('#stuffGetter')[0].value)
-    }, 500);
-  </script>
-
 </section>
 <br>
 <footer>
-    <div class="row" style="padding: 10px; background-color: #000000;font-size: 20px;color:white; margin-top: 1000px;">
-      <div class="col-xs-1 col-xs-offset-1">
-        <img src="../assets/wolf.png">
-      </div>
-      <div class="col-xs-5" style="margin-top:1%;">
-        <p>Proudly Crafted by Booz Allen Digital</p>
-      </div>
-      <div class="col-xs-5" style="margin-top:1%;">
-        <p>Data Source: <a href="http://open.fda.gov">open.fda.gov</a> | Checkout our <a>API</a> | <a ng-click="toAbout()">Meet the team</a></p>
-      </div>
+  <div class="row" style="padding: 10px; background-color: #000000;font-size: 20px;color:white; margin-top: 1000px;">
+    <div class="col-xs-1 col-xs-offset-1">
+      <img src="../assets/wolf.png">
     </div>
-    <div class="col-xs-5">
-      <p>Data Source: <a href="http://open.fda.org">open.fda.org</a> | Checkout our <a>API</a> | <a href="/about">Meet
-        the team</a></p>
+    <div class="col-xs-5" style="margin-top:1%;">
+      <p>Proudly Crafted by Booz Allen Digital</p>
     </div>
-  </div
+    <div class="col-xs-5" style="margin-top:1%;">
+      <p>Data Source: <a href="http://open.fda.gov">open.fda.gov</a> | Checkout our <a>API</a> | <a ng-click="toAbout()">Meet the team</a></p>
+    </div>
+  </div>
 </footer>
