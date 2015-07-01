@@ -1,100 +1,88 @@
-<section id="label-accuracy" class="col-md-12 spacer-2x spacer-2x label-full-row gray-bg" ng-show="alerts.length == 0"
-         style="padding-bottom: 1200px">
-
-  <div class="col-md-12 full-row blue-bg cf">
-    <div class="med-info col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1">
-      <h2>Answer a few questions to help improve a label</h2>
-
-      <p>Together we can improve the accuracy of drug labels. Let us know if the term below is listed as a side
-        effect.</p>
-    </div>
-  </div>
-
-  <div class="row col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1 spacer" ng-show="count < total">
-    <div class="col-md-7 med-info">
-      <h5>From the current label of: {{selectedDrug.brand_name}}</h5>
-    </div>
-
-    <div class="col-md-4 col-md-offset-1 no-padding">
-    </div>
-  </div>
-
-  <div class="row col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1" ng-repeat="stuff in displayedStuff">
-    <input type="text" ng-model="stuff.effect" id="stuffGetter" style="display: none"/>
-
-    <div class="col-md-7">
-      <span class='progress-complete'><strong>{{count}}</strong> of <strong>{{total}}</strong> complete</span>
-
-      <div class="progress">
-        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="{{getPercentage()}}"
-             aria-valuemin="0" aria-valuemax="100" ng-style="{width : (getPercentage() + '%')}">
+<section id="label-accuracy" class="col-md-12 spacer-2x spacer-2x label-full-row gray-bg" ng-show="alerts.length == 0" style="padding-bottom: 1200px">
+    <div class="col-md-12 full-row grey-bg cf">
+        <div class="med-info col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1">
+            <h2><span class="number_block">3</span>Improve drug labels: {{selectedDrug.substance_name}}&nbsp;({{selectedDrug.brand_name}})</h2>
+            <p>You can help the FDA improve drug labels by checking if reported side effects are currently listed on the label correctly. Check 18 side effects to get on our contributor list. Thanks for making labels more up-to-date.</p>
         </div>
-      </div>
-
-      <div ng-class="!$first?'row disabled spacer-2x':'row label-wrap '" ng-show="count < total">
-        <div>
-          <p class='confirm'>Is <strong>{{stuff.effect}}</strong> listed on the label as a side effect?</p>
-
-          <div class="btn-group">
-            <ul class="nav nav-pills " data-toggle="buttons">
-              <li class='yes-btn' role="presentation" ng-click="completeIndex($index, true, $first)"><a href="">YES</a>
-              </li>
-              <li class='no-btn' role="presentation" ng-click="completeIndex($index, false, $first)"><a href="">NO</a>
-              </li>
-            </ul>
-          </div>
+    </div>
+    <div class="row col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1 spacer" ng-show="count < total">
+        <div class="col-md-4 col-md-offset-1 no-padding">
         </div>
-      </div>
-      <div ng-class="!$first?'row disabled spacer-2x':'row label-wrap'" id="adverseSentence" ng-show="count < total"
-           style="overflow: auto">
-        <p>{{stuff.sentence}}</p>
-      </div>
-      <script>
-        setTimeout(function () {
-          $('#adverseSentence').highlight($('#stuffGetter')[0].value)
-        }, 500);
-      </script>
-
     </div>
-    <div class="col-md-4 col-md-offset-1" ng-show="count < total">
-      <h3>Recent Contributors</h3>
-      <ul ng-repeat="leader in leaders" class="leaders"><strong>{{leader.name}}</strong></ul>
-    </div>
-  </div>
+    <div class="row col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1" ng-repeat="stuff in displayedStuff">
+        <input type="text" ng-model="stuff.effect" id="stuffGetter" style="display: none" />
+        <div class="col-md-7">
+            <div class="med-info" ng-show="count < total">
+                <h5>Reported Side Effect:</h5>
+            </div>
+            <div ng-class="!$first?'row disabled spacer-2x':'row label-wrap '" ng-show="count < total">
+                <div>
+                    <p class='confirm'>Is <strong>{{stuff.effect}}</strong> listed on the current label as a side effect?</p>
+                    <div class="btn-group">
+                        <ul class="nav nav-pills " data-toggle="buttons">
+                            <li class='yes-btn' role="presentation" ng-click="completeIndex($index, true, $first)"><a href="">YES</a>
+                            </li>
+                            <li class='no-btn' role="presentation" ng-click="completeIndex($index, false, $first)"><a href="">NO</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 
-  <div class="row col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1" ng-show="count >= total">
-    <div class="col-md-7">
-      <h2>Way to go!</h2>
+                <div class="progress-wrapper">
+                <span class='progress-complete'><strong>{{count}}</strong> of <strong>{{total}}</strong> complete</span>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="{{getPercentage()}}" aria-valuemin="0" aria-valuemax="100" ng-style="{width : (getPercentage() + '%')}">
+                  </div>
+                </div>
+            </div>
 
-      <p>You've helped make the <strong>{{selectedDrug.brand_name}}</strong> labels more accurate. Enter your name to be
-        recognized as a contributor.</p>
-
-      <form>
-        <div class="form-group cf">
-          <input type="text" class="form-control" id="firstName" placeholder="What's your name?" ng-model="name">
-          <button type="submit" class="btn btn-default pull-right" ng-click="addLeader(name)">Submit</button>
+            </div>
+            <div class="med-info m-t-lg" ng-show="count < total">
+                <h5>Current label:</h5>
+            </div>
+            <div ng-class="!$first?'row disabled spacer-2x':'row label-wrap'" id="adverseSentence" ng-show="count < total" style="overflow: auto">
+                <p>{{stuff.sentence}}</p>
+            </div>
+            <script>
+            setTimeout(function() {
+                $('#adverseSentence').highlight($('#stuffGetter')[0].value)
+            }, 500);
+            </script>
         </div>
-      </form>
-      <h3>Other drug labels that need your help.</h3>
+        <div class="col-md-4 col-md-offset-1" ng-show="count < total">
+            <h3>Contributors – Thanks!</h3>
+            <ul ng-repeat="leader in leaders" class="leaders"><strong>{{leader.name}}</strong></ul>
+        </div>
     </div>
-    <div class="col-md-4 col-md-offset-1">
-      <h3>Recent Contributors</h3>
-      <ul ng-repeat="leader in leaders" class="leaders"><strong>{{leader.name}}</strong></ul>
+    <div class="row col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1" ng-show="count >= total">
+        <div class="col-md-7">
+            <h2>Way to go!</h2>
+            <p>You've helped make the <strong>{{selectedDrug.brand_name}}</strong> labels more accurate. Enter your name to be recognized as a contributor.</p>
+            <form>
+                <div class="form-group cf">
+                    <input type="text" class="form-control" id="firstName" placeholder="What's your name?" ng-model="name">
+                    <button type="submit" class="btn btn-default pull-right submit_btn" ng-click="addLeader(name)">Submit</button>
+                </div>
+            </form>
+            <h3>Other drug labels that need your help.</h3>
+        </div>
+        <div class="col-md-4 col-md-offset-1">
+            <h3>Recent Contributors</h3>
+            <ul ng-repeat="leader in leaders" class="leaders"><strong>{{leader.name}}</strong></ul>
+        </div>
     </div>
-  </div>
-
 </section>
 <br>
 <footer>
-  <div class="row" style="padding: 10px; background-color: #000000;font-size: 20px;color:white; margin-top: 2000px;">
-    <div class="col-xs-1 col-xs-offset-1">
-      <img src="../assets/wolf.png">
+    <div class="row" style="padding: 10px; background-color: #000000;font-size: 20px;color:white; margin-top: 2000px;">
+        <div class="col-xs-1 col-xs-offset-1">
+            <img src="../assets/wolf.png">
+        </div>
+        <div class="col-xs-5" style="margin-top:1%;">
+            <p>Proudly Crafted by Booz Allen Digital</p>
+        </div>
+        <div class="col-xs-5" style="margin-top:1%;">
+            <p>Data Source: <a href="http://open.fda.gov">open.fda.gov</a> | Checkout our <a>API</a> | <a ng-click="toAbout()">Meet the team</a></p>
+        </div>
     </div>
-    <div class="col-xs-5" style="margin-top:1%;">
-      <p>Proudly Crafted by Booz Allen Digital</p>
-    </div>
-    <div class="col-xs-5" style="margin-top:1%;">
-      <p>Data Source: <a href="http://open.fda.gov">open.fda.gov</a> | Checkout our <a>API</a> | <a ng-click="toAbout()">Meet the team</a></p>
-    </div>
-  </div>
 </footer>
