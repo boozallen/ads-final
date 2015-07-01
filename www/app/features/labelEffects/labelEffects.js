@@ -40,6 +40,16 @@ angular.module('gapFront')
 
     IntegrationService.registerIntegrationMethod('initLabelEffects', initLabelEffects);
 
+    $scope.addLeader = function(name){
+      var post = {leader: {name: name, zipcode: 11111, count: 5}};
+      $scope.newLeader = name;
+      APIService.getLeadersApi().post(post).then(function() {
+        APIService.getLeadersApi().getList().then(function(resp) {
+          $scope.leaders = resp;
+        });
+      }, serviceError);
+    };
+
     $scope.fetchDrugEffects = function () {
       $scope.adverseEffects = [];
       $scope.displayedStuff = [];

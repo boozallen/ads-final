@@ -1,4 +1,4 @@
-<section id="label-accuracy" class="col-md-12 spacer-2x spacer-2x label-full-row gray-bg" ng-show="count < total && (alerts.length == 0)">
+<section id="label-accuracy" class="col-md-12 spacer-2x spacer-2x label-full-row gray-bg" ng-show="alerts.length == 0">
 
   <div class="col-md-12 full-row blue-bg cf">
     <div class="med-info col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1">
@@ -7,7 +7,7 @@
     </div>
   </div>
 
-  <div class="row col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1 spacer" ng-hide="getPercentage() == 100">
+  <div class="row col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1 spacer" ng-show="count < total">
     <div class="col-md-7 med-info">
       <h5>From the current label of: {{selectedDrug.brand_name}}</h5>
     </div>
@@ -16,7 +16,7 @@
     </div>
   </div>
 
-  <div class="row col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1" ng-repeat="stuff in displayedStuff">
+  <div class="row col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1" ng-repeat="stuff in displayedStuff" >
     <input type="text" ng-model="stuff.effect" id="stuffGetter" style="display: none"/>
 
     <div class="col-md-7">
@@ -25,7 +25,20 @@
         <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="{{getPercentage()}}" aria-valuemin="0" aria-valuemax="100" ng-style="{width : (getPercentage() + '%')}">
         </div>
       </div>
-      <div ng-class="!$first?'row disabled spacer-2x':'row label-wrap '">
+
+      <div ng-show="count >= total">
+        <h2>Way to go!</h2>
+        <p>You've helped make the <strong>{{selectedDrug.brand_name}}</strong> labels more accurate. Enter your name to be recognized as a contributor.</p>
+        <form>
+          <div class="form-group cf">
+            <input type="text" class="form-control" id="firstName" placeholder="What's your name?" ng-model="name">
+            <button type="submit" class="btn btn-default pull-right" ng-click="addLeader(name)">Submit</button>
+          </div>
+        </form>
+        <h3>Other drug labels that need your help.</h3>
+      </div>
+
+      <div ng-class="!$first?'row disabled spacer-2x':'row label-wrap '" ng-show="count < total">
         <div>
           <p class='confirm'>Is <strong>{{stuff.effect}}</strong> listed on the label as a side effect?</p>
 
@@ -37,7 +50,7 @@
           </div>
         </div>
       </div>
-      <div ng-class="!$first?'row disabled spacer-2x':'row label-wrap'" id="adverseSentence">
+      <div ng-class="!$first?'row disabled spacer-2x':'row label-wrap'" id="adverseSentence" ng-show="count < total">
         <p>{{stuff.sentence}}</p>
       </div>
     </div>
@@ -55,9 +68,6 @@
   </div>
 
 </section>
-
-<div ng-controller="LeaderBoardCtrl" ng-include src="'features/leaderBoard/leaderBoard.html'" ng-show="count >= total"></div>
-
 <br>
 <footer>
   <div class="container">
