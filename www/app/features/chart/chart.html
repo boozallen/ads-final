@@ -54,18 +54,23 @@
       </div>
     </div>
     <br>
-    <div class="row col-md-10 col-md-offset-1">
+    <div class="row col-md-11 col-md-offset-1" ng-show="toggleCharts">
       <div class="col-xs-3">
-        <span class='glyphicon glyphicon-ok-sign' style='color:#5bc0de; font-size: 17px;'></span> : Reported and verified on label <br>
+        Data source: <a href="http://open.fda.gov">open.fda.gov</a>
       </div>
-      <div class="col-xs-3">
-        <span class='glyphicon glyphicon-exclamation-sign' style='color:#f8ac59; font-size: 17px;'></span> : Reported but not verified <br>
-      </div>
-      <div class="col-xs-3">
-        <span class='glyphicon glyphicon-ban-circle' style='color:#ed5565; font-size: 17px;'></span> : Reported but incorrectly described <br>
-      </div>
-      <div class="col-xs-3">
-        <span class='glyphicon glyphicon-question-sign' style='color:#d3d3d3; font-size: 17px;'></span> : No crowd data
+      <div class="col-xs-9">
+        <div class="col-xs-3">
+          <span class='glyphicon glyphicon-question-sign' style='color:#d3d3d3; font-size: 17px;'></span> : Needs Crowdsourcing
+        </div>
+        <div class="col-xs-3">
+          <span class='glyphicon glyphicon-ok-sign' style='color:#5bc0de; font-size: 17px;'></span> : On Label - Side Effect <br>
+        </div>
+        <div class="col-xs-3">
+          <span class='glyphicon glyphicon-exclamation-sign' style='color:#f8ac59; font-size: 17px;'></span> : Reported but not verified <br>
+        </div>
+        <div class="col-xs-3">
+          <span class='glyphicon glyphicon-ban-circle' style='color:#ed5565; font-size: 17px;'></span> : On Label - Not Side Effect <br>
+        </div>
       </div>
     </div>
   </div>
