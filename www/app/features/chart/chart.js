@@ -65,10 +65,7 @@ angular.module('gapFront')
         $scope.searchDrugEvents();
         $scope.alerts = [];
 
-        $("#headerDiv").css('display', 'block');
 
-        $location.hash('events-reports');
-        $anchorScroll();
       }, function(error){
         $scope.alerts.push(error.data.message);
         $rootScope.$broadcast('scanner-started', { message: error.data.message });
@@ -217,6 +214,7 @@ angular.module('gapFront')
           type: 'bar',
           events: {
             load: function() {
+              $("#headerDiv").css('display', 'block');
               $('html, body').animate({
                 scrollTop: $("#events-reports").offset().top
               }, 500);
