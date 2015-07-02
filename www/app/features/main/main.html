@@ -1,15 +1,13 @@
-<section class="landing" id="searchSplashScreen">
-
+<div class="landing" id="searchSplashScreen">
     <div class="row m-b-xl">
         <div class="main_logo_wrap col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1">
             <img src="../assets/label_craft_logo.png" align="middle" class="img-responsive logoTitle" alt="Responsive image">
             <h3>Check drug side effects. Improve drug labels.</h3>
         </div>
     </div>
-
     <div class="row">
         <div class="steps col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
-            <div class='step_block-wrap col-md-4 col-xs-12'>
+            <div class='step_block_wrap col-md-4 col-xs-12'>
                 <div class='step_block-inner'>
                     <div class='step-circle'>
                         <p><strong>1</strong></p>
@@ -17,7 +15,7 @@
                     <p class='label-text'>Find a drug</p>
                 </div>
             </div>
-            <div class='step_block-wrap col-md-4 col-xs-12'>
+            <div class='step_block_wrap col-md-4 col-xs-12'>
                 <div class='step_block-inner'>
                     <div class='step-circle'>
                         <p><strong>2</strong></p>
@@ -25,7 +23,7 @@
                     <p class='label-text'>See reported side effects</p>
                 </div>
             </div>
-            <div class='step_block-wrap col-md-4 col-xs-12'>
+            <div class='step_block_wrap col-md-4 col-xs-12'>
                 <div class='step_block-inner'>
                     <div class='step-circle'>
                         <p><strong>3</strong></p>
@@ -57,7 +55,7 @@
     <div class="row">
         <div class="most_prescribed_drug col-md-12 col-md-offset-0 col-xs-10 col-xs-offset-1 m-t-md">
             <div class="col-md-10 col-md-offset-2 col-xs-12 col-xs-offset-0">
-                <h6>…pick from top prescribed drugs in the US.</h6>
+                <h6>…pick one of the top prescribed drugs in the U.S.</h6>
             </div>
             <div class="col-md-2 col-md-offset-2 col-xs-12 col-xs-offset-0 drug-block"><a ng-click="searchDrug('Synthroid')">Synthroid</a></div>
             <div class="col-md-2 col-md-offset-0 col-xs-12 col-xs-offset-0 drug-block"><a ng-click="searchDrug('Crestor')">Crestor</a></div>
@@ -79,14 +77,12 @@
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> {{alert}}
             </div>
         </div>
-
-
-
-  <div class="row">
-    <div class="col-md-4 col-md-offset-4 col-xs-10 col-xs-offset-1">
-      <div class="alert alert-danger" role="alert" ng-repeat="alert in alerts">
-        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-        {{alert}}
-      </div>
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4 col-xs-10 col-xs-offset-1">
+                <div class="alert alert-danger" role="alert" ng-repeat="alert in alerts">
+                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> {{alert}}
+                </div>
+            </div>
+        </div>
     </div>
-</section>
+</div>
