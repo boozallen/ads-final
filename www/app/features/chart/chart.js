@@ -173,18 +173,18 @@ angular.module('gapFront')
                 $scope.barLabels[$scope.chart[i].term.toLowerCase()] = " <span class='glyphicon glyphicon-exclamation-sign'  style='color:#f8ac59; font-size: 17px;'></span>";
               } else {
                 $scope.treeData.push({name: $scope.chart[i].term.toLowerCase(), value: $scope.chart[i].count, colorValue: 1}); // more in no
-                $scope.barLabels[$scope.chart[i].term.toLowerCase()] = " <span class='glyphicon glyphicon-ban-circle' style='color:#ed5565; font-size: 17px;'></span>";
+                $scope.barLabels[$scope.chart[i].term.toLowerCase()] = " <span class='glyphicon glyphicon-ok-circle' style='color:#ed5565; font-size: 17px;'></span>";
               }
             } else { // not in no
               $scope.barLabels[$scope.chart[i].term.toLowerCase()] = " <span class='glyphicon glyphicon-ok-sign' style='color:#5bc0de; font-size: 17px;'></span>";
               $scope.treeData.push({name: $scope.chart[i].term.toLowerCase(), value: $scope.chart[i].count, colorValue: 2});
             }
           } else if ($scope.chart[i].term.toLowerCase() in $scope.drugEffects.no_answers) { // in no but not yes
-            $scope.barLabels[$scope.chart[i].term.toLowerCase()] = " <span class='glyphicon glyphicon-ban-circle' style='color:#ed5565; font-size: 17px;'></span>";
+            $scope.barLabels[$scope.chart[i].term.toLowerCase()] = " <span class='glyphicon glyphicon-ok-circle' style='color:#ed5565; font-size: 17px;'></span>";
             $scope.treeData.push({name: $scope.chart[i].term.toLowerCase(), value: $scope.chart[i].count, colorValue: 1}); // more in no
           } else { // in neither
             $scope.barLabels[$scope.chart[i].term.toLowerCase()] = " <span class='glyphicon glyphicon-question-sign' style='color:#d3d3d3; font-size: 17px;'></span>";
-            $scope.treeData.push({name: $scope.chart[i].term.toLowerCase(), value: $scope.chart[i].count, colorValue: 0});
+            $scope.treeData.push({name: $scope.chart[i].term.toLowerCase(), value: $scope.chart[i].count, colorValue: 3});
           }
         }
       }
@@ -224,15 +224,16 @@ angular.module('gapFront')
           }
         },
         title: {
-          text: 'Side ',
+          text: 'Side Effects',
           style: {
             color: '#707070',
             fontWeight: 'normal',
             fontSize: 12
           },
           textAlign: 'center',
-          x: -160,
-          y: 18
+          offset: -100,
+          x: -100,
+          y: -10
         },
         xAxis: [{
           title: {
@@ -263,7 +264,7 @@ angular.module('gapFront')
         yAxis: {
           min: 0,
           title: {
-            text: 'Counts'
+            text: 'Number of Reports'
           },
           lineColor: '#666666'
 
@@ -297,6 +298,17 @@ angular.module('gapFront')
 
         series: $scope.counts
 
+      }, function (chart){
+        var middle = chart.plotSizeX - 100;
+        chart.renderer.text('Status', chart.plotSizeX / 5, 28)
+          .attr({
+
+          })
+          .css({
+            color: '#707070',
+            fontSize: '12px'
+          })
+          .add();
       });
     }
     function createPieChart() {
@@ -313,7 +325,7 @@ angular.module('gapFront')
           type: 'pie'
         },
         title: {
-          text: 'Total Reported ' + $filter('number')($scope.totalReportedCount),
+          text: 'Total Reported Side Effects ' + $filter('number')($scope.totalReportedCount),
           style: {
             color: '#333',
             fontWeight: 'normal',
@@ -363,7 +375,7 @@ angular.module('gapFront')
         },
 
         title: {
-          text: 'Reported Adverse Event Counts Over Time',
+          text: 'Reported Side Event Over Time',
           style: {
             color: '#333',
             fontWeight: 'normal',
@@ -390,7 +402,7 @@ angular.module('gapFront')
 
     function createTreeChart(){
       Highcharts.setOptions({
-        colors: ['#23b193', '#bde2d9', '#5bc0de', '#f8ac59', '#ed5565']
+        colors: ['#23b193', '#bde2d9', '#5bc0de', '#f8ac59', '#ed5565', '#d3d3d3']
       });
       $scope.treeChart = $('#createTreeChart').highcharts({
         width: $("#"),
@@ -415,7 +427,12 @@ angular.module('gapFront')
               to: 2,
               name: 'Reported and verified on label',
               color: Highcharts.getOptions().colors[2]
-
+            },
+            {
+              from: 3,
+              to: 3,
+              name: "Needs Review",
+              color: Highcharts.getOptions().colors[5]
             }]
 
         },
@@ -425,10 +442,10 @@ angular.module('gapFront')
           data: $scope.treeData
         }],
         legend: {
-          enabled: true
+          enabled: false
         },
         title: {
-          text: 'Highcharts Treemap'
+          text: ''
         },
         plotOptions: {
           series: {
