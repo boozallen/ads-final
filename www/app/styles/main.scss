@@ -189,12 +189,14 @@ p.logo_subtext strong {
 
 .steps .step_block_wrap{
   border-right: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: none;
 }
 
 
 @media (max-width: 985px) {
 .steps .step_block_wrap{
   border-right: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 }
 .steps .step_block_wrap:last-child{
@@ -262,7 +264,7 @@ p.logo_subtext strong {
   .steps .step_block-inner .step-circle{float: left; margin: 0 20px;}
 
   .most_prescribed_drug .drug-block {margin-bottom:10px;}
-  .landing{height:100vh;}
+  .landing{height:100%!important;}
 }
 
 
@@ -353,6 +355,16 @@ background-color:#fff;
   border-radius: 5px;
   border-bottom-right-radius: 5;
   border-top-right-radius: 5;
+}
+
+
+.show_full_label{
+  height: 27px;
+  width: 76px;
+  display: block;
+  cursor: pointer;
+  background: url("../assets/full_label.png") no-repeat;
+  margin: 20px 0 0;
 }
 
 #title {
