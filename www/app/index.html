@@ -1,101 +1,89 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <title>labelcraft</title>
-  <base href="/">
-  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-  <!-- build:css(.) styles/vendor.css -->
-  <!-- bower:css -->
-  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
-  <link rel="stylesheet" href="bower_components/angular-motion/dist/angular-motion.css" />
-  <link rel="stylesheet" href="bower_components/angular-rangeslider/angular.rangeSlider.css" />
-  <!-- endbower -->
-  <!-- endbuild -->
-  <!-- build:css(.tmp) styles/main.css -->
-  <link rel="stylesheet" href="styles/main.css">
-  <!-- endbuild -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>labelcraft</title>
+    <base href="/">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="bower_components/angular-motion/dist/angular-motion.css" />
+    <link rel="stylesheet" href="bower_components/angular-rangeslider/angular.rangeSlider.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
 </head>
+
 <body ng-app="gapFront" id="page-top">
+        <div ng-view></div>
+        <div ng-controller="HeaderCtrl" id="headerDiv" ng-include src="'features/header/header.html'" style="display:none;"></div>
+        <div ng-controller="ChartCtrl" ng-include src="'features/chart/chart.html'" ng-show="selectedDrug"></div>
+        <div ng-controller="LabelEffectsCtrl" ng-include src="'features/labelEffects/labelEffects.html'" ng-show="selectedDrug"></div>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+    <script>
+    ! function(A, n, g, u, l, a, r) {
+        A.GoogleAnalyticsObject = l, A[l] = A[l] || function() {
+                (A[l].q = A[l].q || []).push(arguments)
+            }, A[l].l = +new Date, a = n.createElement(g),
+            r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
+    }(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-<div>
-  <div ng-view></div>
-  <div>
-    <div ng-controller="HeaderCtrl" id="headerDiv" ng-include src="'features/header/header.html'" style="display:none;"></div>
-    <div ng-controller="ChartCtrl" ng-include src="'features/chart/chart.html'" ng-show="selectedDrug"></div>
-    <div ng-controller="LabelEffectsCtrl" ng-include src="'features/labelEffects/labelEffects.html'"
-         ng-show="selectedDrug"></div>
-  </div>
-
-</div>
-
-<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-<script>
-  !function (A, n, g, u, l, a, r) {
-    A.GoogleAnalyticsObject = l, A[l] = A[l] || function () {
-        (A[l].q = A[l].q || []).push(arguments)
-      }, A[l].l = +new Date, a = n.createElement(g),
-      r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
-  }(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-  ga('create', 'UA-XXXXX-X');
-  ga('send', 'pageview');
-</script>
-
-<!-- build:js(.) scripts/vendor.js -->
-<!-- bower:js -->
-<script src="bower_components/jquery/dist/jquery.js"></script>
-<script src="bower_components/angular/angular.js"></script>
-<script src="bower_components/angular-animate/angular-animate.js"></script>
-<script src="bower_components/angular-cookies/angular-cookies.js"></script>
-<script src="bower_components/angular-resource/angular-resource.js"></script>
-<script src="bower_components/angular-route/angular-route.js"></script>
-<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-<script src="bower_components/angular-touch/angular-touch.js"></script>
-<script src="bower_components/ui-router/release/angular-ui-router.js"></script>
-<script src="bower_components/d3/d3.js"></script>
-<script src="bower_components/lodash/lodash.js"></script>
-<script src="bower_components/restangular/dist/restangular.js"></script>
-<script src="bower_components/angular-strap/dist/angular-strap.js"></script>
-<script src="bower_components/angular-strap/dist/angular-strap.tpl.js"></script>
-<script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
-<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-<script src="bower_components/angular-bootstrap-checkbox/angular-bootstrap-checkbox.js"></script>
-<script src="bower_components/angular-rangeslider/angular.rangeSlider.js"></script>
-<script src="bower_components/jquery-highlight/jquery.highlight.js"></script>
-<!-- endbower -->
-<!-- endbuild -->
-<!-- build:js({.tmp,app}) scripts/scripts.js -->
-
-
-<script src="http://code.highcharts.com/stock/highstock.js"></script>
-<script src="http://code.highcharts.com/stock/modules/exporting.js"></script>
-<script src="http://code.highcharts.com/modules/heatmap.js"></script>
-<script src="http://code.highcharts.com/modules/treemap.js"></script>
-
-<script src="app.js"></script>
-<script src="features/common/APIService.js"></script>
-<script src="features/common/DrugService.js"></script>
-<script src="features/common/IntegrationService.js"></script>
-<script src="features/main/main.js"></script>
-<script src="features/header/header.js"></script>
-<script src="features/about/about.js"></script>
-<script src="features/chart/chart.js"></script>
-<script src="features/chart/stacked.js"></script>
-<script src="features/labelEffects/labelEffects.js"></script>
-<script src="features/leaderBoard/leaderBoard.js"></script>
-<script src="features/footer/footer.js"></script>
-
-<script src="constants.js"></script>
-
-<!-- endbuild -->
-<script src="vendor/pace.min.js"></script>
-<script src="vendor/wow.min.js"></script>
-<script src="vendor/pace.min.js"></script>
-<script src="vendor/scrollspy.js"></script>
+    ga('create', 'UA-XXXXX-X');
+    ga('send', 'pageview');
+    </script>
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/d3/d3.js"></script>
+    <script src="bower_components/lodash/lodash.js"></script>
+    <script src="bower_components/restangular/dist/restangular.js"></script>
+    <script src="bower_components/angular-strap/dist/angular-strap.js"></script>
+    <script src="bower_components/angular-strap/dist/angular-strap.tpl.js"></script>
+    <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-bootstrap-checkbox/angular-bootstrap-checkbox.js"></script>
+    <script src="bower_components/angular-rangeslider/angular.rangeSlider.js"></script>
+    <script src="bower_components/jquery-highlight/jquery.highlight.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="http://code.highcharts.com/stock/highstock.js"></script>
+    <script src="http://code.highcharts.com/stock/modules/exporting.js"></script>
+    <script src="http://code.highcharts.com/modules/heatmap.js"></script>
+    <script src="http://code.highcharts.com/modules/treemap.js"></script>
+    <script src="app.js"></script>
+    <script src="features/common/APIService.js"></script>
+    <script src="features/common/DrugService.js"></script>
+    <script src="features/common/IntegrationService.js"></script>
+    <script src="features/main/main.js"></script>
+    <script src="features/header/header.js"></script>
+    <script src="features/about/about.js"></script>
+    <script src="features/chart/chart.js"></script>
+    <script src="features/chart/stacked.js"></script>
+    <script src="features/labelEffects/labelEffects.js"></script>
+    <script src="features/leaderBoard/leaderBoard.js"></script>
+    <script src="features/footer/footer.js"></script>
+    <script src="constants.js"></script>
+    <!-- endbuild -->
+    <script src="vendor/pace.min.js"></script>
+    <script src="vendor/wow.min.js"></script>
+    <script src="vendor/pace.min.js"></script>
+    <script src="vendor/scrollspy.js"></script>
 </body>
+
 </html>
