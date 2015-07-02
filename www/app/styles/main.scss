@@ -350,6 +350,10 @@ background-color:#fff;
 }
 
 
+.chart_key{
+  font-size: 11px;
+}
+
 .chartNavButtons {
   margin: 10px;
   border-radius: 5px;
@@ -520,6 +524,17 @@ h3 {
   font: normal 200 40px/1.5 'Helvetica Neue', Helvetica, sans-serif;
   padding: 0 0 10px 0;
 }
+
+@media (max-width: 950px) {
+.med-info h2{
+  font: normal 200 20px/1.5 'Helvetica Neue', Helvetica, sans-serif;
+  padding: 0 0 10px 0;
+}
+.show_full_label{
+    display: none;
+  }
+}
+
 
 .med-info h2 .number_block{
   padding: 0px 16px 2px;
