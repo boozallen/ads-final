@@ -15,70 +15,75 @@ angular.module('gapFront')
     $scope.searchFixed = '';
     $scope.alerts = [];
 
-    $(window).bind('scroll', function() {
-        var $elem = $("#searchValue");
-        var eventsReportTop = $("#events-reports").top;
-        var $window = $(window);
+    $(window).bind('scroll', function () {
+      var $elem = $("#searchValue");
+      var eventsReportTop = $("#events-reports").top;
+      var $window = $(window);
 
-        var docViewTop = $window.scrollTop();
-        var docViewBottom = docViewTop + $window.height();
+      var docViewTop = $window.scrollTop();
+      var docViewBottom = docViewTop + $window.height();
 
-        var elemTop = $elem.offset().top;
-        var elemBottom = elemTop + $elem.height();
+      var elemTop = $elem.offset().top;
+      var elemBottom = elemTop + $elem.height();
 
-        if((elemBottom <= docViewBottom) && (elemTop >= docViewTop)){
-          $("#fixedSearch").css("display", "none");
-          $("#footerDiv").css("display", "none");
-        }
-        else{
-          $("#fixedSearch").css("display", "block");
-          $("#footerDiv").css("display", "block");
-        }
-        return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+      if ((elemBottom <= docViewBottom) && (elemTop >= docViewTop)) {
+        $("#fixedSearch").css("display", "none");
+        $("#footerDiv").css("display", "none");
+      }
+      else {
+        $("#fixedSearch").css("display", "block");
+        $("#footerDiv").css("display", "block");
+      }
+      return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
     });
 
 
     var lastRoute = $route.current;
-    $scope.$on('$locationChangeSuccess', function(event) {
-        $route.current = lastRoute;
+    $scope.$on('$locationChangeSuccess', function (event) {
+      $route.current = lastRoute;
     });
 
-    $scope.$on('scanner-started', function(event, args) {
+    $scope.$on('scanner-started', function (event, args) {
       $scope.alerts.push(args.message);
       $("#fixedSearch").css("display", "none");
       $scope.searchText = '';
     });
 
-    $scope.setSelectedDrug = function(drug) {
+    $scope.setSelectedDrug = function (drug) {
       //$("#fixedSearch").css("display","block");
       $scope.drugs = [];
       $scope.alerts = [];
       $scope.selectedDrug = drug;
 
-      $location.hash('');
+      //$location.hash('');
 
       DrugService.setSelectedDrug($scope.selectedDrug);
-      IntegrationService.callIntegrationMethod('initChart',{});
+      IntegrationService.callIntegrationMethod('initChart', {});
     };
 
-    $scope.searchDrug = function(drug){
-      APIService.getDrugLabel(drug).then(function(resp) {
+
+    $scope.searchDrug = function (drug) {
+      var drugToSearch = drug.drug || drug;
+      console.log(drugToSearch);
+      APIService.getDrugLabel(drugToSearch).then(function (resp) {
         processLabelResults(resp);
         $scope.setSelectedDrug($scope.drugs[0]);
       }, serviceError)
     };
 
-    $scope.searchDrugs = function() {
+    IntegrationService.registerIntegrationMethod('searchDrug', $scope.searchDrug);
+
+    $scope.searchDrugs = function () {
       //console.log($scope.searchFixed);
       var bla = $scope.searchFixed;
 
-      if(bla){
+      if (bla) {
         //console.log('second');
         $scope.drugs = [];
         //console.log('here');
         var text = bla;
       }
-      else{
+      else {
         var text = $scope.searchText;
       }
 
@@ -93,7 +98,7 @@ angular.module('gapFront')
     function processLabelResults(resp) {
       $scope.drugs = [];
       for (var i in resp.results) {
-        if (resp.results[i]['openfda']['brand_name']){
+        if (resp.results[i]['openfda']['brand_name']) {
           var drug = {
             brand_name: resp.results[i]['openfda']['brand_name'][0],
             generic_name: resp.results[i]['openfda']['generic_name'][0],
@@ -137,11 +142,11 @@ angular.module('gapFront')
       //console.log(error);
     }
 
-    $scope.setTotalLabels = function setTotalLabels(resp){
+    $scope.setTotalLabels = function setTotalLabels(resp) {
       $scope.totalLabels = resp.meta.results.total;
     };
 
-    $scope.setTotalEvents = function setTotalEvents(resp){
+    $scope.setTotalEvents = function setTotalEvents(resp) {
       $scope.totalEvents = resp.meta.results.total;
     };
 
