@@ -191,6 +191,12 @@ p.logo_subtext strong {
   border-right: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+
+@media (max-width: 985px) {
+.steps .step_block_wrap{
+  border-right: none;
+}
+}
 .steps .step_block_wrap:last-child{
   border-right:none;
 }
@@ -360,11 +366,33 @@ background-color:#fff;
 }
 
 footer {
-  height: 100px;
   background-color:#000;
   position: absolute;
   bottom: 0px;
-  width: 100%
+  width: 102%;
+  overflow: hidden;
+}
+
+footer .wolf_img{
+  margin-top: 15px;
+}
+
+footer h6{
+  color: #fff;
+  font: normal 200 18px/1.5 'Helvetica Neue', Helvetica, sans-serif;
+  margin: 25px 0 0;
+}
+
+@media (max-width: 600px) {
+footer .wolf_img{
+  margin-top: 15px;
+  text-align: center;
+}
+
+  footer h6{
+    font-size: 14px;
+    text-align: center;
+  }
 }
 
 h3 {

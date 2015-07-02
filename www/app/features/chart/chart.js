@@ -375,7 +375,7 @@ angular.module('gapFront')
         },
 
         title: {
-          text: 'Reported Side Event Over Time',
+          text: 'Reported Side Effects Over Time',
           style: {
             color: '#333',
             fontWeight: 'normal',

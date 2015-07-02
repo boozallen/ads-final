@@ -1,28 +1,25 @@
 <section class="way-to-go-wrap col-md-12 label-full-row">
-  <div class="container-fluid">
-<div class="row">
-    <div class="col-md-4 col-md-offset-2">
-      <h2>Way to go!</h2>
-      <p>You've helped make the <strong>{{selectedDrug.brand_name}}</strong> labels more accurate. Enter your name to be recognized as a contributor.</p>
-
-      <form>
-        <div class="form-group cf">
-          <input type="text" class="form-control" id="firstName" placeholder="What's your first name?" ng-model="leader.firstName">
-          <input type="text" class="form-control" id="lastName" placeholder="What's your last name?" ng-model="leader.lastName">
-          <input type="text" class="form-control" id="zipCode" placeholder="What's your zip code?" ng-model="leader.zip">
-        <button type="submit" class="btn btn-default pull-right" ng-click="addLeader(leader)">Submit</button>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-2">
+                <h2>Way to go!</h2>
+                <p>You've helped make the <strong>{{selectedDrug.brand_name}}</strong> labels more accurate. Enter your name to be recognized as a contributor.</p>
+                <form>
+                    <div class="form-group cf">
+                        <input type="text" class="form-control" id="firstName" placeholder="What's your first name?" ng-model="leader.firstName">
+                        <input type="text" class="form-control" id="lastName" placeholder="What's your last name?" ng-model="leader.lastName">
+                        <input type="text" class="form-control" id="zipCode" placeholder="What's your zip code?" ng-model="leader.zip">
+                        <button type="submit" class="btn btn-default pull-right" ng-click="addLeader(leader)">Submit</button>
+                    </div>
+                </form>
+                <h3>Other drug labels that need your help.</h3>
+            </div>
+            <div align="center" class="col-md-4 col-md-offset-2">
+                <p>Recent Contributors</p>
+                <ul style="list-style-type: none;">
+                    <li ng-repeat="leader in leaders" class="leaders">{{leader.name}} <strong>{{leader.zipcode}}</strong></li>
+                </ul>
+            </div>
         </div>
-      </form>
-
-      <h3>Other drug labels that need your help.</h3>
     </div>
-
-    <div align="center" class="col-md-4 col-md-offset-2">
-      <p>Recent Contributors</p>
-      <ul style="list-style-type: none;">
-        <li ng-repeat="leader in leaders" class="leaders">{{leader.name}} <strong>{{leader.zipcode}}</strong></li>
-      </ul>
-    </div>
-  </div>
-</div>
 </section>
