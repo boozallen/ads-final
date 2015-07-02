@@ -20,7 +20,7 @@ angular.module('gapFront')
       return $scope.getPercentage() + '% of possible side effects addressed'
     };
 
-    $scope.$on('scanner-started', function(event, args) {
+    $scope.$on('alert-fired', function(event, args) {
       $scope.alerts.push(args.message);
     });
 
@@ -144,6 +144,11 @@ angular.module('gapFront')
         return splitText.join('.');
       }
     }
+
+    $scope.searchDrug = function(drug) {
+      console.log(drug);
+      IntegrationService.callIntegrationMethod('searchDrug', {drug: drug})
+    };
 
     // Called every time you finish one question
     $scope.completeIndex = function (index, accurate) {

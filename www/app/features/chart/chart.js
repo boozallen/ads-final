@@ -71,7 +71,7 @@ angular.module('gapFront')
         $anchorScroll();
       }, function(error){
         $scope.alerts.push(error.data.message);
-        $rootScope.$broadcast('scanner-started', { message: error.data.message });
+        $rootScope.$broadcast('alert-fired', { message: error.data.message });
       });
     };
 
