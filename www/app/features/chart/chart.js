@@ -209,7 +209,7 @@ angular.module('gapFront')
       var colors = Highcharts.getOptions().colors;
       var chartContainerWidth = $('#chartContainer').width();
       //console.log(chartContainerWidth);
-      $('#chartContainer').highcharts({
+      $scope.barGraph = $('#chartContainer').highcharts({
         exporting: {
           enabled: false
         },
