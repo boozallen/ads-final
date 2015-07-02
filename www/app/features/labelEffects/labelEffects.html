@@ -50,7 +50,7 @@
       </div>
       <div ng-class="!$first?'row disabled spacer-2x':'row label-wrap'" id="adverseSentence" ng-show="count < total"
            style="overflow: auto">
-        <p>{{stuff.sentence}}</p>
+        <p>…{{stuff.sentence}}…</p>
       </div>
       <script>
         setTimeout(function () {
@@ -70,6 +70,10 @@
 
       <p>You've helped make the <strong>{{selectedDrug.brand_name}}</strong> labels more accurate. Enter your name to be
         recognized as a contributor.</p>
+
+      <div class="alert alert-danger" role="alert" ng-show="leaderAlert">
+        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> {{leaderAlert}}
+      </div>
 
       <form>
         <div class="form-group cf">

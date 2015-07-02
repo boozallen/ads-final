@@ -10,6 +10,7 @@
 angular.module('gapFront')
   .controller('LabelEffectsCtrl', function ($scope, $location, $window, IntegrationService, APIService, DrugService) {
 
+    $scope.leaderAlert = '';
     $scope.leaderAdded = false;
     $scope.effects = [];
     $scope.alerts = ['alert'];
@@ -49,7 +50,9 @@ angular.module('gapFront')
           $scope.leaders = resp;
           $scope.leaderAdded = true;
         });
-      }, serviceError);
+      }, function(error) {
+        $scope.leaderAlert = 'You must enter a name to submit.';
+      });
     };
 
     $scope.fetchDrugEffects = function () {
@@ -114,8 +117,8 @@ angular.module('gapFront')
         textToSearch.push.apply(textToSearch, drugObject['general_precautions']);
       }
 
-      if (drugObject['warnings_and_precautions']) {
-        textToSearch.push.apply(textToSearch, drugObject['warnings_and_precautions']);
+      if (drugObject['warnings_and_cautions']) {
+        textToSearch.push.apply(textToSearch, drugObject['warnings_and_cautions']);
       }
 
       if (drugObject['adverse_reactions']) {
@@ -128,20 +131,39 @@ angular.module('gapFront')
         textToSearch = textToSearch.join('.');
       }
 
-      var splitText = textToSearch.split('.');
-      for (var i = 0; i < splitText.length; i++) {
-        if (splitText[i].match(effect)) {
-          found = true;
-          break;
+      var words = textToSearch.split(' ');
+      effect = effect.split(' ');
+
+      for (var i = 0; i < words.length; i++) {
+        var loc = words[i].indexOf(effect[0]);
+        if (loc > -1) {
+          if (!effect[1]) {
+            found = true;
+            break;
+          } else {
+            if (words[loc + 1].indexOf(effect[1] > -1)) {
+              if (!effect[2]) {
+                found = true;
+                break;
+              } else {
+                if (words[loc + 2].indexOf(effect[2] > -1)) {
+                  found = true;
+                  break;
+                }
+              }
+            }
+          }
         }
       }
 
+      console.log(textToSearch);
+      console.log(effect);
+
       if (found == true) {
-        return (splitText.slice(i-1, i+1).join('.'));
+        console.log('index: ' + i);
+        return (words.slice(Math.max(i-25, 0), Math.min(i+25, words.length)).join(' '));
       } else {
-        //console.log(textToSearch);
-        //console.log(effect);
-        return splitText.join('.');
+        return words.join(' ');
       }
     }
 

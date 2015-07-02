@@ -8,7 +8,7 @@ class Fda
   end
 
   def self.get_events(drug_name)
-    url = "https://api.fda.gov/drug/event.json?count=patient.reaction.reactionmeddrapt.exact&limit=1000&search=patient.drug.medicinalproduct:#{drug_name}"
+    url = "https://api.fda.gov/drug/event.json?count=patient.reaction.reactionmeddrapt.exact&limit=25&search=patient.drug.medicinalproduct:#{drug_name}"
     events = []
     begin
       JSON.parse(RestClient.get(url, accept: :json))['results'].each do |event|
