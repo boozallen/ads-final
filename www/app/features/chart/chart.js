@@ -299,16 +299,16 @@ angular.module('gapFront')
         series: $scope.counts
 
       }, function (chart){
-        var middle = chart.plotSizeX - 100;
-        chart.renderer.text('Status', chart.plotSizeX / 4, 28)
-          .attr({
-
-          })
-          .css({
-            color: '#707070',
-            fontSize: '12px'
-          })
-          .add();
+        //var middle = chart.plotSizeX - 100;
+        //chart.renderer.text('Status', chart.plotSizeX / 4, 28)
+        //  .attr({
+        //
+        //  })
+        //  .css({
+        //    color: '#707070',
+        //    fontSize: '12px'
+        //  })
+        //  .add();
       });
     }
     function createPieChart() {
