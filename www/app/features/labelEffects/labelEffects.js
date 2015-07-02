@@ -60,6 +60,7 @@ angular.module('gapFront')
       $scope.displayedStuff = [];
 
       var drug = DrugService.getSelectedDrugInfo();
+      console.log(drug);
       $scope.adverseEffects = drug.effects;
       $scope.total = $scope.adverseEffects.length > 18? 18 : $scope.adverseEffects.length;
       addDisplayedStuff();
