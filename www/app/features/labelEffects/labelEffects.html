@@ -60,21 +60,23 @@
     </div>
     <div class="row col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1" ng-show="count >= total">
       <div class="col-md-7 way-to-go-wrap ">
-        <h2>Way to go!</h2>
+        <div ng-show="!leaderAdded">
+          <h2>Way to go!</h2>
 
-        <p>You've helped make the <strong>{{selectedDrug.brand_name}}</strong> labels more accurate. Enter your name to
-          be recognized as a contributor.</p>
+          <p>You've helped make the <strong>{{selectedDrug.brand_name}}</strong> labels more accurate. Enter your name to
+            be recognized as a contributor.</p>
 
-        <form>
+          <form>
 
-          <div class="alert alert-danger" role="alert" ng-repeat="alert in leaderAlerts">
-            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> {{alert}}
-          </div>
-          <div class="form-group cf" ng-show="!leaderAdded">
-            <input type="text" class="form-control" id="firstName" placeholder="What's your name?" ng-model="name">
-            <button type="submit" class="btn pull-right submit_btn" ng-click="addLeader(name)">Submit</button>
-          </div>
-        </form>
+            <div class="alert alert-danger" role="alert" ng-repeat="alert in leaderAlerts">
+              <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> {{alert}}
+            </div>
+            <div class="form-group cf" >
+              <input type="text" class="form-control" id="firstName" placeholder="What's your name?" ng-model="name">
+              <button type="submit" class="btn pull-right submit_btn" ng-click="addLeader(name)">Submit</button>
+            </div>
+          </form>
+        </div>
         <h3>Other drug labels that need your help.</h3>
 
         <div class="col-md-3 col-md-offset-0 col-xs-12 col-xs-offset-0 drug-block"><a
