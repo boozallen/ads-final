@@ -118,16 +118,62 @@ For more information on our architecture, see the artifact below:
 
 [Link to Architecture Image] (https://github.com/booz-allen-agile-delivery/ads-final/wiki/Architecture-Diagrams)
 
-### Open Source Usage:
+Technical Approach Pool Three
+Readme description
+(a) At the start of the project we identified a single Product Owner who has sufficient authority over the project. He had the (1) ability to add or remove features. He attended all (2) release planning, (3) sprint planning and (4) demonstrations and made all final decisions about prioritizing the backlog. 
+(b) Our multidisciplinary team was composed of following 9 LCATs:
 
- 
+1) Category 1   - Product Manager
+2) Category 2   - Tech Architect
+3) Category 3   - Interaction designer
+4) Category 4   - Writer, content designer
+4) Category 5   - Visual Designer
+5) Category 6   - Front-end Dev
+6) Category 7   - Back-end Dev
+7) Category 8   - DevOps Engineer
+8) Category 10 - Delivery Manager
+9) Category 11 -  Agile Coach 
 
-[Open Source License] (Link to OPEN\_SOURCE\_LICENSE.md)
 
-All of the software that we used.
+(c)  As part of sprint zero our team had an ideation session that included the product owner, Booz Allen FDA subject matter experts and the agile team.  This session led to a number of hypotheses about our target audiences and their needs – along with sketches of personas. We validated and updated these personas throughout our project, through in-person and phone-based user interviews and usability testing. Our in-person, moderated usability testing also provided qualitative behavioral data on user goals to be incorporated into the wireframes as well as personas.
 
- 
+(d) We used multiple human centered design techniques and tools throughout the process.  Our Lean UX ideation session included brainstorming with a visioning game which ultimately yielded our product charter.  The process included (1) hand-sketched personas, (2) journey maps, (3) scribbled user stories, and (4) sketched wireframes on large pages in pairs. We then learned more about our users through (5) user interviews (in person and by phone) and (6) usability testing. Our personas were living documents that were updated as we learned more. Our hand-sketched wireframes were moved into (7) Axure, and were tested and updated in iterative rounds of usability testing. 
 
+(e) We began the design process by selecting a bootstrap theme that provided a close resemblance to our vision for the prototype. We chose this approach to help with familiarizing the team with the direction for the styling and components that we would ultimately design around. As our wireframes matured, we used these components as a foundation but modified the styling to meet our needs. We developed a design style guide to provide the team with a general reference point for our core design specifications. This includes: In addition to the design style guide, wireframes and a set of High Fidelity mockups were provided to provide the complete design vision for the prototype.
+
+(f) We conducted user interviews with each of our hypothesized persona types. These personas were updated, expanded or removed based on the incoming user data. We conducted two rounds of usability testing (4-5 participants in each round) on wireframes created in Axure. These were moderated, in-person usability test sessions where the participants pulled up our wireframes and walked through unstructured impressions on layout, navigation, content and interaction. We made significant changes based on both preference and behavioral data from each round of this small-scale usability testing. 
+
+(g) The prototype was developed over 10 sprints. This included the following:
+
+Sprint 0 - Setting up our development environment, including a continuous delivery infrastructure, and going through ideation/human centered design techniques to understand the value we could create and ultimately decide what to build.
+
+We delivered 4 releases over a period of 4 days (1 release per day). Release 2 was also the MVP release (Minimal Viable Product). The Product Owner attended all release planning sessions and provided feedback on the creation and prioritization of the user stories for the release.
+ 
+Sprint 1 - 9: Included (1) Sprint Planning at the beginning of each sprint and a (2) prototype demonstration and (3) retrospective at the end of each sprint. A Product Owner attended all of these and provided input into the prioritization of user stories for the sprint.
+
+All user stories were broken down into tasks and estimated during each sprint planning session. We tracked estimated and completed story points and team velocity.
+
+(h) Responsive Design
+
+(i) Five modern tech
+
+(i) Amazon Web Service Elastic Compute Cloud (EC2) was used to host any shared computing resources needed during for the project. 
+
+ (k) Unit testing was done in conjunction with development and written with appropriate tooling for the technology stack in use. Karma was used for the front-end code and rSpec was used for the backend API. Both these tools allow for developers to keep their development process fluid and leverage their respective language specific advantages. The unit tests were executed both locally on the developer’s machines and again on the continuous integration server upon a Git push. 
+
+(l) Jenkins was used as our continuous integration tool. GitHub hooks were established for each branch to kickoff Jenkins jobs. Custom Jenkins jobs for each branch ran automated tests in containerized environments. Once tests were completed, Jenkins CI would update the Docker registry and deploy the new build. All pushes to the development branch are automatically examined by static code analysis, security scans, unit tests, integration tests, and performance tests. Load testing was performed ad-hoc, at the developer’s discretion.
+
+(m) Configuration management was greatly simplified by leveraging Docker’s tool suite, which encapsulates away many traditional configuration steps. Docker Machine was used to provision and post-provision AWS EC2 instances so they are immediately ready for Docker-based deployments. After provisioning, the Docker engine pulls and builds containers from the Docker repository. Docker Compose implicitly injects the appropriate environment variables into the containers to connect frontend to API to database.   The /bin directory in the repo contains all the necessary scripts to utilize the described Docker workflow.
+
+(n) We set up and used cAdvisor (cAdvisor available at https://github.com/google/cadvisor)  to establish continuous monitoring. The cAdvisor tool cleanly presents a variety of metrics through a website to determine the health of the environment and its running containers, including CPU usage, memory usage, and running process metrics. Alerts are sent to relevant slack channels for any GitHub changes and Jenkins build results.
+
+(o) Docker-engine was used to build Linux containers from custom Dockerfiles stored in our Git repository. All three tiers of our application stack are containerized. Dockerfiles were written using Docker’s recommended best practices, to maximize the caching features of the Docker tool. This allows for quicker builds, which is important since we are rebuilding the Docker image after every push.
+
+(p) Installation instruction is a two lines Docker command. 
+--> we'll also have a docker file architecture diagram
+
+
+(q) Open Source Usage
 ### Evidence
 
 We met each of the attachment E criteria. This and supporting evidence are
