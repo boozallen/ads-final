@@ -71,8 +71,8 @@
       <p>You've helped make the <strong>{{selectedDrug.brand_name}}</strong> labels more accurate. Enter your name to be
         recognized as a contributor.</p>
 
-      <div class="alert alert-danger" role="alert" ng-show="leaderAlert">
-        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> {{leaderAlert}}
+      <div class="alert alert-danger" role="alert" ng-repeat="alert in leaderAlerts">
+        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> {{alert}}
       </div>
 
       <form>

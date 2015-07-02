@@ -9,7 +9,12 @@ class LeadersController < ApplicationController
       leader.count += params[:leader][:count]
       render json: leader.save
     else
-      render json: Leader.create!(leader_params)
+      leader = Leader.new(leader_params)
+      if leader.save
+        render json: leader
+      else
+        render json: { messages: leader.errors.full_messages }, status: 422
+      end
     end
   end
 

@@ -10,9 +10,9 @@
 angular.module('gapFront')
   .controller('LabelEffectsCtrl', function ($scope, $location, $window, IntegrationService, APIService, DrugService) {
 
-    $scope.leaderAlert = '';
     $scope.leaderAdded = false;
     $scope.effects = [];
+    $scope.leaderAlerts = [];
     $scope.alerts = ['alert'];
     $scope.selectedSymptom = '';
     $scope.adverseEffects = [];
@@ -51,7 +51,7 @@ angular.module('gapFront')
           $scope.leaderAdded = true;
         });
       }, function(error) {
-        $scope.leaderAlert = 'You must enter a name to submit.';
+        $scope.leaderAlerts.push.apply($scope.leaderAlerts, error.messages);
       });
     };
 
