@@ -157,8 +157,8 @@ p.logo_subtext strong {
   padding: 10px 0;
   background: rgba(0, 0, 0, 0.3);
   display: block;
+  border-radius:20px;
 }
-
 
 .most_prescribed_drug a:hover{
   cursor: pointer;
@@ -553,7 +553,20 @@ h3 {
   padding: 6px 30px;
 }
 
-.submit_btn{}
+.submit_btn{
+  color: #fff;
+  text-decoration: uppercase !important;
+  font-weight: 300;
+  font-size: 18px;
+  padding: 6px 30px;
+  background-color: #0f6162 !important;
+  border: none;
+  margin: 10px 0;
+}
+.submit_btn:hover{
+  background-color:#17999c!important;
+  color: #fff;
+}
 
 .nav-pills li.yes-btn a{
   background-color: #1ab394;
@@ -608,7 +621,7 @@ h3 {
   background-color: #ebebeb;
   color: #989898;
   font-size: 11px;
-  padding: 5px 12px;
+  padding: 8px 15px;
   margin: 2px;
 }
 
@@ -646,7 +659,7 @@ h3 {
 }
 
 .way-to-go-wrap{
-  background-color: #23c6c8;
+  background-color: #ccc;
 }
 
 .way-to-go-wrap h2, .way-to-go-wrap h3, .way-to-go-wrap p{
@@ -675,17 +688,69 @@ h3 {
   margin: 0 10px 20px 0;
 }
 
-
 .way-to-go-wrap .btn {
   background: #0f6162;
   color: #fff;
-  margin: 10px 30px;
+  margin: 0;
+  text-transform: uppercase;
 }
 
+
+.way-to-go-wrap .drug-block a{
+  color: #1c8080;
+  font-size: 12px;
+  text-align: center;
+  padding: 10px 0;
+  background: rgba(255, 255, 255, 0.5);
+  display: block;
+  margin: 0 0 20px;
+  border-radius: 20px;
+}
+
+.way-to-go-wrap .drug-block a:hover{
+  cursor: pointer;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.leader-board h3{
+  background: #608c99;
+  color: #fff;
+  margin: 0 0 3px;
+  padding: 15px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  position: relative;
+}
+
+.leader-board h3:before, .leader-board h3:after{
+  content: " ";
+  height: 60px;
+  width: 65px;
+  display: block;
+  position: absolute;
+  top: 0px;
+}
+
+.leader-board h3:before{
+  background: url("../assets/ribbon_left.png") no-repeat;
+  left: -60px;
+}
+
+.leader-board h3:after{
+  background: url("../assets/ribbon_right.png") no-repeat;
+  right: -65px;
+}
+
+
 .leaders {
-  background-color: #528989;
-  color: white;
-  margin-bottom: 20px;
+  background-color: #fff;
+  color: #4f727d;
+  margin-bottom: 3px;
+  padding: 15px 20px;
+  font-weight: normal;
+  border-bottom: 1px solid #ececec;
 }
 
 .highcharts-container{width:100% !important; height:100% !important;}
