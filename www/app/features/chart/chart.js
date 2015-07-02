@@ -9,11 +9,6 @@
  */
 angular.module('gapFront')
   .controller('ChartCtrl', function ($scope, $filter, IntegrationService, APIService, DrugService, $rootScope, $location, $anchorScroll) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
 
     $scope.initializeVariables = function initializeVariables() {
       $scope.filterType = "hospitalizations";
@@ -200,6 +195,11 @@ angular.module('gapFront')
       // });
     };
 
+    $scope.modal = {
+      title: "Manufacturer Details for: ",
+      content: "Hello Modal<br>This is a multiline message!"
+    };
+
     Highcharts.setOptions({
       colors: ['#23b193', '#bde2d9']
     });
@@ -300,7 +300,7 @@ angular.module('gapFront')
 
       }, function (chart){
         var middle = chart.plotSizeX - 100;
-        chart.renderer.text('Status', chart.plotSizeX / 5, 28)
+        chart.renderer.text('Status', chart.plotSizeX / 4, 28)
           .attr({
 
           })
