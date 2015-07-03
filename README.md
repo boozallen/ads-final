@@ -118,6 +118,8 @@ For more information on our architecture, see the artifact below:
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Agile-Artifacts.md
 
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/User-Stories.md
+
 (b) Our multidisciplinary team was composed of following 9 LCATs:
 
 - 1) Category 1   - Product Manager
@@ -171,6 +173,10 @@ https://github.com/booz-allen-agile-delivery/ads-final/blob/development/document
 
 (l) Jenkins was used as our continuous integration tool. GitHub hooks were established for each branch to kickoff Jenkins jobs. Custom Jenkins jobs for each branch ran automated tests in containerized environments. Once tests were completed, Jenkins CI would update the Docker registry and deploy the new build. All pushes to the development branch are automatically examined by static code analysis, security scans, unit tests, integration tests, and performance tests. Load testing was performed ad-hoc, at the developer’s discretion.
 
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/DevOps-Process.md
+
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Automated-Testing.md
+
 (m) Configuration management was greatly simplified by leveraging Docker’s tool suite, which encapsulates away many traditional configuration steps. Docker Machine was used to provision and post-provision AWS EC2 instances so they are immediately ready for Docker-based deployments. After provisioning, the Docker engine pulls and builds containers from the Docker repository. Docker Compose implicitly injects the appropriate environment variables into the containers to connect frontend to API to database.   The /bin directory in the repo contains all the necessary scripts to utilize the described Docker workflow.
 
 (n) We set up and used cAdvisor (cAdvisor available at https://github.com/google/cadvisor)  to establish continuous monitoring. The cAdvisor tool cleanly presents a variety of metrics through a website to determine the health of the environment and its running containers, including CPU usage, memory usage, and running process metrics. Alerts are sent to relevant slack channels for any GitHub changes and Jenkins build results.
@@ -178,6 +184,8 @@ https://github.com/booz-allen-agile-delivery/ads-final/blob/development/document
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Continuous-Monitoring.md
 
 (o) Docker-engine was used to build Linux containers from custom Dockerfiles stored in our Git repository. All three tiers of our application stack are containerized. Dockerfiles were written using Docker’s recommended best practices, to maximize the caching features of the Docker tool. This allows for quicker builds, which is important since we are rebuilding the Docker image after every push.
+
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/DevOps-Process.md
 
 (p) Installation instruction is a two lines Docker command. 
 --> we'll also have a docker file architecture diagram
