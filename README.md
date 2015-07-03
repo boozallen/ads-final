@@ -153,3 +153,10 @@ https://github.com/booz-allen-agile-delivery/ads-final/blob/development/INSTALL.
 
 
 **(q)** Open Source Usage
+
+All of the technologies we used for this prototype are open source. The list of technologies can be seen at the following url:
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Architecture-Diagrams.md
+
+We have also open sourced this solution and the Open source license is available at:
+
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/LICENSE.md
