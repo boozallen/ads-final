@@ -76,7 +76,17 @@ Here is how developers code. To make it easier to explain, let's say a release i
 
 ![3_cont_deploymt_man_test_v1](https://cloud.githubusercontent.com/assets/12210910/8342219/89003822-1a98-11e5-9fd7-f85313296e6f.png)
 
-**Continuous Deployment =** is a natural next step once all the automated tests run successfully after continuous integration using the code in developer integration branch
+**Continuous Deployment =** is a natural next step once all the automated tests run successfully after continuous integration using the code in developer integration branch. The gatekeeper of our git flow, in this case our technical architect, merges the changes in the Developer Branch to Release Branch. As soon as the merge is complete, Jenkins CI server initiates the automated process for continuous deployment by running unit tests, static analysis, and code quality scan. Then Jenkins containerizes the application into a Docker file and deploys the release into the Release Environments. The team is notified in Slack when the build is deployed as seen on the below image:
+
+INSERT IMAGE HERE
+
+**Manual Testing =** is performed on the Release Environment. The followint manual test types are performed:
+
+- Usability testing
+- Story (functional) testing
+- Exploratory testing
+
+
 
 ![4_cont_delivery_v1](https://cloud.githubusercontent.com/assets/12210910/8342223/8bd3c636-1a98-11e5-8faa-6490ea1c3ebf.png)
 
