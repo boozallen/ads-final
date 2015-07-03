@@ -1,4 +1,4 @@
-This wiki page has our:
+This page has our:
 
 - Style Guide
 
