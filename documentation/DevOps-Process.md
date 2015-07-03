@@ -80,17 +80,17 @@ Here is how developers code. To make it easier to explain, let's say a release i
 
 INSERT IMAGE HERE
 
-**Manual Testing =** is performed on the Release Environment. The followint manual test types are performed:
+**Manual Testing =** is performed on the Release Environment. The following manual tests types are performed:
 
 - Usability testing
 - Story (functional) testing
 - Exploratory testing
 
-
+## Continuous Delivery
 
 ![4_cont_delivery_v1](https://cloud.githubusercontent.com/assets/12210910/8342223/8bd3c636-1a98-11e5-8faa-6490ea1c3ebf.png)
 
-
+After the Release code is manually verified, continuous delivery is triggered by the product owner manually. We define continuous delivery as deliverying functionality that achieved our "definition of done" to production. This is the real value of DevOps. Traditional software development includes long term plans for releases. Even though some of the release scope is completed, the operations team waits for the complete release scope to be complete and for the planned release date. Continuous Delivery decomposes a large release into smaller chunks.
 
 ## Infrastructure
 
