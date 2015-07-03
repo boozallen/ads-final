@@ -116,6 +116,8 @@ For more information on our architecture, see the artifact below:
 
 (a) At the start of the project we identified a single Product Owner who has sufficient authority over the project. He had the (1) ability to add or remove features. He attended all (2) release planning, (3) sprint planning and (4) demonstrations and made all final decisions about prioritizing the backlog. 
 
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Agile-Artifacts.md
+
 (b) Our multidisciplinary team was composed of following 9 LCATs:
 
 - 1) Category 1   - Product Manager
@@ -133,11 +135,19 @@ See humans.txt for a full list of people who worked on the prototype.
 
 (c)  As part of sprint zero our team had an ideation session that included the Product Owner, Booz Allen FDA subject matter experts and the agile team.  This session led to a number of hypotheses about our target audiences and their needs – along with sketches of personas. We validated and updated these personas throughout our project, through in-person and phone-based user interviews and usability testing. Our in-person, moderated usability testing also provided qualitative behavioral data on user goals to be incorporated into the wireframes as well as personas.
 
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Human-Centered-Design.md
+
 (d) We used multiple human centered design techniques and tools throughout the process.  Our Lean UX ideation session included brainstorming with a visioning game which ultimately yielded our product charter.  The process included (1) hand-sketched personas, (2) journey maps, (3) scribbled user stories, and (4) sketched wireframes on large pages in pairs. We then learned more about our users through (5) user interviews (in person and by phone) and (6) usability testing. Our personas were living documents that were updated as we learned more. Our hand-sketched wireframes were moved into (7) Axure, and were tested and updated in iterative rounds of usability testing. 
+
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Human-Centered-Design.md
 
 (e) We began the design process by selecting a bootstrap theme that provided a close resemblance to our vision for the prototype. We chose this approach to help with familiarizing the team with the direction for the styling and components that we would ultimately design around. As our wireframes matured, we used these components as a foundation but modified the styling to meet our needs. We developed a design style guide to provide the team with a general reference point for our core design specifications. This includes: In addition to the design style guide, wireframes and a set of High Fidelity mockups were provided to provide the complete design vision for the prototype.
 
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Design-Documentation.md
+
 (f) We conducted user interviews with each of our hypothesized persona types. These personas were updated, expanded or removed based on the incoming user data. We conducted two rounds of usability testing (4-5 participants in each round) on wireframes created in Axure. These were moderated, in-person usability test sessions where the participants pulled up our wireframes and walked through unstructured impressions on layout, navigation, content and interaction. We made significant changes based on both preference and behavioral data from each round of this small-scale usability testing. 
+
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Usability-Testing.md
 
 (g) The prototype was developed over 10 sprints. This included the following:
 
@@ -148,6 +158,8 @@ We delivered 4 releases over a period of 4 days (1 release per day). Release 2 w
 Sprint 1 - 9: Included (1) Sprint Planning at the beginning of each sprint and a (2) prototype demonstration and (3) retrospective at the end of each sprint. A Product Owner attended all of these and provided input into the prioritization of user stories for the sprint.
 
 All user stories were broken down into tasks and estimated during each sprint planning session. We tracked estimated and completed story points and team velocity.
+
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Agile-Artifacts.md
 
 (h) Responsive Design
 
@@ -162,6 +174,8 @@ All user stories were broken down into tasks and estimated during each sprint pl
 (m) Configuration management was greatly simplified by leveraging Docker’s tool suite, which encapsulates away many traditional configuration steps. Docker Machine was used to provision and post-provision AWS EC2 instances so they are immediately ready for Docker-based deployments. After provisioning, the Docker engine pulls and builds containers from the Docker repository. Docker Compose implicitly injects the appropriate environment variables into the containers to connect frontend to API to database.   The /bin directory in the repo contains all the necessary scripts to utilize the described Docker workflow.
 
 (n) We set up and used cAdvisor (cAdvisor available at https://github.com/google/cadvisor)  to establish continuous monitoring. The cAdvisor tool cleanly presents a variety of metrics through a website to determine the health of the environment and its running containers, including CPU usage, memory usage, and running process metrics. Alerts are sent to relevant slack channels for any GitHub changes and Jenkins build results.
+
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Continuous-Monitoring.md
 
 (o) Docker-engine was used to build Linux containers from custom Dockerfiles stored in our Git repository. All three tiers of our application stack are containerized. Dockerfiles were written using Docker’s recommended best practices, to maximize the caching features of the Docker tool. This allows for quicker builds, which is important since we are rebuilding the Docker image after every push.
 
