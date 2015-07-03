@@ -56,7 +56,7 @@ linked below:
 
 [Link to the Digital Services Checklist] (https://github.com/booz-allen-agile-delivery/ads-final/wiki/U.S.-Digital-Services-Playbook-Evidence)
 
-The 18F five key principles are covered by following Digital Services Playbook. Our process applied by our Agile team demonstated each of these principles.  
+The 18F five key principles are covered by following Digital Services Playbook. Our process applied by our Agile team demonstrated each of these principles.  
 
 
 ### Architecture/Tools
