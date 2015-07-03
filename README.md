@@ -103,12 +103,11 @@ Our solution is comprised of more than five modern, open-source technologies.  O
 
 - Front-End: Foundation, Angular.JS, Node.js, Karma, JS Hint, HighCharts
 - Backend: Ruby, Rails, RSpec, Rubocop, Brakeman
-- To support unit testing, code quality, and code security we selected RSpec, Rubocop, and Brakeman respectively.
 - Dev-Ops: Docker (Machine, Registry, Compose), Jenkins, cAdvisor
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Architecture-Diagrams.md
 
-**(i)**
+**(j)**
 
 Amazon Web Service Elastic Compute Cloud (EC2) was used to host any shared computing resources needed during for the project.
 
