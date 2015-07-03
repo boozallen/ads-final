@@ -120,7 +120,7 @@ https://github.com/booz-allen-agile-delivery/ads-final/blob/development/document
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/User-Stories.md
 
-(b) Our multidisciplinary team was composed of following 9 LCATs:
+(b) Our multidisciplinary team was composed of following 10 LCATs:
 
 - 1) Category 1   - Product Manager
 - 2) Category 2   - Tech Architect
