@@ -58,28 +58,6 @@ https://github.com/booz-allen-agile-delivery/ads-final/blob/development/document
 
 The 18F five key principles are covered by following Digital Services Playbook. Our process applied by our Agile team demonstrated each of these principles.  
 
-### Architecture/Tools
-
-Instructions to build the software are provided in the artifact below:
-
-https://github.com/booz-allen-agile-delivery/ads-final/blob/development/INSTALL.md
-
-Our architecture consists of a modern technology stack that reflect current best
-practices for web application development.  The selection of technologies was
-driven by the following value propositions:
-
--   Support for multiple cloud environments through Docker and Docker Machine
-
--   Technologies appropriate for task (Ruby for backend, Angular for Front-End
-    Single-Page-App (SPA))
-
--   DevOps Best Practices - Configuration Management using GitFlow
-
--   Security – Sophos Firewall, AWS VPC and Security Groups
-
-For more information on our architecture, see the artifact below:
-
-https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Architecture-Diagrams.md
 
 ###Technical Approach Pool Three
 
