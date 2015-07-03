@@ -54,10 +54,9 @@ and questions we believe are intended to be answered during the execution of any
 digital program.  Our responses to the checklist are contained in the artifact
 linked below:
 
-[Link to the Digital Services Checklist] (https://github.com/booz-allen-agile-delivery/ads-final/wiki/U.S.-Digital-Services-Playbook-Evidence)
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/U.S.-Digital-Services-Playbook-Evidence.md
 
 The 18F five key principles are covered by following Digital Services Playbook. Our process applied by our Agile team demonstrated each of these principles.  
-
 
 ### Architecture/Tools
 
@@ -80,7 +79,7 @@ driven by the following value propositions:
 
 For more information on our architecture, see the artifact below:
 
-[Link to Architecture Image] (https://github.com/booz-allen-agile-delivery/ads-final/wiki/Architecture-Diagrams)
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Architecture-Diagrams.md
 
 ###Technical Approach Pool Three
 
