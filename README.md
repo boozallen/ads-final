@@ -174,7 +174,16 @@ Responsive Design
 
 **(i)**
 
-Five modern technologies
+Our solution is comprised of more than five modern, open-source technologies.  Our selection of technologies was driven by several factors including the language, frameworks, and libraries most appropriate to solve the problem, the ability for the technology to conform to modern development best practices, and tools that best support the full end-to-end life cycle of development for maximum quality.  These factors were considered for the technologies selected for front-end, back-end, and dev-ops. Technologies selected includes:
+
+- Front-End: Foundation, Angular.JS, Node.js, Karma, JS Hint, HighCharts
+- Backend: Ruby, Rails, RSpec, Rubocop, Brakeman
+- To support unit testing, code quality, and code security we selected RSpec, Rubocop, and Brakeman respectively.
+- Dev-Ops: Docker (Machine, Registry, Compose), Jenkins, cAdvisor
+
+In the interest of meeting maximizing the value of our open source Dev-Ops stack, all of our build scripts were contributed to the repository:
+
+https://github.com/booz-allen-agile-delivery/ads-final/tree/development/bin/jenkins
 
 **(i)**
 
