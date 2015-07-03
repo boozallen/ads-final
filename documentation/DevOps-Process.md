@@ -1,7 +1,9 @@
 ![git_flow_v1](https://cloud.githubusercontent.com/assets/12210910/8392524/11919d5e-1cb3-11e5-97ce-5cd08defcd9b.png)
 
 
-This project uses Booz Allen's agile and DevOps practices from Development to Opearations and Operations back to Development.  Our definition of DevOps is, it is a set of practices intended to reduce the time between committing a change to the system we're building, maintaining or operating, and the change being placed into normal production, while ensuring high quality. It is a catchall term that can cover several meanings, including; having development and operations continuously communicate to each other; allowing development teams to deploy to production automatically using well defined and proven practices; and having our development team be the first responders when an error is discovered in production. Although,  this effort was a response to an RFQ, we established our DevOps cultural and technical framework in sprint zero and continued to evolved it though our the development. The source code for our DevOps scripts (or Infrastructure as code) can be found in this git hub at the following URL:
+This project uses Booz Allen's agile and DevOps practices from Development to Opearations and Operations back to Development. All of the information on this page reflects how our DevOps code works for the the prototype we built for the response to this RFQ.
+
+Our definition of DevOps is, it is a set of practices intended to reduce the time between committing a change to the system we're building, maintaining or operating, and the change being placed into normal production, while ensuring high quality. It is a catchall term that can cover several meanings, including; having development and operations continuously communicate to each other; allowing development teams to deploy to production automatically using well defined and proven practices; and having our development team be the first responders when an error is discovered in production. Although,  this effort was a response to an RFQ, we established our DevOps cultural and technical framework in sprint zero and continued to evolved it though our the development. The source code for our DevOps scripts (or Infrastructure as code) can be found in this git hub at the following URL:
 
 Installation scripts for developers:
 https://github.com/booz-allen-agile-delivery/ads-final/tree/development/bin
@@ -54,12 +56,13 @@ Here is how developers code. To make it easier to explain, let's say a release i
 - developer pushes the code back to feature branch from local
 - developer merges the code to developer branch
 
+## Continuous Integration and Automated Testing
 
 ![2_cont_int_and_autom_testing_v1](https://cloud.githubusercontent.com/assets/12210910/8342216/862e2df2-1a98-11e5-8a63-cb98c7fb253e.png)
 
 **Continuous Integration =** is the next key milestone to achieve in the DevOps workflow. Without continuous integration in place, real value from DevOps cannot be achieved. Continuous integration is bringing every developers code working on our prototype together and make sure that the over all build still works with everybody's code. Even though developer test their own code on their local computers and everything works, the over all code may not work when every developers code starts calling each other. This agile process ensures that the working code is healthy at all times. This health check cannot be achieved though without use of automated testing. It's not feasible and realistic to do this validation by manual testing.
 
-Automated Testing = is the agile practice that makes DevOps real. Without automated testing, the whole iterative and continuous delivery concepts cannot be achieved. At the core, DevOps is maximizing automation. The ideal is automate everything, but this is not possible. There is always manual check during the work flow. So the achievable nirvana is to automate as much as possible. This can be more an more as the teams automatically test as many things as possible. For this prototype, we were able to achieve automating : 
+**Automated Testing =** is the agile practice that makes DevOps real. Without automated testing, the whole iterative and continuous delivery concepts cannot be achieved. At the core, DevOps is maximizing automation. The ideal is automate everything, but this is not possible. There is always manual check during the work flow. So the achievable nirvana is to automate as much as possible. This can be more an more as the teams automatically test as many things as possible. For this prototype, we were able to achieve automating : 
 - front end unit tests
 - back end unit tests
 - functional tests
@@ -69,9 +72,11 @@ Automated Testing = is the agile practice that makes DevOps real. Without automa
 - container repo
 - development integration, release and production deployments
 
+## Continuous Deployment and Manual Testing
+
 ![3_cont_deploymt_man_test_v1](https://cloud.githubusercontent.com/assets/12210910/8342219/89003822-1a98-11e5-9fd7-f85313296e6f.png)
 
-Continuous Deployment = is a natural next step once all the automated tests run successfully after continuous integration using the code in developer integration branch
+**Continuous Deployment =** is a natural next step once all the automated tests run successfully after continuous integration using the code in developer integration branch
 
 ![4_cont_delivery_v1](https://cloud.githubusercontent.com/assets/12210910/8342223/8bd3c636-1a98-11e5-8faa-6490ea1c3ebf.png)
 
