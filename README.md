@@ -71,20 +71,9 @@ https://github.com/booz-allen-agile-delivery/ads-final/blob/development/document
 
 **(b)**
 
-Our multidisciplinary team was composed of following 10 LCATs:
+Booz Allen has been using agile methodologies since early 2000s multiple projects (small to large), including on a number of hackathons, including the My America Summit and GSA Open Tech Digital Innovation Hackathon. This experience helped us to identify the ideal multidisciplinary team for the building of this short agile project. 
 
-- 1) Category 1   - Product Manager
-- 2) Category 2   - Tech Architect
-- 3) Category 3   - Interaction designer
-- 4) Category 4   - Writer, content designer
-- 5) Category 5   - Visual Designer
-- 6) Category 6   - Front-end Dev
-- 7) Category 7   - Back-end Dev
-- 8) Category 8   - DevOps Engineer
-- 9) Category 10 - Delivery Manager
-- 10) Category 11 -  Agile Coach 
-
-See our humans.txt file for a full list of people who worked on the prototype.
+We used 10 out of the 13 allowed LCATs - See our humans.txt file for a full list of people who worked on the prototype.
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/www/app/humans.txt
 
