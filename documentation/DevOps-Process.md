@@ -1,4 +1,4 @@
-![git_flow_v1](https://cloud.githubusercontent.com/assets/12210910/8392524/11919d5e-1cb3-11e5-97ce-5cd08defcd9b.png)
+![full_git_flow_v1](https://cloud.githubusercontent.com/assets/12210910/8501142/af3ec0a6-2170-11e5-8dd2-079f0f644af5.png)
 
 
 This project uses Booz Allen's agile and DevOps practices from Development to Opearations and Operations back to Development. All of the information on this page reflects how our DevOps code works for the the prototype we built for the response to this RFQ.
