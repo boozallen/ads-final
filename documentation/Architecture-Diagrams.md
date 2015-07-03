@@ -28,8 +28,8 @@ To support unit testing, code quality, and code security we selected RSpec, Rubo
 Our motivations for the Dev Ops stack was to leverage open source technologies that would enable rapid creation and deployment of containers.  We also feel that an important aspect to achieving the maximum developer experience (DX) is to provide end-to-end solutions to include the components of the dev ops stack as part of the open source solution.   Therefore we selected Jenkins and Docker solutions that could run on-premise or in-cloud as opposed to SaaS based solutions.  This will help to ensure the greatest probablity of adoption in the solution within the open source community.
 
 The team selected Jenkins over other options for the following reasons:
-- Speed - On-premise jenkins server runs very fast.  The team had experienced significant slowdowns with Travis.   Our build with Jenkins runs in less than a minute with a typical best case scerio of 15 seconds.  This is supported by the Jenkins artifact (included in our repository).
-- Flexibility – Jenkins is a complete open source solution for continuous integration and continuous deployment that can be run anywhere.
+- Speed - On-premise jenkins server runs very fast.  The team had experienced significant slowdowns with Travis.   Our build with Jenkins runs in less than a minute. 
+- Flexibility – Jenkins is a complete open source solution for continuous integration and continuous deployment that can be run anywhere. Having full control over the testing, build, and deployment operations was important for us to remain open to different technologies we might leverage during the challenge. 
 - Docker Integration - Jenkins allowed the construction of Docker images within the build server rather than having to leverage an external container build service. 
 
 In the interest of meeting maximizing the value of our open source Dev-Ops stack, all of our build scripts were contributed to the repository:
