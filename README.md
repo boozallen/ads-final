@@ -117,6 +117,7 @@ For more information on our architecture, see the artifact below:
 ###Technical Approach Pool Three
 
 (a) At the start of the project we identified a single Product Owner who has sufficient authority over the project. He had the (1) ability to add or remove features. He attended all (2) release planning, (3) sprint planning and (4) demonstrations and made all final decisions about prioritizing the backlog. 
+
 (b) Our multidisciplinary team was composed of following 9 LCATs:
 
 - 1) Category 1   - Product Manager
@@ -170,9 +171,8 @@ All user stories were broken down into tasks and estimated during each sprint pl
 
 
 (q) Open Source Usage
+
 ### Evidence
 
-We met each of the attachment E criteria. This and supporting evidence are
-linked here.
+We met each of the attachment E criteria.
 
-[Link to Attachment E] (ATTACHMENT-E.xls)
