@@ -192,6 +192,8 @@ https://github.com/booz-allen-agile-delivery/ads-final/blob/development/document
 (p) Installation instruction is a two lines Docker command. 
 --> we'll also have a docker file architecture diagram
 
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/INSTALL.md
+
 
 (q) Open Source Usage
 
