@@ -179,9 +179,7 @@ Our solution is comprised of more than five modern, open-source technologies.  O
 - To support unit testing, code quality, and code security we selected RSpec, Rubocop, and Brakeman respectively.
 - Dev-Ops: Docker (Machine, Registry, Compose), Jenkins, cAdvisor
 
-In the interest of meeting maximizing the value of our open source Dev-Ops stack, all of our build scripts were contributed to the repository:
-
-https://github.com/booz-allen-agile-delivery/ads-final/tree/development/bin/jenkins
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Architecture-Diagrams.md
 
 **(i)**
 
