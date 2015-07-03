@@ -1,6 +1,6 @@
 # 18F Agile Delivery Services – Booz Allen – Prototype: Label Craft
 
-Prototype Submission URL: http://52.0.46.33:9000/
+Prototype Submission URL: http://52.0.46.33:9000/ or http://labelcraft.io
 
 ## Prototype Overview
 
@@ -46,7 +46,7 @@ appropriate resources demonstrated through a sample prototype.  We believe our
 prototype is an exceptional demonstration of our ability to provide these
 resources to the Agile BPA.
 
-### Digital Services Playbook
+### Digital Services Playbook and 18F Key Principals
 
 The US Digital Services playbook provides an invaluable set of guidelines for
 the delivery of digital programs. The USDS playbook includes a set of checklists
@@ -54,52 +54,10 @@ and questions we believe are intended to be answered during the execution of any
 digital program.  Our responses to the checklist are contained in the artifact
 linked below:
 
-[Link to the Digital Services Checklist] (https://github.com/booz-allen-agile-delivery/ads-final/wiki/U.S.-Digital-Services-Playbook-Evidence)
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/U.S.-Digital-Services-Playbook-Evidence.md
 
-### 18F
-The 18F five key principles provide an important emphasis to Agile concepts aimed
-to promote the success of delivery in programs, especially those for the Govt.
+The 18F five key principles are covered by following Digital Services Playbook. Our process applied by our Agile team demonstrated each of these principles.  
 
-1.  Put the needs of users first
-
-2.  Release early, iteratively, and often
-
-3.  Don’t slow down delivery
-
-4.  Only do it if it adds value
-
-5.  Work in the open
-
- 
-Our process applied by our Agile team demonstated each of these principles.  
-
-For a more detailed mapping of our process to the 18F tenets, see the artifact
-below:
-
-[Link to 18F Tenets] (18F\_TENETS.md)
-
-### Architecture/Tools
-
-Instructions to build the software are provided in the artifact below:
-
-[Build Instructions] (Link to INSTALL.md)
-
-Our architecture consists of a modern technology stack that reflect current best
-practices for web application development.  The selection of technologies was
-driven by the following value propositions:
-
--   Support for multiple cloud environments through Docker and Docker Machine
-
--   Technologies appropriate for task (Ruby for backend, Angular for Front-End
-    Single-Page-App (SPA))
-
--   DevOps Best Practices - Configuration Management using GitFlow
-
--   Security – Sophos Firewall, AWS VPC and Security Groups
-
-For more information on our architecture, see the artifact below:
-
-[Link to Architecture Image] (https://github.com/booz-allen-agile-delivery/ads-final/wiki/Architecture-Diagrams)
 
 ###Technical Approach Pool Three
 
@@ -168,7 +126,9 @@ https://github.com/booz-allen-agile-delivery/ads-final/blob/development/document
 
 **(h)**
 
-Responsive Design
+Our front-end application was implemented with the Foundation framework to provide a completely responsive experience on all types of display sizes.  Our team conducted testing on multiple platforms (i.e. desktop, tablet, phone) and we conducted usability tests to observe users on these platforms.  Our front-end development team used the Google chrome mobile display test tool to rapidly emulate the experience of different platforms throughout the development process.
+
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Architecture-Diagrams.md
 
 **(i)**
 
@@ -179,13 +139,12 @@ Our solution is comprised of more than five modern, open-source technologies.  O
 - To support unit testing, code quality, and code security we selected RSpec, Rubocop, and Brakeman respectively.
 - Dev-Ops: Docker (Machine, Registry, Compose), Jenkins, cAdvisor
 
-In the interest of meeting maximizing the value of our open source Dev-Ops stack, all of our build scripts were contributed to the repository:
-
-https://github.com/booz-allen-agile-delivery/ads-final/tree/development/bin/jenkins
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Architecture-Diagrams.md
 
 **(i)**
 
 Amazon Web Service Elastic Compute Cloud (EC2) was used to host any shared computing resources needed during for the project. 
+
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Architecture-Diagrams.md
 
 **(k)**

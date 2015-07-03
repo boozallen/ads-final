@@ -1,4 +1,4 @@
-This wiki page demonstrates how we used U.S. Digital Services Playbook to define our process for this prototype.
+This  page demonstrates how we used U.S. Digital Services Playbook to define our process for this prototype.
 
 **DIGITAL SERVICE PLAY 1: Understand what people need**
 
@@ -13,7 +13,7 @@ _- Use a range of qualitative and quantitative research methods to determine peo
 Used Lean UX based research methods including visioning, dot voting, ideation sketching, persona sketching, and  Journey Maps.
 For more details :
  
-https://github.com/booz-allen-agile-delivery/ads-final/wiki/Human-Centered-Design
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Human-Centered-Design.md
 
 _- Test prototypes of solutions with real people, in the field if possible:_
 
@@ -22,19 +22,21 @@ During and at the end of sprints (either in person or virtually using Lync or Go
 _- Document the findings about user goals, needs, behaviors, and preferences_
 
 Finding documented as agile artifacts:
-User stories : https://github.com/booz-allen-agile-delivery/ads-final/wiki/User-Stories
-Other agile artifacts: https://github.com/booz-allen-agile-delivery/ads-final/wiki/Agile-Artifacts
+User stories : hhttps://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/User-Stories.md
+
+Other agile artifacts: https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Agile-Artifacts.md
 
 _- Share findings with the team and agency leadership_
 
-All findings are in our wiki on GitHub:
-https://github.com/booz-allen-agile-delivery/ads-final/wiki
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Agile-Artifacts.md
 
 _- Create a prioritized list of tasks the user is trying to accomplish, also known as "user stories"_
 
-User stories: https://github.com/booz-allen-agile-delivery/ads-final/wiki/User-Stories
-Prioritization is done during sprint zero for the release plan. At the sprint planning meetings, we reviewed the plan and re-planned and prioritized based on what we have learned and achieved in the previous sprint. All of the sprint plan (photo of the physical kanban board) is on the wiki:
-https://github.com/booz-allen-agile-delivery/ads-final/wiki/Agile-Artifacts
+User stories: https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/User-Stories.md
+
+Prioritization is done during sprint zero for the release plan. At the sprint planning meetings, we reviewed the plan and re-planned and prioritized based on what we have learned and achieved in the previous sprint. All of the sprint plan (photo of the physical kanban board) :
+
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Agile-Artifacts.md
 
 _ - As the digital service is being built, regularly test it with potential users to ensure it meets people’s needs_
 
@@ -68,11 +70,11 @@ _- Create or use an existing, simple, and flexible design style guide for the se
 
 **Our design guide:**
 
-https://github.com/booz-allen-agile-delivery/ads-final/wiki/Design-Style-Guide
+https://github.com/booz-allen-agile-delivery/ads-final/blob/master/www/app/styles/labelcraft_styleguide_final.pdf
 
 _- Use the design style guide consistently for related digital services_
 
-Design Guide is on our wiki and all of our developers are coding based on the style guide. We check the styles during usability tests
+Design Guide is in our repo and all of our developers are coding based on the style guide. We check the styles during usability tests
 
 _- Give users clear information about where they are in each step of the process_
 
@@ -99,7 +101,8 @@ Consistency check us part of our usability test.
 ![p4](https://cloud.githubusercontent.com/assets/12210910/8335886/766a0ece-1a6e-11e5-8372-cee1382ef36b.jpeg)
 
 Our agile practices that we used on this prototype can be seen at the following URL:
-[Agile Practices](https://github.com/booz-allen-agile-delivery/ads-final/wiki/Agile-Artifacts)
+
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Agile-Artifacts.md
 
 _- Ship a functioning “minimum viable product” (MVP) that solves a core user need as soon as possible, no longer than three months from the beginning of the project, using a “beta” or “test” period if needed_
 
@@ -111,7 +114,7 @@ We perform usability tests every iteration.
 
 _- Ensure the individuals building the service communicate closely using techniques such as launch meetings, war rooms, daily standups, and team chat tools_
 
-All of our agile practices like standups are on our wiki. Our sprints are 4 hours long. We start a sprint with a sprint planning meeting with the whole team. Under normal agile tempo, when we have week long or 2 week sprints, we do daily standup meetings. For this prototype, since our sprints are 4 hours, we start the sprint and the planning meeting replaces the standup. The development team is co-located and we use Slack as our internal persistent communication tool. For the demos or usability test to SMEs, we use Lync or Google Hangouts.
+All of our agile practices like standups are in our agile documentation. Our sprints are 4 hours long. We start a sprint with a sprint planning meeting with the whole team. Under normal agile tempo, when we have week long or 2 week sprints, we do daily standup meetings. For this prototype, since our sprints are 4 hours, we start the sprint and the planning meeting replaces the standup. The development team is co-located and we use Slack as our internal persistent communication tool. For the demos or usability test to SMEs, we use Lync or Google Hangouts.
 
 _- Keep delivery teams small and focused; limit organizational layers that separate these teams from the business owners_
 
@@ -119,8 +122,8 @@ For this prototype, we have a small delivery team. Some times, for larger projec
 
 _- Release features and improvements multiple times each month_
 
-We will use DevOps Continuous Delivery practice to delivery features and improvements to production. The frequency of production deployments depends on the timing achieving "Definition of Done" for the features, improvements or fixes. The details of our DevOps process can be seen on our Wiki:
-https://github.com/booz-allen-agile-delivery/ads-final/wiki/DevOps-Process
+We will use DevOps Continuous Delivery practice to delivery features and improvements to production. The frequency of production deployments depends on the timing achieving "Definition of Done" for the features, improvements or fixes. The details of our DevOps process can be seen in our repo:
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/DevOps-Process.md
 
 _- Create a prioritized list of features and bugs, also known as the “feature backlog” and “bug backlog”_
 
@@ -128,9 +131,8 @@ For this short prototyping effort:
 
 We use GitHub's issue tracker for "bug backlog" : https://github.com/booz-allen-agile-delivery/ads-final/issues?q=is%3Aissue+is%3Aclosed
 
-We use GitHub wiki for the feature (user story) backlog
-Sprint level task decompositions are done on the physical Kanban board. Photos of the Kanban board can be seen on our wiki:
-https://github.com/booz-allen-agile-delivery/ads-final/wiki/Agile-Artifacts
+We use GitHub  for the feature (user story) backlog
+Sprint level task decompositions are done on the physical Kanban board. Photos of the Kanban board can be seen in our documentation.
 
 _- Use a source code version control system_
 
@@ -162,7 +164,7 @@ _ - Budget includes research, discovery, and prototyping activities_
 
 _ - A product owner has been identified_
 
-Our product owner is Bill Ott. He is responsible for the scope. After the RFQ is out, we had ideation and human-centered design activities ( https://github.com/booz-allen-agile-delivery/ads-final/wiki/Human-Centered-Design ), and during sprint zero, we identified the idea and scope. After Bill thumbs up as the product owner, we did some more research and we realized some blockers. We had to Pivot and he was the one who made the decision to the change. Here is the details for the Pivot (  https://github.com/booz-allen-agile-delivery/ads-final/wiki/Pivot-or-Persevere-Decision ). This was not a plan activity and showed us one more time the value of agile software development.
+Our product owner is Bill Ott. He is responsible for the scope. After the RFQ is out, we had ideation and human-centered design activities ( https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Human-Centered-Design.md ), and during sprint zero, we identified the idea and scope. After Bill thumbs up as the product owner, we did some more research and we realized some blockers. We had to Pivot and he was the one who made the decision to the change. Here is the details for the Pivot (  hhttps://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Pivot-or-Persevere-Decision.md ). This was not a plan activity and showed us one more time the value of agile software development.
 
 _ - All stakeholders agree that the product owner has the authority to assign tasks and make decisions about features and technical implementation details_
 
@@ -194,13 +196,13 @@ Our designers are front end developers are part of our Digital organization and 
 
 _ - Member(s) of the team have experience using automated testing frameworks_
 
-Some of the team members are part of the team that built Booz Allen's open source Automated Testing as a Service (ATaaS) capability. This product is composed of multiple open source testing frameworks including JUnit, JMeter, Selenium Grid and uses Behavior Driven Development (BDD) language for designing automated tests. Our automated testing frameworks we use for this prototype can be seen on the following wiki page:
+Some of the team members are part of the team that built Booz Allen's open source Automated Testing as a Service (ATaaS) capability. This product is composed of multiple open source testing frameworks including JUnit, JMeter, Selenium Grid and uses Behavior Driven Development (BDD) language for designing automated tests. Our automated testing frameworks we use for this prototype can be seen on the following  page:
 
-https://github.com/booz-allen-agile-delivery/ads-final/wiki/Automated-Testing
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Automated-Testing.md
 
 All of our automated tests are integrated to our DevOps Git Flow:
 
-https://github.com/booz-allen-agile-delivery/ads-final/wiki/DevOps-Process
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/DevOps-Process.md
 
 _ - Member(s) of the team have experience with modern development and operations (DevOps) techniques like continuous integration and continuous deployment_
 
@@ -210,7 +212,7 @@ _ - Member(s) of the team have experience securing digital services_
 
 All members of the team work on Government contracts that require securing digital services. Team members have experience in secure coding practices and use tools to test security as part of our agile development. In addition to the code reviews we perform against the coding practices, we also have integrated automated security testing to our DevOps flow.
 
-https://github.com/booz-allen-agile-delivery/ads-final/wiki/DevOps-Process
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/DevOps-Process.md
 
 ![securitytesting](https://cloud.githubusercontent.com/assets/12210910/8392847/f38714fa-1cbd-11e5-889f-48ffb34c5a07.png)
 
@@ -233,9 +235,9 @@ Booz Allen does have legal team at the service of software development teams sup
 
 _- Choose software frameworks that are commonly used by private-sector companies creating similar services_
 
-We use modern frameworks used leading web sites. The details of the application stack can be seen at the following wiki page:
+We use modern frameworks used leading web sites. The details of the application stack can be seen at the following page:
 
-https://github.com/booz-allen-agile-delivery/ads-final/wiki/Architecture-Diagrams
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Architecture-Diagrams.md
 
 _- Whenever possible, ensure that software can be deployed on a variety of commodity hardware types_
 
@@ -245,21 +247,21 @@ _- Ensure that each project has clear, understandable instructions for setting u
 
 See our developer quick start guide for this effort:
 
-https://github.com/booz-allen-agile-delivery/ads-final/wiki/Developer-Getting-Started-Guide
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Developer-Getting-Started-Guide.md
 
 _- Consider open source software solutions at every layer of the stack_
 
 Our full stack is open source:
 
-https://github.com/booz-allen-agile-delivery/ads-final/wiki/Architecture-Diagrams
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Architecture-Diagrams.md
 
 **DIGITAL SERVICE PLAY 9. Deploy in a flexible hosting environment**
 
 ![p9](https://cloud.githubusercontent.com/assets/12210910/8397620/dd51b55c-1d97-11e5-9e39-069a5a489aff.jpeg)
 
-Our hosting environment is Amazon Web Services (AWS) public cloud. The infrastructure diagram which includes our security can be seen on our wiki:
+Our hosting environment is Amazon Web Services (AWS) public cloud. The infrastructure diagram which includes our security can be seen below:
 
-https://github.com/booz-allen-agile-delivery/ads-final/wiki/Architecture-Diagrams
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Architecture-Diagrams.md
 
 _ - Resources are provisioned on demand_
 
@@ -294,9 +296,9 @@ Yes, AWS.
 
 ![p10](https://cloud.githubusercontent.com/assets/12210910/8397639/39d3b596-1d98-11e5-8bc3-4310766287f9.jpeg)
 
-See the following wiki page for our test automation:
+See the following page for our test automation:
 
-https://github.com/booz-allen-agile-delivery/ads-final/wiki/Automated-Testing
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Automated-Testing.md
 
 _ - Create automated tests that verify all user-facing functionality_
 
@@ -304,13 +306,13 @@ We have mechanisms to test all of the UI interface in place and we built represe
 
 _ - Create unit and integration tests to verify modules and components_
 
-Yes, see the above wiki page for details. Both front-end and back-end are tested using open source testing frameworks. 
+Yes, see the above  page for details. Both front-end and back-end are tested using open source testing frameworks. 
 
 _ - Run tests automatically as part of the build process_
 
 All automated test are triggered by the Continuous Integration and Continuous Deployment capabilities of our DevOps Git Flow.
 
-https://github.com/booz-allen-agile-delivery/ads-final/wiki/DevOps-Process
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/DevOps-Process.md
 
 _ - Perform deployments automatically with deployment scripts, continuous delivery services, or similar techniques_
 
@@ -318,7 +320,7 @@ Yes, all deployments are performed automatically by Docker Machine.
 
 _ - Conduct load and performance tests at regular intervals, including before public launch_
 
-Yes. See : https://github.com/booz-allen-agile-delivery/ads-final/wiki/Automated-Testing
+Yes. See : https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Automated-Testing.md
 
 **DIGITAL SERVICE PLAY 11. Manage security and privacy through reusable processes**
 
@@ -343,6 +345,10 @@ The configuration of all of the environments are the same, designed using Docker
 
 ![p12](https://cloud.githubusercontent.com/assets/12210910/8397641/3a7338d2-1d98-11e5-8dca-2a28bc4c62bf.jpeg)
 
+Yes. See below page:
+
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Continuous-Monitoring.md
+
 _ - Monitor system-level resource utilization in real time_
  _- Monitor system performance in real-time (e.g. response time, latency, throughput, and error rates)_
  _- Ensure monitoring can measure median, 95th percentile, and 98th percentile performance_
@@ -360,7 +366,7 @@ _ - Offer users a mechanism to report bugs and issues, and be responsive to thes
 
 We use Git Issues for bug tracking:
 
-https://github.com/booz-allen-agile-delivery/ads-final/wiki/Automated-Testing
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Automated-Testing.md
 
 _ - Provide datasets to the public, in their entirety, through bulk downloads and APIs (application programming interfaces)_
 
