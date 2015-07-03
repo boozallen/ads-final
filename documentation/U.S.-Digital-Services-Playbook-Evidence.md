@@ -253,15 +253,15 @@ _- Consider open source software solutions at every layer of the stack_
 
 Our full stack is open source:
 
-https://github.com/booz-allen-agile-delivery/ads-final/wiki/Architecture-Diagrams
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Architecture-Diagrams.md
 
 **DIGITAL SERVICE PLAY 9. Deploy in a flexible hosting environment**
 
 ![p9](https://cloud.githubusercontent.com/assets/12210910/8397620/dd51b55c-1d97-11e5-9e39-069a5a489aff.jpeg)
 
-Our hosting environment is Amazon Web Services (AWS) public cloud. The infrastructure diagram which includes our security can be seen on our wiki:
+Our hosting environment is Amazon Web Services (AWS) public cloud. The infrastructure diagram which includes our security can be seen below:
 
-https://github.com/booz-allen-agile-delivery/ads-final/wiki/Architecture-Diagrams
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Architecture-Diagrams.md
 
 _ - Resources are provisioned on demand_
 
@@ -296,9 +296,9 @@ Yes, AWS.
 
 ![p10](https://cloud.githubusercontent.com/assets/12210910/8397639/39d3b596-1d98-11e5-8bc3-4310766287f9.jpeg)
 
-See the following wiki page for our test automation:
+See the following page for our test automation:
 
-https://github.com/booz-allen-agile-delivery/ads-final/wiki/Automated-Testing
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Automated-Testing.md
 
 _ - Create automated tests that verify all user-facing functionality_
 
@@ -306,13 +306,13 @@ We have mechanisms to test all of the UI interface in place and we built represe
 
 _ - Create unit and integration tests to verify modules and components_
 
-Yes, see the above wiki page for details. Both front-end and back-end are tested using open source testing frameworks. 
+Yes, see the above  page for details. Both front-end and back-end are tested using open source testing frameworks. 
 
 _ - Run tests automatically as part of the build process_
 
 All automated test are triggered by the Continuous Integration and Continuous Deployment capabilities of our DevOps Git Flow.
 
-https://github.com/booz-allen-agile-delivery/ads-final/wiki/DevOps-Process
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/DevOps-Process.md
 
 _ - Perform deployments automatically with deployment scripts, continuous delivery services, or similar techniques_
 
@@ -320,7 +320,7 @@ Yes, all deployments are performed automatically by Docker Machine.
 
 _ - Conduct load and performance tests at regular intervals, including before public launch_
 
-Yes. See : https://github.com/booz-allen-agile-delivery/ads-final/wiki/Automated-Testing
+Yes. See : https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Automated-Testing.md
 
 **DIGITAL SERVICE PLAY 11. Manage security and privacy through reusable processes**
 
@@ -345,6 +345,10 @@ The configuration of all of the environments are the same, designed using Docker
 
 ![p12](https://cloud.githubusercontent.com/assets/12210910/8397641/3a7338d2-1d98-11e5-8dca-2a28bc4c62bf.jpeg)
 
+Yes. See below page:
+
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Continuous-Monitoring.md
+
 _ - Monitor system-level resource utilization in real time_
  _- Monitor system performance in real-time (e.g. response time, latency, throughput, and error rates)_
  _- Ensure monitoring can measure median, 95th percentile, and 98th percentile performance_
@@ -362,7 +366,7 @@ _ - Offer users a mechanism to report bugs and issues, and be responsive to thes
 
 We use Git Issues for bug tracking:
 
-https://github.com/booz-allen-agile-delivery/ads-final/wiki/Automated-Testing
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Automated-Testing.md
 
 _ - Provide datasets to the public, in their entirety, through bulk downloads and APIs (application programming interfaces)_
 
