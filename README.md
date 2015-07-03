@@ -41,7 +41,7 @@ https://github.com/booz-allen-agile-delivery/ads-final/blob/development/document
 
 **(a)** 
 
-We identified a member of the team who played the role of Product Owner during the development of the prototype. This person had sufficient authority with the (1) ability to add or remove features. He attended all (2) release planning, (3) sprint planning and (4) demonstrations and made all final decisions about prioritizing the backlog. 
+We identified a member of the team who played the role of Product Owner during the development of the prototype. This person had sufficient authority with the ability to add or remove features. He attended all release planning, sprint planning and (4) demonstrations and made all final decisions about prioritizing the backlog. 
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Agile-Artifacts.md
 
