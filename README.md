@@ -10,18 +10,13 @@ Prototype Submission URL: http://52.0.46.33:9000/ or http://labelcraft.io
 
 [![Build Status](http://52.0.92.86:8080/buildStatus/icon?job=Master_FrontEnd_Builder)](http://52.0.92.86:8080/view/Master/job/Master_FrontEnd_Builder/)[![Build Status](http://52.0.92.86:8080/buildStatus/icon?job=Master_API_Builder)](http://52.0.92.86:8080/view/Master/job/Master_API_Builder/)Master Branch Server: http://52.0.46.33:9000/ or www.crowdmed.io
 
-Label Craft is a crowd-sourcing platform for cataloging the adverse reactions
-found on drug labels. This information on labels must be converted into
-structured data to be able to identify whether drug labels have accurately
-captured the adverse effects that end users are experiencing.
+Label Craft is a crowd-sourcing platform for cataloging the adverse reactions found on drug labels. This information must be converted into structured data to be able to identify whether  labels have accurately captured adverse effects experienced by users.
 
-Data collected by the platform is displayed on the site for each drug and also
-is made accessible via a public API for integration with third-party
-applications. The Label Craft platform provides the foundation for additional
-improvements to the quality of FDA data through crowd-sourcing.
+Data collected by the platform is displayed on the site for each drug and also is made accessible via a public API for integration with third-party applications. 
 
-Our approach taken on this challenge and the resulting outputs showcase the
-value that Booz Allen brings to the 18F BPA including the following:
+It provides the foundation for additional improvements to the quality of FDA data through crowd-sourcing.
+
+Our approach taken on this challenge and the resulting outputs showcase the value that Booz Allen brings to the 18F BPA:
 
 -   Proven Agile Delivery – Our firm’s extensive experience in the successful
     delivery of both small and large Agile programs [ensures that we will be
@@ -33,13 +28,12 @@ value that Booz Allen brings to the 18F BPA including the following:
 
 -   Experienced Staff – Booz Allen was able to quickly assemble a
     highly-skilled, cross-functional team in order to support the ADS challenge.
-    We were also able to tap into a set of domain experts across the firm each
-    of whom had multiple years of experience in FDA.
+    We also tapped into a set of FDA domain experts across the firm.
 
 ### Digital Services Playbook and 18F Key Principals
 
-The US Digital Services playbook provides an invaluable set of guidelines that includes a set of checklists
-and questions we believe should be answered during the execution of any digital program.
+The US Digital Services playbook provides a set of guidelines that includes a set of checklists
+and questions we believe should be answered during the execution of any digital program. 
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/U.S.-Digital-Services-Playbook-Evidence.md
 
@@ -55,7 +49,7 @@ https://github.com/booz-allen-agile-delivery/ads-final/blob/development/document
 
 **(b)**
 
-Booz Allen has been using agile methodologies since early 2000s multiple projects (small to large), including on a number of hackathons, including the My America Summit and GSA Open Tech Digital Innovation Hackathon. This experience helped us to identify the ideal multidisciplinary team for the building of this short agile project. 
+Booz Allen has been using agile methodologies since early 2000s, including on a number of hackathons, including the My America Summit and GSA Open Tech Digital Innovation Hackathon. This experience helped us to identify the ideal multidisciplinary team for the building of this short agile project. 
 
 We used 10 out of the 13 allowed LCATs - See our humans.txt file for a full list of people who worked on the prototype.
 
@@ -69,25 +63,25 @@ https://github.com/booz-allen-agile-delivery/ads-final/blob/development/document
 
 **(d)**
 
-We used multiple human centered design techniques and tools throughout the process.  Our Lean UX ideation session included brainstorming with a visioning game which ultimately yielded our product charter.  The process included hand-sketched personas, journey maps, scribbled user stories, and sketched wireframes on large pages in pairs. We then learned more about our users through user interviews (in person and by phone) and usability testing. Our personas were living documents that were updated as we learned more. Our hand-sketched wireframes were moved into Axure, and were tested and updated in iterative rounds of usability testing. 
+We used multiple human centered design techniques and tools throughout the process.  Our Lean UX ideation session included brainstorming with a visioning game which ultimately yielded our product charter.  The process included hand-sketched personas, journey maps, scribbled user stories, and sketched wireframes on large pages in pairs. We then learned more about our users through user interviews and usability testing. Our personas were living documents that were updated hroughout. Our hand-sketched wireframes were moved into Axure, and were tested and updated in iterative rounds of usability testing. 
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Human-Centered-Design.md
 
 **(e)**
 
-We began the design process by selecting a bootstrap theme that provided a close resemblance to our vision for the prototype. We chose this approach to help with familiarizing the team with the direction for the styling and components that we would ultimately design around. As our wireframes matured, we used these components as a foundation but modified the styling to meet our needs. We developed a design style guide to provide the team with a general reference point for our core design specifications. This includes: In addition to the design style guide, wireframes and a set of High Fidelity mockups were provided to provide the complete design vision for the prototype.
+We began the design process by selecting a bootstrap theme that provided a close resemblance to our vision for the prototype. We chose this approach to help with familiarizing the team with the direction for the styling and components that we would ultimately design around. As our wireframes matured, we used these components as a foundation but modified the styling to meet our needs. We developed a design style guide to provide the team with a general reference point for our core design specifications. In addition to the design style guide, wireframes and a set of High Fidelity mockups were provided to provide the complete design vision for the prototype.
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Design-Documentation.md
 
 **(f)**
 
-We conducted user interviews with each of our hypothesized persona types. These personas were updated, expanded or removed based on the incoming user data. We conducted two rounds of usability testing (4-5 participants in each round) on wireframes created in Axure. These were moderated, in-person usability test sessions where the participants pulled up our wireframes and walked through unstructured impressions on layout, navigation, content and interaction. We made significant changes based on both preference and behavioral data from each round of this small-scale usability testing. 
+We conducted user interviews with each of our hypothesized persona types. These personas were updated, expanded or removed based on the incoming user data. We conducted two rounds of usability testing (4-5 participants in each round) on wireframes created in Axure. These were moderated in-person usability test sessions where the participants pulled up our wireframes and walked through unstructured impressions on layout, navigation, content and interaction. We made significant changes based on both preference and behavioral data from each round of this small-scale usability testing. 
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Usability-Testing.md
 
 **(g)**
 
-The prototype was developed over 10 sprints. This included the following:
+The prototype was developed over multiple sprints.
 
 Sprint 0 - Setting up our development environment, including a continuous delivery infrastructure, and going through ideation/human centered design techniques to understand the value we could create and ultimately decide what to build.
 
@@ -105,7 +99,7 @@ https://github.com/booz-allen-agile-delivery/ads-final/blob/development/document
 
 **(i)**
 
-Our solution is comprised of more than five modern, open-source technologies.  Our selection of technologies was driven by several factors including the language, frameworks, and libraries most appropriate to solve the problem, the ability for the technology to conform to modern development best practices, and tools that best support the full end-to-end life cycle of development for maximum quality.  These factors were considered for the technologies selected for front-end, back-end, and dev-ops. Technologies selected includes:
+Our solution is comprised of more than five modern, open-source technologies.  Our selection of technologies was driven by several factors including the language, frameworks, the libraries most appropriate to solve the problem, the ability for the technology to conform to modern development best practices, and tools that best support the full end-to-end life cycle of development for maximum quality. Technologies selected include:
 
 - Front-End: Foundation, Angular.JS, Node.js, Karma, JS Hint, HighCharts
 - Backend: Ruby, Rails, RSpec, Rubocop, Brakeman
@@ -116,7 +110,7 @@ https://github.com/booz-allen-agile-delivery/ads-final/blob/development/document
 
 **(i)**
 
-Amazon Web Service Elastic Compute Cloud (EC2) was used to host any shared computing resources needed during for the project. 
+Amazon Web Service Elastic Compute Cloud (EC2) was used to host any shared computing resources needed during for the project.
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Architecture-Diagrams.md
 
@@ -136,7 +130,7 @@ https://github.com/booz-allen-agile-delivery/ads-final/blob/development/document
 
 **(m)**
 
-Configuration management was greatly simplified by leveraging Docker’s tool suite, which encapsulates away many traditional configuration steps. Docker Machine was used to provision and post-provision AWS EC2 instances so they are immediately ready for Docker-based deployments. After provisioning, the Docker engine pulls and builds containers from the Docker repository. Docker Compose implicitly injects the appropriate environment variables into the containers to connect frontend to API to database.   The /bin directory in the repo contains all the necessary scripts to utilize the described Docker workflow.
+Configuration management was greatly simplified by leveraging Docker’s tool suite, which encapsulates away many traditional configuration steps. Docker Machine is used to provision and post-provision AWS EC2 instances so they are immediately ready for Docker-based deployments. After provisioning, the Docker engine pulls and builds containers from the Docker repository. Docker Compose implicitly injects the appropriate environment variables into the containers to connect frontend to API to database.   The /bin directory in the repo contains all the necessary scripts to utilize the described Docker workflow.
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/DevOps-Process.md
 
@@ -155,7 +149,6 @@ https://github.com/booz-allen-agile-delivery/ads-final/blob/development/document
 **(p)**
 
 Installation instruction is a two lines Docker command. 
---> we'll also have a docker file architecture diagram
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/INSTALL.md
 
