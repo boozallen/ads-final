@@ -3,7 +3,11 @@
 
 This project uses Booz Allen's agile and DevOps practices from Development to Opearations and Operations back to Development.  Our definition of DevOps is, it is a set of practices intended to reduce the time between committing a change to the system we're building, maintaining or operating, and the change being placed into normal production, while ensuring high quality. It is a catchall term that can cover several meanings, including; having development and operations continuously communicate to each other; allowing development teams to deploy to production automatically using well defined and proven practices; and having our development team be the first responders when an error is discovered in production. Although,  this effort was a response to an RFQ, we established our DevOps cultural and technical framework in sprint zero and continued to evolved it though our the development. The source code for our DevOps scripts (or Infrastructure as code) can be found in this git hub at the following URL:
 
-xxxxxxxx
+Installation scripts for developers:
+https://github.com/booz-allen-agile-delivery/ads-final/tree/development/bin
+
+Scripts for Jenkins:
+https://github.com/booz-allen-agile-delivery/ads-final/tree/development/bin/jenkins
 
 * Continuous Development
 * Configuration Management
