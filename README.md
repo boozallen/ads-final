@@ -36,28 +36,12 @@ value that Booz Allen brings to the 18F BPA including the following:
     We were also able to tap into a set of domain experts across the firm each
     of whom had multiple years of experience in FDA.
 
-## Understanding:
-
-### RFQ
-
-We understand 18f’s goal to select a candidate to the Agile BPA to deliver
-digital services and agile methodologies based on their ability to provide
-appropriate resources demonstrated through a sample prototype.  We believe our
-prototype is an exceptional demonstration of our ability to provide these
-resources to the Agile BPA.
-
 ### Digital Services Playbook and 18F Key Principals
 
-The US Digital Services playbook provides an invaluable set of guidelines for
-the delivery of digital programs. The USDS playbook includes a set of checklists
-and questions we believe are intended to be answered during the execution of any
-digital program.  Our responses to the checklist are contained in the artifact
-linked below:
+The US Digital Services playbook provides an invaluable set of guidelines that includes a set of checklists
+and questions we believe should be answered during the execution of any digital program.
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/U.S.-Digital-Services-Playbook-Evidence.md
-
-The 18F five key principles are covered by following Digital Services Playbook. Our process applied by our Agile team demonstrated each of these principles.  
-
 
 ###Technical Approach Pool Three
 
