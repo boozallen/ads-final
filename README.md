@@ -164,9 +164,7 @@ We delivered 4 releases over a period of 4 days (1 release per day). Release 2 w
  
 Sprint Planning was done at the beginning of each sprint and a (2) prototype demonstration and (3) retrospective at the end of each sprint. The Product Owner attended all of these and provided input into the prioritization of user stories for the sprint.
 
-All user stories were broken down into tasks and estimated during each sprint planning session. We tracked estimated and completed story points and team velocity.
-
-https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Agile-Artifacts.md
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Architecture-Diagrams.md
 
 **(h)**
 
@@ -174,11 +172,21 @@ Responsive Design
 
 **(i)**
 
-Five modern technologies
+Our solution is comprised of more than five modern, open-source technologies.  Our selection of technologies was driven by several factors including the language, frameworks, and libraries most appropriate to solve the problem, the ability for the technology to conform to modern development best practices, and tools that best support the full end-to-end life cycle of development for maximum quality.  These factors were considered for the technologies selected for front-end, back-end, and dev-ops. Technologies selected includes:
+
+- Front-End: Foundation, Angular.JS, Node.js, Karma, JS Hint, HighCharts
+- Backend: Ruby, Rails, RSpec, Rubocop, Brakeman
+- To support unit testing, code quality, and code security we selected RSpec, Rubocop, and Brakeman respectively.
+- Dev-Ops: Docker (Machine, Registry, Compose), Jenkins, cAdvisor
+
+In the interest of meeting maximizing the value of our open source Dev-Ops stack, all of our build scripts were contributed to the repository:
+
+https://github.com/booz-allen-agile-delivery/ads-final/tree/development/bin/jenkins
 
 **(i)**
 
 Amazon Web Service Elastic Compute Cloud (EC2) was used to host any shared computing resources needed during for the project. 
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Architecture-Diagrams.md
 
 **(k)**
 
