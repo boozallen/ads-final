@@ -160,6 +160,8 @@ https://github.com/booz-allen-agile-delivery/ads-final/blob/development/document
 (i) Amazon Web Service Elastic Compute Cloud (EC2) was used to host any shared computing resources needed during for the project. 
 
  (k) Unit testing was done in conjunction with development and written with appropriate tooling for the technology stack in use. Karma was used for the front-end code and rSpec was used for the backend API. Both these tools allow for developers to keep their development process fluid and leverage their respective language specific advantages. The unit tests were executed both locally on the developer’s machines and again on the continuous integration server upon a Git push. 
+ 
+ https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/DevOps-Process.md
 
 (l) Jenkins was used as our continuous integration tool. GitHub hooks were established for each branch to kickoff Jenkins jobs. Custom Jenkins jobs for each branch ran automated tests in containerized environments. Once tests were completed, Jenkins CI would update the Docker registry and deploy the new build. All pushes to the development branch are automatically examined by static code analysis, security scans, unit tests, integration tests, and performance tests. Load testing was performed ad-hoc, at the developer’s discretion.
 
