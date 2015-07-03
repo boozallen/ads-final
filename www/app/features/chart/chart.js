@@ -28,6 +28,13 @@ angular.module('gapFront')
       $scope.greatest=100;
     };
 
+    $scope.scrollToLabelAccuracy = function scrollToLabelAccuracy(){
+      //console.log('scrolling');
+      $('html, body').animate({
+        scrollTop: $("#label-accuracy").offset().top-70
+      }, 500);
+    };
+
     $scope.initializePie = function initializePie() {
       var query = 'patient.drug.medicinalproduct:'+$scope.selectedDrug.brand_name+' AND serious:2';
       APIService.aggregateDrugEvent(query, null, null).then(function(resp){
@@ -195,11 +202,6 @@ angular.module('gapFront')
       // });
     };
 
-    $scope.modal = {
-      title: "Manufacturer Details for: ",
-      content: "Hello Modal<br>This is a multiline message!"
-    };
-
     Highcharts.setOptions({
       colors: ['#23b193', '#bde2d9']
     });
@@ -224,7 +226,7 @@ angular.module('gapFront')
           }
         },
         title: {
-          text: 'Side Effects',
+          text: '',
           style: {
             color: '#707070',
             fontWeight: 'normal',
@@ -238,11 +240,11 @@ angular.module('gapFront')
         xAxis: [{
           title: {
             useHtml: true,
-            text: "Side Effects",
+            text: "Top Side Effects",
             align: "high",
             rotation: 0,
             textAlign: 'left',
-            x: -100,
+            x: -115,
             y: -10
           },
           tickWidth: 0,

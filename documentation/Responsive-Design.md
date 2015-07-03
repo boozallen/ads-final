@@ -1,0 +1,2 @@
+
+Our front-end application was implemented with the Foundation framework to provide a completely responsive experience on all types of display sizes.  Our team conducted testing on multiple platforms (i.e. desktop, tablet, phone) and we conducted usability tests to observe users on these platforms.  Our front-end development team used the Google chrome mobile display test tool to rapidly emulate the experience of different platforms throughout the development process.

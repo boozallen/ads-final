@@ -1,75 +1,90 @@
 /* TEAM */
 	
-	Product Manager: Haluk Saker
+	Name: Haluk Saker
+	Role: Product Manager
 	Contact: saker_haluk [at] bah.com
 	From: Herndon, VA, USA
 
-	Tech Architect: Wyatt Chaffee
+	Name: Wyatt Chaffee
+	Role: Tech Architect
 	Contact: chaffee_wyatt [at] bah.com
 	From: Herndon, VA, USA
 
-	Interaction Designer / User Researcher / Usability Tester: Sarah Weise
+	Name: Sarah Weise
+	Role: Interaction Designer / User Researcher / Usability Tester
 	Contact: weise_sarah [at] bah.com
 	From: Herndon, VA, USA
 
-	Visual Designer: Matt Rice
+	Name: Matt Rice
+	Role: Visual Designer
 	Contact: Rice_Matthew [at] bah.com
 	From: Vienna, VA, USA
 
-	Visual Designer: Destin Frasier
+	Name: Destin Frasier
+	Role: Visual Designer 
 	Contact: Frasier_Eugene [at] bah.com
 	From: Vienna, VA, USA
 
-	Front-End Developer: Sami Mirimiri
+	Name: Sami Mirimiri
+	Role: Front-End Developer 
 	Contact: mirimiri_sami [at] bah.com
 	From: Manassas, VA
 
-	Front-End Developer: Sameer Dhar
+	Name: Sameer Dhar
+	Role: Front-End Developer 
 	Contact: dhar_sameer [at] bah.com
 	From: Richmond, VA
 
-	Back-End Developer: Chris Kacerguis
+	Name: Chris Kacerguis
+	Role: Back-End Developer
 	Contact: kacerguis_chris [at] bah.com
 	From: San Antonio, TX
 
-	Back-End Developer: Michael Stack
+	Name: Michael Stack
+	Role: Back-End Developer 
 	Contact: stack_michael [at] bah.com
 	From: San Antonio, TX
 
-	Backend Developer: Debanjan Dasgupta
+	Name: Debanjan Dasgupta
+	Role: Backend Developer
 	Contact: Dasgupta_Debanjan [at] bah.com
 	From: Fairfax, VA
 
-	DevOps Engineer: Martin Folkoff
+	Name: Martin Folkoff
+	Role: DevOps Engineer 
 	Contact: folkoff_martin [at] bah.com
 	From: Herndon, VA, USA
 
-	DevOps Engineer: Eugene Raether
+	Name: Eugene Raether
+	Role: DevOps Engineer
 	Contact: raether_eugene [at] bah.com
 	From: Herndon, VA, USA	
 	
-	DevOps Engineer: Saurab Joshi
+	Name: Saurab Joshi
+	Role: DevOps Engineer
 	Contact: joshi_saurab [at] bah.com
 	From: Herndon, VA
 
-	DevOps Engineer: Will Jackson
+	Name: Will Jackson
+	Role: DevOps Engineer
 	Contact: jackson_william [at] bah.com
 	From: Herndon, VA
 
-	Delivery Manager: Nico Botha
+	Name: Delivery Manager
+	Role: Nico Botha
 	Contact: Botha_Nico [at] bah.com
 	From: Herndon, VA
 
-	Agile Coach: Luke Lackrone
+	Name: Luke Lackrone
+	Role: Agile Coach
 	Contact: Lackrone_Luke [at] bah.com
 	Twitter: @lackrone
 	From: Fulton, MD, USA
 
 	
-
-	
 /* THANKS */
-	Product Owner: Bill Ott
+	Name: Bill Ott
+	Role: Product Owner 
 	From: McLean, VA, USA
 
 /* SITE */
