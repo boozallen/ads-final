@@ -6,9 +6,12 @@ Building this project is made easy with Docker, the following instruction sets w
 Go to https://docs.docker.com/ and install docker on your computer.
 
 ####Run Build Script for entire prototype
+* Ensure Docker is running successfully on your machine (`Docker ps` should not return an error)
 * Clone the repository
-* Go inside the project folder
-* Run `source /bin/build.sh`. This will run front end, api, and database containers. Once all containers are running, you can put localhost:3000 in the browser to see the website. 
+* cd into the newly created directory
+* Run `source /bin/build.sh`. This will run front end, api, and database containers. 
+
+Once all containers are running, you can put localhost:3000 in the browser to see the website. 
 
 ####Run Docker Container Services Manually
 * Clone the repository
