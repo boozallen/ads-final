@@ -129,8 +129,9 @@ For more information on our architecture, see the artifact below:
 - 9) Category 10 - Delivery Manager
 - 10) Category 11 -  Agile Coach 
 
+See humans.txt for a full list of people who worked on the prototype.
 
-(c)  As part of sprint zero our team had an ideation session that included the product owner, Booz Allen FDA subject matter experts and the agile team.  This session led to a number of hypotheses about our target audiences and their needs – along with sketches of personas. We validated and updated these personas throughout our project, through in-person and phone-based user interviews and usability testing. Our in-person, moderated usability testing also provided qualitative behavioral data on user goals to be incorporated into the wireframes as well as personas.
+(c)  As part of sprint zero our team had an ideation session that included the Product Owner, Booz Allen FDA subject matter experts and the agile team.  This session led to a number of hypotheses about our target audiences and their needs – along with sketches of personas. We validated and updated these personas throughout our project, through in-person and phone-based user interviews and usability testing. Our in-person, moderated usability testing also provided qualitative behavioral data on user goals to be incorporated into the wireframes as well as personas.
 
 (d) We used multiple human centered design techniques and tools throughout the process.  Our Lean UX ideation session included brainstorming with a visioning game which ultimately yielded our product charter.  The process included (1) hand-sketched personas, (2) journey maps, (3) scribbled user stories, and (4) sketched wireframes on large pages in pairs. We then learned more about our users through (5) user interviews (in person and by phone) and (6) usability testing. Our personas were living documents that were updated as we learned more. Our hand-sketched wireframes were moved into (7) Axure, and were tested and updated in iterative rounds of usability testing. 
 
