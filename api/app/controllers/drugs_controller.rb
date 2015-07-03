@@ -7,7 +7,7 @@ class DrugsController < ApplicationController
     effects = []
 
     if drug.nil? || drug['openfda']['brand_name'].nil?
-      render json: { message: "Not enough information found for #{brand_name}. Try searching for another drug above." }, status: 404
+      render json: { message: "Not enough information found for #{drug['openfda']['brand_name']}. Try searching for another drug above." }, status: 404
     end
 
     brand_name = drug['openfda']['brand_name'][0]
