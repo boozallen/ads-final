@@ -95,8 +95,6 @@ Instructions to build the software are provided in the artifact below:
 
 [Build Instructions] (Link to INSTALL.md)
 
- 
-
 Our architecture consists of a modern technology stack that reflect current best
 practices for web application development.  The selection of technologies was
 driven by the following value propositions:
