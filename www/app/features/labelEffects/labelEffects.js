@@ -42,6 +42,10 @@ angular.module('gapFront')
       });
     };
 
+    $scope.getDocRef = function getDocRef() {
+      return window.location.protocol + "//" + window.location.hostname + ":3000/documentation/";
+    };
+
     IntegrationService.registerIntegrationMethod('initLabelEffects', initLabelEffects);
 
     $scope.addLeader = function(name){
@@ -62,7 +66,6 @@ angular.module('gapFront')
       $scope.displayedStuff = [];
 
       var drug = DrugService.getSelectedDrugInfo();
-      console.log(drug);
       $scope.adverseEffects = drug.effects;
       $scope.total = $scope.adverseEffects.length > 18? 18 : $scope.adverseEffects.length;
       addDisplayedStuff();
@@ -142,12 +145,12 @@ angular.module('gapFront')
             found = true;
             break;
           } else {
-            if (words[loc + 1].indexOf(effect[1]) > -1) {
+            if (words[loc + 1].indexOf(effect[1] > -1)) {
               if (!effect[2]) {
                 found = true;
                 break;
               } else {
-                if (words[loc + 2].indexOf(effect[2]) > -1) {
+                if (words[loc + 2].indexOf(effect[2] > -1)) {
                   found = true;
                   break;
                 }
@@ -157,7 +160,7 @@ angular.module('gapFront')
         }
       }
 
-      console.log(found);
+      //console.log(found);
       if (found == true) {
         return (words.slice(Math.max(i-25, 0), Math.min(i+25, words.length)).join(' '));
       } else {

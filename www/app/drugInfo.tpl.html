@@ -8,27 +8,22 @@
       <div class="modal-body" ng-show="selectedDrug.brand_name">
 
         <h4>Manufacturer Details for: {{selectedDrug.brand_name}}</h4>
+
         <p>{{selectedDrug.object.package_label_principal_display_panel.toString()}}</p>
-      <br>
+        <br>
 
-      <p>{{selectedDrug.object.indications_and_usage.toString()}}</p>
-      <br>
+        <p>{{selectedDrug.object.indications_and_usage.toString()}}</p>
+        <br>
 
-      <p>{{selectedDrug.object.dosage_and_administration}}</p>
-      <br>
-      <p>Data Source: <a href="https://open.fda.gov">open.fda.gov</a></p>
+        <p>{{selectedDrug.object.dosage_and_administration}}</p>
+        <br>
 
-        <!-- <h4>Popover in a modal</h4>
-        <p>This <a href="#" role="button" class="btn btn-default popover-test" data-title="A Title" data-content="And here's some amazing content. It's very engaging. right?" bs-popover>button</a> should trigger a popover on click.</p>
-
-        <h4>Tooltips in a modal</h4>
-        <p><a href="#" class="tooltip-test" data-title="Tooltip" bs-tooltip>This link</a> and <a href="#" class="tooltip-test" data-title="Tooltip" bs-tooltip>that link</a> should have tooltips on hover.</p> -->
+        <p>Data Source: <a href="https://open.fda.gov">open.fda.gov</a></p>
 
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" ng-click="$hide()">Close</button>
-<!--         <button type="button" class="btn btn-primary" ng-click="$hide()">Save changes</button>
- -->      </div>
+      </div>
     </div>
   </div>
 </div>
