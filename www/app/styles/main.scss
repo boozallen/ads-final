@@ -361,14 +361,17 @@ background-color:#fff;
   border-top-right-radius: 5;
 }
 
+.highcharts-title{
+  font-weight:700!important;
+}
 
 .show_full_label{
-  height: 27px;
-  width: 76px;
+  height: 42px;
+  width: 95px;
   display: block;
   cursor: pointer;
   background: url("../assets/full_label.png") no-repeat;
-  margin: 20px 0 0;
+  margin: 10px 0 0;
 }
 
 #title {
@@ -688,7 +691,7 @@ h3 {
   background-color: #ebebeb;
   color: #989898;
   font-size: 11px;
-  padding: 8px 15px;
+  padding: 8px 10px;
   margin: 2px;
 }
 

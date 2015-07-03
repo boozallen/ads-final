@@ -325,6 +325,7 @@ p{ font-weight: 200}
 }
 .team-member {
   text-align: center;
+  margin: 0 0 40px;
 }
 .team-member img {
   margin: auto;
