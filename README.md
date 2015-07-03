@@ -73,16 +73,6 @@ to promote the success of delivery in programs, especially those for the Govt.
  
 Our process applied by our Agile team demonstated each of these principles.  
 
-1. Our User Experience team constructed user personas and conducted numerous usability tests to ensure the product addressed user needs.  
-
-2. Our DevOps team deployed the software to servers continously and automatically.  Our Agile team followed four hour sprints and daily releases.
- 
-3. Our Delivery Manager tracked blockers according to Agile best practices and worked to quickly resolve them.
-
-4. We also assigned a product owner to assess the value of each feature.   This feedback is essential to an important part of Agile process.
-
-5. Finally, the efforts of all our team members can be seen clearly in our GitHub repository and the artifacts uploaded to the corresponding wiki.  We used open source technology.
-
 For a more detailed mapping of our process to the 18F tenets, see the artifact
 below:
 
