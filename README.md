@@ -96,7 +96,7 @@ https://github.com/booz-allen-agile-delivery/ads-final/blob/development/document
 
 **(d)**
 
-We used multiple human centered design techniques and tools throughout the process.  Our Lean UX ideation session included brainstorming with a visioning game which ultimately yielded our product charter.  The process included (1) hand-sketched personas, (2) journey maps, (3) scribbled user stories, and (4) sketched wireframes on large pages in pairs. We then learned more about our users through (5) user interviews (in person and by phone) and (6) usability testing. Our personas were living documents that were updated as we learned more. Our hand-sketched wireframes were moved into (7) Axure, and were tested and updated in iterative rounds of usability testing. 
+We used multiple human centered design techniques and tools throughout the process.  Our Lean UX ideation session included brainstorming with a visioning game which ultimately yielded our product charter.  The process included hand-sketched personas, journey maps, scribbled user stories, and sketched wireframes on large pages in pairs. We then learned more about our users through user interviews (in person and by phone) and usability testing. Our personas were living documents that were updated as we learned more. Our hand-sketched wireframes were moved into Axure, and were tested and updated in iterative rounds of usability testing. 
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Human-Centered-Design.md
 
@@ -120,7 +120,7 @@ Sprint 0 - Setting up our development environment, including a continuous delive
 
 We delivered 4 releases over a period of 4 days (1 release per day). Release 2 was also the MVP release (Minimal Viable Product). The Product Owner attended all release planning sessions and provided feedback on the creation and prioritization of the user stories for the release.
  
-Sprint Planning was done at the beginning of each sprint and a (2) prototype demonstration and (3) retrospective at the end of each sprint. The Product Owner attended all of these and provided input into the prioritization of user stories for the sprint.
+Sprint Planning was done at the beginning of each sprint with a prototype demonstration and retrospective at the end of each sprint. The Product Owner attended all of these and provided input into the prioritization of user stories for the sprint.
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Architecture-Diagrams.md
 
