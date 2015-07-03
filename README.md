@@ -46,7 +46,7 @@ appropriate resources demonstrated through a sample prototype.  We believe our
 prototype is an exceptional demonstration of our ability to provide these
 resources to the Agile BPA.
 
-### Digital Services Playbook
+### Digital Services Playbook and 18F Key Principals
 
 The US Digital Services playbook provides an invaluable set of guidelines for
 the delivery of digital programs. The USDS playbook includes a set of checklists
@@ -56,27 +56,8 @@ linked below:
 
 [Link to the Digital Services Checklist] (https://github.com/booz-allen-agile-delivery/ads-final/wiki/U.S.-Digital-Services-Playbook-Evidence)
 
-### 18F
-The 18F five key principles provide an important emphasis to Agile concepts aimed
-to promote the success of delivery in programs, especially those for the Govt.
+The 18F five key principles are covered by following Digital Services Playbook. Our process applied by our Agile team demonstated each of these principles.  
 
-1.  Put the needs of users first
-
-2.  Release early, iteratively, and often
-
-3.  Don’t slow down delivery
-
-4.  Only do it if it adds value
-
-5.  Work in the open
-
- 
-Our process applied by our Agile team demonstated each of these principles.  
-
-For a more detailed mapping of our process to the 18F tenets, see the artifact
-below:
-
-[Link to 18F Tenets] (18F\_TENETS.md)
 
 ### Architecture/Tools
 
