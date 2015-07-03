@@ -155,7 +155,7 @@ Sprint 0 - Setting up our development environment, including a continuous delive
 
 We delivered 4 releases over a period of 4 days (1 release per day). Release 2 was also the MVP release (Minimal Viable Product). The Product Owner attended all release planning sessions and provided feedback on the creation and prioritization of the user stories for the release.
  
-Sprint 1 - 9: Included (1) Sprint Planning at the beginning of each sprint and a (2) prototype demonstration and (3) retrospective at the end of each sprint. A Product Owner attended all of these and provided input into the prioritization of user stories for the sprint.
+Sprint Planning was done at the beginning of each sprint and a (2) prototype demonstration and (3) retrospective at the end of each sprint. A Product Owner attended all of these and provided input into the prioritization of user stories for the sprint.
 
 All user stories were broken down into tasks and estimated during each sprint planning session. We tracked estimated and completed story points and team velocity.
 
