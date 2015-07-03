@@ -23,3 +23,4 @@ Once all containers are running, you can put localhost:3000 in the browser to se
 * `docker build -t api api`
 * `docker run -p 3000:3000 -d api`<br>
 
+Once all containers are running, you can put localhost:3000 in the browser to see the website.
