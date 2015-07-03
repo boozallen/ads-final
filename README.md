@@ -57,7 +57,7 @@ linked below:
 [Link to the Digital Services Checklist] (https://github.com/booz-allen-agile-delivery/ads-final/wiki/U.S.-Digital-Services-Playbook-Evidence)
 
 ### 18F
-he 18F five key principles provide an imporant emphasis to Agile concepts aimed
+The 18F five key principles provide an important emphasis to Agile concepts aimed
 to promote the success of delivery in programs, especially those for the Govt.
 
 1.  Put the needs of users first
@@ -77,7 +77,6 @@ For a more detailed mapping of our process to the 18F tenets, see the artifact
 below:
 
 [Link to 18F Tenets] (18F\_TENETS.md)
-
 
 ### Architecture/Tools
 
@@ -155,7 +154,7 @@ https://github.com/booz-allen-agile-delivery/ads-final/blob/development/document
 
 (h) Responsive Design
 
-(i) Five modern tech
+(i) Five modern technologies
 
 (i) Amazon Web Service Elastic Compute Cloud (EC2) was used to host any shared computing resources needed during for the project. 
 
