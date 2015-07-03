@@ -2,7 +2,8 @@
 
 In order to maintain healthy code among the team, any team shared code was subjected to rigorous automated tests on various perspectives of quality, including code, security, performance, and functionality. Tests were executed automatically as developers submitted code to the repository. Feedback was made available to developers within minutes of the submission on a variety of criteria explained below. If all tests were successful a deployment was automatically initiated and available for review on the appropriate environment.
 
-![automated_testing_v1](https://cloud.githubusercontent.com/assets/12210910/8392520/1185a8be-1cb3-11e5-9533-865459510f9d.png)
+![automated_testing_v2](https://cloud.githubusercontent.com/assets/12210910/8501116/7a70d5da-2170-11e5-96fc-ba16d2261bcb.png)
+
 
 For more information on how the tests were executed in the build process please refer to the [api](https://github.com/booz-allen-agile-delivery/ads-final/blob/development/bin/jenkins/api-test.sh) and [front end](https://github.com/booz-allen-agile-delivery/ads-final/blob/development/bin/jenkins/api-test.sh) shell scripts. 
 
