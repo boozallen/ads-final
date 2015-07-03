@@ -103,7 +103,7 @@ For more information on our architecture, see the artifact below:
 
 ###Technical Approach Pool Three
 
-(a) At the start of the project we identified a single Product Owner who has sufficient authority over the project. He had the (1) ability to add or remove features. He attended all (2) release planning, (3) sprint planning and (4) demonstrations and made all final decisions about prioritizing the backlog. 
+**(a)** At the start of the project we identified a single Product Owner who has sufficient authority over the project. He had the (1) ability to add or remove features. He attended all (2) release planning, (3) sprint planning and (4) demonstrations and made all final decisions about prioritizing the backlog. 
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Agile-Artifacts.md
 
