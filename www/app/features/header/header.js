@@ -14,21 +14,21 @@ angular.module('gapFront')
     //console.log($location.path());
 
     $scope.scrollToEventReports = function scrollToEventReports(){
-      console.log('scrolling');
+      //console.log('scrolling');
       $('html, body').animate({
         scrollTop: $("#events-reports").offset().top-70
       }, 500);
     };
 
     $scope.scrollToLabelAccuracy = function scrollToLabelAccuracy(){
-      console.log('scrolling');
+      //console.log('scrolling');
       $('html, body').animate({
         scrollTop: $("#label-accuracy").offset().top-70
       }, 500);
-    }
+    };
 
     $scope.scrollToSearch = function scrollToSearch(){
-      console.log('scrolling');
+      //console.log('scrolling');
       $('html, body').animate({
         scrollTop: $("#searchSplashScreen").offset().top-70
       }, 500);

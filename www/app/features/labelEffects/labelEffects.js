@@ -17,6 +17,7 @@ angular.module('gapFront')
     $scope.selectedSymptom = '';
     $scope.adverseEffects = [];
     $scope.displayedStuff = [];
+    $scope.selectedDrug = DrugService.getSelectedDrug;
     $scope.percentAnswered = function(){
       return $scope.getPercentage() + '% of possible side effects addressed'
     };
@@ -24,6 +25,7 @@ angular.module('gapFront')
     $scope.$on('alert-fired', function(event, args) {
       $scope.alerts.push(args.message);
     });
+
 
     $scope.count = 0;
     $scope.total = 1;
@@ -140,12 +142,12 @@ angular.module('gapFront')
             found = true;
             break;
           } else {
-            if (words[loc + 1].indexOf(effect[1] > -1)) {
+            if (words[loc + 1].indexOf(effect[1]) > -1) {
               if (!effect[2]) {
                 found = true;
                 break;
               } else {
-                if (words[loc + 2].indexOf(effect[2] > -1)) {
+                if (words[loc + 2].indexOf(effect[2]) > -1) {
                   found = true;
                   break;
                 }
@@ -155,6 +157,7 @@ angular.module('gapFront')
         }
       }
 
+      console.log(found);
       if (found == true) {
         return (words.slice(Math.max(i-25, 0), Math.min(i+25, words.length)).join(' '));
       } else {
