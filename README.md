@@ -63,7 +63,7 @@ The 18F five key principles are covered by following Digital Services Playbook. 
 
 Instructions to build the software are provided in the artifact below:
 
-[Build Instructions] (Link to INSTALL.md)
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/INSTALL.md
 
 Our architecture consists of a modern technology stack that reflect current best
 practices for web application development.  The selection of technologies was
