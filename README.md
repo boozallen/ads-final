@@ -110,29 +110,25 @@ driven by the following value propositions:
 
 -   Security – Sophos Firewall, AWS VPC and Security Groups
 
-
-![Application Stack](https://cloud.githubusercontent.com/assets/8406690/8394816/b3587f9a-1d17-11e5-9292-16c2fd68e51b.png)
-
-
 For more information on our architecture, see the artifact below:
 
 [Link to Architecture Image] (https://github.com/booz-allen-agile-delivery/ads-final/wiki/Architecture-Diagrams)
 
-Technical Approach Pool Three
-Readme description
+###Technical Approach Pool Three
+
 (a) At the start of the project we identified a single Product Owner who has sufficient authority over the project. He had the (1) ability to add or remove features. He attended all (2) release planning, (3) sprint planning and (4) demonstrations and made all final decisions about prioritizing the backlog. 
 (b) Our multidisciplinary team was composed of following 9 LCATs:
 
-1) Category 1   - Product Manager
-2) Category 2   - Tech Architect
-3) Category 3   - Interaction designer
-4) Category 4   - Writer, content designer
-4) Category 5   - Visual Designer
-5) Category 6   - Front-end Dev
-6) Category 7   - Back-end Dev
-7) Category 8   - DevOps Engineer
-8) Category 10 - Delivery Manager
-9) Category 11 -  Agile Coach 
+- 1) Category 1   - Product Manager
+- 2) Category 2   - Tech Architect
+- 3) Category 3   - Interaction designer
+- 4) Category 4   - Writer, content designer
+- 5) Category 5   - Visual Designer
+- 6) Category 6   - Front-end Dev
+- 7) Category 7   - Back-end Dev
+- 8) Category 8   - DevOps Engineer
+- 9) Category 10 - Delivery Manager
+- 10) Category 11 -  Agile Coach 
 
 
 (c)  As part of sprint zero our team had an ideation session that included the product owner, Booz Allen FDA subject matter experts and the agile team.  This session led to a number of hypotheses about our target audiences and their needs – along with sketches of personas. We validated and updated these personas throughout our project, through in-person and phone-based user interviews and usability testing. Our in-person, moderated usability testing also provided qualitative behavioral data on user goals to be incorporated into the wireframes as well as personas.
