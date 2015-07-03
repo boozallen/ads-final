@@ -164,9 +164,7 @@ We delivered 4 releases over a period of 4 days (1 release per day). Release 2 w
  
 Sprint Planning was done at the beginning of each sprint and a (2) prototype demonstration and (3) retrospective at the end of each sprint. The Product Owner attended all of these and provided input into the prioritization of user stories for the sprint.
 
-All user stories were broken down into tasks and estimated during each sprint planning session. We tracked estimated and completed story points and team velocity.
-
-https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Agile-Artifacts.md
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Architecture-Diagrams.md
 
 **(h)**
 
