@@ -30,7 +30,7 @@ Our approach taken on this challenge and the resulting outputs showcase the valu
     highly-skilled, cross-functional team in order to support the ADS challenge.
     We also tapped into a set of FDA domain experts across the firm.
 
-### Digital Services Playbook and 18F Key Principals
+### Digital Services Playbook
 
 The US Digital Services playbook provides a set of guidelines that includes a set of checklists
 and questions we believe should be answered during the execution of any digital program. 
