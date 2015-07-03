@@ -239,6 +239,20 @@ p.logo_subtext strong {
   float: left;
 }
 
+.steps .step_block-inner .step-circle-gray{
+  background:#bfbfbf;
+  border-radius: 60px;
+  -moz-border-radius: 60px;
+  -webkit-border-radius: 60px;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  color: #fff;
+  display: block;
+  margin: 24px 0 0 20px;
+  float: left;
+}
+
 .steps .step_block-inner .step-circle p{
   margin: 0;
   padding: 5px 0 0;
@@ -252,6 +266,21 @@ p.logo_subtext strong {
   font-weight: 700;
   line-height: 48px;
 }
+
+.steps .step_block-inner .step-circle-gray p{
+  margin: 0;
+  padding: 5px 0 0;
+  color: #fff;
+  float: none;
+}
+
+.steps .step_block-inner .step-circle-gray p strong{
+  display: block;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 48px;
+}
+
 
 @media (max-width: 1100px) {
   .steps .step_block-inner p.label-text{font-size: 16px; width:51%;}
