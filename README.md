@@ -186,6 +186,7 @@ https://github.com/booz-allen-agile-delivery/ads-final/tree/development/bin/jenk
 **(i)**
 
 Amazon Web Service Elastic Compute Cloud (EC2) was used to host any shared computing resources needed during for the project. 
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Architecture-Diagrams.md
 
 **(k)**
 
