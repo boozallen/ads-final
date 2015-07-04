@@ -10,11 +10,13 @@ Prototype Submission URL: https://labelcraft.io
 
 [![Build Status](http://jenkins.labelcraft.io/buildStatus/icon?job=Master_FrontEnd_Builder)](http://jenkins.labelcraft.io/view/Master/job/Master_FrontEnd_Builder/)[![Build Status](http://jenkins.labelcraft.io/buildStatus/icon?job=Master_API_Builder)](http:/jenkins.labelcraft.io/view/Master/job/Master_API_Builder/)Master Branch Server: https://labelcraft.io
 
-Label Craft is a crowd-sourcing platform for cataloging the adverse reactions found on drug labels. This information must be converted into structured data to be able to identify whether  labels have accurately captured adverse effects experienced by users.
+Label Craft is a crowd-sourcing platform to improve the accuracy of drug labels.  The goal of the prototype is to be able to determine whether an adverse effect reported by consumers was accurately described by the manufacturer on the drug label.
 
-Data collected by the platform is displayed on the site for each drug and also is made accessible via a public API for integration with third-party applications. 
+By identifying the adverse effects that consumers have reported which are not listed on drug labels, we hope to reduce the time it takes for manufacturers to update their labels and better inform consumers about the potential adverse effects of a drug.
 
-It provides the foundation for additional improvements to the quality of FDA data through crowd-sourcing.
+Since the information on drug labels is unstructured, simply finding the adverse effect on a label is not sufficient to conclude that the manufacturer had accurately described it as a side effect.  As we observed and confirmed on the FDA site, the information included on drug labels in terms of sections on contents is highly variable.
+
+We felt that this was a perfect problem to leverage the power of the crowd and so we built a crowd-sourcing platform that would ask users to answer a series of questions to determine whether the adverse effects reported by consumers are found on the drug label.  The platform could be expanded in the future to allow for additional types of information on the drug labels to be categorized.  To ensure the information we collected is used to its full potential, our data is exposed via an API and documented for third-party application developers.
 
 Our approach taken on this challenge and the resulting outputs showcase the value that Booz Allen brings to the 18F BPA:
 
