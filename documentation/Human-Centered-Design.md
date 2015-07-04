@@ -48,10 +48,6 @@ We conducted market research on these items and realized that despite our best h
 
 So we went back to our brainstorming board and discussed several others who might be target audiences.
 
-![brainstorming 3](https://cloud.githubusercontent.com/assets/13038047/8505235/8b0dc054-21ae-11e5-831c-ec778ec0bc25.JPG)
-
-![charter](https://cloud.githubusercontent.com/assets/12210285/8508143/a4af9292-2232-11e5-9da9-8c8decab757e.JPG)
-![journey map](https://cloud.githubusercontent.com/assets/12210285/8508144/a4b15794-2232-11e5-88b2-a32364c3bfe7.JPG)
 ![ideation 5](https://cloud.githubusercontent.com/assets/12210285/8508148/a4b49e2c-2232-11e5-8fa6-949ab24a3013.JPG)
 
 **(3) Persona Sketching** - After voting on the major target audiences, and doing lite market research on whether they would make for a good fit, we sketched personas for the key audiences we hypothesized that we would target
