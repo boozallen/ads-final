@@ -63,7 +63,7 @@ So we went back to our brainstorming board and discussed several others who migh
 
 Then each small group shared the journeys with the larger group and we discussed each.
 
-![journeys - sharing](https://cloud.githubusercontent.com/assets/13038047/8505352/517fa35e-21b1-11e5-91e7-28066aa6ec39.JPG)
+![journey map](https://cloud.githubusercontent.com/assets/12210285/8508144/a4b15794-2232-11e5-88b2-a32364c3bfe7.JPG)
 
 Based on this information, our fill-in-the-blank mad libs-style vision evolved with more thought and research. We were able to write a basic charter for what we were building that hung beside us on the wall throughout the challenge. After our major pivot, this vision did change slightly.
 
