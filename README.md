@@ -162,4 +162,4 @@ https://github.com/booz-allen-agile-delivery/ads-final/blob/development/document
 
 We have also open sourced this solution and the Open source license is available at:
 
-https://github.com/booz-allen-agile-delivery/ads-final/blob/development/LICENSE.md
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/LICENSE
