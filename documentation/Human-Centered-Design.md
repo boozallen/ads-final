@@ -91,7 +91,7 @@ For the advocacy group persona, we phoned the founder of the Hashimoto’s 411 g
 Our user interviews impacted not only our personas, but also our user stories, journey maps, and wireframes. Ultimately these interviews guided what product we were building. We found out that about half of the people we spoke to read labels, and of those people nearly all of them feel mistrusting of the label alone, and for good reason!  Of the top adverse events reported, only a fraction makes it onto medicine labels. To do anything about this big honkin' problem, we needed better data.  And who better to help us with that than the people who need it -- health conscious general public, advocacy groups, etc. Everyone wants to know about side effects, and a small fraction of these people are willing to help make labels more accurate. With crowdsourcing, even a small fraction of do-gooders can make a big difference. Therefore, the goal of our website is ultimately to perform a gap analysis between adverse events data and label data, using crowdsourcing to help give us the proper data to help FDA administrators make drug labels more accurate. 
 
 After our pivot, this was our modified charter:
-
+![charter](https://cloud.githubusercontent.com/assets/12210285/8508200/13a6bc32-2235-11e5-8696-b471052030e7.JPG)
 PHOTO OF FINAL CHARTER
 
 ## Personas
