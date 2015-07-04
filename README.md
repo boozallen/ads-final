@@ -1,4 +1,4 @@
-# 18F Agile Delivery Services – Booz Allen – Prototype: Label Craft
+# 18F Agile Delivery Services (ADS) – Booz Allen Digital– Prototype: LabelCRAFT
 
 Prototype Submission URL: https://labelcraft.io
 
