@@ -97,15 +97,12 @@ PHOTO OF FINAL CHARTER
 ## Personas
 We started by hand-sketching our personas and guessing about their needs, goals and journeys. We then learned more about our users through user interviews (in person and by phone) and usability testing. Our personas were living documents that were updated as we learned more. They all had faces and names, and we spoke about them as if they were team members throughout the process. We got to know them them and empathized with them as we designed and coded. Our hand-sketched wireframes were moved into Axure, and were tested and updated in iterative rounds of usability testing.
 
-IMAGE OF BECCA PERSONA
+![slide1](https://cloud.githubusercontent.com/assets/12210285/8508230/6c272116-2236-11e5-99b5-8b625357e891.jpg)
+![slide2](https://cloud.githubusercontent.com/assets/12210285/8508233/6c299c84-2236-11e5-80e9-ae7d75887d43.jpg)
+![slide3](https://cloud.githubusercontent.com/assets/12210285/8508232/6c294a54-2236-11e5-95fb-1fc2b3423fa9.jpg)
+![slide4](https://cloud.githubusercontent.com/assets/12210285/8508231/6c27fb22-2236-11e5-8854-11989b0fbb93.jpg)
+![slide5](https://cloud.githubusercontent.com/assets/12210285/8508234/6c2a24d8-2236-11e5-802c-92196dcab624.jpg)
 
-IMAGE OF VIC PERSONA
-
-IMAGE OF ESTER PERSONA
-
-IMAGE OF MATT PERSONA
-
-IMAGE OF HASHI'S GROUP PERSONA
 
 ## Wireframing
 We started with hand-sketched wireframes on large easel-sized post-it pads on the wall.  
