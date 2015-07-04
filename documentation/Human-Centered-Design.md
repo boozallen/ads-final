@@ -22,6 +22,9 @@ Everyone agreed to these rules, and one was added along the way. At any point, w
 ![brainstorming 2](https://cloud.githubusercontent.com/assets/13038047/8505233/8b0afde2-21ae-11e5-866c-7f7d9f037f03.JPG)
 ![brainstorming](https://cloud.githubusercontent.com/assets/13038047/8505234/8b0d5d12-21ae-11e5-8b5f-4e0bf79459cb.JPG)
 
+
+![ideation3](https://cloud.githubusercontent.com/assets/12210285/8508146/a4b312e6-2232-11e5-883a-7611804028cb.JPG)
+
 We did this for each of several fill-in-the-blank brainstorming stems:
 
 FOR [target customer]
