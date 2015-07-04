@@ -39,31 +39,33 @@ https://github.com/booz-allen-agile-delivery/ads-final/blob/development/document
 
 **(b)**
 
-Booz Allen has been using agile methodologies since early 2000s, including on a number of hackathons (e.g., the My America Summit and GSA Open Tech Digital Innovation Hackathon). This experience helped us to identify the right-sized multidisciplinary team for this effort. We used 10 out of the 13 allowed LCATs - See our humans.txt file for a full list of people who worked on the prototype.
+Booz Allen has been using agile methodologies since early 2000s, including on a number of hackathons (e.g., the My America Summit and GSA Open Tech Digital Innovation Hackathon). This experience helped us to identify the right-sized multidisciplinary team for this effort. We used 10 out of the 13 allowed LCATs.
+
+SEE humans.txt file for a full list of people who worked on the prototype.
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/www/app/humans.txt
 
 **(c)**  
 
-As part of sprint zero, our team had an ideation session that included the Product Owner, Booz Allen FDA SMEs and the agile team. This session led to a number of hypotheses about our target audiences and their needs – along with sketches of personas. We validated and updated these personas throughout our project, through in-person and phone-based user interviews and usability testing. Our in-person, moderated usability testing also provided qualitative behavioral data on user goals to be incorporated into the wireframes as well as personas.
+Our team had an ideation session that included the Product Owner, Booz Allen FDA SMEs and the agile team. This led to a number of hypotheses about our target audiences and their needs – along with sketches of personas. We validated and updated these through in-person and phone-based user interviews and usability testing. Our in-person, moderated usability testing also provided qualitative behavioral data on user goals to be incorporated into the wireframes as well as personas.
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Human-Centered-Design.md
 
 **(d)**
 
-We used multiple human centered design techniques and tools throughout the process. Our Lean UX ideation session included brainstorming with a visioning game, which ultimately yielded our product charter. The process included hand-sketched personas, journey maps, scribbled user stories, and sketched wireframes on large pages in pairs. We then learned more about our users through user interviews and usability testing. Our personas were living documents that were updated throughout. Our hand-sketched wireframes were moved into Axure, and were tested and updated in iterative rounds of usability testing.
+We used multiple human centered design techniques and tools. Our Lean UX ideation session included brainstorming with a visioning game, which ultimately yielded our product charter. It included hand-sketched personas, journey maps, scribbled user stories, and sketched wireframes on large pages in pairs. We then learned more about our users through user interviews and usability testing. Our personas were updated throughout. Our hand-sketched wireframes (Axure) were tested and updated in iterative rounds of usability testing.
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Human-Centered-Design.md
 
 **(e)**
 
-We began the design process by selecting a bootstrap theme that provided a close resemblance to our vision for the prototype. We chose this approach to help with familiarizing the team with the direction for the styling and components that we would ultimately design around. As our wireframes matured, we used these components as a foundation but modified the styling to meet our needs. We developed a design style guide to provide the team with a general reference point for our core design specifications. In addition to the design style guide, wireframes and a set of high fidelity mockups were provided to provide the complete design vision for the prototype.
+We selected a bootstrap theme that provided a close resemblance to our vision for the prototype. We chose this approach to help with familiarizing the team with the direction for the styling and components that we would ultimately design around. As our wireframes matured, we used these components as a foundation but modified the styling to meet our needs. We developed a design style guide to provide the team with a general reference point for our core design specifications. Wireframes and a set of high fidelity mockups were provided to provide the complete design vision for the prototype.
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Design-Documentation.md
 
 **(f)**
 
-We conducted user interviews with each of our hypothesized persona types. These personas were updated, expanded or removed based on the incoming user data. We conducted two rounds of usability testing (4-5 participants in each round) on wireframes created in Axure. These were moderated in-person usability test sessions where the participants pulled up our wireframes and walked through unstructured impressions on layout, navigation, content and interaction. We made significant changes based on both preference and behavioral data from each round of this small-scale usability testing. 
+We conducted user interviews with each of our hypothesized persona types. They were updated, expanded or removed based on the incoming user data. We conducted two rounds of usability testing (4-5 participants each round) on wireframes. These were moderated in-person usability test sessions where we walked through unstructured impressions on layout, navigation, content and interaction. We made significant changes based on feedback from each round of this small-scale usability testing. 
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Usability-Testing.md
 
@@ -71,23 +73,23 @@ https://github.com/booz-allen-agile-delivery/ads-final/blob/development/document
 
 The prototype was developed over multiple sprints.
 
-Sprint 0 - Setting up our development environment, including a continuous delivery infrastructure, and going through ideation/human centered design techniques to understand the value we could create and ultimately decide what to build.
+Sprint 0 - Setting up our development environment, a continuous delivery infrastructure, and going through ideation/human centered design techniques to understand the value we could create and ultimately build.
 
-We delivered 6 releases over a period of 6 days (1 release per day). Release 2 was also the MVP release (Minimal Viable Product). The Product Owner attended all release planning sessions and provided feedback on the creation and prioritization of the user stories for the release.
- 
+We delivered 6 releases over a period of 6 days, with Release 2 the MVP. The Product Owner attended all release planning sessions and provided feedback on the creation and prioritization of the user stories.
+
 Sprint Planning was done at the beginning of each sprint with a prototype demonstration and retrospective at the end of each sprint. The Product Owner attended all of these and provided input into the prioritization of user stories for the sprint.
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Architecture-Diagrams.md
 
 **(h)**
 
-Our front-end application was implemented with the Foundation framework to provide a completely responsive experience across all types of display sizes.  Our team conducted testing on multiple platforms (i.e. desktop, tablet, phone) and we conducted usability tests to observe users on these platforms.  Our front-end development team used the Google chrome mobile display test tool to rapidly emulate the experience of different platforms throughout the development process.
+Our front-end application was implemented with the Foundation framework to provide a completely responsive experience across all types of display sizes. We conducted testing on multiple platforms (i.e. desktop, tablet, phone) and conducted usability tests to observe users on these platforms. We used the Google chrome mobile display test tool to emulate the experience of different platforms.
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Architecture-Diagrams.md
 
 **(i)**
 
-Our solution is comprised of more than five modern, open-source technologies.  Our selection of technologies was driven by several factors including the language, frameworks, the libraries most appropriate to solve the problem, the ability for the technology to conform to modern development best practices, and tools that best support the full end-to-end life cycle of development for maximum quality. Technologies selected include:
+Our selection of technologies (more than 5 modern, open-source technologies)  was driven by the language, frameworks, the libraries most appropriate to solve the problem, the ability for the technology to conform to modern development best practices, and tools that best support the full end-to-end life cycle of development. It included:
 
 - Front-End: Foundation, Angular.JS, Node.js, Karma, JS Hint, HighCharts
 - Backend: Ruby, Rails, RSpec, Rubocop, Brakeman
@@ -103,13 +105,13 @@ https://github.com/booz-allen-agile-delivery/ads-final/blob/development/document
 
 **(k)**
 
-Unit testing was done in conjunction with development and written with appropriate tooling for the technology stack in use. Karma was used for the front-end code and rSpec was used for the backend API. Both these tools allow for developers to keep their development process fluid and leverage their respective language specific advantages. The unit tests were executed both locally on the developer’s machines and again on the continuous integration server upon a Git push. 
+Unit testing was done with development and written with appropriate tooling for the technology stack. Karma was used for the front-end code and rSpec was used for the backend API. Both allowed for a fluid development process and leveraged their respective language specific advantages. The unit tests were executed both locally and on the continuous integration server (Git push).
  
  https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/DevOps-Process.md
 
 **(l)**
 
-Jenkins was used as our continuous integration tool. GitHub hooks were established for each branch to kickoff Jenkins jobs. Custom Jenkins jobs for each branch ran automated tests in containerized environments. Once tests were completed, Jenkins CI would update the Docker registry and deploy the new build. All pushes to the development branch are automatically examined by static code analysis, security scans, unit tests, integration tests, and performance tests. Load testing was performed ad-hoc, at the developer’s discretion.
+Jenkins was used as our continuous integration tool. GitHub hooks were established for each branch to kickoff Jenkins jobs. Custom jobs for each branch ran automated tests in containerized environments. Once tests were completed, Jenkins CI updated the Docker registry and deployed the new build. All pushes to the development branch are automatically examined by static code analysis, security scans, unit tests, integration tests, and performance tests. Load testing was performed ad-hoc (developer’s discretion).
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/DevOps-Process.md
 
@@ -117,19 +119,19 @@ https://github.com/booz-allen-agile-delivery/ads-final/blob/development/document
 
 **(m)**
 
-Configuration management was greatly simplified by leveraging Docker’s tool suite, which encapsulates away many traditional configuration steps. Docker Machine is used to provision and post-provision AWS EC2 instances so they are immediately ready for Docker-based deployments. After provisioning, the Docker engine pulls and builds containers from the Docker repository. Docker Compose implicitly injects the appropriate environment variables into the containers to connect frontend to API to database.   The /bin directory in the repo contains all the necessary scripts to utilize the described Docker workflow.
+The Docker’s tool suite, was used is used to provision and post-provision AWS EC2 instances so they are immediately ready for Docker-based deployments. After provisioning, the Docker engine pulls and builds containers from the Docker repository. Docker Compose implicitly injects the appropriate environment variables into the containers to connect frontend to API to database. The /bin directory in the repo contains all the necessary scripts to utilize the described Docker workflow.
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/DevOps-Process.md
 
 **(n)**
 
-We set up and used cAdvisor (cAdvisor available at https://github.com/google/cadvisor)  to establish continuous monitoring. The cAdvisor tool cleanly presents a variety of metrics through a website to determine the health of the environment and its running containers, including CPU usage, memory usage, and running process metrics. Alerts are sent to relevant slack channels for any GitHub changes and Jenkins build results.
+We set up and used cAdvisor (https://github.com/google/cadvisor) to establish continuous monitoring. This tool cleanly presents a variety of metrics (CPU usage, memory usage, and running process metrics) through a website to determine the health of the environment and its running containers. Alerts are sent to relevant slack channels for any GitHub changes and Jenkins build results.
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Continuous-Monitoring.md
 
 **(o)**
 
-Docker-engine was used to build Linux containers from custom Dockerfiles stored in our Git repository. All three tiers of our application stack are containerized. Dockerfiles were written using Docker’s recommended best practices, to maximize the caching features of the Docker tool. This allows for quicker builds, which is important since we are rebuilding the Docker image after every push.
+Docker-engine was used to build Linux containers from custom Dockerfiles stored in our Git repository. All three tiers of our application stack are containerized. Dockerfiles were written using Docker’s recommended best practices, to maximize the caching features of the Docker tool. This allows for quicker builds, which is important as the Docker image is rebuilt after every push.
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/DevOps-Process.md
 
@@ -140,12 +142,13 @@ Installation instruction is a two-line Docker command.
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/INSTALL.md
 
 
-**(q)** Open Source Usage
+**(q)**
 
-All of the technologies we used for this prototype are open source. The list of technologies can be seen at:
+All of the technologies we used for this prototype are open source.
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Architecture-Diagrams.md
 
-We have also open sourced this solution and the Open source license is available at:
+We have also open sourced this solution. Open source license is available at:
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/LICENSE
+
