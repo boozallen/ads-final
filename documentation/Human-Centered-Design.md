@@ -10,20 +10,14 @@ We conducted a series of visioning exercises, adapted from design thinking and L
 
 Before we could start these "games" (detailed below), we had to set up some ground rules for the session:
 
-![ideation rules](https://cloud.githubusercontent.com/assets/13038047/8505371/9e22adaa-21b1-11e5-8ead-4badc56faaf1.JPG)
-
-![charter](https://cloud.githubusercontent.com/assets/12210285/8508143/a4af9292-2232-11e5-9da9-8c8decab757e.JPG)
-![journey map](https://cloud.githubusercontent.com/assets/12210285/8508144/a4b15794-2232-11e5-88b2-a32364c3bfe7.JPG)
-![ideation 5](https://cloud.githubusercontent.com/assets/12210285/8508148/a4b49e2c-2232-11e5-8fa6-949ab24a3013.JPG)
-![ideation 4](https://cloud.githubusercontent.com/assets/12210285/8508145/a4b28088-2232-11e5-9233-1de82a6c7007.JPG)
-![ideation3](https://cloud.githubusercontent.com/assets/12210285/8508146/a4b312e6-2232-11e5-883a-7611804028cb.JPG)
-![ideation 2](https://cloud.githubusercontent.com/assets/12210285/8508149/a4b7c7b4-2232-11e5-892a-9c81726556f4.JPG)
 ![ideation session](https://cloud.githubusercontent.com/assets/12210285/8508147/a4b4bf2e-2232-11e5-81b8-6aaf4450fef3.JPG)
 
 
 Everyone agreed to these rules, and one was added along the way. At any point, we were allowed to call out "ELMO" ("Enough Let's Move On") if someone was speaking too much, and we agreed as a group that it would not be rude to do this. 
 
 **(1) Mad Libs Style Brainstorming** - We had a series of question stems and brainstormed individually and in groups to get post-its on the wall with lots of ideas. 
+
+![ideation 2](https://cloud.githubusercontent.com/assets/12210285/8508149/a4b7c7b4-2232-11e5-892a-9c81726556f4.JPG)
 
 ![brainstorming 1](https://cloud.githubusercontent.com/assets/13038047/8505232/8afdffe8-21ae-11e5-9eca-39e8b5ce8621.JPG)
 ![brainstorming 2](https://cloud.githubusercontent.com/assets/13038047/8505233/8b0afde2-21ae-11e5-866c-7f7d9f037f03.JPG)
