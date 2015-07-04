@@ -67,7 +67,7 @@ Then each small group shared the journeys with the larger group and we discussed
 
 Based on this information, our fill-in-the-blank mad libs-style vision evolved with more thought and research. We were able to write a basic charter for what we were building that hung beside us on the wall throughout the challenge. After our major pivot, this vision did change slightly.
 
-![initial charter](https://cloud.githubusercontent.com/assets/13038047/8505356/6417b394-21b1-11e5-843a-4b5dff61cd3e.JPG)
+![charter](https://cloud.githubusercontent.com/assets/12210285/8508200/13a6bc32-2235-11e5-8696-b471052030e7.JPG)
 
 ## Market Research on Persona Groups & Industry Competition 
 We conducted market research at numerous steps throughout the process because we wanted to make sure we were delivering something of high value for our target users that would help people taking medications, either directly or indirectly -- something we decided on as a team up front.
