@@ -14,7 +14,7 @@ Label Craft is a crowd-sourcing platform to improve the accuracy of drug labels.
 
 By identifying the adverse effects that consumers have reported which are not listed on drug labels, we hope to reduce the time it takes for manufacturers to update their labels and better inform consumers about the potential adverse effects of a drug.
 
-Since the information on drug labels is unstructured, simply finding the adverse effect on a label is not sufficient to conclude that the manufacturer had accurately described it as a side effect.  As we observed and confirmed on the FDA site, the information included on drug labels in terms of sections on contents is highly variable.
+Since the information on drug labels is unstructured, simply finding the adverse effect on a label is not sufficient to conclude that the manufacturer had accurately described it as a side effect.  As we observed and confirmed on the FDA site, the information included on drug labels in terms of sections and contents is highly variable.
 
 We felt that this was a perfect problem to leverage the power of the crowd and so we built a crowd-sourcing platform that would ask users to answer a series of questions to determine whether the adverse effects reported by consumers are found on the drug label.  The platform could be expanded in the future to allow for additional types of information on the drug labels to be categorized.  To ensure the information we collected is used to its full potential, our data is exposed via an API and documented for third-party application developers.
 
