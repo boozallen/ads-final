@@ -40,8 +40,6 @@ As you can see from the photo below, our team's UX analyst set up the room befor
 
 Based on this dot voting, as a group we chose two distinct customers to possibly target, parents and data scientists:
 
-![dot voting](https://cloud.githubusercontent.com/assets/13038047/8505241/c40c5cf8-21ae-11e5-9554-c9f53daa0a20.JPG)
-
 ![ideation 4](https://cloud.githubusercontent.com/assets/12210285/8508145/a4b28088-2232-11e5-9233-1de82a6c7007.JPG)
 
 We conducted market research on these items and realized that despite our best hypotheses, the market was not there for these two key target audiences.
