@@ -42,7 +42,12 @@ Based on this dot voting, as a group we chose two distinct customers to possibly
 
 ![dot voting](https://cloud.githubusercontent.com/assets/13038047/8505241/c40c5cf8-21ae-11e5-9554-c9f53daa0a20.JPG)
 
-We conducted market research these items and realized that despite our best hypotheses, the market was not there for these two key target audiences.
+![charter](https://cloud.githubusercontent.com/assets/12210285/8508143/a4af9292-2232-11e5-9da9-8c8decab757e.JPG)
+![journey map](https://cloud.githubusercontent.com/assets/12210285/8508144/a4b15794-2232-11e5-88b2-a32364c3bfe7.JPG)
+![ideation 5](https://cloud.githubusercontent.com/assets/12210285/8508148/a4b49e2c-2232-11e5-8fa6-949ab24a3013.JPG)
+![ideation 4](https://cloud.githubusercontent.com/assets/12210285/8508145/a4b28088-2232-11e5-9233-1de82a6c7007.JPG)
+
+We conducted market research on these items and realized that despite our best hypotheses, the market was not there for these two key target audiences.
 
 ![collaboration3](https://cloud.githubusercontent.com/assets/13038047/8505255/0c397b50-21af-11e5-9968-a7823556772f.JPG) 
 
