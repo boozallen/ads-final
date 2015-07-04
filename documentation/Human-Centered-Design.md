@@ -59,11 +59,11 @@ So we went back to our brainstorming board and discussed several others who migh
 **(4) Journey Mapping/Task Analysis** - We drafted journeys for each of these audiences on the websites starting with what they would do when they came to the site. Small groups sketched a journey for each key persona, outlining flows for the hypothesized top tasks. 
 
 ![journey mapping - small groups 1](https://cloud.githubusercontent.com/assets/13038047/8505343/260e22f4-21b1-11e5-9f6c-f9cd75b9bae2.JPG)
-![journey mapping in small groups](https://cloud.githubusercontent.com/assets/13038047/8505344/2617f982-21b1-11e5-809e-b7f1ede5c0b3.JPG)
+
+![journey map](https://cloud.githubusercontent.com/assets/12210285/8508144/a4b15794-2232-11e5-88b2-a32364c3bfe7.JPG)
 
 Then each small group shared the journeys with the larger group and we discussed each.
 
-![journey map](https://cloud.githubusercontent.com/assets/12210285/8508144/a4b15794-2232-11e5-88b2-a32364c3bfe7.JPG)
 
 Based on this information, our fill-in-the-blank mad libs-style vision evolved with more thought and research. We were able to write a basic charter for what we were building that hung beside us on the wall throughout the challenge. After our major pivot, this vision did change slightly.
 
