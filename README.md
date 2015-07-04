@@ -95,7 +95,7 @@ https://github.com/booz-allen-agile-delivery/ads-final/blob/development/document
 
 **(h)**
 
-Our front-end application was implemented with the Foundation framework to provide a completely responsive experience on all types of display sizes.  Our team conducted testing on multiple platforms (i.e. desktop, tablet, phone) and we conducted usability tests to observe users on these platforms.  Our front-end development team used the Google chrome mobile display test tool to rapidly emulate the experience of different platforms throughout the development process.
+Our front-end application was implemented with the Foundation framework to provide a completely responsive experience across all types of display sizes.  Our team conducted testing on multiple platforms (i.e. desktop, tablet, phone) and we conducted usability tests to observe users on these platforms.  Our front-end development team used the Google chrome mobile display test tool to rapidly emulate the experience of different platforms throughout the development process.
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Architecture-Diagrams.md
 
@@ -149,16 +149,16 @@ https://github.com/booz-allen-agile-delivery/ads-final/blob/development/document
 
 **(p)**
 
-Installation instruction is a two lines Docker command. 
+Installation instruction is a two-line Docker command. 
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/INSTALL.md
 
 
 **(q)** Open Source Usage
 
-All of the technologies we used for this prototype are open source. The list of technologies can be seen at the following url:
+All of the technologies we used for this prototype are open source. The list of technologies can be seen at:
 
-https://github.com/booz-allen-agile-delivery/ads-final/blob/development/LICENSE
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Architecture-Diagrams.md
 
 We have also open sourced this solution and the Open source license is available at:
 
