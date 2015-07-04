@@ -31,7 +31,7 @@ https://github.com/booz-allen-agile-delivery/ads-final/blob/development/document
 
 **(a)** 
 
-We identified a member of the team who played the role of Product Owner during the development of the prototype. This person had sufficient authority with the ability to add or remove features. He attended all release planning, sprint planning and (4) demonstrations and made all final decisions about prioritizing the backlog. 
+We identified a member of the team who played the role of Product Owner during the development of the prototype. This person had authority with the ability to add or remove features. He attended all release planning, sprint planning and demonstrations and made all final decisions about prioritizing the backlog. 
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Agile-Artifacts.md
 
@@ -39,9 +39,7 @@ https://github.com/booz-allen-agile-delivery/ads-final/blob/development/document
 
 **(b)**
 
-Booz Allen has been using agile methodologies since early 2000s, including on a number of hackathons, including the My America Summit and GSA Open Tech Digital Innovation Hackathon. This experience helped us to identify the ideal multidisciplinary team for the building of this short agile project. 
-
-We used 10 out of the 13 allowed LCATs - See our humans.txt file for a full list of people who worked on the prototype.
+Booz Allen has been using agile methodologies since early 2000s, including on a number of hackathons (e.g., the My America Summit and GSA Open Tech Digital Innovation Hackathon). This experience helped us to identify the right-sized multidisciplinary team for this effort. We used 10 out of the 13 allowed LCATs - See our humans.txt file for a full list of people who worked on the prototype.
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/www/app/humans.txt
 
