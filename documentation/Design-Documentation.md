@@ -22,7 +22,7 @@ We developed a design style guide to provide the team with a general reference p
 
 In addition to the design style guide, wireframes and a set of High Fidelity mockups were provided to provide the complete design vision for the prototype.
 
-**Design Style Guide**
+**1. Design Style Guide**
 
 **Style Guide can be downloaded at**
 https://github.com/booz-allen-agile-delivery/ads-final/blob/master/www/app/styles/labelcraft_styleguide_final.pdf
@@ -37,8 +37,8 @@ https://github.com/booz-allen-agile-delivery/ads-final/blob/master/www/app/style
 ![style8](https://cloud.githubusercontent.com/assets/12210285/8508278/644d6020-2238-11e5-816c-7e39a4de70c7.png)
 ![style9](https://cloud.githubusercontent.com/assets/12210285/8508280/644e4904-2238-11e5-862d-0c33aed1d467.png)
 
-**Wireframes**
+**2. Wireframes**
 ![labelcraft_wireframe_final](https://cloud.githubusercontent.com/assets/11598168/8410160/6b06ea7c-1e4a-11e5-8858-2511d114382e.png)
 
-**Mockups**
+**3. Mockups**
 ![labelcraft_mockup_final](https://cloud.githubusercontent.com/assets/11598168/8410145/579140dc-1e4a-11e5-8ea3-bae0e106a07a.png)
