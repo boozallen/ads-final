@@ -45,19 +45,19 @@ https://github.com/booz-allen-agile-delivery/ads-final/blob/development/www/app/
 
 **(c)**  
 
-As part of sprint zero our team had an ideation session that included the Product Owner, Booz Allen FDA subject matter experts and the agile team.  This session led to a number of hypotheses about our target audiences and their needs – along with sketches of personas. We validated and updated these personas throughout our project, through in-person and phone-based user interviews and usability testing. Our in-person, moderated usability testing also provided qualitative behavioral data on user goals to be incorporated into the wireframes as well as personas.
+As part of sprint zero, our team had an ideation session that included the Product Owner, Booz Allen FDA SMEs and the agile team. This session led to a number of hypotheses about our target audiences and their needs – along with sketches of personas. We validated and updated these personas throughout our project, through in-person and phone-based user interviews and usability testing. Our in-person, moderated usability testing also provided qualitative behavioral data on user goals to be incorporated into the wireframes as well as personas.
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Human-Centered-Design.md
 
 **(d)**
 
-We used multiple human centered design techniques and tools throughout the process.  Our Lean UX ideation session included brainstorming with a visioning game which ultimately yielded our product charter.  The process included hand-sketched personas, journey maps, scribbled user stories, and sketched wireframes on large pages in pairs. We then learned more about our users through user interviews and usability testing. Our personas were living documents that were updated hroughout. Our hand-sketched wireframes were moved into Axure, and were tested and updated in iterative rounds of usability testing. 
+We used multiple human centered design techniques and tools throughout the process. Our Lean UX ideation session included brainstorming with a visioning game, which ultimately yielded our product charter. The process included hand-sketched personas, journey maps, scribbled user stories, and sketched wireframes on large pages in pairs. We then learned more about our users through user interviews and usability testing. Our personas were living documents that were updated throughout. Our hand-sketched wireframes were moved into Axure, and were tested and updated in iterative rounds of usability testing.
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Human-Centered-Design.md
 
 **(e)**
 
-We began the design process by selecting a bootstrap theme that provided a close resemblance to our vision for the prototype. We chose this approach to help with familiarizing the team with the direction for the styling and components that we would ultimately design around. As our wireframes matured, we used these components as a foundation but modified the styling to meet our needs. We developed a design style guide to provide the team with a general reference point for our core design specifications. In addition to the design style guide, wireframes and a set of High Fidelity mockups were provided to provide the complete design vision for the prototype.
+We began the design process by selecting a bootstrap theme that provided a close resemblance to our vision for the prototype. We chose this approach to help with familiarizing the team with the direction for the styling and components that we would ultimately design around. As our wireframes matured, we used these components as a foundation but modified the styling to meet our needs. We developed a design style guide to provide the team with a general reference point for our core design specifications. In addition to the design style guide, wireframes and a set of high fidelity mockups were provided to provide the complete design vision for the prototype.
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Design-Documentation.md
 
@@ -73,7 +73,7 @@ The prototype was developed over multiple sprints.
 
 Sprint 0 - Setting up our development environment, including a continuous delivery infrastructure, and going through ideation/human centered design techniques to understand the value we could create and ultimately decide what to build.
 
-We delivered 4 releases over a period of 4 days (1 release per day). Release 2 was also the MVP release (Minimal Viable Product). The Product Owner attended all release planning sessions and provided feedback on the creation and prioritization of the user stories for the release.
+We delivered 6 releases over a period of 6 days (1 release per day). Release 2 was also the MVP release (Minimal Viable Product). The Product Owner attended all release planning sessions and provided feedback on the creation and prioritization of the user stories for the release.
  
 Sprint Planning was done at the beginning of each sprint with a prototype demonstration and retrospective at the end of each sprint. The Product Owner attended all of these and provided input into the prioritization of user stories for the sprint.
 
@@ -97,7 +97,7 @@ https://github.com/booz-allen-agile-delivery/ads-final/blob/development/document
 
 **(j)**
 
-Amazon Web Service Elastic Compute Cloud (EC2) was used to host any shared computing resources needed during for the project.
+Amazon Web Service Elastic Compute Cloud (EC2) was used to host shared computing resources needed during for the project.
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Architecture-Diagrams.md
 
