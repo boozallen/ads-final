@@ -1,41 +1,38 @@
-(function() {
-  'use strict';
+'use strict';
 
-  angular.module('gapFront')
-    .service('DrugService', DrugService);
+/**
+ * @ngdoc function
+ * @name gapFront.service:DrugService
+ * @description
+ * # DrugService
+ * Angular Service providing access State Drug data
+ */
+angular.module('gapFront')
+  .service('DrugService', function () {
 
-  /**
-   * @ngdoc function
-   * @name gapFront.service:DrugService
-   * @description
-   * # DrugService
-   * Angular Service providing access State Drug data
-   */
-  function DrugService() {
     var selectedDrug;
     var selectedDrugInfo;
 
-    return {
-      setSelectedDrug: setSelectedDrug,
-      getSelectedDrug: getSelectedDrug,
-      setSelectedDrugInfo: setSelectedDrugInfo,
-      getSelectedDrugInfo: getSelectedDrugInfo
-    };
-
-    function setSelectedDrug(drug) {
+    function setSelectedDrug(drug){
       selectedDrug = drug;
     }
 
-    function getSelectedDrug() {
+    function getSelectedDrug(){
       return selectedDrug;
     }
 
-    function setSelectedDrugInfo(drug) {
+    function setSelectedDrugInfo(drug){
       selectedDrugInfo = drug;
     }
 
-    function getSelectedDrugInfo() {
+    function getSelectedDrugInfo(){
       return selectedDrugInfo;
     }
-  }
-})();
+
+    return {
+      setSelectedDrug:setSelectedDrug,
+      getSelectedDrug:getSelectedDrug,
+      setSelectedDrugInfo:setSelectedDrugInfo,
+      getSelectedDrugInfo:getSelectedDrugInfo
+    };
+  });

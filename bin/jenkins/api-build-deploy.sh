@@ -35,34 +35,3 @@ then
   echo "****** DOCKER-COMPOSE FINISHED ******"
 
 
-  echo "****** REMOVING BACKEND CONTAINTERS ******"
-  #if [[ -n $(docker images | grep ^$REGISTRY/$BACKEND_IMAGE_NAME) ]]; 
-  #then 
-  #docker stop $BACKEND_IMAGE_NAME
-  #docker rm $BACKEND_IMAGE_NAME
-  #fi
-
-  #if [[ -n $(docker images | grep ^$REGISTRY/$DATABASE_IMAGE_NAME) ]]; 
-  #then 
-  #docker stop $DATABASE_IMAGE_NAME
-  #docker rm $DATABASE_IMAGE_NAME
-  #fi
-
-  #echo "****** PULLING BACKEND IMAGES ******"
-  #docker pull $REGISTRY/$BACKEND_IMAGE_NAME:latest
-  #docker pull $REGISTRY/$DATABASE_IMAGE_NAME:latest
-
-  #echo "****** RUNNING BACKEND CONTAINERS ******"
-  #DATABASE_ID=$(docker run -p 5432:5432 -d --name $DATABASE_IMAGE_NAME $REGISTRY/$DATABASE_IMAGE_NAME:latest postgres)
-  #IP_ADDRESS=$(docker inspect --format='{{.NetworkSettings.IPAddress}}' $DATABASE_ID)
-  #echo "IP_ADDRESS: $IP_ADDRESS"
-
-  #until /usr/local/bin/docker-machine ssh $DOCKER_MACHINE_NAME "nc -z $IP_ADDRESS 5432"
-  #do
-  #    echo "Attempting to run backend...waiting for postgres container..."
-  #    sleep 0.5
-  #done
-
-  #docker run -p 3000:3000 -d --name $BACKEND_IMAGE_NAME --net=host $REGISTRY/$BACKEND_IMAGE_NAME:latest
-
-

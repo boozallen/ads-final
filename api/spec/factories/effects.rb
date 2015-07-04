@@ -1,7 +1,6 @@
 FactoryGirl.define do
   factory :effect do
-    sequence :name do |n|
-      "Effect #{n}"
-    end
+    name "MyString"
   end
+
 end

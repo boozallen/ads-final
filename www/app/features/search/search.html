@@ -1,0 +1,21 @@
+<form>
+  <div class="search_block input-group input-group-xs col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1 spacer-2x">
+    <input type="text" class="form-control searchInput" ng-model="searchFixed" id="searchFixed"
+           placeholder="Search for a Drug..." ng-change="searchDrugs()">
+
+    <div class="input-group-btn">
+      <button class="btn searchButton searchInput" type="button" ng-click="setSelectedDrug(drugs[0])"><i
+        class="fa fa-search searchIcon"></i></button>
+    </div>
+
+  </div>
+  <div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1" ng-show="drugs">
+    <div ng-class="!drugs.length==0?'dropdown clearfix open':'dropdown clearfix'">
+      <ul class="dropdown-menu" style="width: 100%">
+        <li ng-repeat="drug in drugs track by $index">
+          <a ng-click="setSelectedDrug(drug)">{{drug.brand_name}}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</form>

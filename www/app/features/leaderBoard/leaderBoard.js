@@ -28,11 +28,11 @@ angular.module('gapFront')
     $scope.addLeader = function(leader){
       var post = {leader: {name: leader.firstName + ' ' + leader.lastName, zipcode: leader.zip, count: 5}};
       $scope.newLeader = name;
-      APIService.getLeadersApi().post(post).then(serviceError, serviceError);
-
-      APIService.getLeadersApi().getList().then(function(resp) {
-        $scope.leaders = resp;
-      });
+      APIService.getLeadersApi().post(post).then(function() {
+        APIService.getLeadersApi().getList().then(function(resp) {
+          $scope.leaders = resp;
+        });
+      }, serviceError);
     };
 
     function serviceError(error) {

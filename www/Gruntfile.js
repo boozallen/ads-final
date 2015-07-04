@@ -468,8 +468,8 @@ module.exports = function (grunt) {
         }, {
           expand: true,
           dot: true,
-          cwd: './bower_components/bootstrap-sass/assets/fonts',
-          dest: '<%= yeoman.dist %>/fonts',
+          cwd: './bower_components/bootstrap-sass/assets/fonts/bootstrap',
+          dest: '<%= yeoman.dist %>/fonts/bootstrap',
           src: [ '**' ]
         }, {
           expand: true,
@@ -505,6 +505,12 @@ module.exports = function (grunt) {
           dest: '<%= yeoman.dist %>/styles/fonts',
           src: [ '**' ]
         }, {
+            expand: true,
+            dot: true,
+            cwd: './bower_components/bootstrap-sass/assets/fonts/bootstrap',
+            dest: '<%= yeoman.dist %>/fonts/bootstrap',
+            src: [ '**' ]
+          }, {
           expand: true,
           cwd: '.tmp/images',
           dest: '<%= yeoman.dist %>/images',
@@ -556,7 +562,8 @@ module.exports = function (grunt) {
       'concurrent:server',
       'autoprefixer:server',
       'connect:livereload',
-      'watch'
+      'watch',
+      'copy:prod'
     ]);
   });
 
@@ -572,7 +579,8 @@ module.exports = function (grunt) {
     'concurrent:server',
     'autoprefixer:server',
     'connect:dev',
-    'watch'
+    'watch',
+    'copy:prod'
   ]);
 
   grunt.registerTask('prod', [
@@ -603,7 +611,7 @@ module.exports = function (grunt) {
     'autoprefixer',
     'connect:test',
     'devperf',
-    'karma'
+    'karma',
   ]);
 
   grunt.registerTask('build', [

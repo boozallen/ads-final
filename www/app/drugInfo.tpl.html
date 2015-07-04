@@ -1,21 +1,21 @@
 <div class="modal" tabindex="-1" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header" ng-show="title">
+      <div class="modal-header" ng-show="selectedDrug.brand_name">
         <button type="button" class="close" ng-click="$hide()">&times;</button>
-        <h4 class="modal-title">{{ ::vm.drug.brand_name }}</h4>
+        <h4 class="modal-title">{{selectedDrug.brand_name}}</h4>
       </div>
-      <div class="modal-body">
+      <div class="modal-body" ng-show="selectedDrug.brand_name">
 
-        <h4>Manufacturer Details for: {{ ::vm.drug.brand_name }}</h4>
+        <h4>Manufacturer Details for: {{selectedDrug.brand_name}}</h4>
 
-        <p>{{ ::vm.drug.object.package_label_principal_display_panel.toString() }}</p>
+        <p>{{selectedDrug.object.package_label_principal_display_panel.toString()}}</p>
         <br>
 
-        <p>{{ ::vm.drug.object.indications_and_usage.toString() }}</p>
+        <p>{{selectedDrug.object.indications_and_usage.toString()}}</p>
         <br>
 
-        <p>{{ ::vm.drug.object.dosage_and_administration }}</p>
+        <p>{{selectedDrug.object.dosage_and_administration}}</p>
         <br>
 
         <p>Data Source: <a href="https://open.fda.gov">open.fda.gov</a></p>
