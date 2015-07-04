@@ -4,11 +4,11 @@ Prototype Submission URL: https://labelcraft.io
 
 ## Prototype Overview
 
-[![Build Status](http://jenkins.labelcraft.io/buildStatus/icon?job=Development_FrontEnd_Builder)](http://jenkins.labelcraft.io/view/Development/job/Development_FrontEnd_Builder/)[![Build Status](http://jenkins.labelcraft.io/buildStatus/icon?job=Development_API_Builder)](http://jenkins.labelcraft.io/view/Development/job/Development_API_Builder/)Development Branch Server: http://dev.labelcraft.io
+[![Build Status](https://jenkins.labelcraft.io/buildStatus/icon?job=Development_FrontEnd_Builder)](https://jenkins.labelcraft.io/view/Development/job/Development_FrontEnd_Builder/)[![Build Status](https://jenkins.labelcraft.io/buildStatus/icon?job=Development_API_Builder)](https://jenkins.labelcraft.io/view/Development/job/Development_API_Builder/)Development Branch Server: http://dev.labelcraft.io
 
-[![Build Status](http://jenkins.labelcraft.io/buildStatus/icon?job=Release_FrontEnd_Builder)](http://jenkins.labelcraft.io/view/Release/job/Release_FrontEnd_Builder/)[![Build Status](http://jenkins.labelcraft.io/buildStatus/icon?job=Release_API_Builder)](http://jenkins.labelcraft.io/view/Release/job/Release_API_Builder/)Release Branch Server: http://xx.xx.xx.xx:9000/
+[![Build Status](https://jenkins.labelcraft.io/buildStatus/icon?job=Release_FrontEnd_Builder)](https://jenkins.labelcraft.io/view/Release/job/Release_FrontEnd_Builder/)[![Build Status](https://jenkins.labelcraft.io/buildStatus/icon?job=Release_API_Builder)](https://jenkins.labelcraft.io/view/Release/job/Release_API_Builder/)Release Branch Server: https://release.labelcraft.io:9000/
 
-[![Build Status](http://jenkins.labelcraft.io/buildStatus/icon?job=Master_FrontEnd_Builder)](http://jenkins.labelcraft.io/view/Master/job/Master_FrontEnd_Builder/)[![Build Status](http://jenkins.labelcraft.io/buildStatus/icon?job=Master_API_Builder)](http:/jenkins.labelcraft.io/view/Master/job/Master_API_Builder/)Master Branch Server: https://labelcraft.io
+[![Build Status](https://jenkins.labelcraft.io/buildStatus/icon?job=Master_FrontEnd_Builder)](https://jenkins.labelcraft.io/view/Master/job/Master_FrontEnd_Builder/)[![Build Status](https://jenkins.labelcraft.io/buildStatus/icon?job=Master_API_Builder)](https:/jenkins.labelcraft.io/view/Master/job/Master_API_Builder/)Master Branch Server: https://labelcraft.io
 
 LabelCRAFT is a crowd-sourcing platform with the goal to improve the drug label accuracy. Through LabelCRAFT, we  are now able determine whether an adverse effect reported by consumers is accurately described by the manufacturer on the drug label.  By identifying the adverse effects that consumers have reported and are not currently listed on drug labels, we hope to reduce the time it takes for manufacturers to update their labels and better inform consumers.  
 
