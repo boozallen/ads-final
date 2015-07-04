@@ -10,27 +10,12 @@ Prototype Submission URL: https://labelcraft.io
 
 [![Build Status](http://jenkins.labelcraft.io/buildStatus/icon?job=Master_FrontEnd_Builder)](http://jenkins.labelcraft.io/view/Master/job/Master_FrontEnd_Builder/)[![Build Status](http://jenkins.labelcraft.io/buildStatus/icon?job=Master_API_Builder)](http:/jenkins.labelcraft.io/view/Master/job/Master_API_Builder/)Master Branch Server: https://labelcraft.io
 
-Label Craft is a crowd-sourcing platform to improve the accuracy of drug labels.  The goal of the prototype is to be able to determine whether an adverse effect reported by consumers was accurately described by the manufacturer on the drug label.
-
-By identifying the adverse effects that consumers have reported which are not listed on drug labels, we hope to reduce the time it takes for manufacturers to update their labels and better inform consumers about the potential adverse effects of a drug.
-
-Since the information on drug labels is unstructured, simply finding the adverse effect on a label is not sufficient to conclude that the manufacturer had accurately described it as a side effect.  As we observed and confirmed on the FDA site, the information included on drug labels in terms of sections and contents is highly variable.
-
-We felt that this was a perfect problem to leverage the power of the crowd and so we built a crowd-sourcing platform that would ask users to answer a series of questions to determine whether the adverse effects reported by consumers are found on the drug label.  The platform could be expanded in the future to allow for additional types of information on the drug labels to be categorized.  To ensure the information we collected is used to its full potential, our data is exposed via an API and documented for third-party application developers.
-
-Our approach taken on this challenge and the resulting outputs showcase the value that Booz Allen brings to the 18F BPA:
-
--   Proven Agile Delivery – Our firm’s extensive experience in the successful
-    delivery of both small and large Agile programs [ensures that we will be
-    successful in the BPA.]
-
--   A Culture of Innovation - Booz Allen's dedication to creating a culture of
-    innovation resulted in formation of the Strategic Innovation Group (SIG)
-    whose mission it is to ensure there is focus on innovation in all programs.
-
--   Experienced Staff – Booz Allen was able to quickly assemble a
-    highly-skilled, cross-functional team in order to support the ADS challenge.
-    We also tapped into a set of FDA domain experts across the firm.
+LabelCRAFT is a crowd-sourcing platform with the goal t improve the drug label accuracy. Through LabelCRAFT, we  are now able determine whether an adverse effect reported by consumers is accurately described by the manufacturer on the drug label.  By identifying the adverse effects that consumers have reported and are not currently listed on drug labels, we hope to reduce the time it takes for manufacturers to update their labels and better inform consumers.  
+The challenge with the label data is that it is unstructured and label sections often vary by manufacturer making if difficult to automate the discovery of adverse effects with technology.  Simply finding the adverse effect ‘words’ on a label is not sufficient to conclude that the manufacturer has accurately described it as a side effect. We felt this challenge is perfect to solve through the power of crowdsourcing.  LabelCraft is crowd-sourcing platform that asks users questions to assess whether adverse effects reported by consumers (from https://open.fda.gov/drug/label/) are found on the drug label (from https://open.fda.gov/drug/event/).  To ensure the information we collect is used to its full potential, our data is exposed via an API and documented for third-party application developers.
+Our approach taken on this challenge and the prototype showcase the value that Booz Allen brings to the GSA 18F ADS BPA:
+•	Demonstrated Agile Delivery – Our firm has strong experience with agile software development as demonstrated on this prototype as well as on GSA Integrated Award Environment (IAE), numerous hackations, and many other federal and commercial engagements.
+•	A Culture of Innovation - Booz Allen's dedication to creating a culture of innovation resulted in formation of a 1,800 team, the Strategic Innovation Group (SIG),  whose mission it is to ensure there is focus on agile, digital, next gen analytics and cyber security for all modern solutions.
+•	Cross-functional agile skilled staff with reach back to domain SME – Booz Allen was able to quickly assemble a highly-skilled, cross-functional team for this challenge. Booz Allen also has deep knowledge of federal agencies missions.  For example, for this efforts we engaged FDA domain experts from our firm to help us understand the data and come up with our solution concept.
 
 ### Digital Services Playbook
 
