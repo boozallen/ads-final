@@ -1,0 +1,93 @@
+/* TEAM */
+	
+	Name: Haluk Saker
+	Role: Product Manager
+	Contact: saker_haluk [at] bah.com
+	From: Herndon, VA, USA
+
+	Name: Wyatt Chaffee
+	Role: Tech Architect
+	Contact: chaffee_wyatt [at] bah.com
+	From: Herndon, VA, USA
+
+	Name: Sarah Weise
+	Role: Interaction Designer / User Researcher / Usability Tester
+	Contact: weise_sarah [at] bah.com
+	From: Herndon, VA, USA
+
+	Name: Matt Rice
+	Role: Visual Designer
+	Contact: Rice_Matthew [at] bah.com
+	From: Vienna, VA, USA
+
+	Name: Destin Frasier
+	Role: Visual Designer 
+	Contact: Frasier_Eugene [at] bah.com
+	From: Vienna, VA, USA
+
+	Name: Sami Mirimiri
+	Role: Front-End Developer 
+	Contact: mirimiri_sami [at] bah.com
+	From: Manassas, VA
+
+	Name: Sameer Dhar
+	Role: Front-End Developer 
+	Contact: dhar_sameer [at] bah.com
+	From: Richmond, VA
+
+	Name: Chris Kacerguis
+	Role: Back-End Developer
+	Contact: kacerguis_chris [at] bah.com
+	From: San Antonio, TX
+
+	Name: Michael Stack
+	Role: Back-End Developer 
+	Contact: stack_michael [at] bah.com
+	From: San Antonio, TX
+
+	Name: Debanjan Dasgupta
+	Role: Backend Developer
+	Contact: Dasgupta_Debanjan [at] bah.com
+	From: Fairfax, VA
+
+	Name: Martin Folkoff
+	Role: DevOps Engineer 
+	Contact: folkoff_martin [at] bah.com
+	From: Herndon, VA, USA
+
+	Name: Eugene Raether
+	Role: DevOps Engineer
+	Contact: raether_eugene [at] bah.com
+	From: Herndon, VA, USA	
+	
+	Name: Saurab Joshi
+	Role: DevOps Engineer
+	Contact: joshi_saurab [at] bah.com
+	From: Herndon, VA
+
+	Name: Will Jackson
+	Role: DevOps Engineer
+	Contact: jackson_william [at] bah.com
+	From: Herndon, VA
+
+	Name: Delivery Manager
+	Role: Nico Botha
+	Contact: Botha_Nico [at] bah.com
+	From: Herndon, VA
+
+	Name: Luke Lackrone
+	Role: Agile Coach
+	Contact: Lackrone_Luke [at] bah.com
+	Twitter: @lackrone
+	From: Fulton, MD, USA
+
+	
+/* THANKS */
+	Name: Bill Ott
+	Role: Product Owner 
+	From: McLean, VA, USA
+
+/* SITE */
+	Language: English
+	Doctype:HTML5
+	IDE: Sublime Text, Webstorm, vim

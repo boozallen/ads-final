@@ -38,13 +38,21 @@ angular
         templateUrl: 'features/labelEffects/labelEffects.html',
         controller: 'LabelEffectsCtrl'
       })
+      .when('/about', {
+        templateUrl: 'features/about/about.html'
+      })
+      .when('/leader', {
+        templateUrl: 'features/leaderBoard/leaderBoard.html',
+        controller: 'LeaderBoardCtrl'
+      })
+
       .otherwise({
         redirectTo: '/'
       });
       $locationProvider.html5Mode(true);
+  })
+  .config(function($modalProvider) {
+    angular.extend($modalProvider.defaults, {
+      html: true
+    });
   });
-
-  // .run(function(Restangular) {
-  //   RestangularProvider.setBaseUrl('http://www.google.com');
-  //   RestangularProvider.setRequestSuffix('.json');
-  // })

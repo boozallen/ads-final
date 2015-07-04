@@ -3,34 +3,30 @@
 /**
  * @ngdoc function
  * @name gapFront.servece:APIService
- * @description
+ * @description Calls the Open FDA api for drug information as well as our local api.
  * # APIService
  * Angular Service providing access to the FDA Drug APIs
  */
 angular.module('gapFront')
-  .service('APIService', function (Restangular) {
+  .service('APIService', function (Restangular, $location) {
     var FDAService = Restangular.withConfig(function(RestangularConfigurer) {
       RestangularConfigurer.setBaseUrl('https://api.fda.gov');
     });
 
-    var railsService = Restangular.withConfig(function(RestangularConfigurer,Restangular) {
-      RestangularConfigurer.setBaseUrl('http://52.4.69.219:3000/api/v1');
-      //RestangularProvider.setDefaultHeaders({
-      //  "Content-Type": "application/json",
-      //  "X-Requested-With": "XMLHttpRequest"
-      //});
+    var railsService = Restangular.withConfig(function(RestangularConfigurer) {
+      RestangularConfigurer.setBaseUrl(window.location.protocol + '//' + window.location.hostname + ':3000' + '/api/v1');
     });
-
-    var pillboxService = Restangular.withConfig(function(RestangularConfigurer) {
-      RestangularConfigurer.setBaseUrl('http://pillbox.nlm.nih.gov/PHP/pillboxAPIService.php');
-    });
-
 
     var drug = FDAService.all('drug');
-    //var drugLabel = drug.all('label.json');
-    //var drugEvent = drug.all('event.json');
 
-
+    /**
+    * @ngdoc function
+    * @name queryDrugLabel
+    * @description calls the Food and Drug Administration's api and queries it.
+    * @param {string} query - The query to send to open fda api.
+    * @param {integer} skip - For dealing with paginated results.
+    * @param {integer} limit - The number of results to request.
+    */
     function queryDrugLabel(query, skip, limit){
       var params = {
         search:query,
@@ -38,6 +34,12 @@ angular.module('gapFront')
         limit:limit
       };
       return drug.get('label.json', params);
+    }
+
+    function getDrugLabel(brand_name){
+      var params = {};
+      params.search = 'openfda.brand_name.exact:' + '"' + brand_name + '"';
+      return drug.get('label.json', params)
     }
 
     function queryDrugEvent(query, skip, limit){
@@ -64,8 +66,20 @@ angular.module('gapFront')
       return drug.get('event.json', params);
     }
 
-    function getDrugEffectApi(){
+    function getDrugsApi(){
       return railsService.all('drugs');
+    }
+
+    function getEffectsApi(){
+      return railsService.all('effects');
+    }
+
+    function getLeadersApi(){
+      return railsService.all('leaders')
+    }
+
+    function getVerifiedApi(array) {
+      return railsService.all('verified');
     }
 
     function getDrugDateReportCount(query, aggregationField){
@@ -75,15 +89,21 @@ angular.module('gapFront')
       return drug.get('event.json', params);
     }
 
-
-
+    function getLeaderBoard(){
+      return railsService.all('leaders');
+    }
 
     return {
       queryDrugLabel:queryDrugLabel,
+      getDrugLabel:getDrugLabel,
       queryDrugEvent:queryDrugEvent,
       aggregateDrugLabel:aggregateDrugLabel,
       aggregateDrugEvent:aggregateDrugEvent,
-      getDrugEffectApi:getDrugEffectApi,
-      getDrugDateReportCount:getDrugDateReportCount
+      getDrugsApi:getDrugsApi,
+      getLeadersApi:getLeadersApi,
+      getEffectsApi:getEffectsApi,
+      getDrugDateReportCount:getDrugDateReportCount,
+      getVerifiedApi:getVerifiedApi,
+      getLeaderBoard:getLeaderBoard
     };
   });

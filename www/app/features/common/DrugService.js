@@ -11,6 +11,7 @@ angular.module('gapFront')
   .service('DrugService', function () {
 
     var selectedDrug;
+    var selectedDrugInfo;
 
     function setSelectedDrug(drug){
       selectedDrug = drug;
@@ -20,8 +21,18 @@ angular.module('gapFront')
       return selectedDrug;
     }
 
+    function setSelectedDrugInfo(drug){
+      selectedDrugInfo = drug;
+    }
+
+    function getSelectedDrugInfo(){
+      return selectedDrugInfo;
+    }
+
     return {
       setSelectedDrug:setSelectedDrug,
-      getSelectedDrug:getSelectedDrug
+      getSelectedDrug:getSelectedDrug,
+      setSelectedDrugInfo:setSelectedDrugInfo,
+      getSelectedDrugInfo:getSelectedDrugInfo
     };
   });
