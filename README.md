@@ -16,9 +16,9 @@ The challenge with the label data is that it is unstructured and label sections 
 
 Our approach taken on this challenge and the prototype showcase the value that Booz Allen brings to the GSA 18F ADS BPA:
 
-- Demonstrated Agile Delivery – Our firm has strong experience with agile software development as demonstrated on this prototype as well as on GSA Integrated Award Environment (IAE), numerous hackations, and many other federal and commercial engagements.
-- A Culture of Innovation - Booz Allen's dedication to creating a culture of innovation resulted in formation of a 1,800 team, the Strategic Innovation Group (SIG),  whose mission it is to ensure there is focus on agile, digital, next gen analytics and cyber security for all modern solutions.
-- Cross-functional agile skilled staff with reach back to domain SME – Booz Allen was able to quickly assemble a highly-skilled, cross-functional team for this challenge. Booz Allen also has deep knowledge of federal agencies missions.  For example, for this efforts we engaged FDA domain experts from our firm to help us understand the data and come up with our solution concept.
+- **Demonstrated Agile Delivery** – Our firm has strong experience with agile software development as demonstrated on this prototype as well as on GSA Integrated Award Environment (IAE), numerous hackations, and many other federal and commercial engagements.
+- **A Culture of Innovation** - Booz Allen's dedication to creating a culture of innovation resulted in formation of a 1,800 team, the Strategic Innovation Group (SIG),  whose mission it is to ensure there is focus on agile, digital, next gen analytics and cyber security for all modern solutions.
+- **Cross-functional agile skilled staff with reach back to domain SME** – Booz Allen was able to quickly assemble a highly-skilled, cross-functional team for this challenge. Booz Allen also has deep knowledge of federal agencies missions.  For example, for this efforts we engaged FDA domain experts from our firm to help us understand the data and come up with our solution concept.
 
 ### Digital Services Playbook
 
