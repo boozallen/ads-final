@@ -4,7 +4,7 @@ Prototype Submission URL: https://labelcraft.io
 
 ## Prototype Overview
 
-[![Build Status](https://jenkins.labelcraft.io/buildStatus/icon?job=Development_FrontEnd_Builder)](https://jenkins.labelcraft.io/view/Development/job/Development_FrontEnd_Builder/)[![Build Status](https://jenkins.labelcraft.io/buildStatus/icon?job=Development_API_Builder)](https://jenkins.labelcraft.io/view/Development/job/Development_API_Builder/)Development Branch Server: http://dev.labelcraft.io
+[![Build Status](https://jenkins.labelcraft.io/buildStatus/icon?job=Development_FrontEnd_Builder)](https://jenkins.labelcraft.io/view/Development/job/Development_FrontEnd_Builder/)[![Build Status](https://jenkins.labelcraft.io/buildStatus/icon?job=Development_API_Builder)](https://jenkins.labelcraft.io/view/Development/job/Development_API_Builder/)Development Branch Server: https://dev.labelcraft.io
 
 [![Build Status](https://jenkins.labelcraft.io/buildStatus/icon?job=Release_FrontEnd_Builder)](https://jenkins.labelcraft.io/view/Release/job/Release_FrontEnd_Builder/)[![Build Status](https://jenkins.labelcraft.io/buildStatus/icon?job=Release_API_Builder)](https://jenkins.labelcraft.io/view/Release/job/Release_API_Builder/)Release Branch Server: https://release.labelcraft.io
 
