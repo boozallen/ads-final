@@ -26,7 +26,7 @@ These tests validate the user facing functionality of the site. PhantomJS is use
 ### Conduct load and performance tests at regular intervals, including before public launch
 ***
 - [bees with machineguns](https://github.com/newsapps/beeswithmachineguns)-
-distributed AWS load testing, run by one-click Jenkins job on an ad-hoc basis by the developers discretion. This tool helps provision ec2 instances with agents that will generate load on identified endpoints.  
+distributed AWS load testing, run by one-click [Jenkins job](https://jenkins.labelcraft.io/view/Development/job/Run%20Bees%20With%20Machineguns%20Load%20Test/) on an ad-hoc basis by the developers discretion. This tool helps provision ec2 instances with agents that will generate load on identified endpoints.
 
 - [grunt-devperf](https://github.com/gmetais/grunt-devperf)-
 Grunt task that uses phantomjs to launch areas of the site and review a variety of performance metrics that can be compared to budgeted performance goals. Warnings and other alerts will be presented to help identify areas of performance improvement. [example report from Jenkins](http://52.0.92.86:8080/view/Development/job/Development_FrontEnd_Builder/lastSuccessfulBuild/artifact/reports/tests/tests/results/index.html)
