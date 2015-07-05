@@ -83,7 +83,7 @@ https://github.com/booz-allen-agile-delivery/ads-final/blob/development/document
 
 **(h)**
 
-Our front-end application was implemented with the Foundation framework to provide a completely responsive experience across all types of display sizes. We conducted testing on multiple platforms (i.e. desktop, tablet, phone) and conducted usability tests to observe users on these platforms. We used the Google chrome mobile display test tool to emulate the experience of different platforms.
+Our front-end application was implemented with the Boostrap framework to provide a completely responsive experience across all types of display sizes. We conducted testing on multiple platforms (i.e. desktop, tablet, phone) and conducted usability tests to observe users on these platforms. We used the Google chrome mobile display test tool to emulate the experience of different platforms.
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Responsive-Design.md
 
@@ -91,7 +91,7 @@ https://github.com/booz-allen-agile-delivery/ads-final/blob/development/document
 
 Our selection of technologies (more than 5 modern, open-source technologies)  was driven by the language, frameworks, the libraries most appropriate to solve the problem, the ability for the technology to conform to modern development best practices, and tools that best support the full end-to-end life cycle of development. It included:
 
-- Front-End: Foundation, Angular.JS, Node.js, Karma, JS Hint, HighCharts
+- Front-End: Bootstrap, Angular.JS, Node.js, Karma, JS Hint, HighCharts
 - Backend: Ruby, Rails, RSpec, Rubocop, Brakeman
 - Dev-Ops: Docker (Machine, Registry, Compose), Jenkins, cAdvisor
 
@@ -119,13 +119,13 @@ https://github.com/booz-allen-agile-delivery/ads-final/blob/development/document
 
 **(m)**
 
-The Docker’s tool suite, was used is used to provision and post-provision AWS EC2 instances so they are immediately ready for Docker-based deployments. After provisioning, the Docker engine pulls and builds containers from the Docker repository. Docker Compose implicitly injects the appropriate environment variables into the containers to connect frontend to API to database. The /bin directory in the repo contains all the necessary scripts to utilize the described Docker workflow.
+The Docker’s tool suite, was used to provision and post-provision AWS EC2 instances so they are immediately ready for Docker-based deployments. After provisioning, the Docker engine pulls and builds containers from the Docker repository. Docker Compose implicitly injects the appropriate environment variables into the containers to connect frontend to API to database. The /bin directory in the repo contains all the necessary scripts to utilize the described Docker workflow.
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/DevOps-Process.md
 
 **(n)**
 
-We set up and used cAdvisor (https://github.com/google/cadvisor) to establish continuous monitoring. This tool cleanly presents a variety of metrics (CPU usage, memory usage, and running process metrics) through a website to determine the health of the environment and its running containers. Alerts are sent to relevant slack channels for any GitHub changes and Jenkins build results.
+Our continuous monitoring solution consists of Sophos and cAdvisor. Sophos is used as a security appliance to give us continuous feedback on the state of our solution’s risk posture. Sophos additionally offers security controls to minimize any active cyber threats. We also chose to enforce encryption be default via SSL. For more visibility into our operations, cAdvisor was implemented to generate details of our containerized services.
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Continuous-Monitoring.md
 
@@ -137,7 +137,7 @@ https://github.com/booz-allen-agile-delivery/ads-final/blob/development/document
 
 **(p)**
 
-Installation instruction is a two-line Docker command. 
+Installation instructions are included in the repo.
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/INSTALL.md
 
