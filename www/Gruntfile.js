@@ -83,8 +83,8 @@ module.exports = function (grunt) {
       options: {
         port: 9000,
         // Change this to '0.0.0.0' to access the server from outside.
-        hostname: 'localhost',
-        livereload: 35729
+        hostname: 'localhost'
+        //livereload: 35729
       },
       livereload: {
         options: {
@@ -134,6 +134,7 @@ module.exports = function (grunt) {
         options: {
           port: 9000,
           hostname: '0.0.0.0',
+          livereload: false,
           middleware: function (connect) {
               return [
                   modRewrite(['^[^\\.]*$ /index.html [L]']),
@@ -187,7 +188,7 @@ module.exports = function (grunt) {
               ];
           }
         }
-      },
+      }
     },
 
     // Make sure code styles are up to par and there are no obvious mistakes
@@ -567,6 +568,16 @@ module.exports = function (grunt) {
     ]);
   });
 
+  grunt.registerTask('static', [
+    'clean:server',
+    'wiredep',
+    'ngdocs',
+    'concurrent:server',
+    'autoprefixer:server',
+    'connect:prod',
+    'watch'
+  ]);
+
   grunt.registerTask('server', 'DEPRECATED TASK. Use the "serve" task instead', function (target) {
     grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
     grunt.task.run(['serve:' + target]);
@@ -582,6 +593,7 @@ module.exports = function (grunt) {
     'watch',
     'copy:prod'
   ]);
+
 
   grunt.registerTask('prod', [
     'clean:dist',

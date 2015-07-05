@@ -1,12 +1,12 @@
 
 # Our Application Stack and the Tools we used : 
 
-![Application Stack](https://cloud.githubusercontent.com/assets/8406690/8394816/b3587f9a-1d17-11e5-9292-16c2fd68e51b.png)
+![Application Stack](https://cloud.githubusercontent.com/assets/8406690/8513068/e3b2a558-232a-11e5-9eda-83a49d6839f7.png)
 
 
 Our solution is comprised of more than five modern, open-source technologies.  Our selection of technologies was driven by several factors including the language, frameworks, and libraries most appropriate to solve the problem, the ability for the technology to conform to modern development best practices, and tools that best support the full end-to-end life cycle of development for maximum quality.  These factors were considered for the technologies selected for front-end, back-end, and dev-ops.
 
-**a.) Front-End:** Foundation, Angular.JS, Node.js, Karma, JS Hint, HighCharts
+**a.) Front-End:** Bootstrap, Angular.JS, Node.js, Karma, JS Hint, HighCharts
 
 We decided on JavaScript for the front-end technology to ensure a highly decoupled front-end from back-end.
 
@@ -14,7 +14,7 @@ We selected high-charts due to the variety of available visualizations and moder
 
 AngularJS was selected to build-out the front-end as a single-page application.
 Node.JS was used to host the front-end code and manages the resolution of front-end dependencies thorugh NPM.
-We selectd Foundation as the framework to support the responsive web design.
+We selectd Bootstrap as the framework to support the responsive web design.
 Karma / JS Hint provide static code analysis and code quality metrics for JavaScript applications.
 
 **b.) Backend:** Ruby, Rails, RSpec, Rubocop, Brakeman
@@ -39,4 +39,4 @@ https://github.com/booz-allen-agile-delivery/ads-final/tree/development/bin/jenk
 
 # Physical Deployment Model:
 
-![Physical Deployment Model](https://cloud.githubusercontent.com/assets/8406690/8393250/e460811a-1cd5-11e5-8e31-231aeb1ae046.png)
+![Physical Deployment Model](https://cloud.githubusercontent.com/assets/8406690/8513155/a8c11102-232d-11e5-8cd5-9ea748f1e537.png)
