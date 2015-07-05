@@ -85,7 +85,7 @@ https://github.com/booz-allen-agile-delivery/ads-final/blob/development/document
 
 Our front-end application was implemented with the Foundation framework to provide a completely responsive experience across all types of display sizes. We conducted testing on multiple platforms (i.e. desktop, tablet, phone) and conducted usability tests to observe users on these platforms. We used the Google chrome mobile display test tool to emulate the experience of different platforms.
 
-https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Architecture-Diagrams.md
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Responsive-Design.md
 
 **(i)**
 
