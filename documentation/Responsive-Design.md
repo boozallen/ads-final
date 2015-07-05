@@ -12,7 +12,8 @@ Andriod Device
 
 IPad
 
-![iphone2](https://cloud.githubusercontent.com/assets/12210285/8511917/ca7e7c92-22f8-11e5-988a-2bb3b41c77f8.jpeg)
 ![iphone1](https://cloud.githubusercontent.com/assets/12210285/8511914/ca796054-22f8-11e5-9198-b056da1dd2fb.jpeg)
+
+![iphone2](https://cloud.githubusercontent.com/assets/12210285/8511917/ca7e7c92-22f8-11e5-988a-2bb3b41c77f8.jpeg)
 
 IPhone
