@@ -1,6 +1,6 @@
 class DrugsController < ApplicationController
-  api :POST, '/drugs', 'Creates or Updates a drug entry by name'
-  param :drugs, Object, desc: 'Drug effects that have been experienced'
+  api :POST, '/drugs', 'Returns drug information, reported adverse effects, and validation results of the label craft platform.'
+  param :drug, Object, desc: 'Drug object retrieved from FDA feed', required: true
 
   def create
     drug = params[:drug]['object']
