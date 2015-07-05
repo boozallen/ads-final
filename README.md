@@ -4,7 +4,7 @@ Prototype Submission URL: https://labelcraft.io
 
 ## Prototype Overview
 
-[![Build Status](https://jenkins.labelcraft.io/buildStatus/icon?job=Development_FrontEnd_Builder)](https://jenkins.labelcraft.io/view/Development/job/Development_FrontEnd_Builder/)[![Build Status](https://jenkins.labelcraft.io/buildStatus/icon?job=Development_API_Builder)](https://jenkins.labelcraft.io/view/Development/job/Development_API_Builder/)Development Branch Server: http://dev.labelcraft.io
+[![Build Status](https://jenkins.labelcraft.io/buildStatus/icon?job=Development_FrontEnd_Builder)](https://jenkins.labelcraft.io/view/Development/job/Development_FrontEnd_Builder/)[![Build Status](https://jenkins.labelcraft.io/buildStatus/icon?job=Development_API_Builder)](https://jenkins.labelcraft.io/view/Development/job/Development_API_Builder/)Development Branch Server: https://dev.labelcraft.io
 
 [![Build Status](https://jenkins.labelcraft.io/buildStatus/icon?job=Release_FrontEnd_Builder)](https://jenkins.labelcraft.io/view/Release/job/Release_FrontEnd_Builder/)[![Build Status](https://jenkins.labelcraft.io/buildStatus/icon?job=Release_API_Builder)](https://jenkins.labelcraft.io/view/Release/job/Release_API_Builder/)Release Branch Server: https://release.labelcraft.io
 
@@ -85,7 +85,7 @@ https://github.com/booz-allen-agile-delivery/ads-final/blob/development/document
 
 Our front-end application was implemented with the Foundation framework to provide a completely responsive experience across all types of display sizes. We conducted testing on multiple platforms (i.e. desktop, tablet, phone) and conducted usability tests to observe users on these platforms. We used the Google chrome mobile display test tool to emulate the experience of different platforms.
 
-https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Architecture-Diagrams.md
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Responsive-Design.md
 
 **(i)**
 

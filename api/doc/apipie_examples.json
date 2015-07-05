@@ -8,499 +8,168 @@
       ],
       "query": null,
       "request_data": {
-        "name": "A Test Drug",
-        "effects": [
-          "newness"
-        ]
+	  	"drug": {
+	  		"effective_time": "20130925",
+	  		"substance_name": "LEVOTHYROXINE",
+	  		"generic_name": "LEVOTHYROXINE SODIUM",
+	  		"lowercase_name": "synthroid",
+	  		"brand_name": "Synthroid",
+	  		"manufacturer_name": "Dispensing Solutions, Inc.",
+	  		"object": {
+	  			"effective_time": "20130925",
+	  			"drug_interactions": ["Drug Interactions Many drugs affect ..."],
+	  			"geriatric_use": ["Geriatric Use Because of the increased prevalence of cardiovascular disease among the elderly, levothyroxine therapy should not be initiated at the full replacement dose (see WARNINGS, PRECAUTIONS , and DOSAGE AND ADMINISTRATION )."],
+	  			"precautions": ["PRECAUTIONS General Levothyroxine has a narrow therapeutic index..."],
+	  			"description": ["DESCRIPTION SYNTHROID (levothyroxine sodium tablets, USP) contain ..."],
+	  			"general_precautions": ["General Levothyroxine has a narrow therapeutic index...."],
+	  			"clinical_pharmacology_table": ["Table 1. Pharmacokinetic Parameters of Thyroid Hormones..."],
+	  			"indications_and_usage": ["INDICATIONS AND USAGE Levothyroxine sodium is used for the following indications..."],
+	  			"set_id": "00eea4aa-f08e-419a-827a-56e40e93f05f",
+	  			"id": "c12f402b-f00b-466d-a6ea-862f00f81ec7",
+	  			"description_table": ["FD&amp;C Yellow No. 6 Aluminum Lake..."],
+	  			"dosage_and_administration_table": ["Table 3. Levothyroxine Sodium Dosing Guidelines for Pediatric Hypothyroidism..."],
+	  			"pediatric_use": ["Pediatric Use General The goal of treatment in pediatric patients ..."],
+	  			"precautions_table": ["Table 2. Drug-Thyroidal Axis Interactions..."],
+	  			"contraindications": ["CONTRAINDICATIONS Levothyroxine is contraindicated in patients with untreated subclinical..."],
+	  			"drug_interactions_table": ["Table 2. Drug-Thyroidal Axis Interactions..."],
+	  			"warnings": ["WARNINGS Boxed Warning WARNING: Thyroid hormones, including SYNTHROID, either alone or with other therapeutic agents..."],
+	  			"pregnancy": ["Pregnancy Category A Studies in women taking levothyroxine sodium during pregnancy have not shown ..."],
+	  			"nursing_mothers": ["Nursing Mothers Although thyroid hormones are excreted only minimally in human milk, caution should be exercised when SYNTHROID is administered to a nursing woman. However, adequate replacement doses of levothyroxine are generally needed to maintain normal lactation."],
+	  			"spl_product_data_elements": ["Synthroid Levothyroxine Sodium LEVOTHYROXINE LEVOTHYROXINE ACACIA LACTOSE MONOHYDRATE MAGNESIUM STEARATE POVIDONE TALC FD&C BLUE NO. 2 SYNTHROID;150"],
+	  			"boxed_warning": ["Boxed Warning WARNING: Thyroid hormones, including SYNTHROID, either alone or with other therapeutic ..."],
+	  			"drug_and_or_laboratory_test_interactions": ["Drug-Laboratory Test Interactions Changes in TBG concentration must be considered when ..."],
+	  			"openfda": {
+	  				"product_ndc": ["66336-591"],
+	  				"nui": ["N0000007632", "N0000175945"],
+	  				"package_ndc": ["66336-591-30"],
+	  				"generic_name": ["LEVOTHYROXINE SODIUM"],
+	  				"spl_set_id": ["00eea4aa-f08e-419a-827a-56e40e93f05f"],
+	  				"pharm_class_cs": ["Thyroxine [Chemical/Ingredient]"],
+	  				"brand_name": ["Synthroid"],
+	  				"original_packager_product_ndc": ["0074-7069"],
+	  				"manufacturer_name": ["Dispensing Solutions, Inc."],
+	  				"unii": ["Q51BO43MG4"],
+	  				"rxcui": ["966225", "966201"],
+	  				"spl_id": ["c12f402b-f00b-466d-a6ea-862f00f81ec7"],
+	  				"substance_name": ["LEVOTHYROXINE"],
+	  				"product_type": ["HUMAN PRESCRIPTION DRUG"],
+	  				"route": ["ORAL"],
+	  				"application_number": ["NDA021402"],
+	  				"pharm_class_epc": ["l-Thyroxine [EPC]"]
+	  			},
+	  			"version": "2",
+	  			"dosage_and_administration": ["DOSAGE AND ADMINISTRATION General Principles The goal of replacement therapy is ..."],
+	  			"adverse_reactions": ["ADVERSE REACTIONS Adverse reactions associated with levothyroxine therapy are ..."],
+	  			"@epoch": 1.416451272131902E9,
+	  			"how_supplied_table": ["<table width=\"100%\" ID=\"How_Supplied_table\">...<\/table>"],
+	  			"how_supplied": ["HOW SUPPLIED SYNTHROID (levothyroxine sodium tablets, USP) are round, color coded,.."],
+	  			"laboratory_tests": ["Laboratory Tests General The diagnosis of hypothyroidism is confirmed by measuring TSH ..."],
+	  			"information_for_patients": ["Information for Patients Patients should be informed of the following information ..."],
+	  			"package_label_principal_display_panel": ["PACKAGE LABEL.PRINCIPAL DISPLAY PANEL NDC 66336-0591-XX"],
+	  			"clinical_pharmacology": ["CLINICAL PHARMACOLOGY Thyroid hormone synthesis and secretion is regulated by the ..."],
+	  			"carcinogenesis_and_mutagenesis_and_impairment_of_fertility": ["Carcinogenesis, Mutagenesis, and Impairment of Fertility Animal ..."],
+	  			"overdosage": ["Overdosage The signs and symptoms of overdosage are those of hyperthyroidism (see ..."]
+	  		}
+	  	}
       },
       "response_data": {
-        "name": "A Test Drug",
-        "effects": [
-          "newness"
-        ]
-      },
-      "code": "200",
-      "show_in_doc": 1,
-      "recorded": true
-    },
-    {
-      "verb": "POST",
-      "path": "/api/v1/drugs",
-      "versions": [
-        "1.0"
-      ],
-      "query": null,
-      "request_data": {
-        "name": "A Repeating Drug",
-        "effects": [
-          "first"
-        ]
-      },
-      "response_data": {
-        "name": "A Repeating Drug",
-        "effects": [
-          "first"
-        ]
-      },
-      "code": "200",
-      "show_in_doc": 1,
-      "recorded": true
-    },
-    {
-      "verb": "POST",
-      "path": "/api/v1/drugs",
-      "versions": [
-        "1.0"
-      ],
-      "query": null,
-      "request_data": {
-        "name": "A Repeating Drug",
-        "effects": [
-          "second"
-        ]
-      },
-      "response_data": {
-        "name": "A Repeating Drug",
-        "effects": [
-          "second"
-        ]
-      },
-      "code": "200",
-      "show_in_doc": 1,
-      "recorded": true
-    },
-    {
-      "verb": "POST",
-      "path": "/api/v1/drugs",
-      "versions": [
-        "1.0"
-      ],
-      "query": null,
-      "request_data": {
-        "name": "A Reported Drug",
-        "effects": [
-          "first"
-        ]
-      },
-      "response_data": {
-        "name": "A Reported Drug",
-        "effects": [
-          "first"
-        ]
-      },
-      "code": "200",
-      "show_in_doc": 1,
-      "recorded": true
-    },
-    {
-      "verb": "POST",
-      "path": "/api/v1/drugs",
-      "versions": [
-        "1.0"
-      ],
-      "query": null,
-      "request_data": {
-        "name": "A Reported Drug",
-        "effects": [
-          "second"
-        ]
-      },
-      "response_data": {
-        "name": "A Reported Drug",
-        "effects": [
-          "second"
-        ]
-      },
-      "code": "200",
-      "show_in_doc": 1,
-      "recorded": true
-    },
-    {
-      "verb": "POST",
-      "path": "/api/v1/drugs",
-      "versions": [
-        "1.0"
-      ],
-      "query": null,
-      "request_data": {
-        "name": "A Reported Drug",
-        "effects": [
-          "second",
-          "third"
-        ]
-      },
-      "response_data": {
-        "name": "A Reported Drug",
-        "effects": [
-          "second",
-          "third"
-        ]
-      },
-      "code": "200",
-      "show_in_doc": 1,
-      "recorded": true
-    },
-    {
-      "verb": "POST",
-      "path": "/api/v1/drugs",
-      "versions": [
-        "1.0"
-      ],
-      "query": null,
-      "request_data": {
-        "name": "A Reported Drug",
-        "effects": [
-          "first",
-          "second",
-          "third"
-        ]
-      },
-      "response_data": {
-        "name": "A Reported Drug",
-        "effects": [
-          "first",
-          "second",
-          "third"
-        ]
+
+
+
+		  	"drug": {
+		  		"information_for_patients": ["Information for Patients Patients should be informed of the ..."],
+		  		"dosage_and_administration_table": ["Table 3. Levothyroxine Sodium Dosing Guidelines for Pediatric Hypothyroidism..."],
+		  		"indications_and_usage": ["INDICATIONS AND USAGE Levothyroxine sodium is used for the following indications..."],
+		  		"contraindications": ["CONTRAINDICATIONS Levothyroxine is contraindicated in patients with untreated subclinical ..."],
+		  		"how_supplied": ["HOW SUPPLIED SYNTHROID (levothyroxine sodium tablets, USP) are round, color coded..."],
+		  		"description_table": ["Inactive_Ingredients_table..."],
+		  		"dosage_and_administration": ["DOSAGE AND ADMINISTRATION General Principles The goal of replacement therapy ..."],
+		  		"version": "2",
+		  		"id": "c12f402b-f00b-466d-a6ea-862f00f81ec7",
+		  		"package_label_principal_display_panel": ["PACKAGE LABEL.PRINCIPAL DISPLAY PANEL NDC 66336-0591-XX"],
+		  		"@epoch": 1416451272.131902,
+		  		"description": ["DESCRIPTION SYNTHROID (levothyroxine sodium tablets, USP) contain synthetic ..."],
+		  		"pediatric_use": ["Pediatric Use General The goal of treatment in pediatric patients with hypothyroidism is to ..."],
+		  		"precautions_table": ["Table 2. Drug-Thyroidal Axis Interactions..."],
+		  		"openfda": {
+		  			"unii": ["Q51BO43MG4"],
+		  			"spl_id": ["c12f402b-f00b-466d-a6ea-862f00f81ec7"],
+		  			"product_ndc": ["66336-591"],
+		  			"substance_name": ["LEVOTHYROXINE"],
+		  			"rxcui": ["966225", "966201"],
+		  			"spl_set_id": ["00eea4aa-f08e-419a-827a-56e40e93f05f"],
+		  			"original_packager_product_ndc": ["0074-7069"],
+		  			"product_type": ["HUMAN PRESCRIPTION DRUG"],
+		  			"pharm_class_cs": ["Thyroxine [Chemical/Ingredient]"],
+		  			"manufacturer_name": ["Dispensing Solutions, Inc."],
+		  			"brand_name": ["Synthroid"],
+		  			"route": ["ORAL"],
+		  			"nui": ["N0000007632", "N0000175945"],
+		  			"package_ndc": ["66336-591-30"],
+		  			"pharm_class_epc": ["l-Thyroxine [EPC]"],
+		  			"generic_name": ["LEVOTHYROXINE SODIUM"],
+		  			"application_number": ["NDA021402"]
+		  		},
+		  		"spl_product_data_elements": ["Synthroid Levothyroxine Sodium LEVOTHYROXINE LEVOTHYROXINE ACACIA LACTOSE MONOHYDRATE MAGNESIUM STEARATE POVIDONE TALC FD\u0026C BLUE NO. 2 SYNTHROID;150"],
+		  		"warnings": ["WARNINGS Boxed Warning WARNING: Thyroid hormones, including SYNTHROID, either ..."],
+		  		"set_id": "00eea4aa-f08e-419a-827a-56e40e93f05f",
+		  		"geriatric_use": ["Geriatric Use Because of the increased prevalence of cardiovascular disease among the elderly, levothyroxine therapy should not be initiated at the full replacement dose (see WARNINGS, PRECAUTIONS , and DOSAGE AND ADMINISTRATION )."],
+		  		"adverse_reactions": ["ADVERSE REACTIONS Adverse reactions associated with levothyroxine ..."],
+		  		"overdosage": ["Overdosage The signs and symptoms of overdosage are those of hyperthyroidism ..."],
+		  		"general_precautions": ["General Levothyroxine has a narrow therapeutic index..."],
+		  		"drug_interactions": ["Drug Interactions Many drugs affect thyroid hormone pharmacokinetics and ..."],
+		  		"drug_interactions_table": ["Table 2. Drug-Thyroidal Axis Interactions..."],
+		  		"carcinogenesis_and_mutagenesis_and_impairment_of_fertility": ["Carcinogenesis, Mutagenesis, and Impairment of Fertility ..."],
+		  		"effective_time": "20130925",
+		  		"pregnancy": ["Pregnancy Category A Studies in women taking levothyroxine sodium during pregnancy have ..."],
+		  		"drug_and_or_laboratory_test_interactions": ["Drug-Laboratory Test Interactions Changes in TBG ...."],
+		  		"precautions": ["PRECAUTIONS General Levothyroxine has a narrow therapeutic index. Regardless ..."],
+		  		"nursing_mothers": ["Nursing Mothers Although thyroid hormones are excreted only minimally in human milk..."],
+		  		"laboratory_tests": ["Laboratory Tests General The diagnosis of hypothyroidism is confirmed by measuring ... "],
+		  		"boxed_warning": ["Boxed Warning WARNING: Thyroid hormones, including SYNTHROID, either ..."],
+		  		"clinical_pharmacology": ["CLINICAL PHARMACOLOGY Thyroid hormone synthesis and secretion is regulated ..."],
+		  		"clinical_pharmacology_table": ["Table 1. Pharmacokinetic Parameters of Thyroid Hormones ..."],
+		  		"how_supplied_table": ["How_Supplied_table..."],
+		  		"effects": ["nausea", "fatigue", "headache", "pain", "vomiting", "arthralgia", "anxiety", "insomnia", "rash", "chest pain", "pruritus", "hypertension", "abdominal pain", "palpitations", "tremor", "myocardial infarction", "flushing", "hypothyroidism", "urticaria", "diabetes mellitus", "nervousness", "drug interaction", "coronary artery disease", "breast cancer", "tachycardia", "oedema", "irritability", "cardiac arrest", "arrhythmia", "wheezing", "hyperthyroidism", "surgery", "inflammation", "increased appetite", "obesity", "cardiovascular disorder", "hepatitis", "angioedema", "cyst", "autoimmune thyroiditis", "pregnancy", "aspiration", "adrenal insufficiency", "atrial septal defect"],
+		  		"reported_effects": []
+		  	},
+		  	"effects": {
+		  		"yes_answers": {},
+		  		"no_answers": {},
+		  		"effects": ["nausea", "fatigue", "headache", "pain", "vomiting", "arthralgia", "anxiety", "insomnia", "rash", "chest pain", "pruritus", "hypertension", "abdominal pain", "palpitations", "tremor", "myocardial infarction", "flushing", "hypothyroidism", "urticaria", "diabetes mellitus", "nervousness", "drug interaction", "coronary artery disease", "breast cancer", "tachycardia", "oedema", "irritability", "cardiac arrest", "arrhythmia", "wheezing", "hyperthyroidism", "surgery", "inflammation", "increased appetite", "obesity", "cardiovascular disorder", "hepatitis", "angioedema", "cyst", "autoimmune thyroiditis", "pregnancy", "aspiration", "adrenal insufficiency", "atrial septal defect"]
+		  	}
       },
       "code": "200",
       "show_in_doc": 1,
       "recorded": true
     }
   ],
-  "drugs#show": [
+	
+	"effects#create": [
     {
-      "verb": "GET",
-      "path": "/api/v1/drugs/Advil",
+      "verb": "POST",
+      "path": "/api/v1/effects",
       "versions": [
         "1.0"
       ],
-      "query": "",
-      "request_data": null,
+	  "query": null,
+      "request_data": {
+		  "drug_name": "Synthroid",
+		  "effect": "abdominal pain",
+		  "response": true
+      },
       "response_data": {
-        "set_id": "1f01c10a-9434-91a4-2ee4-352315a6b610",
-        "indications_and_usage": [
-          "USES temporarily relieves minor aches and pains due to: headache toothache backache menstrual cramps the common cold muscular aches minor pain of arthritis temporarily reduces fever"
-        ],
-        "stop_use": [
-          "Stop use and ask a doctor if you experience any of the following signs of stomach bleeding: feel faint vomit blood have bloody or black stools have stomach pain that does not get better pain gets worse or lasts more than 10 days fever gets worse or lasts more than 3 days redness or swelling is present in the painful area any new symptoms appear"
-        ],
-        "keep_out_of_reach_of_children": [
-          "Keep out of reach of children. In case of overdose, get medical help or contact a Poison Control Center right away."
-        ],
-        "ask_doctor": [
-          "Ask a doctor before use if stomach bleeding warning applies to you you have problems or serious side effects from taking pain relievers or fever reducers you have a history of stomach problems, such as heartburn you have high blood pressure, heart disease, liver cirrhosis, kidney disease, or asthma you are taking a diuretic"
-        ],
-        "questions": [
-          "QUESTIONS OR COMMENTS? call toll free 1-800-88-ADVIL"
-        ],
-        "dosage_and_administration": [
-          "DIRECTIONS do not take more than directed the smallest effective dose should be used adults and children 12 years and over: take 1 capsule every 4 to 6 hours while symptoms persist if pain or fever does not respond to 1 capsule, 2 capsules may be used do not exceed 6 capsules in 24 hours, unless directed by a doctor children under 12 years: ask a doctor"
-        ],
-        "purpose": [
-          "PURPOSE Pain reliever/Fever reducer"
-        ],
-        "ask_doctor_or_pharmacist": [
-          "Ask a doctor or pharmacist before use if you are under a doctor's care for any serious condition taking aspirin for heart attack or stroke, because ibuprofen may decrease this benefit of aspirin taking any other drug"
-        ],
-        "do_not_use": [
-          "Do not use if you have ever had an allergic reaction to any other pain reliever/fever reducer right before or after heart surgery"
-        ],
-        "version": "9",
-        "id": "e7e97dde-915b-40c3-ba9c-f14846f65e3a",
-        "package_label_principal_display_panel": [
-          "PRINCIPAL DISPLAY PANEL - 80 Capsule Bottle Label Advil® LIQUI-GELS ® Solubilized Ibuprofen Capsules, 200 mg Pain Reliever/Fever Reducer (NSAID) 80 Liquid Filled Capsules Liquid Filled Capsules READ AND KEEP CARTON FOR COMPLETE WARNINGS AND INFORMATION PRINCIPAL DISPLAY PANEL - 80 Capsule Bottle Label",
-          "PRODUCT PACKAGING The product packaging shown below represents a sample of that currently in use. Additional packaging may also be available. Advil Liqui-Gels Solubilized Ibuprofen Capsules, 200 mg Pain Reliever/Fever Reducer (NSAID) 80 Liqui-Gels* *Liquid Filled Capsules Liquid Filled Capsules Distributed by: Pfizer Madison, NJ 07940 USA ©2011 Pfizer Inc. LIQUI-GELS is a trademark or registered trademark of Catalent Pharma Solutions. Advil Liqui-Gels Packaging"
-        ],
-        "pregnancy_or_breast_feeding": [
-          "If pregnant or breast-feeding, ask a health professional before use. It is especially important not to use ibuprofen during the last 3 months of pregnancy unless definitely directed to do so by a doctor because it may cause problems in the unborn child or complications during delivery."
-        ],
-        "active_ingredient": [
-          "ACTIVE INGREDIENT (IN EACH CAPSULE) Solubilized ibuprofen equal to 200 mg ibuprofen (NSAID)* (present as the free acid and potassium salt) *nonsteroidal anti-inflammatory drug"
-        ],
-        "inactive_ingredient": [
-          "INACTIVE INGREDIENTS FD&C green no. 3, gelatin, light mineral oil, pharmaceutical ink, polyethylene glycol, potassium hydroxide, purified water, sorbitan, sorbitol"
-        ],
-        "@epoch": 1432336729.773203,
-        "effective_time": "20150511",
-        "openfda": {
-          "unii": [
-            "WK2XYI10QM"
-          ],
-          "spl_id": [
-            "fa7252d0-96a9-46ce-9912-1d6782aab8f0"
-          ],
-          "product_ndc": [
-            "0573-0169"
-          ],
-          "substance_name": [
-            "IBUPROFEN"
-          ],
-          "rxcui": [
-            "731533",
-            "310964"
-          ],
-          "spl_set_id": [
-            "1f01c10a-9434-91a4-2ee4-352315a6b610"
-          ],
-          "product_type": [
-            "HUMAN OTC DRUG"
-          ],
-          "pharm_class_cs": [
-            "Nonsteroidal Anti-inflammatory Compounds [Chemical/Ingredient]"
-          ],
-          "upc": [
-            "0305730169400"
-          ],
-          "manufacturer_name": [
-            "Pfizer Consumer Healthcare"
-          ],
-          "brand_name": [
-            "Advil"
-          ],
-          "is_original_packager": [
-            true
-          ],
-          "route": [
-            "ORAL"
-          ],
-          "nui": [
-            "N0000000160",
-            "N0000175722",
-            "N0000175721"
-          ],
-          "pharm_class_moa": [
-            "Cyclooxygenase Inhibitors [MoA]"
-          ],
-          "package_ndc": [
-            "0573-0169-13",
-            "0573-0169-49",
-            "0573-0169-31",
-            "0573-0169-89",
-            "0573-0169-43",
-            "0573-0169-86",
-            "0573-0169-52",
-            "0573-0169-40",
-            "0573-0169-20",
-            "0573-0169-22",
-            "0573-0169-30",
-            "0573-0169-17",
-            "0573-0169-11",
-            "0573-0169-51",
-            "0573-0169-08",
-            "0573-0169-19",
-            "0573-0169-02"
-          ],
-          "pharm_class_epc": [
-            "Nonsteroidal Anti-inflammatory Drug [EPC]"
-          ],
-          "generic_name": [
-            "IBUPROFEN"
-          ],
-          "application_number": [
-            "NDA020402"
-          ]
-        },
-        "spl_product_data_elements": [
-          "Advil ibuprofen IBUPROFEN IBUPROFEN FD&C GREEN NO. 3 GELATIN LIGHT MINERAL OIL POLYETHYLENE GLYCOLS POTASSIUM HYDROXIDE SORBITAN SORBITOL WATER Transparent green to blue green oblong softgel Advil Advil ibuprofen IBUPROFEN IBUPROFEN FD&C GREEN NO. 3 GELATIN LIGHT MINERAL OIL POLYETHYLENE GLYCOLS POTASSIUM HYDROXIDE WATER SORBITAN SORBITOL Transparent green to blue green oblong softgel Advil"
-        ],
-        "warnings": [
-          "WARNINGS Allergy alert: Ibuprofen may cause a severe allergic reaction, especially in people allergic to aspirin. Symptoms may include: hives facial swelling asthma (wheezing) shock skin reddening rash blisters If an allergic reaction occurs, stop use and seek medical help right away. Stomach bleeding warning: This product contains an NSAID, which may cause severe stomach bleeding. The chance is higher if you are age 60 or older have had stomach ulcers or bleeding problems take a blood thinning (anticoagulant) or steroid drug take other drugs containing prescription or nonprescription NSAIDs [aspirin, ibuprofen, naproxen, or others] have 3 or more alcoholic drinks every day while using this product take more or for a longer time than directed Do not use if you have ever had an allergic reaction to any other pain reliever/fever reducer right before or after heart surgery Ask a doctor before use if stomach bleeding warning applies to you you have problems or serious side effects from taking pain relievers or fever reducers you have a history of stomach problems, such as heartburn you have high blood pressure, heart disease, liver cirrhosis, kidney disease, or asthma you are taking a diuretic Ask a doctor or pharmacist before use if you are under a doctor's care for any serious condition taking aspirin for heart attack or stroke, because ibuprofen may decrease this benefit of aspirin taking any other drug When using this product take with food or milk if stomach upset occurs the risk of heart attack or stroke may increase if you use more than directed or for longer than directed Stop use and ask a doctor if you experience any of the following signs of stomach bleeding: feel faint vomit blood have bloody or black stools have stomach pain that does not get better pain gets worse or lasts more than 10 days fever gets worse or lasts more than 3 days redness or swelling is present in the painful area any new symptoms appear If pregnant or breast-feeding, ask a health professional before use. It is especially important not to use ibuprofen during the last 3 months of pregnancy unless definitely directed to do so by a doctor because it may cause problems in the unborn child or complications during delivery. Keep out of reach of children. In case of overdose, get medical help or contact a Poison Control Center right away."
-        ],
-        "when_using": [
-          "When using this product take with food or milk if stomach upset occurs the risk of heart attack or stroke may increase if you use more than directed or for longer than directed"
-        ],
-        "spl_unclassified_section": [
-          "DRUG FACTS",
-          "OTHER INFORMATION each capsule contains: potassium 20 mg read all warnings and directions before use. Keep carton. store at 20-25°C (68-77°F) avoid excessive heat above 40°C (104°F)"
-        ],
-        "effects": [
-          {
-            "medical_term": "pain",
-            "layman_term": "pain"
-          },
-          {
-            "medical_term": "rash",
-            "layman_term": "rash"
-          },
-          {
-            "medical_term": "overdose",
-            "layman_term": "overdose"
-          },
-          {
-            "medical_term": "asthma",
-            "layman_term": "airways become inflamed"
-          },
-          {
-            "medical_term": "swelling",
-            "layman_term": "swelling"
-          },
-          {
-            "medical_term": "blister",
-            "layman_term": "blister"
-          },
-          {
-            "medical_term": "pregnancy",
-            "layman_term": "pregnancy"
-          },
-          {
-            "medical_term": "wheezing",
-            "layman_term": "wheezing"
-          },
-          {
-            "medical_term": "surgery",
-            "layman_term": "surgery"
-          },
-          {
-            "medical_term": "shock",
-            "layman_term": "shock"
-          },
-          {
-            "medical_term": "ulcer",
-            "layman_term": "ulcer"
-          }
-        ],
-        "reported_effects": [
-
-        ]
+	  	"id": 1,
+	  	"name": "abdominal pain",
+	  	"drug_id": null,
+	  	"created_at": "2015-07-05T18:53:23.906Z",
+	  	"updated_at": "2015-07-05T18:53:23.906Z",
+	  	"response": true,
+	  	"drug_name": "Synthroid"
       },
       "code": "200",
       "show_in_doc": 1,
       "recorded": true
-    },
-    {
-      "verb": "GET",
-      "path": "/api/v1/drugs",
-      "versions": [
-        "1.0"
-      ],
-      "query": "effects%5B%5D=first&name=A+Reported+Drug",
-      "request_data": null,
-      "response_data": {
-        "set_id": "002e4f96-7a74-4501-8b81-dc6f092c807a",
-        "information_for_patients": [
-          "Information for Patients: Do not touch dropper tip to any surface, as this may contaminate the solution. Patient should be advised not to drive or engage in potentially hazardous activities while pupils are dilated. Patient may experience sensitivity to light and should protect eyes in bright illumination during dilation. Parents should be warned not to get this preparation in their child's mouth and to wash their own hands and the child's hands following administration."
-        ],
-        "indications_and_usage": [
-          "INDICATIONS AND USAGE: For mydriasis and cycloplegia for diagnostic procedures."
-        ],
-        "contraindications": [
-          "CONTRAINDICATIONS: Contraindicated in persons showing hypersensitivity to any component of this preparation."
-        ],
-        "how_supplied": [
-          "HOW SUPPLIED: Tropicamide Ophthalmic Solution USP, 1% are supplied as sterile solutions in plastic dropper bottles. 1% NDC 0404-7192-01 (15 mL) STORAGE: Store at 20° to 25°C (68° to 77°F) [see USP Controlled Room Temperature]. Do not refrigerate or store at high temperatures. Keep container tightly closed. Distributed by (in US only): HENRY SCHEIN INC. 135 DURYEA ROAD MELVILLE, NY 11747 USA BTC00N Rev. 12/14"
-        ],
-        "adverse_reactions": [
-          "ADVERSE REACTIONS: Ocular: Transient stinging, blurred vision, photophobia and superficial punctate keratitis have been reported with the use of tropicamide. Increased intraocular pressure has been reported following the use of mydriatics. Non-Ocular: Dryness of the mouth, tachycardia, headache, allergic reactions, nausea, vomiting, pallor, central nervous system disturbances and muscle rigidity have been reported with the use of tropicamide. Psychotic reactions, behavioral disturbances, and vasomotor or cardiorespiratory collapse in children have been reported with the use of anticholinergic drugs."
-        ],
-        "dosage_and_administration": [
-          "DOSAGE AND ADMINISTRATION: For refraction, instill one or two drops of 1% solution in the eye(s), repeated in five minutes. If patient is not seen within 20 to 30 minutes, an additional drop may be instilled to prolong mydriatic effect. Individuals with heavily pigmented irides may require higher strength or more doses. Mydriasis will reverse spontaneously with time, typically in 4 to 8 hours. However, in some cases, complete recovery may take up to 24 hours."
-        ],
-        "storage_and_handling": [
-          "STORAGE: Store at 20° to 25°C (68° to 77°F) [see USP Controlled Room Temperature]. Do not refrigerate or store at high temperatures. Keep container tightly closed. Distributed by (in US only): HENRY SCHEIN INC. 135 DURYEA ROAD MELVILLE, NY 11747 USA BTC00N Rev. 12/14"
-        ],
-        "general_precautions": [
-          "General: The lacrimal sac should be compressed by digital pressure for two to three minutes after instillation to avoid excessive systemic absorption."
-        ],
-        "drug_interactions": [
-          "Drug Interactions: Tropicamide may interfere with the antihypertensive action of carbachol, pilocarpine, or ophthalmic cholinesterase inhibitors."
-        ],
-        "version": "1",
-        "id": "bfd88552-997c-4cbe-b37e-729a7dc3a61e",
-        "package_label_principal_display_panel": [
-          "Principal Display Panel Text for Container Label: HENRY SCHEIN Logo NDC 0404-7192-01 112-7192 TROPICAMIDE OPHTHALMIC SOLUTION, USP 1% Sterile Rx only 15 mL FOR TOPICAL OPHTHALMIC USE ONLY. Principal Display Panel Text for Container Label",
-          "Principal Display Panel Text for Carton Label: HENRY SCHEIN Logo NDC 0404-7192-01 112-7192 TROPICAMIDE OPHTHALMIC SOLUTION, USP 1% FOR TOPICAL OPHTHALMIC USE ONLY. Sterile Rx only 15 mL HENRY SCHEIN Ribbon Seal Principal Display Panel Text for Carton Label"
-        ],
-        "@epoch": 1432336729.773203,
-        "carcinogenesis_and_mutagenesis_and_impairment_of_fertility": [
-          "Carcinogenesis, Mutagenesis, Impairment of Fertility: There have been no long-term studies done using tropicamide in animals to evaluate carcinogenic potential."
-        ],
-        "effective_time": "20150513",
-        "description": [
-          "DESCRIPTION: Tropicamide Ophthalmic Solution, USP is an anticholinergic prepared as a sterile topical ophthalmic solution in two strengths. The active ingredient is represented by the structural formula: C17H20N2O2 MW=284.36 Established name: Tropicamide Chemical name: Benzeneacetamide, N-ethyl-α-(hydroxymethyl)-N-(4-pyridinylmethyl)-. Each mL contains: Active: Tropicamide 1% (10 mg). Inactives: Edetate Disodium, Sodium Chloride, Hydrochloric Acid and/or Sodium Hydroxide (to adjust pH), Water for Injection. pH range 4.0 to 5.8. Preservative: Benzalkonium Chloride 0.01%. Structural Formula"
-        ],
-        "pregnancy": [
-          "Pregnancy: Pregnancy Category C. Animal reproduction studies have not been conducted with tropicamide. It is also not known whether tropicamide can cause fetal harm when administered to a pregnant woman or can affect reproduction capacity. Tropicamide should be given to a pregnant woman only if clearly needed."
-        ],
-        "precautions": [
-          "PRECAUTIONS: General: The lacrimal sac should be compressed by digital pressure for two to three minutes after instillation to avoid excessive systemic absorption. Information for Patients: Do not touch dropper tip to any surface, as this may contaminate the solution. Patient should be advised not to drive or engage in potentially hazardous activities while pupils are dilated. Patient may experience sensitivity to light and should protect eyes in bright illumination during dilation. Parents should be warned not to get this preparation in their child's mouth and to wash their own hands and the child's hands following administration. Drug Interactions: Tropicamide may interfere with the antihypertensive action of carbachol, pilocarpine, or ophthalmic cholinesterase inhibitors. Carcinogenesis, Mutagenesis, Impairment of Fertility: There have been no long-term studies done using tropicamide in animals to evaluate carcinogenic potential. Pregnancy: Pregnancy Category C. Animal reproduction studies have not been conducted with tropicamide. It is also not known whether tropicamide can cause fetal harm when administered to a pregnant woman or can affect reproduction capacity. Tropicamide should be given to a pregnant woman only if clearly needed. Nursing Mothers: It is not known whether this drug is excreted in human milk. Because many drugs are excreted inhuman milk, caution should be exercised when tropicamide is administered to a nursing woman. Pediatric Use: Tropicamide may rarely cause CNS disturbances which may be dangerous in pediatric patients. Psychotic reactions, behavioral disturbances, and vasomotor or cardiorespiratory collapse in children have been reported with the use of anticholinergic drugs (See WARNINGS). Keep this and all medications out of the reach of children."
-        ],
-        "pediatric_use": [
-          "Pediatric Use: Tropicamide may rarely cause CNS disturbances which may be dangerous in pediatric patients. Psychotic reactions, behavioral disturbances, and vasomotor or cardiorespiratory collapse in children have been reported with the use of anticholinergic drugs (See WARNINGS). Keep this and all medications out of the reach of children."
-        ],
-        "nursing_mothers": [
-          "Nursing Mothers: It is not known whether this drug is excreted in human milk. Because many drugs are excreted inhuman milk, caution should be exercised when tropicamide is administered to a nursing woman."
-        ],
-        "clinical_pharmacology": [
-          "CLINICAL PHARMACOLOGY: This anticholinergic preparation blocks the responses of the sphincter muscle of the iris and the ciliary muscle to cholinergic stimulation, dilating the pupil (mydriasis). The stronger preparation (1%) also paralyzes accommodation. This preparation acts in 15-30 minutes and the duration of activity is approximately 3-8hours. Complete recovery from mydriasis in some individuals may require 24 hours. The weaker strength may be useful in producing mydriasis with only slight cycloplegia. Heavily pigmented irides may require more doses than lightly pigmented irides."
-        ],
-        "openfda": {
-        },
-        "spl_product_data_elements": [
-          "Tropicamide Tropicamide Tropicamide Tropicamide Edetate Disodium Sodium Chloride Hydrochloric Acid Sodium Hydroxide Water Benzalkonium Chloride"
-        ],
-        "warnings": [
-          "WARNINGS: For topical use only — not for injection. This preparation may cause CNS disturbances which may be dangerous in pediatric patients. The possibility of psychotic reactions and behavioral disturbances due to hypersensitivity to anticholinergic drugs should be considered. Mydriatics may produce a transient elevation of intraocular pressure. Remove contact lenses before using."
-        ],
-        "spl_unclassified_section": [
-          "Rx only"
-        ],
-        "effects": [
-          {
-            "medical_term": "nausea",
-            "layman_term": "nausea"
-          },
-          {
-            "medical_term": "headache",
-            "layman_term": "headache"
-          },
-          {
-            "medical_term": "vomiting",
-            "layman_term": "vomiting"
-          },
-          {
-            "medical_term": "hypersensitivity",
-            "layman_term": "hypersensitivity"
-          },
-          {
-            "medical_term": "tachycardia",
-            "layman_term": "rapid heartbeat"
-          },
-          {
-            "medical_term": "anger",
-            "layman_term": "anger"
-          },
-          {
-            "medical_term": "pallor",
-            "layman_term": "pallor"
-          },
-          {
-            "medical_term": "photophobia",
-            "layman_term": "photophobia"
-          },
-          {
-            "medical_term": "muscle rigidity",
-            "layman_term": "muscle rigidity"
-          }
-        ],
-        "reported_effects": [
-          {
-            "effect": "second",
-            "reported": 3
-          },
-          {
-            "effect": "third",
-            "reported": 2
-          },
-          {
-            "effect": "first",
-            "reported": 2
-          }
-        ]
-      },
-      "code": "200",
-      "show_in_doc": 1,
-      "recorded": true
-    }
-  ]
+  	}
+	]
 }

@@ -81,8 +81,6 @@ Here is how developers code. To make it easier to explain, let's say a release i
 
 **Continuous Deployment =** is a natural next step once all the automated tests run successfully after continuous integration using the code in developer integration branch. The gatekeeper of our git flow, in this case our technical architect, merges the changes in the Developer Branch to Release Branch. As soon as the merge is complete, Jenkins CI server initiates the automated process for continuous deployment by running unit tests, static analysis, and code quality scan. Then Jenkins containerizes the application into a Docker file and deploys the release into the Release Environments. The team is notified in Slack when the build is deployed as seen on the below image:
 
-INSERT IMAGE HERE
-
 **Manual Testing =** is performed on the Release Environment. The following manual tests types are performed:
 
 - Usability testing
@@ -111,9 +109,8 @@ If tests pass...
      5) Containers are deployed on the live EC2 machine. A cAdvisor container is deployed to monitor resources.
 
 ## Monitoring
-![devops](https://cloud.githubusercontent.com/assets/1631162/8363339/38036994-1b4c-11e5-86a1-4fad3f968bfe.png)
-1) 
-Screenshot from EC2 instance [release branch], monitoring the front-end Docker container.
+
+Please see our [monitoring documentation](https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Continuous-Monitoring.md)
 
 ## Environments
 
