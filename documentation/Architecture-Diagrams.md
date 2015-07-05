@@ -6,7 +6,7 @@
 
 Our solution is comprised of more than five modern, open-source technologies.  Our selection of technologies was driven by several factors including the language, frameworks, and libraries most appropriate to solve the problem, the ability for the technology to conform to modern development best practices, and tools that best support the full end-to-end life cycle of development for maximum quality.  These factors were considered for the technologies selected for front-end, back-end, and dev-ops.
 
-**a.) Front-End:** Foundation, Angular.JS, Node.js, Karma, JS Hint, HighCharts
+**a.) Front-End:** Bootstrap, Angular.JS, Node.js, Karma, JS Hint, HighCharts
 
 We decided on JavaScript for the front-end technology to ensure a highly decoupled front-end from back-end.
 
@@ -14,7 +14,7 @@ We selected high-charts due to the variety of available visualizations and moder
 
 AngularJS was selected to build-out the front-end as a single-page application.
 Node.JS was used to host the front-end code and manages the resolution of front-end dependencies thorugh NPM.
-We selectd Foundation as the framework to support the responsive web design.
+We selectd Bootstrap as the framework to support the responsive web design.
 Karma / JS Hint provide static code analysis and code quality metrics for JavaScript applications.
 
 **b.) Backend:** Ruby, Rails, RSpec, Rubocop, Brakeman
