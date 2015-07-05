@@ -6,14 +6,15 @@ To ensure system reliability, security, and normal operating procedure we implem
 
 See a live feed of our production cAdvisor monitoring -- https://cadvisor.labelcraft.io
 
-![devops](https://cloud.githubusercontent.com/assets/1631162/8363339/38036994-1b4c-11e5-86a1-4fad3f968bfe.png)
+![cadvisor-monitoring](https://cloud.githubusercontent.com/assets/1631162/8363339/38036994-1b4c-11e5-86a1-4fad3f968bfe.png)
 
 The cAdvisor tool allows us to seamlessly review and analyze our EC2 instance machine performance, as well as dive into the container specific metrics. The information is presented in a simple but efficient html format that can be accessed anytime and anywhere. Insights or warning can be discovered through useful graphs and metrics on memory usage, cpu usage, throughput, and processes. Container specific metrics are valuable to review anomalies in the exact service, reducing debugging time, and allowing for service specific optimizations. 
 
 ### [sophos](https://www.sophos.com/en-us.aspx)
 
-The sophos security appliance allows us to visualize and react to any security threat. Incoming requests are analyzed for security concerns and then dealth with according to our solutions security posture. Relevant metrics are reported out automatically daily to appropriate individuals. 
+The sophos security appliance allows us to visualize and react to security threats. Incoming requests are analyzed for security concerns and then dealth with according to our solutions security posture. Relevant metrics are reported out automatically to appropriate individuals. A small snippit of a report is shown below.
 
+![sophos-monitoring](https://cloud.githubusercontent.com/assets/11528424/8512957/aff7a316-2326-11e5-92c4-1f35fd7b1f0a.png)
 
 
 
