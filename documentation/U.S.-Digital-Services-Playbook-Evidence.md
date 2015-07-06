@@ -22,7 +22,7 @@ During and at the end of sprints (either in person or virtually using Lync or Go
 _- Document the findings about user goals, needs, behaviors, and preferences_
 
 Finding documented as agile artifacts:
-User stories : hhttps://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/User-Stories.md
+User stories : https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/User-Stories.md
 
 Other agile artifacts: https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Agile-Artifacts.md
 
