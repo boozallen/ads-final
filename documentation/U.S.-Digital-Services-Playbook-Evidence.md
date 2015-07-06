@@ -96,7 +96,7 @@ _- Use language and design consistently throughout the service, including online
 
 Consistency check us part of our usability test.
 
-**DIGITAL SERVICE PLAY 4. Build the service using agile and iterative practices  **
+**DIGITAL SERVICE PLAY 4. Build the service using agile and iterative practices **
 
 ![p4](https://cloud.githubusercontent.com/assets/12210910/8335886/766a0ece-1a6e-11e5-8372-cee1382ef36b.jpeg)
 
