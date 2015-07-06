@@ -25,8 +25,7 @@ Booz Allen Digital offers key strengths to the GSA 18F for the ADS BPA:
 
 ### Digital Services Playbook
 
-The US Digital Services playbook provides a set of guidelines that includes a set of checklists
-and questions we believe should be answered during the execution of any digital program. 
+We closely followed the Digital Services playbook guidelines as detailed in the link below: 
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/U.S.-Digital-Services-Playbook-Evidence.md
 
