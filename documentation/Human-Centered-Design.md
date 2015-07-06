@@ -1,3 +1,5 @@
+During this challenge, we used nine core Human Centered Design (HCD) techniques: (1) Visioning exercise to brainstorm target groups, emotional benefits, and  features/services to meet their needs; (2) User Interviews; (3) Personas; (4) Journey Mapping; (5) User Stories; (6) Sketching screen designs; (7) Rapid Prototyping with clickable Axure Wireframes; (8) Heuristic Reviews based on researched best practices and industry standards for desinging for real, live people; (9) Usability Testing in four small-scale iterative rounds of moderated, in-person testing. Here is an overview of our lean HCD process:
+
 ![human_centered_design_v2](https://cloud.githubusercontent.com/assets/13038047/8524024/756c6eac-23c6-11e5-9319-0fc5a4a6e278.png)
 
 ## Learning about the Data
