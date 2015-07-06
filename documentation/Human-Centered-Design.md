@@ -90,9 +90,9 @@ For the advocacy group persona, we phoned the founder of the Hashimoto’s 411 g
 
 Our user interviews impacted not only our personas, but also our user stories, journey maps, and wireframes. Ultimately these interviews guided what product we were building. We found out that about half of the people we spoke to read labels, and of those people nearly all of them feel mistrusting of the label alone, and for good reason!  Of the top adverse events reported, only a fraction makes it onto medicine labels. To do anything about this big honkin' problem, we needed better data.  And who better to help us with that than the people who need it -- health conscious general public, advocacy groups, etc. Everyone wants to know about side effects, and a small fraction of these people are willing to help make labels more accurate. With crowdsourcing, even a small fraction of do-gooders can make a big difference. Therefore, the goal of our website is ultimately to perform a gap analysis between adverse events data and label data, using crowdsourcing to help give us the proper data to help FDA administrators make drug labels more accurate. 
 
-After our pivot, this was our modified charter:
+After our pivot, this was our modified charter/vision:
 
-![charter_final](https://cloud.githubusercontent.com/assets/12210285/8523808/71ea0290-23c5-11e5-95e5-782facb4c3b9.jpg)
+![new charter](https://cloud.githubusercontent.com/assets/13038047/8523875/cab6e78a-23c5-11e5-9ea9-da42d552f1e9.jpg)
 
 ## Personas
 We started by hand-sketching our personas and guessing about their needs, goals and journeys. We then learned more about our users through user interviews (in person and by phone) and usability testing. Our personas were living documents that were updated as we learned more. They all had faces and names, and we spoke about them as if they were team members throughout the process. We got to know them them and empathized with them as we designed and coded. Our hand-sketched wireframes were moved into Axure, and were tested and updated in iterative rounds of usability testing.
