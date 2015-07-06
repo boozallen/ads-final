@@ -360,7 +360,8 @@ _ - Monitor system-level resource utilization in real time_
 
 **DIGITAL SERVICE PLAY 13. Default to open**
 
-![p13](https://cloud.githubusercontent.com/assets/12210910/8335320/f119b70e-1a6a-11e5-9594-cfa122f93c8a.jpeg)
+
+![p13](https://cloud.githubusercontent.com/assets/12210910/8525768/d675469c-23d0-11e5-8261-a7bf6b04068d.jpeg)
 
 _ - Offer users a mechanism to report bugs and issues, and be responsive to these reports_
 
