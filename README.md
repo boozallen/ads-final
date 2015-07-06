@@ -1,6 +1,10 @@
 # 18F Agile Delivery Services (ADS) – Booz Allen Digital– Prototype: LabelCRAFT
 
-Prototype Submission URL: https://labelcraft.io
+Prototype URL: https://labelcraft.io
+
+Please evaluate our development branch located at:
+
+https://github.com/booz-allen-agile-delivery/ads-final/tree/development
 
 ## Prototype Overview
 
