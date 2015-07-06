@@ -89,7 +89,7 @@ angular.module('gapFront')
 
       if (text) {
         var query = 'openfda.generic_name:' + text + ' openfda.brand_name:' + text + ' openfda.substance_name:' + text;
-        APIService.queryDrugLabel(query, 0, 10).then(processLabelResults, serviceError);
+        APIService.queryDrugLabel(query, 0, 10).then(processLabelResults, clearDrugs);
       } else {
         $scope.drugs = [];
       }
@@ -140,6 +140,10 @@ angular.module('gapFront')
 
     function serviceError(error) {
       //console.log(error);
+    }
+
+    function clearDrugs() {
+      $scope.drugs = [];
     }
 
     $scope.setTotalLabels = function setTotalLabels(resp) {
