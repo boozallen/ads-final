@@ -100,7 +100,7 @@ We started by hand-sketching our personas and guessing about their needs, goals 
 ![slide1](https://cloud.githubusercontent.com/assets/12210285/8508230/6c272116-2236-11e5-99b5-8b625357e891.jpg)
 ![slide2](https://cloud.githubusercontent.com/assets/12210285/8508233/6c299c84-2236-11e5-80e9-ae7d75887d43.jpg)
 ![slide3](https://cloud.githubusercontent.com/assets/12210285/8508232/6c294a54-2236-11e5-95fb-1fc2b3423fa9.jpg)
-![slide4](https://cloud.githubusercontent.com/assets/12210285/8508231/6c27fb22-2236-11e5-8854-11989b0fbb93.jpg)
+![geriatric](https://cloud.githubusercontent.com/assets/13038047/8522320/c1993e42-23ba-11e5-88b4-94807be1c9c2.png)
 ![slide5](https://cloud.githubusercontent.com/assets/12210285/8508234/6c2a24d8-2236-11e5-802c-92196dcab624.jpg)
 
 
