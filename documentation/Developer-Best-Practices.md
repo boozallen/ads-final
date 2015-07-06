@@ -20,8 +20,8 @@ Continuous Integration:
 * Failed Builds MUST NOT be allowed to be deployed
 
 Continuous Monitoring:
-* Metrics MUST include the following: CPU, Memory, Storage Space
-* Alerts MUST be triggered upon the following events: Limited Storage Space, Failed Login Attempts
+* Metrics MUST allow understanding of current system performance (i.e. CPU, Memory, Storage Space)
+* Alerts MUST be triggered upon the following security related events: Failed Login Attempts, etc.
 
 Manual Testing:
 * Defects found SHOULD be reported as issues in GitHub
