@@ -97,12 +97,11 @@ PHOTO OF FINAL CHARTER
 ## Personas
 We started by hand-sketching our personas and guessing about their needs, goals and journeys. We then learned more about our users through user interviews (in person and by phone) and usability testing. Our personas were living documents that were updated as we learned more. They all had faces and names, and we spoke about them as if they were team members throughout the process. We got to know them them and empathized with them as we designed and coded. Our hand-sketched wireframes were moved into Axure, and were tested and updated in iterative rounds of usability testing.
 
-![slide1](https://cloud.githubusercontent.com/assets/12210285/8508230/6c272116-2236-11e5-99b5-8b625357e891.jpg)
-![slide2](https://cloud.githubusercontent.com/assets/12210285/8508233/6c299c84-2236-11e5-80e9-ae7d75887d43.jpg)
-![slide3](https://cloud.githubusercontent.com/assets/12210285/8508232/6c294a54-2236-11e5-95fb-1fc2b3423fa9.jpg)
+![becca label nut](https://cloud.githubusercontent.com/assets/13038047/8522319/c1953cc0-23ba-11e5-9e2a-36c0e720ba09.png)
+![vic label non-reader](https://cloud.githubusercontent.com/assets/13038047/8522322/c19e27fe-23ba-11e5-804f-661b16cf484d.png)
+![fda administrator](https://cloud.githubusercontent.com/assets/13038047/8522318/c1917acc-23ba-11e5-9ff1-42eeb098fd05.png)
 ![geriatric](https://cloud.githubusercontent.com/assets/13038047/8522320/c1993e42-23ba-11e5-88b4-94807be1c9c2.png)
-![slide5](https://cloud.githubusercontent.com/assets/12210285/8508234/6c2a24d8-2236-11e5-802c-92196dcab624.jpg)
-
+![hashi group](https://cloud.githubusercontent.com/assets/13038047/8522321/c19a8022-23ba-11e5-8b98-be22488a3f93.png)
 
 ## Wireframing
 We started with hand-sketched wireframes on large easel-sized post-it pads on the wall.  
