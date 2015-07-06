@@ -97,11 +97,11 @@ After our pivot, this was our modified charter/vision:
 ## Personas
 We started by hand-sketching our personas and guessing about their needs, goals and journeys. We then learned more about our users through user interviews (in person and by phone) and usability testing. Our personas were living documents that were updated as we learned more. They all had faces and names, and we spoke about them as if they were team members throughout the process. We got to know them them and empathized with them as we designed and coded. Our hand-sketched wireframes were moved into Axure, and were tested and updated in iterative rounds of usability testing.
 
-![becca label nut](https://cloud.githubusercontent.com/assets/13038047/8522319/c1953cc0-23ba-11e5-9e2a-36c0e720ba09.png)
-![vic label non-reader](https://cloud.githubusercontent.com/assets/13038047/8522322/c19e27fe-23ba-11e5-804f-661b16cf484d.png)
-![fda administrator](https://cloud.githubusercontent.com/assets/13038047/8522318/c1917acc-23ba-11e5-9ff1-42eeb098fd05.png)
-![geriatric](https://cloud.githubusercontent.com/assets/13038047/8522320/c1993e42-23ba-11e5-88b4-94807be1c9c2.png)
-![hashi group](https://cloud.githubusercontent.com/assets/13038047/8522321/c19a8022-23ba-11e5-8b98-be22488a3f93.png)
+![becca label nut](https://cloud.githubusercontent.com/assets/13038047/8523872/cab0639c-23c5-11e5-8a7d-766dc982b916.png)
+![vic label non-reader](https://cloud.githubusercontent.com/assets/13038047/8523870/caaec96a-23c5-11e5-9196-cdb030f3f400.png)
+![fda administrator](https://cloud.githubusercontent.com/assets/13038047/8523874/cab36376-23c5-11e5-8de6-bce8922311c2.png)
+![geriatric](https://cloud.githubusercontent.com/assets/13038047/8523871/cab06158-23c5-11e5-9964-a87430e83808.png)
+![hashi group](https://cloud.githubusercontent.com/assets/13038047/8523873/cab1520c-23c5-11e5-9775-abe97bbb01cf.png)
 
 ## Wireframing
 We started with hand-sketched wireframes on large easel-sized post-it pads on the wall.  
