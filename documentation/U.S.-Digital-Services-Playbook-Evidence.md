@@ -184,6 +184,8 @@ Not applicable. This is an RFQ.
 
 **DIGITAL SERVICE PLAY 7. Bring in experienced teams**
 
+![p7](https://cloud.githubusercontent.com/assets/12210910/8525803/02847c4e-23d1-11e5-986d-015abae302e3.jpeg)
+
 Booz Allen software developers are part of our System Development Group (SDG), regardless which market or cross-cut they support. The advantage of this structure is to learn and continuously improve. We have reusable best practices, checklists, playbooks that help us to standup a self organizing teams quickly. 
 
 _ - Member(s) of the team have experience building popular, high-traffic digital services_
