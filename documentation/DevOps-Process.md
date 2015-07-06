@@ -84,13 +84,15 @@ Here is how developers code. To make it easier to explain, let's say a release i
 
 ![4_cont_delivery_v1](https://cloud.githubusercontent.com/assets/12210910/8342223/8bd3c636-1a98-11e5-8faa-6490ea1c3ebf.png)
 
-After the Release code is manually verified, continuous delivery is triggered by the product owner manually. We define continuous delivery as deliverying functionality that achieved our "definition of done" to production. This is the real value of DevOps. Traditional software development includes long term plans for releases. Even though some of the release scope is completed, the operations team waits for the complete release scope to be complete and for the planned release date. Continuous Delivery decomposes a large release into smaller chunks.
+We define continuous delivery as deliverying functionality that achieved our "definition of done" to production. This is the real value of DevOps. 
+
+After the Release code is verified by our automated checks and manual tests, a pull request is created to promote the release into the master branch. This pormotion wil automatically deploy the latest code into our production environment, where users can take advantage of the latest features and fixes. 
 
 ## Infrastructure
 
 For a visualization of infrastructrue architecture please refer to [physical deployment model diagram](https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Architecture-Diagrams.md#physical-deployment-model)
 
-the flow is more described in more detail in the following image :
+the flow is described in more detail in the following image :
 
 ![devops](https://cloud.githubusercontent.com/assets/1631162/8362833/2edcfd06-1b49-11e5-93d2-85f44488e9b4.png)
 
@@ -99,11 +101,11 @@ the flow is more described in more detail in the following image :
 2) Containers are deployed and tested on the CI server. Containers are stopped after tests finish.
 If tests pass...
 
-     3) The new image is pushed to Docker Registry.
+3) The new image is pushed to Docker Registry.
 
-     4) Jenkins notifies the branch's corresponding EC2 machine [using Docker Machine] to pull new images. 
+4) Jenkins notifies the branch's corresponding EC2 machine [using Docker Machine] to pull new images. 
 
-     5) Containers are deployed on the live EC2 machine. A cAdvisor container is deployed to monitor resources.
+5) Containers are deployed on the live EC2 machine. A cAdvisor container is deployed to monitor resources.
 
 ## Monitoring
 
