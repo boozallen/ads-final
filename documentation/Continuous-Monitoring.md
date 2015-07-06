@@ -10,7 +10,7 @@ See a live feed of our production cAdvisor monitoring -- https://cadvisor.labelc
 
 The cAdvisor tool allows us to seamlessly review and analyze our EC2 instance machine performance, as well as dive into the container specific metrics. The information is presented in a simple but efficient html format that can be accessed anytime and anywhere. Insights or warning can be discovered through useful graphs and metrics on memory usage, cpu usage, throughput, and processes. Container specific metrics are valuable to review anomalies in the exact service, reducing debugging time, and allowing for service specific optimizations. 
 
-### [sophos](https://www.sophos.com/en-us.aspx)
+### [Sophos](https://www.sophos.com/en-us.aspx)
 
 The sophos security appliance allows us to visualize and react to security threats.  The sophos appliance provides intrusion detection / intrusion prevention (IDS/IPS) and web application firewall to reverse proxy requests to the Docker hosts.  Incoming requests are analyzed for security concerns and then dealth with according to our solutions security posture.  Notifications of login attempts and other security events notify administrators immediately.  Relevant metrics are reported to appropriate individuals on a daily basis.
 
