@@ -34,6 +34,7 @@ Technical Approach Pool Three
 **(a)**
 
 We assigned one leader, our Product Owner (PO), who had the authority and responsibility and was held accountable for the quality of our labelCRAFT prototype submission.  Our PO had the authority to allocate resources and funding to create the prototype.  The PO was responsible for defining the initial prototype concept and attended all release planning, sprint planning and demonstrations. The PO made the decisions about backlog priorities.
+
 Our user stories for labelCRAFT:
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/User-Stories.md
