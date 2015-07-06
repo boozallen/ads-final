@@ -12,7 +12,7 @@ General Development:
 * Developers MUST run tests before committing
 
 Front-End:
-* Developers SHOULD review the Angular Style Guide -[Angular Style Guide](https://github.com/johnpapa/angular-styleguide)
+* Developers SHOULD review the Angular Style Guide - [Angular Style Guide](https://github.com/johnpapa/angular-styleguide)
 * Developers MUST write unit tests for angular code using Karma
 * Developers MUST fix JS HINT before committing code
 
