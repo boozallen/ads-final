@@ -1,6 +1,6 @@
 # 18F Agile Delivery Services (ADS) – Booz Allen Digital– Prototype: LabelCRAFT
 
-Prototype URL: https://labelcraft.io (For the purposes of the prototype, we crowdsourced input for the Top 8 drugs listed on the homepage)
+Prototype URL: https://labelcraft.io (To date, we crowdsourced input for the Top 8 drugs)
 
 Please evaluate our development branch located at:
 
