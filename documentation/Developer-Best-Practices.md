@@ -3,7 +3,7 @@ This page includes the practices used on the prototype:
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
 
 GitHub:
-* The team MUST follow GitFlow Branchinghttps://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
+* The team MUST follow GitFlow Branching - [Atlassian GitFlow Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
 * Developers SHOULD NOT commit directly to master branch
 * Developers SHOULD initiate pull requests to master
 
@@ -12,7 +12,7 @@ General Development:
 * Developers MUST run tests before committing
 
 Front-End:
-* Developers SHOULD review the Angular Style Guide:https://github.com/johnpapa/angular-styleguide
+* Developers SHOULD review the Angular Style Guide -[Angular Style Guide](https://github.com/johnpapa/angular-styleguide)
 * Developers MUST write unit tests for angular code using Karma
 * Developers MUST fix JS HINT before committing code
 
