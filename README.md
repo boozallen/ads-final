@@ -29,7 +29,7 @@ and questions we believe should be answered during the execution of any digital 
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/U.S.-Digital-Services-Playbook-Evidence.md
 
-** ### Technical Approach Pool Three**
+### Technical Approach Pool Three
 
 **(a)**
 
