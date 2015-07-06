@@ -1,4 +1,4 @@
-![human_centered_design_v1](https://cloud.githubusercontent.com/assets/12210910/8392525/11940b48-1cb3-11e5-8fe7-3f79af83f7c9.png)
+![human_centered_design_v2](https://cloud.githubusercontent.com/assets/13038047/8524024/756c6eac-23c6-11e5-9319-0fc5a4a6e278.png)
 
 ## Learning about the Data
 We kicked off the first day with icebreakers and a data show-and-tell session where data scientist subject matter experts walked us through the data and discussed with the team the types of data we had to work with. We discussed the different sets of data and wondered if it was a possibility to could combine multiple sets of data into one valuable product in a unique way that would offer a valuable differentiator to target users. 
