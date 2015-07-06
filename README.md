@@ -55,7 +55,7 @@ https://github.com/booz-allen-agile-delivery/ads-final/blob/development/document
 
 **(d)**
 
-We used multiple human centered design techniques and tools. Our Lean UX ideation session included brainstorming with a visioning game, which ultimately yielded our product charter. It included hand-sketched personas, journey maps, scribbled user stories, and sketched wireframes on large pages in pairs. We then learned more about our users through user interviews and usability testing. Our personas were updated throughout. Our hand-sketched wireframes (Axure) were tested and updated in iterative rounds of usability testing.
+During this challenge, we used nine core Human Centered Design (HCD) techniques: (1) Visioning exercise to brainstorm target groups, emotional benefits, and features/services to meet their needs; (2) User Interviews; (3) Personas; (4) Journey Mapping; (5) User Stories; (6) Sketching screen designs; (7) Rapid Prototyping with clickable Axure Wireframes; (8) Heuristic Reviews based on researched best practices and industry standards for desinging for real, live people; (9) Usability Testing in four small-scale iterative rounds of moderated, in-person testing. Here is an overview of our lean HCD process:
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Human-Centered-Design.md
 
