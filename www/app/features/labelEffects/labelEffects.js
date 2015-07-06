@@ -162,7 +162,7 @@ angular.module('gapFront')
 
       //console.log(found);
       if (found == true) {
-        return (words.slice(Math.max(i-25, 0), Math.min(i+25, words.length)).join(' '));
+        return (words.slice(Math.max(i-50, 0), Math.min(i+50, words.length)).join(' '));
       } else {
         return words.join(' ');
       }
