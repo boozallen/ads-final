@@ -235,7 +235,7 @@ angular.module('gapFront')
           .attr("transform", "translate(-45, -30)")
           .attr('fill', function (d) {
             if ($scope.treeData[d] == 0) {
-              return '#f8ac59';
+              return '#000000';
             } else if ($scope.treeData[d] == 1) {
               return '#ed5565';
             } else if ($scope.treeData[d] == 2) {
