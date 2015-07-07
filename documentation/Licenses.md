@@ -11,6 +11,7 @@
 | [Docker-Registy](https://github.com/docker/distribution) | [Apache](https://github.com/docker/distribution/blob/master/LICENSE) |
 | [Bootstrap](http://getbootstrap.com/) | [MIT](https://github.com/twbs/bootstrap/blob/master/LICENSE)  |
 | [jshint](http://jshint.com/) | [MIT](https://github.com/jshint/jshint/blob/master/LICENSE) |
+| [ruby](https://www.ruby-lang.org/en/) | [License](https://github.com/ruby/ruby/blob/trunk/COPYING) |
 | [rails](https://github.com/rails/rails) | [MIT](http://opensource.org/licenses/MIT) |
 | [rSepc](https://github.com/rspec/rspec) | [MIT](https://github.com/rspec/rspec/blob/master/License.txt) |
 | [ruboCop](https://github.com/bbatsov/rubocop) | [License](https://github.com/bbatsov/rubocop/blob/master/LICENSE.txt) |
