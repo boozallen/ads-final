@@ -142,7 +142,7 @@ angular.module('gapFront')
 
       for (var i = 0; i < words.length; i++) {
         var loc = words[i].indexOf(effect[0]);
-        console.log(words[i]);
+        //console.log(words[i]);
         if (loc > -1) {
           //console.log("Found first word");
           //console.log("Location: " + i + " / word: " + words[i]);
@@ -151,7 +151,7 @@ angular.module('gapFront')
             break;
           } else {
             if (words[i + 1].indexOf(effect[1]) > -1) {
-              console.log("second word: " + words[i+1]);
+              //console.log("second word: " + words[i+1]);
               if (!effect[2]) {
                 found = true;
                 break;
