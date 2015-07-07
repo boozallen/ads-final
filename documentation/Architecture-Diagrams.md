@@ -43,4 +43,14 @@ https://github.com/booz-allen-agile-delivery/ads-final/tree/development/bin/jenk
 
 #Licenses
 
-Please see our [licenses documentation](https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/licenses.md)
+We used all open source technologies and open sourced our LabelCRAFT prototype.
+
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Architecture-Diagrams.md
+
+Open source license:
+
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/LICENSE
+
+Licenses for open source technologies:
+
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Licenses.md
