@@ -173,3 +173,6 @@ Open source license:
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/LICENSE
 
+Licenses for open source technologies:
+
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Licenses.md
