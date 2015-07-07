@@ -18,7 +18,7 @@ class DrugsController < ApplicationController
       d['effects'] = []
       Fda.get_events(brand_name).each do |term|
         if adverse_reactions.match term
-          puts adverse_reactions
+          # puts adverse_reactions
           d['effects'].push(term)
           effects.push(term)
         end

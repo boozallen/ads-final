@@ -22,7 +22,7 @@ During and at the end of sprints (either in person or virtually using Lync or Go
 _- Document the findings about user goals, needs, behaviors, and preferences_
 
 Finding documented as agile artifacts:
-User stories : hhttps://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/User-Stories.md
+User stories : https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/User-Stories.md
 
 Other agile artifacts: https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Agile-Artifacts.md
 
@@ -96,7 +96,7 @@ _- Use language and design consistently throughout the service, including online
 
 Consistency check us part of our usability test.
 
-**DIGITAL SERVICE PLAY 4. Build the service using agile and iterative practices  **
+**DIGITAL SERVICE PLAY 4. Build the service using agile and iterative practices**
 
 ![p4](https://cloud.githubusercontent.com/assets/12210910/8335886/766a0ece-1a6e-11e5-8372-cee1382ef36b.jpeg)
 
@@ -183,6 +183,8 @@ _ - The product owner has a strong relationship with the contracting officer_
 Not applicable. This is an RFQ.
 
 **DIGITAL SERVICE PLAY 7. Bring in experienced teams**
+
+![p7](https://cloud.githubusercontent.com/assets/12210910/8525803/02847c4e-23d1-11e5-986d-015abae302e3.jpeg)
 
 Booz Allen software developers are part of our System Development Group (SDG), regardless which market or cross-cut they support. The advantage of this structure is to learn and continuously improve. We have reusable best practices, checklists, playbooks that help us to standup a self organizing teams quickly. 
 
@@ -360,7 +362,8 @@ _ - Monitor system-level resource utilization in real time_
 
 **DIGITAL SERVICE PLAY 13. Default to open**
 
-![p13](https://cloud.githubusercontent.com/assets/12210910/8335320/f119b70e-1a6a-11e5-9594-cfa122f93c8a.jpeg)
+
+![p13](https://cloud.githubusercontent.com/assets/12210910/8525768/d675469c-23d0-11e5-8261-a7bf6b04068d.jpeg)
 
 _ - Offer users a mechanism to report bugs and issues, and be responsive to these reports_
 

@@ -1,4 +1,6 @@
-![human_centered_design_v1](https://cloud.githubusercontent.com/assets/12210910/8392525/11940b48-1cb3-11e5-8fe7-3f79af83f7c9.png)
+During this challenge, we used nine core Human Centered Design (HCD) techniques: (1) Visioning exercise to brainstorm target groups, emotional benefits, and  features/services to meet their needs; (2) User Interviews; (3) Personas; (4) Journey Mapping; (5) User Stories; (6) Sketching screen designs; (7) Rapid Prototyping with clickable Axure Wireframes; (8) Heuristic Reviews based on researched best practices and industry standards for desinging for real, live people; (9) Usability Testing in four small-scale iterative rounds of moderated, in-person testing. Here is an overview of our lean HCD process:
+
+![human_centered_design_v2](https://cloud.githubusercontent.com/assets/13038047/8524024/756c6eac-23c6-11e5-9319-0fc5a4a6e278.png)
 
 ## Learning about the Data
 We kicked off the first day with icebreakers and a data show-and-tell session where data scientist subject matter experts walked us through the data and discussed with the team the types of data we had to work with. We discussed the different sets of data and wondered if it was a possibility to could combine multiple sets of data into one valuable product in a unique way that would offer a valuable differentiator to target users. 
@@ -90,19 +92,18 @@ For the advocacy group persona, we phoned the founder of the Hashimoto’s 411 g
 
 Our user interviews impacted not only our personas, but also our user stories, journey maps, and wireframes. Ultimately these interviews guided what product we were building. We found out that about half of the people we spoke to read labels, and of those people nearly all of them feel mistrusting of the label alone, and for good reason!  Of the top adverse events reported, only a fraction makes it onto medicine labels. To do anything about this big honkin' problem, we needed better data.  And who better to help us with that than the people who need it -- health conscious general public, advocacy groups, etc. Everyone wants to know about side effects, and a small fraction of these people are willing to help make labels more accurate. With crowdsourcing, even a small fraction of do-gooders can make a big difference. Therefore, the goal of our website is ultimately to perform a gap analysis between adverse events data and label data, using crowdsourcing to help give us the proper data to help FDA administrators make drug labels more accurate. 
 
-After our pivot, this was our modified charter:
-![charter](https://cloud.githubusercontent.com/assets/12210285/8508200/13a6bc32-2235-11e5-8696-b471052030e7.JPG)
-PHOTO OF FINAL CHARTER
+After our pivot, this was our modified charter/vision:
+
+![new charter](https://cloud.githubusercontent.com/assets/13038047/8523875/cab6e78a-23c5-11e5-9ea9-da42d552f1e9.jpg)
 
 ## Personas
 We started by hand-sketching our personas and guessing about their needs, goals and journeys. We then learned more about our users through user interviews (in person and by phone) and usability testing. Our personas were living documents that were updated as we learned more. They all had faces and names, and we spoke about them as if they were team members throughout the process. We got to know them them and empathized with them as we designed and coded. Our hand-sketched wireframes were moved into Axure, and were tested and updated in iterative rounds of usability testing.
 
-![slide1](https://cloud.githubusercontent.com/assets/12210285/8508230/6c272116-2236-11e5-99b5-8b625357e891.jpg)
-![slide2](https://cloud.githubusercontent.com/assets/12210285/8508233/6c299c84-2236-11e5-80e9-ae7d75887d43.jpg)
-![slide3](https://cloud.githubusercontent.com/assets/12210285/8508232/6c294a54-2236-11e5-95fb-1fc2b3423fa9.jpg)
-![slide4](https://cloud.githubusercontent.com/assets/12210285/8508231/6c27fb22-2236-11e5-8854-11989b0fbb93.jpg)
-![slide5](https://cloud.githubusercontent.com/assets/12210285/8508234/6c2a24d8-2236-11e5-802c-92196dcab624.jpg)
-
+![becca label nut](https://cloud.githubusercontent.com/assets/13038047/8523872/cab0639c-23c5-11e5-8a7d-766dc982b916.png)
+![vic label non-reader](https://cloud.githubusercontent.com/assets/13038047/8523870/caaec96a-23c5-11e5-9196-cdb030f3f400.png)
+![fda administrator](https://cloud.githubusercontent.com/assets/13038047/8523874/cab36376-23c5-11e5-8de6-bce8922311c2.png)
+![geriatric](https://cloud.githubusercontent.com/assets/13038047/8523871/cab06158-23c5-11e5-9964-a87430e83808.png)
+![hashi group](https://cloud.githubusercontent.com/assets/13038047/8523873/cab1520c-23c5-11e5-9775-abe97bbb01cf.png)
 
 ## Wireframing
 We started with hand-sketched wireframes on large easel-sized post-it pads on the wall.  
@@ -112,4 +113,4 @@ We started with hand-sketched wireframes on large easel-sized post-it pads on th
 After iterating sketches and verifying with user stories and personas, we moved the wireframes into a rapid prototyping software, Axure. Our certified usability analyst conducted a heuristic review based on industry best practices and recommended enhancements to the navigation, presentation, content and interaction represented in the wireframe. Through rounds of usability testing and user interviews, we continually updated the wireframe. We shared it with developers and used the Kanban board and our periodic reviews to prioritize functionality to code. While the developers coded core functionality, team members focused on user design continued to talk with users and update wireframes to match recommendations on look, layout and textual elements. 
 
 ## Usability Testing
-We performed numerous small-scale, iterative rounds of usability testing both in-person and by phone. All of our usability testing was moderated because we were most interested in behavioral, qualitative feedback from our key target audiences. [Our usability testing process >]https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Usability-Testing.md
+We performed numerous small-scale, iterative rounds of usability testing both in-person and by phone. All of our usability testing was moderated because we were most interested in behavioral, qualitative feedback from our key target audiences. [Our usability testing process >](https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Usability-Testing.md)
