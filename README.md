@@ -2,7 +2,7 @@
 
 Prototype URL: https://labelcraft.io (To date, we crowdsourced input for the Top 8 drugs)
 
-Please evaluate our development branch (all 3 branches are in sync but our documentation links all points to the development branch) located at:
+Please evaluate our development branch (all 3 branches are in sync but our documentation links development):
 
 https://github.com/booz-allen-agile-delivery/ads-final/tree/development
 
@@ -84,7 +84,7 @@ https://github.com/booz-allen-agile-delivery/ads-final/blob/development/document
 
 **(g)**
 
-We developed labelCRAFT using an iterative approach where feedback informed subsequent versions of the prototype. We had a Sprint ‘0’ followed by 10 Sprints. In Sprint 0, we tailored Booz Allen Digital’s existing agile development tools and environment which includes a continuous delivery infrastructure. We then delivered 6 releases over a period of 6 days. We conducted sprint planning at the beginning of each sprint and then conducted a prototype demonstration and retrospective at the end of each sprint. The FDA SMEs and PO attended the planning sessions, the reviews, and provided feedback that informed subsequent work.
+We developed labelCRAFT using an iterative approach where feedback informed subsequent versions of the prototype. We had a Sprint ‘0’ followed by 9 Sprints. In Sprint 0, we tailored Booz Allen Digital’s existing agile development tools and environment which includes a continuous delivery infrastructure. We then delivered 6 releases over a period of 6 days. We conducted sprint planning at the beginning of each sprint and conducted a prototype demonstration and retrospective at the end of each sprint. The FDA SMEs and PO attended the planning sessions, the reviews, and provided feedback that informed subsequent work.
 
 Our iterative agile process:
 
@@ -93,7 +93,7 @@ https://github.com/booz-allen-agile-delivery/ads-final/blob/development/document
 
 **(h)**
 
-Our labelCRAFT prototype works on multiple devices (e.g., desktop, mobile, tablet) and is a responsive design. We implemented our front-end with the Bootstrap framework to provide a completely responsive experience. We conducted usability tests to observe users on these platforms. We also used Google’s chrome mobile display test tool to emulate the experience of different platforms.
+Our labelCRAFT prototype works on multiple devices and is a responsive design. We implemented our front-end with the Bootstrap framework to provide a completely responsive experience. We conducted usability tests to observe users on these platforms and used Google’s chrome mobile display test tool to emulate the experience of different platforms.
 
 Our responsive design:
 
@@ -108,7 +108,7 @@ We developed labelCRAFT with 14 modern, open source technologies most appropriat
 - Backend: Ruby, Rails, RSpec, Rubocop, Brakeman 
 - Dev-Ops: Docker (Machine, Registry, Compose), Jenkins, cAdvisor
 
-Our application stack and the tools we used:
+Our application stack:
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Architecture-Diagrams.md
 
@@ -128,7 +128,7 @@ We wrote unit tests for code, written with appropriate tooling for the technolog
 
 **(l)**
 
-We use Jenkins as our continuous integration system to automate the running of tests and continuously deploy our code to AWS. We established GitHub hooks for each branch to kickoff Jenkins jobs. Custom jobs for each branch ran automated tests in containerized environments. Once tests were completed, Jenkins CI updated the Docker registry and deployed the new build. All pushes to the development branch are automatically examined by static code analysis, security scans, unit tests, integration tests, and performance tests. Load testing was performed ad-hoc (developer’s discretion).
+We use Jenkins as our continuous integration system to automate the running of tests and continuously deploy our code. We established GitHub hooks for each branch to kickoff Jenkins jobs. Custom jobs for each branch ran automated tests in containerized environments. Once tests were completed, Jenkins CI updated the Docker registry and deployed the new build. All pushes to the development branch are automatically examined by static code analysis, security scans, unit tests, integration tests, and performance tests. Load testing was performed ad-hoc (developer’s discretion).
 
 Our DevOps workflow:
 
