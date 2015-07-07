@@ -1,4 +1,4 @@
-# Booz Allen Hamilton, Agile Delivery Services BPA Wiki
+# Booz Allen Hamilton, Agile Delivery Services BPA
 
 We used this page to document all associated documentation that went into the creation of the prototype.
 
