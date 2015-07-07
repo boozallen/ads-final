@@ -16,12 +16,6 @@
     <div class="row col-md-10 col-md-offset-1">
       <br>
       <div class="col-xs-10 col-xs-offset-1 col-md-2 col-md-offset-0">
-        <h2>View</h2>
-        <ul class="nav nav-pills" data-toggle="buttons">
-          <li role="presentation" ng-click="toggleCharts = !toggleCharts; searchDrugEvents();" ng-class="toggleCharts==true?'active':''"><a href="">Bar Graph</a></li>
-          <li role="presentation" ng-click="toggleCharts = !toggleCharts; treeChart.redraw();" ng-class="toggleCharts==false?'active':''"><a href="">Tree Map</a></li>
-        </ul>
-        <br>
         <h2>Filters</h2>
         <h3 style="margin-top:0px;">Seriousness</h3>
         <ul class="nav nav-pills" data-toggle="buttons">
@@ -45,9 +39,8 @@
       </div>
       <div class="col-xs-10 col-xs-offset-1 col-md-7 col-md-offset-0">
         <div style="height:680px;">
-          <div id="chartContainer" ng-show="toggleCharts" style="min-width: 310px; height: 600px; margin: 0 auto"></div>
-          <div id="createTreeChart" ng-hide="toggleCharts" style="height: 600px;"></div>
-          <div class="row col-md-12" ng-show="toggleCharts">
+          <div id="chartContainer" style="min-width: 310px; height: 600px; margin: 0 auto"></div>
+          <div class="row col-md-12">
             <div class="chart_key">
               <!--<div class="col-xs-2">-->
               <!--Data source: <a href="http://open.fda.gov">open.fda.gov</a>-->
@@ -67,23 +60,6 @@
               <div class="col-xs-10 col-md-3">
                 <span class='glyphicon glyphicon-exclamation-sign' style='font-size: 14px;'></span> : Reported but not verified
               </div>
-            </div>
-          </div>
-          <div class="row chart_key" ng-hide="toggleCharts">
-            <div class="col-xs-10 col-md-2">
-                <strong>Crowdsource Legend:</strong>
-              </div>
-            <div class="col-xs-10 col-md-2">
-              <span style="background:#d3d3d3;">&nbsp;&nbsp;&nbsp;&nbsp;</span> : Needs Review
-            </div>
-            <div class="col-xs-10 col-md-2">
-              <span style="background:#5bc0de;">&nbsp;&nbsp;&nbsp;&nbsp;</span> : On Label - Side Effect
-            </div>
-            <div class="col-xs-10 col-md-2">
-              <span style="background:#ed5565;">&nbsp;&nbsp;&nbsp;&nbsp;</span> : On Label - Not Side Effect
-            </div>
-            <div class="col-xs-10 col-md-2">
-              <span style="background:#f8ac59;">&nbsp;&nbsp;&nbsp;&nbsp;</span> : Reported But Not Verified
             </div>
           </div>
           <br>
