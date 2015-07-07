@@ -13,7 +13,7 @@
 | [jshint](http://jshint.com/) | [MIT](https://github.com/jshint/jshint/blob/master/LICENSE) |
 | [ruby](https://www.ruby-lang.org/en/) | [License](https://github.com/ruby/ruby/blob/trunk/COPYING) |
 | [rails](https://github.com/rails/rails) | [MIT](http://opensource.org/licenses/MIT) |
-| [rSepc](https://github.com/rspec/rspec) | [MIT](https://github.com/rspec/rspec/blob/master/License.txt) |
+| [rSpec](https://github.com/rspec/rspec) | [MIT](https://github.com/rspec/rspec/blob/master/License.txt) |
 | [ruboCop](https://github.com/bbatsov/rubocop) | [License](https://github.com/bbatsov/rubocop/blob/master/LICENSE.txt) |
 | [brakeman](https://github.com/presidentbeef/brakeman) | [MIT](https://github.com/presidentbeef/brakeman/blob/master/MIT-LICENSE) |
 | [cAdvisor](https://github.com/google/cadvisor) | [Apache](https://github.com/google/cadvisor/blob/master/LICENSE) 
