@@ -43,11 +43,7 @@ module.exports = function(config) {
       // endbower
       'app/**/*.js',
       //'test/mock/**/*.js',
-      'test/spec/**/*.js',
-      'http://code.highcharts.com/stock/highstock.js',
-      'http://code.highcharts.com/stock/modules/exporting.js',
-      'http://code.highcharts.com/modules/heatmap.js',
-      'http://code.highcharts.com/modules/treemap.js'
+      'test/spec/**/*.js'
     ],
 
     // list of files / patterns to exclude

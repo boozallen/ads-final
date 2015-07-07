@@ -201,8 +201,6 @@ angular.module('gapFront')
     };
 
     function createChart() {
-
-
       nv.addGraph(function () {
         var chart = nv.models.multiBarHorizontalChart()
           .x(function (d) {
@@ -230,27 +228,14 @@ angular.module('gapFront')
         //<span class='glyphicon glyphicon-question-sign' style='color:#d3d3d3; font-size: 14px;'></span> : Needs Review
         d3.selectAll('.nv-x').filter('.nv-axis').filter('.nvd3-svg').select('g').selectAll('g').filter('.tick').selectAll('text')
           .attr('transform', 'translate(-30,0)');
-        d3.selectAll('.nv-x').filter('.nv-axis').filter('.nvd3-svg').select('g').selectAll('g').filter('.tick').append('foreignObject')
-          .attr('transform', 'translate(-30,-8)')
-          .attr('height', '1.1em')
-          .attr('width', '1em')
-          .attr('y', '0.0em')
-          .style('display', 'block')
-          .attr('x', '.5em').append('xhtml:span')
-          .attr('class', function (d) {
+        d3.selectAll('.nv-x').filter('.nv-axis').filter('.nvd3-svg').select('g').selectAll('g').filter('.tick').append('circle')
+          .attr("cx", 30)
+          .attr("cy", 30)
+          .attr("r", 8)
+          .attr("transform", "translate(-45, -30)")
+          .attr('fill', function (d) {
             if ($scope.treeData[d] == 0) {
-              return 'glyphicon glyphicon-exclamation-sign';
-            } else if ($scope.treeData[d] == 1) {
-              return 'glyphicon glyphicon-ok-circle';
-            } else if ($scope.treeData[d] == 2) {
-              return 'glyphicon glyphicon-ok-sign';
-            } else if ($scope.treeData[d] == 3) {
-              return 'glyphicon glyphicon-question-sign';
-            }
-          })
-          .style('color', function (d) {
-            if ($scope.treeData[d] == 0) {
-              return '#f8ac59';
+              return '#000000';
             } else if ($scope.treeData[d] == 1) {
               return '#ed5565';
             } else if ($scope.treeData[d] == 2) {
@@ -263,13 +248,16 @@ angular.module('gapFront')
           .style('font-size', '14px')
           .attr('text', function (d, i) {
             return d;
-          });
+          }).append('Comments');
 
         d3.selectAll(".nv-bar").filter(".positive")
           .style('fill', '#23b193')
           .style('height', '18');
 
         nv.utils.windowResize(chart.update);
+
+        $('.foreignObject').append("<span class='glyphicon glyphicon-exclamation-sign'></span>");
+
 
         return chart;
       });
