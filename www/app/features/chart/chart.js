@@ -284,8 +284,13 @@ angular.module('gapFront')
           },
           xaxis: {
             tickOptions: {
-              formatter: tickFormatter
-            }
+              formatter: tickFormatter,
+              angle: -90,
+              fontSize: '10pt'
+            },
+            max: 4000,
+            min: 1,
+            numberTicks: 3
           }
         }
       });
