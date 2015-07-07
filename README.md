@@ -2,7 +2,7 @@
 
 Prototype URL: https://labelcraft.io (To date, we crowdsourced input for the Top 8 drugs)
 
-Please evaluate our development branch located at:
+Please evaluate our development branch (all 3 branches are in sync but our documentation links all points to the development branch) located at:
 
 https://github.com/booz-allen-agile-delivery/ads-final/tree/development
 
