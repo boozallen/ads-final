@@ -14,7 +14,7 @@ angular.module('gapFront')
     });
 
     var railsService = Restangular.withConfig(function(RestangularConfigurer) {
-      RestangularConfigurer.setBaseUrl(window.location.protocol + '//' + window.location.hostname + ':3000' + '/api/v1');
+      RestangularConfigurer.setBaseUrl('https://dev.labelcraft.io:3000' + '/api/v1');
     });
 
     var drug = FDAService.all('drug');

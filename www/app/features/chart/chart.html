@@ -1,3 +1,12 @@
+<style>
+  .jqplot-yaxis {
+    /*margin-left:-80px !important;*/
+    width:160px !important;
+  }
+  #chart2b > div.jqplot-point-label.jqplot-series-0{
+    left:120px !important;
+  }
+</style>
 <div id="events-reports" class="features" ng-show="selectedDrug && (alerts.length == 0)">
   <div class="" style="margin-top: 80px;">
     <div id="tooltip" class="hidden">
@@ -37,14 +46,19 @@
         <h3>Age Group</h3>
         <div range-slider min="0" max="100" model-min="least" model-max="greatest" on-handle-up="searchDrugEvents()"></div>
       </div>
-      <div class="col-xs-10 col-xs-offset-1 col-md-7 col-md-offset-0">
+      <div class="col-xs-10 col-xs-offset-1 col-md-offset-0">
         <div style="height:680px;">
-          <div id="chartContainer" style="min-width: 310px; height: 600px; margin: 0 auto"></div>
+          <!--<div id="chartContainer" style="min-width: 310px; height: 600px; margin: 0 auto"></div>-->
+          <div id="chart2b" style="min-width: 310px; height: 600px; margin: 0 auto"></div>
           <div class="row col-md-12">
             <div class="chart_key">
               <!--<div class="col-xs-2">-->
               <!--Data source: <a href="http://open.fda.gov">open.fda.gov</a>-->
               <!--</div>-->
+              <div align="center">
+                Number of Reports
+              </div>
+              <br>
               <div class="col-xs-10 col-md-2">
                 <strong>Crowdsource Legend:</strong>
               </div>
