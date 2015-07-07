@@ -28,6 +28,7 @@
 	Name: Sami Mirimiri
 	Role: Front-End Developer 
 	Contact: mirimiri_sami [at] bah.com
+	Twitter: @_kaiega
 	From: Manassas, VA
 
 	Name: Sameer Dhar
@@ -80,7 +81,12 @@
 	Contact: Lackrone_Luke [at] bah.com
 	Twitter: @lackrone
 	From: Fulton, MD, USA
-
+	
+	Name: Sonja Hall
+	Role: Writer/Content Designer/Content
+Strategist
+  Contact: Hall_Sonja [at] bah.com
+  From: Mclean, VA
 	
 /* THANKS */
 	Name: Bill Ott

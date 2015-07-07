@@ -6,99 +6,100 @@
     </div>
 
     <br>
+
     <div class="med-info col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1 space-top-60">
       <h2><span class="number_block">2</span>Top 15 Reported Side Effects for: {{selectedDrug.substance_name}}&nbsp;({{selectedDrug.brand_name}})
-        <span class="show_full_label pull-right" data-animation="am-fade-and-slide-top" data-template="drugInfo.tpl.html" bs-modal="modal"></span>
+        <span class="show_full_label pull-right" data-animation="am-fade-and-slide-top"
+              data-template="drugInfo.tpl.html" bs-modal="modal"></span>
       </h2>
 
-      <p>The chart below shows the top 15 reported side effects from the FDA’s database.  In addition, the chart shows which of the reported side effects are currently listed on the drug label and which are not.</p>
+      <p>The chart below shows the top 15 reported side effects from the FDA’s database. In addition, the chart shows
+        which of the reported side effects are currently listed on the drug label and which are not.</p>
     </div>
     <div class="row col-md-10 col-md-offset-1">
       <br>
+
       <div class="col-xs-10 col-xs-offset-1 col-md-2 col-md-offset-0">
-        <h2>View</h2>
-        <ul class="nav nav-pills" data-toggle="buttons">
-          <li role="presentation" ng-click="toggleCharts = !toggleCharts; searchDrugEvents();" ng-class="toggleCharts==true?'active':''"><a href="">Bar Graph</a></li>
-          <li role="presentation" ng-click="toggleCharts = !toggleCharts; treeChart.redraw();" ng-class="toggleCharts==false?'active':''"><a href="">Tree Map</a></li>
-        </ul>
-        <br>
         <h2>Filters</h2>
+
         <h3 style="margin-top:0px;">Seriousness</h3>
         <ul class="nav nav-pills" data-toggle="buttons">
-          <li role="presentation" class="active" ng-click="filtersUpdated('seriousness','all')" ng-class="seriousness=='all'?'active':''"><a href="">All</a></li>
-          <li role="presentation" ng-click="filtersUpdated('seriousness', 'non_serious_adverse_events')" ng-class="seriousness=='non_serious_adverse_events'?'active':''"><a href="">Non-serious</a></li>
-          <li role="presentation" ng-click="filtersUpdated('seriousness','serious_adverse_events')" ng-class="seriousness=='serious_adverse_events'?'active':''"><a href="">Serious</a></li>
+          <li role="presentation" class="active" ng-click="filtersUpdated('seriousness','all')"
+              ng-class="seriousness=='all'?'active':''"><a href="">All</a></li>
+          <li role="presentation" ng-click="filtersUpdated('seriousness', 'non_serious_adverse_events')"
+              ng-class="seriousness=='non_serious_adverse_events'?'active':''"><a href="">Non-serious</a></li>
+          <li role="presentation" ng-click="filtersUpdated('seriousness','serious_adverse_events')"
+              ng-class="seriousness=='serious_adverse_events'?'active':''"><a href="">Serious</a></li>
         </ul>
 
         <h3>Outcome</h3>
         <ul class="nav nav-pills" data-toggle="buttons">
-          <li role="presentation" ng-click="filtersUpdated('outcome', 'all')" ng-class="outcome=='all'?'active':''"><a href="">All</a></li>
-          <li role="presentation" ng-click="filtersUpdated('outcome', 'fatal')" ng-class="outcome=='fatal'?'active':''"><a href="">Fatal</a></li>
-          <li role="presentation" ng-click="filtersUpdated('outcome', 'recovering')" ng-class="outcome=='recovering'?'active':''"><a href="">Recovering</a></li>
-          <li role="presentation" ng-click="filtersUpdated('outcome', 'not_recovered_not_resolved')" ng-class="outcome=='not_recovered_not_resolved'?'active':''"><a href="">Not Recovered</a></li>
-          <li role="presentation" ng-click="filtersUpdated('outcome', 'recovered_resolved')" ng-class="outcome=='recovered_resolved'?'active':''"><a href="">Recovered</a></li>
-          <li role="presentation" ng-click="filtersUpdated('outcome', 'unknown')" ng-class="outcome=='unknown'?'active':''"><a href="">Unknown</a></li>
+          <li role="presentation" ng-click="filtersUpdated('outcome', 'all')" ng-class="outcome=='all'?'active':''"><a
+            href="">All</a></li>
+          <li role="presentation" ng-click="filtersUpdated('outcome', 'fatal')" ng-class="outcome=='fatal'?'active':''">
+            <a href="">Fatal</a></li>
+          <li role="presentation" ng-click="filtersUpdated('outcome', 'recovering')"
+              ng-class="outcome=='recovering'?'active':''"><a href="">Recovering</a></li>
+          <li role="presentation" ng-click="filtersUpdated('outcome', 'not_recovered_not_resolved')"
+              ng-class="outcome=='not_recovered_not_resolved'?'active':''"><a href="">Not Recovered</a></li>
+          <li role="presentation" ng-click="filtersUpdated('outcome', 'recovered_resolved')"
+              ng-class="outcome=='recovered_resolved'?'active':''"><a href="">Recovered</a></li>
+          <li role="presentation" ng-click="filtersUpdated('outcome', 'unknown')"
+              ng-class="outcome=='unknown'?'active':''"><a href="">Unknown</a></li>
         </ul>
 
         <h3>Age Group</h3>
-        <div range-slider min="0" max="100" model-min="least" model-max="greatest" on-handle-up="searchDrugEvents()"></div>
+
+        <div range-slider min="0" max="100" model-min="least" model-max="greatest"
+             on-handle-up="searchDrugEvents()"></div>
+
+        <button class="btn btn-success btn-lg spacer" ng-click="scrollToLabelAccuracy()">Go to Step 3</button>
+
       </div>
-      <div class="col-xs-10 col-xs-offset-1 col-md-7 col-md-offset-0">
+      <div class="col-xs-10 col-xs-offset-1 col-md-offset-0">
         <div style="height:680px;">
-          <div id="chartContainer" ng-show="toggleCharts" style="min-width: 310px; height: 600px; margin: 0 auto"></div>
-          <div id="createTreeChart" ng-hide="toggleCharts" style="height: 600px;"></div>
-          <div class="row col-md-12" ng-show="toggleCharts">
+          <div id="chartContainer" style="min-width: 200px; height: 600px; margin: 0 auto">
+            <svg></svg>
+          </div>
+          <div class="row col-md-12">
             <div class="chart_key">
               <!--<div class="col-xs-2">-->
               <!--Data source: <a href="http://open.fda.gov">open.fda.gov</a>-->
               <!--</div>-->
+              <div align="center">
+                Number of Reports
+              </div>
+              <br>
+
               <div class="col-xs-10 col-md-2">
                 <strong>Crowdsource Legend:</strong>
               </div>
               <div class="col-xs-10 col-md-2">
-                <span class='glyphicon glyphicon-question-sign' style='color:#d3d3d3; font-size: 14px;'></span> : Needs Review
+                <span class='fa fa-circle' style='color:#d3d3d3; font-size: 14px;'></span> : Needs
+                Review
               </div>
               <div class="col-xs-10 col-md-2">
-                <span class='glyphicon glyphicon-ok-sign' style='color:#5bc0de; font-size: 14px;'></span> : On Label - Side Effect
+                <span class='fa fa-circle' style='color:#5bc0de; font-size: 14px;'></span> : On Label -
+                Side Effect
               </div>
               <div class="col-xs-10 col-md-3">
-                <span class='glyphicon glyphicon-ok-circle' style='color:#ed5565; font-size: 14px;'></span> : On Label - Not Side Effect
+                <span class='fa fa-circle' style='color:#ed5565; font-size: 14px;'></span> : On Label -
+                Not Side Effect
               </div>
               <div class="col-xs-10 col-md-3">
-                <span class='glyphicon glyphicon-exclamation-sign' style='font-size: 14px;'></span> : Reported but not verified
+                <span class='fa fa-circle' style='font-size: 14px;'></span> : Reported but not
+                verified
               </div>
             </div>
           </div>
-          <div class="row chart_key" ng-hide="toggleCharts">
-            <div class="col-xs-10 col-md-2">
-                <strong>Crowdsource Legend:</strong>
-              </div>
-            <div class="col-xs-10 col-md-2">
-              <span style="background:#d3d3d3;">&nbsp;&nbsp;&nbsp;&nbsp;</span> : Needs Review
-            </div>
-            <div class="col-xs-10 col-md-2">
-              <span style="background:#5bc0de;">&nbsp;&nbsp;&nbsp;&nbsp;</span> : On Label - Side Effect
-            </div>
-            <div class="col-xs-10 col-md-2">
-              <span style="background:#ed5565;">&nbsp;&nbsp;&nbsp;&nbsp;</span> : On Label - Not Side Effect
-            </div>
-            <div class="col-xs-10 col-md-2">
-              <span style="background:#f8ac59;">&nbsp;&nbsp;&nbsp;&nbsp;</span> : Reported But Not Verified
-            </div>
+          <br>
+
+          <div class="col-md-offset-1" align="center">
           </div>
         </div>
-      </div>
-      <div class="col-xs-10 col-xs-offset-1 col-md-2 col-md-offset-0">
-        <div>
-          <div id="totalReportedContainer" style="height: 200px; width: 300px;"></div>
-        </div>
-        <br><br><br>
-        <div id="lineGraphContainer" style="width: 300px; height: 300px;"></div>
-      </div>
-      <div class="col-md-offset-10">
-        <button class="btn btn-success spacer" ng-click="scrollToLabelAccuracy()">Go to Step 3</button>
       </div>
     </div>
     <br>
   </div>
+  <br>
 </div>

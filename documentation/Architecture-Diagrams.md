@@ -6,11 +6,11 @@
 
 Our solution is comprised of more than five modern, open-source technologies.  Our selection of technologies was driven by several factors including the language, frameworks, and libraries most appropriate to solve the problem, the ability for the technology to conform to modern development best practices, and tools that best support the full end-to-end life cycle of development for maximum quality.  These factors were considered for the technologies selected for front-end, back-end, and dev-ops.
 
-**a.) Front-End:** Bootstrap, Angular.JS, Node.js, Karma, JS Hint, HighCharts
+**a.) Front-End:** Bootstrap, Angular.JS, Node.js, Karma, JS Hint, D3.js
 
 We decided on JavaScript for the front-end technology to ensure a highly decoupled front-end from back-end.
 
-We selected high-charts due to the variety of available visualizations and moderate learing curve compared to other similar frameworks.
+We selected D3.js due to the variety of available visualizations and moderate learing curve compared to other similar frameworks.
 
 AngularJS was selected to build-out the front-end as a single-page application.
 Node.JS was used to host the front-end code and manages the resolution of front-end dependencies thorugh NPM.
@@ -40,3 +40,13 @@ https://github.com/booz-allen-agile-delivery/ads-final/tree/development/bin/jenk
 # Physical Deployment Model:
 
 ![Physical Deployment Model](https://cloud.githubusercontent.com/assets/8406690/8513155/a8c11102-232d-11e5-8cd5-9ea748f1e537.png)
+
+#Licenses
+
+We used all open source technologies and open sourced our LabelCRAFT prototype.
+
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/LICENSE
+
+Licenses for open source technologies:
+
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Licenses.md

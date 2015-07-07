@@ -38,15 +38,12 @@ module.exports = function(config) {
       'bower_components/angular-bootstrap-checkbox/angular-bootstrap-checkbox.js',
       'bower_components/angular-rangeslider/angular.rangeSlider.js',
       'bower_components/jquery-highlight/jquery.highlight.js',
+      'bower_components/nvd3/build/nv.d3.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/**/*.js',
       //'test/mock/**/*.js',
-      'test/spec/**/*.js',
-      'http://code.highcharts.com/stock/highstock.js',
-      'http://code.highcharts.com/stock/modules/exporting.js',
-      'http://code.highcharts.com/modules/heatmap.js',
-      'http://code.highcharts.com/modules/treemap.js'
+      'test/spec/**/*.js'
     ],
 
     // list of files / patterns to exclude

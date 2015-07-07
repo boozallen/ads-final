@@ -1,6 +1,10 @@
 # 18F Agile Delivery Services (ADS) – Booz Allen Digital– Prototype: LabelCRAFT
 
-Prototype Submission URL: https://labelcraft.io
+Prototype URL: https://labelcraft.io (To date, we crowdsourced input for the Top 8 drugs)
+
+Please evaluate our development branch (all 3 branches are in sync but our documentation links to development):
+
+https://github.com/booz-allen-agile-delivery/ads-final/tree/development
 
 ## Prototype Overview
 
@@ -10,145 +14,165 @@ Prototype Submission URL: https://labelcraft.io
 
 [![Build Status](https://jenkins.labelcraft.io/buildStatus/icon?job=Master_FrontEnd_Builder)](https://jenkins.labelcraft.io/view/Master/job/Master_FrontEnd_Builder/)[![Build Status](https://jenkins.labelcraft.io/buildStatus/icon?job=Master_API_Builder)](https:/jenkins.labelcraft.io/view/Master/job/Master_API_Builder/)Master Branch Server: https://labelcraft.io
 
-LabelCRAFT is a crowd-sourcing platform with the goal to improve the drug label accuracy. Through LabelCRAFT, we  are now able determine whether an adverse effect reported by consumers is accurately described by the manufacturer on the drug label.  By identifying the adverse effects that consumers have reported and are not currently listed on drug labels, we hope to reduce the time it takes for manufacturers to update their labels and better inform consumers.  
+LabelCRAFT is a crowd-sourcing platform with the goal of improving drug labels. Through labelCRAFT, we are able to determine whether adverse effects reported by consumers are accurately described by the manufacturer on the drug label. By identifying the adverse effects that consumers have reported and are not currently listed on drug labels, we hope to reduce the time it takes for manufacturers to update their labels and better inform consumers.
 
-The challenge with the label data is that it is unstructured and label sections often vary by manufacturer making if difficult to automate the discovery of adverse effects with technology.  Simply finding the adverse effect ‘words’ on a label is not sufficient to conclude that the manufacturer has accurately described it as a side effect. We felt this challenge is perfect to solve through the power of crowdsourcing.  LabelCraft is crowd-sourcing platform that asks users questions to assess whether adverse effects reported by consumers (from https://open.fda.gov/drug/label/) are found on the drug label (from https://open.fda.gov/drug/event/).  To ensure the information we collect is used to its full potential, our data is exposed via an API and documented for third-party application developers.
+The challenge with the label data is that it is unstructured and label sections often vary by manufacturer making it difficult to automate the discovery of adverse effects with technology. Simply finding the adverse effect ‘words’ on a label is not sufficient to conclude that the manufacturer has accurately described it as a side effect. We felt this challenge is perfect to solve through the power of crowdsourcing. LabelCRAFT is crowd-sourcing platform that asks users questions to assess whether adverse effects reported by consumers (from https://open.fda.gov/drug/label/) are found on the drug label. To ensure the information we collect is used to its full potential, our data is exposed via an API and documented for third-party application developers.
 
-Our approach taken on this challenge and the prototype showcase the value that Booz Allen brings to the GSA 18F ADS BPA:
+Booz Allen Digital offers key strengths to the GSA 18F for the ADS BPA:
 
-- **Demonstrated Agile Delivery** – Our firm has strong experience with agile software development as demonstrated on this prototype as well as on GSA Integrated Award Environment (IAE), numerous hackations, and many other federal and commercial engagements.
-- **A Culture of Innovation** - Booz Allen's dedication to creating a culture of innovation resulted in formation of a 1,800 team, the Strategic Innovation Group (SIG),  whose mission it is to ensure there is focus on agile, digital, next gen analytics and cyber security for all modern solutions.
-- **Cross-functional agile skilled staff with reach back to domain SME** – Booz Allen was able to quickly assemble a highly-skilled, cross-functional team for this challenge. Booz Allen also has deep knowledge of federal agencies missions.  For example, for this efforts we engaged FDA domain experts from our firm to help us understand the data and come up with our solution concept.
+
+- **Demonstrated Agile Delivery** – Our firm has strong experience with agile software development as demonstrated on this prototype as well as on GSA Integrated Award Environment (IAE), numerous hackathons, and many other federal and commercial engagements.
+
+- **A Culture of Innovation** - Booz Allen's dedication to creating a culture of innovation resulted in the Strategic Innovation Group (SIG), a 1,800 team whose mission it is to ensure there is focus on agile, digital, next gen analytics and cyber security for all modern solutions.
+
+- **Cross-functional agile skilled staff with reach back to domain SME** – Booz Allen was able to quickly assemble a highly-skilled, cross-functional team for this effort. Booz Allen has deep knowledge of federal agencies missions. For example, for this effort, we engaged FDA domain experts from our firm to help us understand the data and come up with our solution concept.
 
 ### Digital Services Playbook
 
-The US Digital Services playbook provides a set of guidelines that includes a set of checklists
-and questions we believe should be answered during the execution of any digital program. 
+We closely followed the Digital Services playbook guidelines as detailed in the link below: 
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/U.S.-Digital-Services-Playbook-Evidence.md
 
-###Technical Approach Pool Three
+### Technical Approach Pool Three
 
-**(a)** 
+**(a)**
 
-We identified a member of the team who played the role of Product Owner during the development of the prototype. This person had authority with the ability to add or remove features. He attended all release planning, sprint planning and demonstrations and made all final decisions about prioritizing the backlog. 
+We assigned one leader, our Product Owner (PO), who had the authority, responsibility, and was held accountable for the quality of our labelCRAFT prototype submission. Our PO also had the authority to allocate resources and funding to create the prototype. The PO was responsible for defining the initial prototype concept and attended all release planning, sprint planning and demonstrations. The PO made the decisions about backlog priorities.
 
-https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Agile-Artifacts.md
+Our user stories:
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/User-Stories.md
 
 **(b)**
 
-Booz Allen has been using agile methodologies since early 2000s, including on a number of hackathons (e.g., the My America Summit and GSA Open Tech Digital Innovation Hackathon). This experience helped us to identify the right-sized multidisciplinary team for this effort. We used 10 out of the 13 allowed LCATs.
+We decided that we wanted to build a prototype that not only intuitively displayed data from 2 of the 3 FDA datasets but also included a backend data repository / front end user interface to capture input data for label data crowdsourcing. Given this scope, we assembled a multidisciplinary and collaborative team using 10 of the 13 labor categories (LCATs). The LCATs used were 1) Product Manager, 2) Technical Architect, 3) Interaction Designer/User Researcher/Usability Tester, 4) Writer/Content Designer/Content Strategist, 5) Visual Designer, 6) Frontend Web Developer, 7) Backend Web Developer, 8) DevOps Engineer, 9) Delivery Manager, and 10) Agile Coach.
 
-SEE humans.txt file for a full list of people who worked on the prototype.
+Our humans.txt file:
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/www/app/humans.txt
 
-**(c)**  
+**(c)**
 
-Our team had an ideation session that included the Product Owner, Booz Allen FDA SMEs and the agile team. This led to a number of hypotheses about our target audiences and their needs – along with sketches of personas. We validated and updated these through in-person and phone-based user interviews and usability testing. Our in-person, moderated usability testing also provided qualitative behavioral data on user goals to be incorporated into the wireframes as well as personas.
+From the beginning of our prototype development, we included ‘people’ throughout the process to understand their needs and get their feedback on our design and development. On day 1, we led an ideation session with “people” (2 Booz Allen FDA Drug and Data SMEs), the PO and the 18F BPA “agile team”. We developed multiple hypotheses about our target audiences and their needs along with sketches of personas which was  validated and updated through in-person and phone-based user interviews and usability testing. 
+
+Our human-centered design process:
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Human-Centered-Design.md
+
 
 **(d)**
 
-We used multiple human centered design techniques and tools. Our Lean UX ideation session included brainstorming with a visioning game, which ultimately yielded our product charter. It included hand-sketched personas, journey maps, scribbled user stories, and sketched wireframes on large pages in pairs. We then learned more about our users through user interviews and usability testing. Our personas were updated throughout. Our hand-sketched wireframes (Axure) were tested and updated in iterative rounds of usability testing.
-
-https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Human-Centered-Design.md
+We used 9 core Human Centered Design (HCD) techniques: (1) Visioning exercise to brainstorm target groups, emotional benefits, and features/services to meet their needs; (2) User Interviews; (3) Personas; (4) Journey Mapping; (5) User Stories; (6) Sketching Screen Designs; (7) Rapid Prototyping with clickable Axure Wireframes; (8) Heuristic Reviews based on researched best practices and industry standards for designing for real, live people; (9) Usability Testing in 2 small-scale iterative rounds of moderated, in-person testing.
 
 **(e)**
 
-We selected a bootstrap theme that provided a close resemblance to our vision for the prototype. We chose this approach to help with familiarizing the team with the direction for the styling and components that we would ultimately design around. As our wireframes matured, we used these components as a foundation but modified the styling to meet our needs. We developed a design style guide to provide the team with a general reference point for our core design specifications. Wireframes and a set of high fidelity mockups were provided to provide the complete design vision for the prototype.
+We used a bootstrap design style theme that mirrored our vision for the prototype. As we matured our wireframes, we used this design as a foundation but modified the styling to meet our UX needs. We developed a design style guide and provided the team with our core design specifications. We provided wireframes and a set of high fidelity mockups to the developers to implement iteratively.
+
+Our style guide, wireframes, and mockups:
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Design-Documentation.md
 
+
 **(f)**
 
-We conducted user interviews with each of our hypothesized persona types. They were updated, expanded or removed based on the incoming user data. We conducted two rounds of usability testing (4-5 participants each round) on wireframes. These were moderated in-person usability test sessions where we walked through unstructured impressions on layout, navigation, content and interaction. We made significant changes based on feedback from each round of this small-scale usability testing. 
+We conducted user interviews and usability tests with ‘people’ that mapped to each of our hypothesized persona types. We conducted 2 rounds of usability testing (4-5 participants each round) on the wireframes. We moderated in-person usability test sessions where we walked through unstructured impressions on layout, navigation, content and interaction. We made significant changes based on feedback received.
+
+Our usability testing:
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Usability-Testing.md
 
+
 **(g)**
 
-The prototype was developed over multiple sprints.
+We developed labelCRAFT using an iterative approach where feedback informed subsequent versions of the prototype. We had a Sprint ‘0’ followed by 9 Sprints. In Sprint 0, we tailored Booz Allen Digital’s existing agile development tools and environment which includes a continuous delivery infrastructure. We then delivered 6 releases over a period of 6 days. We conducted sprint planning at the beginning of each sprint and conducted a prototype demonstration and retrospective at the end of each sprint. The FDA SMEs and PO attended the planning sessions, the reviews, and provided feedback that informed subsequent work.
 
-Sprint 0 - Setting up our development environment, a continuous delivery infrastructure, and going through ideation/human centered design techniques to understand the value we could create and ultimately build.
+Our iterative agile process:
 
-We delivered 6 releases over a period of 6 days, with Release 2 the MVP. The Product Owner attended all release planning sessions and provided feedback on the creation and prioritization of the user stories.
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Agile-Artifacts.md
 
-Sprint Planning was done at the beginning of each sprint with a prototype demonstration and retrospective at the end of each sprint. The Product Owner attended all of these and provided input into the prioritization of user stories for the sprint.
-
-https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Architecture-Diagrams.md
 
 **(h)**
 
-Our front-end application was implemented with the Boostrap framework to provide a completely responsive experience across all types of display sizes. We conducted testing on multiple platforms (i.e. desktop, tablet, phone) and conducted usability tests to observe users on these platforms. We used the Google chrome mobile display test tool to emulate the experience of different platforms.
+Our labelCRAFT prototype works on multiple devices and is a responsive design. We implemented our front-end with the Bootstrap framework to provide a completely responsive experience. We conducted usability tests to observe users on these platforms and used Google’s chrome mobile display test tool to emulate the experience of different platforms.
+
+Our responsive design:
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Responsive-Design.md
 
+
 **(i)**
 
-Our selection of technologies (more than 5 modern, open-source technologies)  was driven by the language, frameworks, the libraries most appropriate to solve the problem, the ability for the technology to conform to modern development best practices, and tools that best support the full end-to-end life cycle of development. It included:
+We developed labelCRAFT with 14 modern, open source technologies most appropriate to implement the prototype.
 
-- Front-End: Bootstrap, Angular.JS, Node.js, Karma, JS Hint, HighCharts
-- Backend: Ruby, Rails, RSpec, Rubocop, Brakeman
+- Front-End: Bootstrap, Angular.JS, Node.js, Karma, JS Hint, nvd3
+- Backend: Ruby, Rails, RSpec, Rubocop, Brakeman 
 - Dev-Ops: Docker (Machine, Registry, Compose), Jenkins, cAdvisor
 
+Our application stack:
+
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Architecture-Diagrams.md
+
 
 **(j)**
 
-Amazon Web Service Elastic Compute Cloud (EC2) was used to host shared computing resources needed during for the project.
+We deployed labelCRAFT on the Amazon Web Service Elastic Compute Cloud (EC2) IaaS.  
+
+Our physical deployment model:
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Architecture-Diagrams.md
 
+
 **(k)**
 
-Unit testing was done with development and written with appropriate tooling for the technology stack. Karma was used for the front-end code and rSpec was used for the backend API. Both allowed for a fluid development process and leveraged their respective language specific advantages. The unit tests were executed both locally and on the continuous integration server (Git push).
- 
- https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/DevOps-Process.md
+We wrote unit tests for code, written with appropriate tooling for the technology stack. We used Karma for front-end code and used rSpec for the backend API. Our unit testing enabled a fluid development process while leveraging the respective language specific advantages of each testing technology. The unit tests were executed both locally and on the continuous integration server (Git push).
 
 **(l)**
 
-Jenkins was used as our continuous integration tool. GitHub hooks were established for each branch to kickoff Jenkins jobs. Custom jobs for each branch ran automated tests in containerized environments. Once tests were completed, Jenkins CI updated the Docker registry and deployed the new build. All pushes to the development branch are automatically examined by static code analysis, security scans, unit tests, integration tests, and performance tests. Load testing was performed ad-hoc (developer’s discretion).
+We use Jenkins as our continuous integration system to automate the running of tests and continuously deploy our code. We established GitHub hooks for each branch to kickoff Jenkins jobs. Custom jobs for each branch ran automated tests in containerized environments. Once tests were completed, Jenkins CI updated the Docker registry and deployed the new build. All pushes to the development branch are automatically examined by static code analysis, security scans, unit tests, integration tests, and performance tests. Load testing was performed ad-hoc (developer’s discretion).
+
+Our DevOps workflow:
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/DevOps-Process.md
 
+Our automated testing approach:
+
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Automated-Testing.md
+
 
 **(m)**
 
-The Docker’s tool suite, was used to provision and post-provision AWS EC2 instances so they are immediately ready for Docker-based deployments. After provisioning, the Docker engine pulls and builds containers from the Docker repository. Docker Compose implicitly injects the appropriate environment variables into the containers to connect frontend to API to database. The /bin directory in the repo contains all the necessary scripts to utilize the described Docker workflow.
+The team utilized GitHub for distributed source control.  We leveraged the GitFlow model of propagating code from feature branches, to development, to release, and finally to production. The Docker tool suite allowed seamless containerization and configuration management of the front-end, back-end (API) and database applications.
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/DevOps-Process.md
 
 **(n)**
 
-Our continuous monitoring solution consists of Sophos and cAdvisor. Sophos is used as a security appliance to give us continuous feedback on the state of our solution’s risk posture. Sophos additionally offers security controls to minimize any active cyber threats. We also chose to enforce encryption be default via SSL. For more visibility into our operations, cAdvisor was implemented to generate details of our containerized services.
+We use Sophos and cAdvisor for continuous monitoring. We use Sophos as a security appliance to give us continuous feedback on the state of our solution’s risk posture. It additionally offers security controls to minimize any active cyber threats. We also enforce encryption by default via SSL and use cAdvisor to generate details of our containerized services. Slack is used for team collaboration and integrated with GitHub and Jenkins to help the team keep track of commits and build status.
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Continuous-Monitoring.md
 
 **(o)**
 
-Docker-engine was used to build Linux containers from custom Dockerfiles stored in our Git repository. All three tiers of our application stack are containerized. Dockerfiles were written using Docker’s recommended best practices, to maximize the caching features of the Docker tool. This allows for quicker builds, which is important as the Docker image is rebuilt after every push.
+We used Docker-engine to build Linux containers from custom Dockerfiles stored in our Git repository. We containerized all 3 tiers of our application stack. We wrote Dockerfiles using Docker’s recommended best practices to maximize the caching features of the Docker tool. This allows for quicker builds, which is important as the Docker image is rebuilt after every push.
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/DevOps-Process.md
 
 **(p)**
 
-Installation instructions are included in the repo.
+Instructions to install and run our prototype on another machine:
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/INSTALL.md
 
-
 **(q)**
 
-All of the technologies we used for this prototype are open source.
+We used all open source technologies and open sourced our LabelCRAFT prototype.
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Architecture-Diagrams.md
 
-We have also open sourced this solution. Open source license is available at:
+Open source license:
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/LICENSE
 
+Licenses for open source technologies:
+
+https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/Licenses.md
