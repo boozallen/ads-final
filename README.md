@@ -104,7 +104,7 @@ https://github.com/booz-allen-agile-delivery/ads-final/blob/development/document
 
 We developed labelCRAFT with 14 modern, open source technologies most appropriate to implement the prototype.
 
-- Front-End: Bootstrap, Angular.JS, Node.js, Karma, JS Hint, HighCharts 
+- Front-End: Bootstrap, Angular.JS, Node.js, Karma, JS Hint, nvd3
 - Backend: Ruby, Rails, RSpec, Rubocop, Brakeman 
 - Dev-Ops: Docker (Machine, Registry, Compose), Jenkins, cAdvisor
 
