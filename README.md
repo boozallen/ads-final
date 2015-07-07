@@ -1,6 +1,10 @@
 # 18F Agile Delivery Services (ADS) – Booz Allen Digital– Prototype: LabelCRAFT
 
-Prototype Submission URL: https://labelcraft.io
+Prototype URL: https://labelcraft.io (To date, we crowdsourced input for the Top 8 drugs)
+
+Please evaluate our development branch located at:
+
+https://github.com/booz-allen-agile-delivery/ads-final/tree/development
 
 ## Prototype Overview
 
@@ -10,7 +14,7 @@ Prototype Submission URL: https://labelcraft.io
 
 [![Build Status](https://jenkins.labelcraft.io/buildStatus/icon?job=Master_FrontEnd_Builder)](https://jenkins.labelcraft.io/view/Master/job/Master_FrontEnd_Builder/)[![Build Status](https://jenkins.labelcraft.io/buildStatus/icon?job=Master_API_Builder)](https:/jenkins.labelcraft.io/view/Master/job/Master_API_Builder/)Master Branch Server: https://labelcraft.io
 
-LabelCRAFT is a crowd-sourcing platform with the goal of improving drug labels. Through LabelCRAFT, we are able to determine whether adverse effects reported by consumers are accurately described by the manufacturer on the drug label. By identifying the adverse effects that consumers have reported and are not currently listed on drug labels, we hope to reduce the time it takes for manufacturers to update their labels and better inform consumers.
+LabelCRAFT is a crowd-sourcing platform with the goal of improving drug labels. Through labelCRAFT, we are able to determine whether adverse effects reported by consumers are accurately described by the manufacturer on the drug label. By identifying the adverse effects that consumers have reported and are not currently listed on drug labels, we hope to reduce the time it takes for manufacturers to update their labels and better inform consumers.
 
 The challenge with the label data is that it is unstructured and label sections often vary by manufacturer making it difficult to automate the discovery of adverse effects with technology. Simply finding the adverse effect ‘words’ on a label is not sufficient to conclude that the manufacturer has accurately described it as a side effect. We felt this challenge is perfect to solve through the power of crowdsourcing. LabelCRAFT is crowd-sourcing platform that asks users questions to assess whether adverse effects reported by consumers (from https://open.fda.gov/drug/label/) are found on the drug label. To ensure the information we collect is used to its full potential, our data is exposed via an API and documented for third-party application developers.
 
@@ -25,8 +29,7 @@ Booz Allen Digital offers key strengths to the GSA 18F for the ADS BPA:
 
 ### Digital Services Playbook
 
-The US Digital Services playbook provides a set of guidelines that includes a set of checklists
-and questions we believe should be answered during the execution of any digital program. 
+We closely followed the Digital Services playbook guidelines as detailed in the link below: 
 
 https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/U.S.-Digital-Services-Playbook-Evidence.md
 
@@ -101,8 +104,9 @@ https://github.com/booz-allen-agile-delivery/ads-final/blob/development/document
 
 We developed labelCRAFT with 14 modern, open source technologies most appropriate to implement the prototype.
 
-• Front-End: Bootstrap, Angular.JS, Node.js, Karma, JS Hint, HighCharts 
-• Backend: Ruby, Rails, RSpec, Rubocop, Brakeman • Dev-Ops: Docker (Machine, Registry, Compose), Jenkins, cAdvisor
+- Front-End: Bootstrap, Angular.JS, Node.js, Karma, JS Hint, HighCharts 
+- Backend: Ruby, Rails, RSpec, Rubocop, Brakeman 
+- Dev-Ops: Docker (Machine, Registry, Compose), Jenkins, cAdvisor
 
 Our application stack and the tools we used:
 

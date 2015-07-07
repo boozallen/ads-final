@@ -40,3 +40,7 @@ https://github.com/booz-allen-agile-delivery/ads-final/tree/development/bin/jenk
 # Physical Deployment Model:
 
 ![Physical Deployment Model](https://cloud.githubusercontent.com/assets/8406690/8513155/a8c11102-232d-11e5-8cd5-9ea748f1e537.png)
+
+#Licenses
+
+Please see our [licenses documentation](https://github.com/booz-allen-agile-delivery/ads-final/blob/development/documentation/licenses.md)
