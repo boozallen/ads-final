@@ -1,4 +1,4 @@
-# Challenges Dependency technology licenses:
+# Open Source Technology Licenses:
 | Technology  |  License    |
 | ----------- |-------------|
 | [NodeJS](https://github.com/joyent/node)  | [License](https://github.com/joyent/node/blob/master/LICENSE) |
