@@ -2,7 +2,7 @@
 
 Prototype URL: https://labelcraft.io (To date, we crowdsourced input for the Top 8 drugs)
 
-Please evaluate our development branch (all 3 branches are in sync but our documentation links development):
+Please evaluate our development branch (all 3 branches are in sync but our documentation links to development):
 
 https://github.com/booz-allen-agile-delivery/ads-final/tree/development
 
